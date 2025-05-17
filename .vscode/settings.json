@@ -1,0 +1,15 @@
+{
+	"conventionalCommits.scopes": [
+		"core-menu-generator",
+		"config",
+		"css",
+		"newsagent.js",
+		"core-static-generator",
+		"banner exchange updater",
+		"SEO",
+		"CI/CD",
+		"RegStats",
+		"Lost & Found",
+		"RegStats"
+	]
+}

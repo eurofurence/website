@@ -1,0 +1,330 @@
+:root {
+	--header-height: 85px;
+}
+
+* {
+	box-sizing: border-box;
+}
+html {
+	background: #333;
+	color: #fff;
+}
+main {
+	background-color: #333;
+	background-image: none;
+	background-repeat: no-repeat;
+}
+/* mobile browser do not support 
+   background-attachment: fixed for performance reasons,
+   the following fix enables it only on desktop */
+   @media only screen and (min-width: 1080px) {
+	main {
+		background-attachment: fixed;
+		background-size: cover;
+		background-position-y: var(--header-height);
+		background-position-x: center;
+	}
+}
+@media only screen and (max-width: 1080px) {
+	main {
+		background-attachment: scroll;
+		background-position-y: 0;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+.uk-modal,
+.uk-modal h1,
+.uk-modal h2,
+.uk-modal h3,
+.uk-modal h4,
+.uk-modal h5,
+.uk-modal h6 {
+	color: #333;
+}
+
+a[href^="http"]:not(.hide-ext):after {
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    position: relative;
+	left: 4px;
+	content: " ";
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBpZD0iUmVubm11dHplbCIgZD0ibTUuODgwNDc3LDQuODE0MTg3bC01LjE0Mjc2MSwwbDAsOC4xMjAxNDlsOC4xMjAxNTEsMGwwLC01LjE0Mjc2bS0yLjcwNjcxNywtNy4wMzc0NjRsMCwxLjM1MzM1OGwxLjM1MzM1OCwxLjM1MzM1OGwtNC4wNjAwNzUsNC4wNjAwNzVsMi43MDY3MTcsMi43MDY3MTZsNC4wNjAwNzUsLTQuMDYwMDc0bDEuMzUzMzU5LDEuMzUzMzU4bDEuMzUzMzU3LDBsMCwtNi43NjY3OTFsLTYuNzY2NzkxLDB6IiBzdHJva2U9IiM2NjYiIGZpbGw9InRyYW5zcGFyZW50Ii8+DQo8L3N2Zz4=);
+    mask-repeat: no-repeat;
+	mask-size: contain;
+	background-color: #fff;
+}
+
+/* fix anchor targeting */
+:target {
+	border-top: var(--header-height) solid transparent;
+	margin-top: calc(0 - var(--header-height));
+}
+
+/* header */
+header, label#nav-button {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--header-height);
+}
+header {
+	z-index: 7;
+	background-color: #000;
+}
+label#nav-button {
+	cursor: pointer;
+	z-index: 8;
+}
+label#nav-button:hover ~ * .ef-menubutton {
+	background: url(../img/menu.png) no-repeat;
+	background-size: contain;
+}
+
+header h1 {
+	margin-top: 0;
+	font-size: 4em;
+	letter-spacing: 2px;
+	overflow: hidden;
+}
+.ef-menubutton {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	width: 0.8em;
+	height: 0.8em;
+	margin: 0 8px;
+	background: url(../img/logo.png) no-repeat;
+	background-size: contain;
+}
+
+/* navigation */
+nav {
+	position: fixed;
+	top: var(--header-height);
+	padding: 20px 20px calc(var(--header-height) + 20px);
+	z-index: 7;
+	width: 100%;
+	height: 100vh;
+	left: -100vw;
+	transition: left .2s;
+	background-color: rgba(0, 0, 0, 0.9);
+	overflow: auto;
+}
+input#nav-state {
+	position: fixed;
+	left: -100vw;
+}
+
+#nav-state:checked ~ nav {
+	left: 0vw;
+}
+
+nav ul {
+	padding-left: 0;
+}
+nav li {
+	position: relative;
+	list-style: none;
+}
+nav li a {
+	display: inline-block;
+}
+@media (max-width: 960px) {
+	nav li a {
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
+
+/* body area */
+main {
+	position: relative;
+	padding: calc(var(--header-height) + 20px) 0 20px;
+	overflow: hidden;
+}
+.landingpage-content-start {
+	position: relative;
+}
+#scrolldown:hover {
+	text-decoration: none;
+}
+#scrolldown span[uk-icon] {
+    position: relative;
+    transition: top .2s;
+    top: -10px;
+}
+#scrolldown:hover span[uk-icon] {
+    top: -5px
+}
+main.ef-landingpage {
+	/* latter span being the "scroll down" div height */
+	padding-top: calc(100vh - var(--header-height) - 50px);
+}
+#ef-condetails {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	padding-left: 20px;
+	padding-left: var(--menu-button-width, 100);
+}
+#scrolldown {
+	position: absolute;
+	width: 100%;
+	top: -200px;
+	text-align: center;
+}
+#content {
+    min-height: calc(100vh - var(--header-height));
+	background: rgba(0, 0, 0, 0.9);
+	padding: 20px;
+}
+[class^="uk-card-media-"] a:hover img,
+[uk-lightbox] a:hover img,
+[uk-toggle]:hover {
+	filter: brightness(0.75);
+	cursor: pointer;
+}
+.ef-table-borders th, .ef-table-borders td {
+	border: 1px solid #666;
+}
+
+/* news */
+#news cite {
+	display: block;
+}
+
+/* footer */
+footer {
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+footer .uk-button-group {
+	display: inline-flex;
+	vertical-align: middle;
+	position: relative;
+}
+footer .uk-button-group a ~ a {
+	margin-left: 6px; 
+}
+
+/* uikit overrides */
+span.uk-icon {
+	margin-right: 0.25em;
+}
+span.ef-uk-icon-lift {
+	position: relative;
+	top: -2px;
+}
+[class*="uk-column-"] > * {
+	break-inside: avoid-column;
+}
+
+/* convention links */
+#links {
+	display: block;
+	width: 200px;
+	height: 80px;
+}
+
+/* Apps */
+.ef-app-badge img {
+	height: 36px;
+}
+
+/* utility classes */
+.ef-people img {
+	display: inline;
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-right: 12px;
+}
+
+.ef-people h3 {
+	margin: 0;
+}
+
+/* js-disabled */
+.js-disabled {
+	font-family: monospace;
+	padding: 3px 8px;
+	font-weight: 600;
+	background-color: #000;
+	color: white;
+}
+
+/* ef-badger */
+.ef-new::after {
+	content: "new";
+	display: inline-block;
+	height: .9em;
+	line-height: .6em;
+	font-size: .8em;
+	font-weight: bold;
+	padding: 0 4px;
+	margin-left: 3px;
+	background-color: #f00;
+	color: #fff;
+	border-radius: 3px;
+}
+#ef-badger a[href^="https://chrome.google.com"]::before,
+#ef-badger a[href^="https://addons.mozilla.org"]::before {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	content: " ";
+	width: 1em;
+	height: 1em;
+	background-size: contain;
+	margin: 0 3px;
+}
+#ef-badger a[href^="https://chrome.google.com"]::before {
+	background-image: url(../img/chrome.png);
+}
+#ef-badger a[href^="https://addons.mozilla.org"]::before {
+	background-image: url(../img/firefox.png);
+}
+
+/* administrative */
+.debug {
+	display: block;
+	position: relative;
+	padding: 8px;
+	font-family: monospace;
+	border: 1px solid orange;
+	color: #fff;
+	background: transparent;
+	font-size: 0.75em;
+	line-height: 1em;
+	overflow: visible;
+}
+.debug > h3 {
+	font-size: 1em;
+	position: absolute;
+	right: 8px;
+	margin-top: 0;
+}
+.debug:before {
+	content: "debug";
+	color: #000;
+	background: orange;
+	position: absolute;
+	top: -.75em;
+	left: 6px;
+	padding: 1px 4px;
+	border-radius: 2px;
+}
+#EFWebCoreAutoExport {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+}

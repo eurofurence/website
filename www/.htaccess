@@ -1,0 +1,9 @@
+DirectoryIndex index.php index.html
+RewriteEngine On
+
+FallbackResource /index.php
+
+RewriteCond %{REQUEST_URI} !^/index\.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?x=$1 [NC,QSA]

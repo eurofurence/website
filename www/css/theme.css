@@ -1,0 +1,29 @@
+:root {
+    --ef-palette-1: #ffa500;
+    --ef-palette-2: #fff;
+}
+main {
+    background-image: url('../img/sample_background_by_Vinaru.jpg');
+}
+
+main a {
+	color: var(--ef-palette-1);
+}
+main a:hover {
+	color: var(--ef-palette-1);
+	text-decoration: underline;
+}
+footer a {
+    color: var(--ef-palette-2);
+}
+footer a:hover {
+    color: var(--ef-palette-2);
+    text-decoration: underline;
+}
+nav a {
+    color: var(--ef-palette-2);
+}
+nav a:hover {
+	color: var(--ef-palette-2);
+    text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+name: deploy to www.eurofurence.org
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        run: |
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.DEPLOY_KEY_WWW }}"
+
+      - name: Rsync to server
+        run: |
+          rsync -av --delete -e "ssh -o StrictHostKeyChecking=no" \
+          --exclude 'modified.json' \
+          www/ ef-web@www.eurofurence.org:${{ vars.PROD_PATH }}

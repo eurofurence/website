@@ -1,0 +1,134 @@
+{
+    "path": "..\/img\/cons\/{key}",
+    "conventions": {
+        "bayern-furs": {
+            "enable": true,
+            "source": "https:\/\/www.bayern-furs.de\/images\/bf_banner_ef.png",
+            "target": "https:\/\/www.bayern-furs.de\/",
+            "country": "de",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "6fece737e6cd5b276b11be3a16a27ff9"
+            },
+            "file": "img\/cons\/bayern-furs.png"
+        },
+        "cesfur": {
+            "enable": false,
+            "source": "https:\/\/www.cesfur.org\/data\/images\/cesfur_banner.jpg",
+            "target": "https:\/\/www.cesfur.org\/",
+            "country": "cz",
+            "data": {
+                "timestamp": 1614878058,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "east": {
+            "enable": true,
+            "source": "https:\/\/static.sachsenfurs.de\/east_200_80.jpg",
+            "target": "https:\/\/sachsenfurs.de\/en\/east",
+            "country": "de",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "c706c20f2b99757bf9fd4fa14916353e"
+            },
+            "file": "img\/cons\/east.jpg"
+        },
+        "fblacklight": {
+            "enable": true,
+            "source": "https:\/\/data.fblacklight.org\/uploads\/banner_exchange_w_EF_5cd4a81ad7.jpg",
+            "target": "https:\/\/fblacklight.org\/",
+            "country": "fr",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "82c337afbbad6c9c5627f901ecfdcac9"
+            },
+            "file": "img\/cons\/fblacklight.jpg"
+        },
+        "furrnion": {
+            "enable": false,
+            "source": "https:\/\/www.furrnion.org\/banner-furrnion.gif",
+            "target": "https:\/\/www.furrnion.org\/",
+            "country": "es",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "5e1a5393bc27e24664249c3dcb8df8a2"
+            },
+            "file": "img\/cons\/furrnion.gif"
+        },
+        "gdakon": {
+            "enable": true,
+            "source": "https:\/\/static.gdakon.org\/banner_200_80.jpg",
+            "target": "https:\/\/gdakon.org\/",
+            "country": "pl",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "491e078415d50037552ad7e394bf8e8d"
+            },
+            "file": "img\/cons\/gdakon.jpg"
+        },
+        "infurnity": {
+            "enable": false,
+            "source": "https:\/\/infurnity.com\/wp-content\/uploads\/2020\/02\/200x80banner.png",
+            "target": "https:\/\/infurnity.com\/",
+            "country": "tw",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "jmof": {
+            "enable": true,
+            "source": "img\/cons\/jmof.png",
+            "target": "https:\/\/www.jmof.jp\/",
+            "country": "jp",
+            "data": {
+                "hash": "d41d8cd98f00b204e9800998ecf8427e",
+                "timestamp": null,
+                "status": 0
+            },
+            "file": "img\/cons\/jmof.png"
+        },
+        "nordicfuzzcon": {
+            "enable": false,
+            "source": "https:\/\/www.nordicfuzzcon.org\/content\/website\/general\/NFCBanner.gif",
+            "target": "https:\/\/www.nordicfuzzcon.org\/",
+            "country": "se",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 403,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "silverfang": {
+            "enable": true,
+            "source": "https:\/\/con.silverfang.net\/wp-content\/themes\/con\/banner200x80.png",
+            "target": "https:\/\/con.silverfang.net\/",
+            "country": "us",
+            "data": {
+                "timestamp": 1684880319,
+                "status": 200,
+                "hash": "2141f550d06105565c87eedbfc2e7a1d"
+            },
+            "file": "img\/cons\/silverfang.png"
+        },
+        "slofluffcon": {
+            "enable": true,
+            "source": "https:\/\/slofluffcon.org\/assets\/banners\/sfc-2023.png",
+            "target": "https:\/\/slofluffcon.org\/",
+            "country": "si",
+            "file": "img\/cons\/slofluffcon.png",
+            "data": {
+                "timestamp": 1686858864,
+                "status": 200,
+                "hash": "4f91044fb28ce3d2c10c971194c680cd"
+            }
+        }
+    }
+}
