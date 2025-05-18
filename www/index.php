@@ -155,43 +155,35 @@
 
 	<body>
 		<header>
-			<label for="nav-state" id="nav-button"></label>
-			<h1><span class="ef-menubutton"></span>Eurofurence <?= $core->current->number ?></h1>
+			<nav>
+				<!-- <a href="home" id="ef-homelink">&lt; Home Page</a> -->
+				<?= $core->get_menu() ?>
+				<!--
+				<h3>Countdown</h3>
+				<div class="uk-grid-small uk-child-width-auto uk-margin-large-bottom" uk-grid uk-countdown="date: <?= $core->config->convention->opening ?>">
+					<div>
+						<div class="uk-countdown-number uk-countdown-days"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center">Days</div>
+					</div>
+					<div class="uk-countdown-separator">:</div>
+					<div>
+						<div class="uk-countdown-number uk-countdown-hours"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center">Hours</div>
+					</div>
+					<div class="uk-countdown-separator">:</div>
+					<div>
+						<div class="uk-countdown-number uk-countdown-minutes"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center">Minutes</div>
+					</div>
+					<div class="uk-countdown-separator">:</div>
+					<div>
+						<div class="uk-countdown-number uk-countdown-seconds"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center">Seconds</div>
+					</div>
+				</div>
+				-->
+			</nav>
 		</header>
-		<input type="checkbox" id="nav-state" />
-		<nav>
-			<a href="home" id="ef-homelink">&lt; Home Page</a>
-			<hr />
-			<?= $core->get_menu() ?>
-			<hr />
-			<h3>News</h3>
-			<div id="news" class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider" uk-grid>
-				<div>JavaScript required to view the latest announcements from Eurofurence.</div>
-			</div>
-			<hr />
-			<h3>Countdown</h3>
-			<div class="uk-grid-small uk-child-width-auto uk-margin-large-bottom" uk-grid uk-countdown="date: <?= $core->config->convention->opening ?>">
-				<div>
-					<div class="uk-countdown-number uk-countdown-days"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center">Days</div>
-				</div>
-				<div class="uk-countdown-separator">:</div>
-				<div>
-					<div class="uk-countdown-number uk-countdown-hours"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center">Hours</div>
-				</div>
-				<div class="uk-countdown-separator">:</div>
-				<div>
-					<div class="uk-countdown-number uk-countdown-minutes"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center">Minutes</div>
-				</div>
-				<div class="uk-countdown-separator">:</div>
-				<div>
-					<div class="uk-countdown-number uk-countdown-seconds"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center">Seconds</div>
-				</div>
-			</div>
-		</nav>
 
 		<main <?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
 			<div id="content">
