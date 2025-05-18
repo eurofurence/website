@@ -40,9 +40,9 @@
 		"hrefSuffix": "",
 		"ifActiveClass": "ef-active",
 		"templates": {
-			"category": "<div role=\"listitem\"><h3>{title}</h3><ul>{items}</ul></div>",
+			"category": "<li><input type=\"radio\" name=\"subnav-ctl\" id=\"subnav-{title}\" /><label for=\"subnav-{title}\">{title}</label><ul>{items}</ul></li>",
 			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}>{menuText}</a></li>",
-			"nav": "<div role=\"list\" class=\"uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider\" uk-grid>{categories}</div>"
+			"nav": "<ul>{categories}</ul>"
 		}
 	},
 	"staticOut": {

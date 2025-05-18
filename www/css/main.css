@@ -1,3 +1,7 @@
+:root {
+	--ef-green: #005953;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -62,25 +66,155 @@ header h1 {
 
 /* navigation */
 nav {
-	
-}
-
-nav ul {
-	padding-left: 0;
-}
-nav li {
 	position: relative;
+	z-index: 8;
+	width: fit-content;
+	margin: 20px auto;
+	background: var(--ef-green);
+	/* background: linear-gradient(
+		69deg,
+		rgba(229, 0, 0, 0.4) 0%,
+		rgba(255, 141, 0, 0.4) 25%,
+		rgba(2, 129, 33, 0.4) 45%,
+		rgba(255, 238, 0, 0.4) 60%,
+		rgba(0, 76, 255, 0.4) 75%,
+		rgba(119, 0, 136, 0.4) 100%
+	); */
+	border-radius: 6px;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #fff;
+	text-shadow: 0 0 2px white;
+	text-decoration: none;
+}
+nav ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-nav li a {
+nav > ul {
+	display: flex;
+}
+nav > ul > li {
+	position: relative;
+}
+nav > ul > li > a,
+nav > ul > li > label {
 	display: inline-block;
+	padding: 5px 10px;
+	cursor: pointer;
 }
-@media (max-width: 960px) {
-	nav li a {
-		padding-top: 4px;
-		padding-bottom: 4px;
+nav > ul > li:first-child > a,
+nav > ul > li:first-child > label {
+	padding-left: 30px;
+}
+nav > ul > li:last-child > a,
+nav > ul > li:last-child > label {
+	padding-right: 30px;
+}
+nav > ul > li > label:after {
+	content: " ▼";
+	font-size: .67em;
+}
+input[id="nav-ctl"],
+input[name="subnav-ctl"] {
+	position: fixed;
+	top: -100vh;
+	opacity: 0;
+}
+nav > ul > li:hover > ul,
+nav > ul > li > ul:hover,
+nav input[name="subnav-ctl"]:checked ~ ul {
+	max-height: 100vh;
+}
+nav > ul ul {
+	position: absolute;
+	top: 100%;
+	left: 10px;
+	max-height: 0;
+	overflow: hidden;
+	background-color: var(--ef-green);
+	border-radius: 0 0 4px 4px;
+	transition: max-height .25s;
+}
+nav > ul ul a {
+	display: inline-block;
+	width: 100%;
+	padding: 5px 10px;
+}
+nav > ul ul a:after {
+	background-color: #fff !important;
+}
+nav > ul ul a:hover {
+	background-color: #fff;
+	color: var(--ef-green);
+	text-decoration: none;
+}
+/* nav responsive for mobile */
+label[for="nav-ctl"] {
+	display: block;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	z-index: 9;
+	background-image: url(../img/menu.png);
+	background-size: contain;
+}
+#nav-ctl:checked ~ nav {
+	max-width: 100vw;
+}
+@media (max-width: 640px) {
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		padding-top: 70px;
+		overflow: hidden;
+		border-radius: 0;
+		max-width: 0;
+		transition: max-width .25s;
+	}
+	nav > ul {
+		display: block;
+	}
+	nav ul ul {
+		position: relative;
+		max-height: unset;
+		backdrop-filter: none;
+		box-shadow: none;
+		background-color: transparent;
+		padding: 0 .66em;
+	}
+	nav ul label {
+		color: #333;
+	}
+	nav > ul ul a {
+		color: #fff;
+	}
+	nav > ul > li:first-child > a,
+	nav > ul > li:first-child > label {
+		padding-left: 10px;
+	}
+	nav > ul > li:last-child > a,
+	nav > ul > li:last-child > label {
+		padding-right: 10px;
 	}
 }
+
+
+
+
+
+
 
 /* body area */
 main {

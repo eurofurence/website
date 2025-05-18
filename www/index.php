@@ -155,6 +155,8 @@
 
 	<body>
 		<header>
+			<input type="checkbox" id="nav-ctl" />
+			<label for="nav-ctl" class="uk-hidden@s"></label>
 			<nav>
 				<!-- <a href="home" id="ef-homelink">&lt; Home Page</a> -->
 				<?= $core->get_menu() ?>
