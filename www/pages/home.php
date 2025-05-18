@@ -6,7 +6,7 @@
     </p>
 </div>
 
-<div class="uk-column-1-2@l uk-margin-top landingpage-content-start">
+<div class="uk-margin-top">
     <a href="#content" id="scrolldown" uk-scroll="offset: 50"><strong>Scroll Down<br /><span uk-icon="icon: chevron-down"></span></strong></a>
 
     <h1><?= $this->current->title ?></h1>

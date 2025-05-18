@@ -1,35 +1,9 @@
-:root {
-	--header-height: 85px;
-}
-
 * {
 	box-sizing: border-box;
 }
 html {
 	background: #333;
 	color: #fff;
-}
-main {
-	background-color: #333;
-	background-image: none;
-	background-repeat: no-repeat;
-}
-/* mobile browser do not support 
-   background-attachment: fixed for performance reasons,
-   the following fix enables it only on desktop */
-   @media only screen and (min-width: 1080px) {
-	main {
-		background-attachment: fixed;
-		background-size: cover;
-		background-position-y: var(--header-height);
-		background-position-x: center;
-	}
-}
-@media only screen and (max-width: 1080px) {
-	main {
-		background-attachment: scroll;
-		background-position-y: 0;
-	}
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #fff;
@@ -44,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 }
 
-a[href^="http"]:not(.hide-ext):after {
+.uk-modal a[href^="http"]:not(.hide-ext, .uk-icon-button):after {
     display: inline-block;
     width: 14px;
     height: 10px;
@@ -57,30 +31,16 @@ a[href^="http"]:not(.hide-ext):after {
 	background-color: #fff;
 }
 
-/* fix anchor targeting */
-:target {
-	border-top: var(--header-height) solid transparent;
-	margin-top: calc(0 - var(--header-height));
+header, main, footer {
+	margin: 20px auto;
+	max-width: var(--uk-breakpoint-l, 1200px);
+	border: 1px inset #fff;
 }
 
 /* header */
-header, label#nav-button {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: var(--header-height);
-}
 header {
 	z-index: 7;
 	background-color: #000;
-}
-label#nav-button {
-	cursor: pointer;
-	z-index: 8;
-}
-label#nav-button:hover ~ * .ef-menubutton {
-	background: url(../img/menu.png) no-repeat;
-	background-size: contain;
 }
 
 header h1 {
@@ -102,24 +62,7 @@ header h1 {
 
 /* navigation */
 nav {
-	position: fixed;
-	top: var(--header-height);
-	padding: 20px 20px calc(var(--header-height) + 20px);
-	z-index: 7;
-	width: 100%;
-	height: 100vh;
-	left: -100vw;
-	transition: left .2s;
-	background-color: rgba(0, 0, 0, 0.9);
-	overflow: auto;
-}
-input#nav-state {
-	position: fixed;
-	left: -100vw;
-}
-
-#nav-state:checked ~ nav {
-	left: 0vw;
+	
 }
 
 nav ul {
@@ -142,43 +85,8 @@ nav li a {
 /* body area */
 main {
 	position: relative;
-	padding: calc(var(--header-height) + 20px) 0 20px;
-	overflow: hidden;
-}
-.landingpage-content-start {
-	position: relative;
-}
-#scrolldown:hover {
-	text-decoration: none;
-}
-#scrolldown span[uk-icon] {
-    position: relative;
-    transition: top .2s;
-    top: -10px;
-}
-#scrolldown:hover span[uk-icon] {
-    top: -5px
-}
-main.ef-landingpage {
-	/* latter span being the "scroll down" div height */
-	padding-top: calc(100vh - var(--header-height) - 50px);
-}
-#ef-condetails {
-	position: absolute;
-	top: 0;
-	padding: 20px;
-	padding-left: 20px;
-	padding-left: var(--menu-button-width, 100);
-}
-#scrolldown {
-	position: absolute;
-	width: 100%;
-	top: -200px;
-	text-align: center;
 }
 #content {
-    min-height: calc(100vh - var(--header-height));
-	background: rgba(0, 0, 0, 0.9);
 	padding: 20px;
 }
 [class^="uk-card-media-"] a:hover img,
@@ -189,11 +97,6 @@ main.ef-landingpage {
 }
 .ef-table-borders th, .ef-table-borders td {
 	border: 1px solid #666;
-}
-
-/* news */
-#news cite {
-	display: block;
 }
 
 /* footer */

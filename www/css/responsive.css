@@ -6,13 +6,5 @@
 */
  
 @media (max-width: 1080px) {
-	:root {
-		--header-height: 46px;
-	}
-	header h1 {
-		padding-left: .25em;
-		padding-top: 2px;
-		font-size: 2em;
-		letter-spacing: normal;
-	}
+	
 }
