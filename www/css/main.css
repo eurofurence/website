@@ -38,13 +38,11 @@ h1, h2, h3, h4, h5, h6 {
 header, main, footer {
 	margin: 20px auto;
 	max-width: var(--uk-breakpoint-l, 1200px);
-	border: 1px inset #fff;
 }
 
 /* header */
 header {
 	z-index: 7;
-	background-color: #000;
 }
 
 header h1 {
@@ -98,9 +96,11 @@ nav ul {
 }
 nav > ul {
 	display: flex;
+	text-align: center;
 }
 nav > ul > li {
 	position: relative;
+	min-width: 180px;
 }
 nav > ul > li > a,
 nav > ul > li > label {
@@ -108,14 +108,14 @@ nav > ul > li > label {
 	padding: 5px 10px;
 	cursor: pointer;
 }
-nav > ul > li:first-child > a,
+/* nav > ul > li:first-child > a,
 nav > ul > li:first-child > label {
-	padding-left: 30px;
+	padding-left: 50px;
 }
 nav > ul > li:last-child > a,
 nav > ul > li:last-child > label {
-	padding-right: 30px;
-}
+	padding-right: 50px;
+} */
 nav > ul > li > label:after {
 	content: " ▼";
 	font-size: .67em;
