@@ -1,5 +1,6 @@
 :root {
 	--ef-green: #005953;
+	--ef-green-light: #69a3a2;
 }
 
 * {
@@ -241,6 +242,20 @@ main {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+#ef-home-photo {
+	min-height: 400px;
+	color: #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#ef-home-photo > p {
+	margin: 20px 30px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, .7);
+	width: min(50%, 480px, 100%);
+	position: absolute;
+	right: 20px;
+}
 
 /* footer */
 footer {
@@ -266,6 +281,12 @@ span.ef-uk-icon-lift {
 }
 [class*="uk-column-"] > * {
 	break-inside: avoid-column;
+}
+[class^="uk-"][class$="primary"] {
+	background-color: var(--ef-green);
+}
+[class^="uk-"][class$="primary"]:hover {
+	background-color: var(--ef-green-light);
 }
 
 /* convention links */

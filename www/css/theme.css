@@ -11,6 +11,11 @@ main {
     text-align: right;
 }
 
+#ef-home-photo {
+    background-image: url(../img/pages/home/photo_2025.jpg);
+    background-position: bottom;
+}
+
 main a {
 	color: var(--ef-palette-1);
 }
