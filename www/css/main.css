@@ -233,6 +233,15 @@ main {
 	border: 1px solid #666;
 }
 
+/* landing page */
+#ef-home-banner {
+	height: 300px;
+	color: #fff;
+	padding: 20px 30px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 /* footer */
 footer {
 	padding: 20px;
@@ -266,7 +275,7 @@ span.ef-uk-icon-lift {
 	height: 80px;
 }
 
-/* Apps */
+/* apps */
 .ef-app-badge img {
 	height: 36px;
 }

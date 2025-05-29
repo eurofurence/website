@@ -1,4 +1,5 @@
-<div id="ef-condetails">
+<div id="ef-home-banner">
+    <h1>Eurofurence <?= $this->current->number ?></h1>
     <p>
         <?= $this->current->theme ?> <br />
         <?= $this->current->dates ?> <br />

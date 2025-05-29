@@ -6,6 +6,11 @@ main {
     
 }
 
+#ef-home-banner {
+    background-image: url(../img/pages/home/banner_2025.gif);
+    text-align: right;
+}
+
 main a {
 	color: var(--ef-palette-1);
 }
