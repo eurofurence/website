@@ -155,8 +155,9 @@
 
 	<body>
 		<header>
-			<input type="checkbox" id="nav-ctl" />
-			<label for="nav-ctl" class="uk-hidden@s"></label>
+			<button id="nav-toggle" aria-label="Toggle navigation bar" tabindex="0">
+				<img src="img/menu-icon.svg" alt="menu icon" />
+			</button>
 			<nav>
 				<!-- <a href="home" id="ef-homelink">&lt; Home Page</a> -->
 				<?= $core->get_menu() ?>
