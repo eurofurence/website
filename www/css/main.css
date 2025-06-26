@@ -166,9 +166,10 @@ label[for="nav-ctl"] {
 	background-image: url(../img/menu.png);
 	background-size: contain;
 }
-#nav-ctl:checked ~ nav {
-	max-width: 100vw;
+#nav-toggle {
+	display: none;
 }
+
 @media (max-width: 640px) {
 	nav {
 		position: fixed;
@@ -207,6 +208,20 @@ label[for="nav-ctl"] {
 	nav > ul > li:last-child > a,
 	nav > ul > li:last-child > label {
 		padding-right: 10px;
+	}
+
+	/* Mobile nav toggle button */
+	#nav-toggle {
+		display: block;
+		margin: 0.5rem;
+		border: none;
+		border-radius: 9999px;
+		width: 3rem;
+		height: 3rem;
+		padding: 0.5rem;
+	}
+	#nav-toggle:focus ~ nav {
+		max-width: 100vw;
 	}
 }
 
