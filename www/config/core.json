@@ -39,7 +39,7 @@
 		"hrefSuffix": "",
 		"ifActiveClass": "ef-active",
 		"templates": {
-			"category": "<li><input type=\"radio\" name=\"subnav-ctl\" id=\"subnav-{title}\" /><label for=\"subnav-{title}\">{title}</label><ul>{items}</ul></li>",
+			"category": "<li><a class=\"has-submenu\" aria-expanded=\"false\" tabindex=\"{i}\">{title}</a><ul>{items}</ul>",
 			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}>{menuText}</a></li>",
 			"nav": "<ul>{categories}</ul>"
 		}
