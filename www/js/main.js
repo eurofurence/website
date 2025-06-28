@@ -19,23 +19,3 @@ const job = document.getElementById(`ef-job-${window.location.hash.substring(1)}
 if (window.location.hash && job) {
     UIkit.modal(job).show();
 }
-
-// dropdown navigation bar
-document.querySelectorAll('nav label[for^="subnav-"]').forEach(label => {
-    // close previously opened nav dropdown on repeated click
-    let radio = document.getElementById(label.htmlFor);
-    label.addEventListener('click', (event) => {
-        if (radio.checked) {
-            radio.checked = false;
-            event.preventDefault();
-        }
-    });
-    // or on hovering another nav item
-    label.addEventListener('mouseenter', (event) => {
-        document.querySelectorAll('nav input[id^="subnav-"]').forEach(r => {
-            if (r.id != label.htmlFor) {
-                r.checked = false;
-            }
-        })
-    });
-});
