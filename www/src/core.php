@@ -4,7 +4,7 @@
  * Includes debug(), dirmtime(), dircopy() and is_external() as global functions
  * @author	draconigen@dogpixels.net
  * @since 	11/2015
- * @version	4.2
+ * @version	4.3
  * @license	MIT
  */
 class EFWebCore
@@ -186,7 +186,7 @@ class EFWebCore
 		}
 
 		// generate categories html string
-		$category_i = 0;
+		$category_i = 1;
 		$categories_html = "";
 		foreach ($categorized_pages as $category_title => $pages)
 		{
