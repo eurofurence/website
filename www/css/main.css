@@ -214,15 +214,20 @@ label[for="nav-ctl"] {
 	/* Mobile nav toggle button */
 	#nav-toggle {
 		display: block;
+		position: relative;
+		z-index: 9;
 		margin: 0.5rem;
 		border: none;
 		border-radius: 9999px;
 		width: 3rem;
 		height: 3rem;
 		padding: 0.5rem;
+		background: none;
+		transition: ease 0.1s;
 	}
-	#nav-toggle:focus ~ nav {
-		max-width: 100vw;
+	#nav-toggle:hover,
+	#nav-toggle:focus {
+		border: 2px solid #fff;
 	}
 }
 

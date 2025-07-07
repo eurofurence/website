@@ -155,9 +155,10 @@
 
 	<body>
 		<header>
-			<button id="nav-toggle" aria-label="Toggle navigation bar" tabindex="0">
+			<button id="nav-toggle" aria-label="Toggle navigation bar" aria-expanded="false" tabindex="0">
 				<img src="img/menu-icon.svg" alt="menu icon" />
 			</button>
+
 			<nav>
 				<!-- <a href="home" id="ef-homelink">&lt; Home Page</a> -->
 				<?= $core->get_menu() ?>
@@ -258,5 +259,24 @@
 		<script src="js/main.js"></script>
 		<?= $core->current->key === 'lostandfound'? '<script src="js/lostandfound.js"></script>' : ''?>
 	</body>
+
+	<script defer>
+		// Accessible navbar toggle mechanism
+		const navButton = document.querySelector("#nav-toggle")
+
+		navButton.addEventListener("click", e => {
+			let navExpanded = navButton.getAttribute("aria-expanded")
+
+			if(navExpanded === "false") {
+				navButton.setAttribute("aria-expanded", "true")
+				document.querySelector("#nav-toggle ~ nav").style.maxWidth = "100vw"
+				return
+			}
+
+			navButton.setAttribute("aria-expanded", "false")
+			document.querySelector("#nav-toggle ~ nav").style.maxWidth = "0"
+			return
+		})
+	</script>
 </html>
 <?php $core->end(); ?>
