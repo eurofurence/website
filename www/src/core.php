@@ -2,9 +2,9 @@
 /**
  * Eurofurence Website Core Component
  * Includes debug(), dirmtime(), dircopy() and is_external() as global functions
- * @author	draconigen@gmail.com
+ * @author	draconigen@dogpixels.net
  * @since 	11/2015
- * @version	4.1
+ * @version	4.3
  * @license	MIT
  */
 class EFWebCore
@@ -186,11 +186,15 @@ class EFWebCore
 		}
 
 		// generate categories html string
+		$category_i = 1;
 		$categories_html = "";
 		foreach ($categorized_pages as $category_title => $pages)
 		{
+			// insert counter (e.g. tabindex)
+			$category_html = mb_ereg_replace("\{i\}", $category_i++, $this->config->menu->templates->category);
+
 			// insert category title
-			$category_html = mb_ereg_replace("\{title\}", $category_title, $this->config->menu->templates->category);
+			$category_html = mb_ereg_replace("\{title\}", $category_title, $category_html);
 			
 			// generate items html string
 			$items = "";
@@ -201,6 +205,7 @@ class EFWebCore
 
 				// load item template
 				$item = $this->config->menu->templates->item;
+
 
 				// insert href
 				$item = mb_ereg_replace

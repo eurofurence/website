@@ -72,7 +72,7 @@
 			['Rig', 'HelpCenter', 'rig.jpg', ''],
 			['Sebin', 'Accessibility', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
 			['Vinaru', 'Banner Exchange', 'vinaru.png', 'https://www.furaffinity.net/user/vinaru'],
-			['Xenor', 'Survey', 'xenor.png', 'https://twitter.com/XenorThesergal'],
+			['Xenor', 'Survey', 'xenor.png', 'https://bsky.app/profile/xenor.bsky.social'],
 		];
 
 		foreach ($members as $m) { ?>
