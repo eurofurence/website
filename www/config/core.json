@@ -229,6 +229,19 @@
             "title": "Venue - Nearby Dining Options",
             "uri": "restaurants.php"
         },
+        "dancecontests": {
+			"owner": "@Px0ssum",
+            "accessible": true,
+            "category": "Program",
+            "description": "Infos on our popular dance competition shows: Paws on Fire and Enter The Arena.",
+            "inMenu": true,
+            "keywords": "dance, dancing, arena, competition, contest, paws on fire, enter the arena",
+            "menuText": "Dance Contests",
+            "ogpImage": "dancecontests.jpg",
+            "robots": "",
+            "title": "Enter the Arena & Paws on Fire",
+            "uri": "dancecontests.php"
+        },
 		"dealersden": {
 			"owner": "@Pattarchus",
 			"accessible": false,
