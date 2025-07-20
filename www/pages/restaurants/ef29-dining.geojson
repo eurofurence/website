@@ -1,0 +1,326 @@
+{
+"_meta": {
+  "copyright": "Copyright (c) 2025, Eurofurence e.V.",
+  "License": "CC-BY-SA",
+  "authors": "Jörg Reuter",
+  "changed": "2025-05-23T22:30+02:00",
+  "disclaimer": "No guarantees, claims, or promises are given about the accurarcy, completeness, currency, or integrity of the provided information."
+},
+"type": "FeatureCollection",
+"features": [
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "venue",
+       "title": "CCH",
+       "name": "Congress Center Hamburg",
+       "address": "Congressplatz 1, 20355 Hamburg",
+       "url": "https://www.cch.de/",
+       "description": "<div style='padding-bottom: 0.7ex;'>Venue of Eurofurence 29</div><div>The pedestrian entrance is from Dag-Hammarsköld-Platz/Congressplatz. Entry to the parking garage from Tiergartenstraße.</div>"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986, 53.561583]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Green Papaya",
+       "style": "Vietnamese",
+       "attributes": ["vegetarian"],
+       "price": 2,
+       "distance": 450,
+       "address": "Stephansplatz 6, 20354 Hamburg",
+       "phone": "+49 40 349 607 83",
+       "email": "info@greenpapaya-hamburg.de",
+       "url": "https://www.greenpapaya-hamburg.de/stephansplatz/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.989220, 53.557797]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "EF Foodtrucks",
+       "style": "Mixed",
+       "attributes": [],
+       "price": 2,
+       "distance": 5,
+       "address": "Congressplatz"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986374, 53.561328]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Stadtsalat",
+       "style": "Salads",
+       "attributes": ["vegetarian", "vegan", "glutenfree"],
+       "price": 1,
+       "distance": 550,
+       "address": "Große Theaterstraße 31-35, 20354 Hamburg",
+       "url": "https://stadtsalat.de/hamburg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.989222, 53.556916]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Yumi",
+       "style": "Vietnamese",
+       "attributes": ["vegan"],
+       "price": 1,
+       "distance": 600,
+       "address": "Grindelallee 22, 20146 Hamburg",
+       "phone": "+49 40 466 541 76",
+       "url": "https://www.instagram.com/yumi.streetkitchen/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.983890, 53.564883]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Hofbräu Hamburg",
+       "style": "German",
+       "attributes": ["vegetarian", "vegan"],
+       "price": 2,
+       "distance": 600,
+       "address": "Esplanade 6, 20354 Hamburg",
+       "phone": "+49 40 349 938 38",
+       "email": "reservierung@hamburg-hofbraeu.de",
+       "url": "https://www.hofbraeu-wirtshaus.de/esplanade/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.992049, 53.557525]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegan",
+       "title": "Apple & Eve",
+       "style": "Vegan",
+       "attributes": ["vegan"],
+       "price": 1,
+       "distance": 700,
+       "address": "Grindelallee 34a, 20146 Hamburg",
+       "phone": "+49 40 226 668 27",
+       "email": "info@appleeve.de",
+       "url": "https://speisekarte.appleeve.de/restaurant/apple-and-eve-grindel"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.983163, 53.565513]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegan",
+       "title": "Amargi",
+       "name": "Amargi Gängeviertel",
+       "style": "Syrian",
+       "attributes": ["vegan"],
+       "price": 1,
+       "distance": 850,
+       "address": "Fabrique, Valentinskamp 34a, 20355 Hamburg",
+       "phone": "+49 157 5959 7337"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.983375, 53.555211]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Quán 19",
+       "name": "The Grand Garden: Quán 19",
+       "style": "Vietnamese",
+       "attributes": ["vegan", "glutenfree"],
+       "price": 2,
+       "distance": 950,
+       "address": "Rentzelstr. 6, 20146 Hamburg",
+       "phone": "+49 40 521 568 76",
+       "email": "info@bythegrandgarden.com",
+       "url": "https://www.bythegrandgarden.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.980269, 53.566838]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Edelcurry",
+       "style": "Bratwurst",
+       "attributes": ["vegan", "glutenfree"],
+       "price": 1,
+       "distance": 1100,
+       "address": "Große Bleichen 68, 20354 Hamburg",
+       "phone": "+49 40 3571 6262",
+       "email": "info@edelcurry.de",
+       "url": "https://www.edelcurry.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986331, 53.552241]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegan",
+       "title": "Happenpappen",
+       "name": "HAPPENPAPPEN",
+       "style": "Vegan",
+       "attributes": ["vegan"],
+       "price": 1,
+       "distance": 1400,
+       "address": "Feldstraße 36, 20357 Hamburg",
+       "email": "cathy.happenpappen@gmail.com",
+       "url": "https://happenpappen.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.970254, 53.557447]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-glutenfree",
+       "title": "Isabella Patisserie",
+       "name": "Isabella Glutenfreie Patisserie",
+       "style": "Confectionary",
+       "attributes": ["glutenfree", "vegan"],
+       "price": 2,
+       "distance": 1400,
+       "address": "Alter Wall 12, 20457 Hamburg",
+       "phone": "+49 40 751 160 11",
+       "email": "hamburg@isabella-patisserie.de",
+       "url": "https://isabella-patisserie.de/stores/hamburg-alter-wall/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.991153, 53.550702]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Capriccio",
+       "style": "Italian",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 3,
+       "distance": 1500,
+       "address": "Thielbek 12, 20355 Hamburg",
+       "phone": "+49 40 180 792 19"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.980476, 53.551210]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegetarian",
+       "title": "Piccolo Paradiso",
+       "style": "Vegetarian",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 2,
+       "distance": 1500,
+       "address": "Brüderstraße 27, 20355 Hamburg",
+       "phone": "+49 40 357 153 58",
+       "email": "info@piccolo-paradiso.de",
+       "url": "https://www.piccolo-paradiso.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.980685, 53.551451]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegan",
+       "title": "Kkokki",
+       "name": "kkokki loves vegan",
+       "style": "Korean",
+       "attributes": ["vegan"],
+       "price": 2,
+       "distance": 2000,
+       "address": "Schanzenstraße 36, 20357 Hamburg",
+       "phone": "+49 40 431 900 70",
+       "email": "info@kkokki-loves-vegan.de",
+       "url": "https://www.kkokki-loves-vegan.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.965377, 53.561011]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegan",
+       "title": "Cham",
+       "name": "Cham The Vegan Kitchen",
+       "style": "Vegan",
+       "attributes": ["vegan"],
+       "price": 2,
+       "distance": 2200,
+       "address": "Schulterblatt 75, 20357 Hamburg",
+       "phone": "+49 40 842 002 88",
+       "email": "info@chamhamburg.de",
+       "url": "https://chamhamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.961274, 53.562538]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegan",
+       "title": "Bodhi",
+       "name": "Bodhi Vegan Living",
+       "style": "Vegan",
+       "attributes": ["vegan"],
+       "price": 2,
+       "distance": 2000,
+       "address": "Lange Reihe 93, 20099 Hamburg",
+       "phone": "+49 40 361 970 08",
+       "url": "https://www.instagram.com/anveganhouse/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.012716, 53.558708]
+    }
+  }
+]
+}

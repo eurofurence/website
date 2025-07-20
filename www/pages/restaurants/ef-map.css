@@ -1,0 +1,719 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.venue {
+  background-image: url("./marker/eflogo_round.svg");
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  z-index: 3;
+}
+
+.hotel-featured {
+  background-image: url("./marker/hotelmarker.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.hotel-featured-partner {
+  background-image: url("./marker/efhotel.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.hotel-popup-partner {
+  height: 18px;
+  margin-bottom: 2ex;
+}
+
+.text-partner {
+  display: inline-block;
+  color: #1b4e4c;
+  vertical-align: super;
+}
+
+.logo-partner {
+  display: inline-block;
+  background-image: url("./marker/eflogo_round.svg");
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.dining {
+  background-image: url("./marker/dining.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.dining-vegetarian {
+  background-image: url("./marker/dining-vegetarian.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.dining-vegan {
+  background-image: url("./marker/dining-vegan.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.dining-glutenfree {
+  background-image: url("./marker/dining-glutenfree.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.museum {
+  background-image: url("./marker/museum.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.park {
+  background-image: url("./marker/park.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.photo {
+  background-image: url("./marker/photo.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.generic {
+  background-image: url("./marker/generic.svg");
+  background-size: cover;
+  width: 32px;
+  height: 48px;
+  z-index: 2;
+  --offset: 0px -22px;
+}
+
+.hotel-osm {
+  background-image: url("./marker/transparent.png");
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+}
+
+.rail {
+  background-image: url("./marker/rail-station.svg");
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.subway {
+  background-image: url("./marker/subway-station.svg");
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.bus {
+  background-image: url("./marker/busstop.svg");
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+
+.hotel-popup {
+  max-width: 500px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.hotel-popup-heading {
+  font-weight: bold;
+  padding-bottom: 1ex;
+}
+
+.hotel-popup-alert {
+  color: red;
+  padding-bottom: 1ex;
+}
+
+.hotel-popup-text {
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.hotel-popup a:visited {
+  text-decoration: none;
+}
+
+.hotel-popup a:link {
+  text-decoration: none;
+}
+
+.hotel-popup a:hover {
+  text-decoration: underline;
+}
+
+.hotel-partner-popup {
+  max-width: 500px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.hotel-partner-popup a:visited {
+  text-decoration: none;
+}
+
+.hotel-partner-popup a:link {
+  text-decoration: none;
+}
+
+.hotel-partner-popup a:hover {
+  text-decoration: underline;
+}
+
+.dining-popup {
+  max-width: 500px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.dining-popup a:visited {
+  text-decoration: none;
+}
+
+.dining-popup a:link {
+  text-decoration: none;
+}
+
+.dining-popup a:hover {
+  text-decoration: underline;
+}
+
+.dining-popup-heading {
+  font-weight: bold;
+  padding-bottom: 1ex;
+}
+
+.dining-popup-text {
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.dining-popup a:visited {
+  text-decoration: none;
+}
+
+.dining-popup a:link {
+  text-decoration: none;
+}
+
+.dining-popup a:hover {
+  text-decoration: underline;
+}
+
+
+.hotrec_s {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.venue-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.venue-popup-heading {
+  font-weight: bold;
+  padding-bottom: 1ex;
+}
+
+.venue-popup-alert {
+  color: red;
+  padding-bottom: 1ex;
+}
+
+.venue-popup-text {
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.venue-popup-description {
+  padding-left: 0px;
+  text-indent: 0px;
+}
+
+.venue-popup a:visited {
+  text-decoration: none;
+}
+
+.venue-popup a:link {
+  text-decoration: none;
+}
+
+.venue-popup a:hover {
+  text-decoration: underline;
+}
+
+.station-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.station-popup-heading {
+  font-weight: bold;
+  padding-bottom: 1ex;
+}
+
+.station-popup-alert {
+  color: red;
+  padding-bottom: 1ex;
+}
+
+.station-popup-line-S1 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: green;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-S2 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: #b41439;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em
+}
+
+.station-popup-line-S3 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: purple;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-S4 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: #ec0068;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-S5 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: #009cca;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-S5¹ {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: #009cca;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-S6 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: #d2d900;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-S11 {
+  border-radius: 20%/40%;
+  color: green;
+  background-color: #fdf4dc;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 1px;
+  border-color: green;
+  margin-right: 0.2em
+}
+
+.station-popup-line-S21 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: red;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+
+.station-popup-line-S31 {
+  border-radius: 20%/40%;
+  color: white;
+  background-color: purple;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-U1 {
+  color: white;
+  background-color: blue;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-U2 {
+  color: white;
+  background-color: red;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-U3 {
+  color: white;
+  background-color: gold;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup-line-U4 {
+  color: white;
+  background-color: teal;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+.station-popup a:visited {
+  text-decoration: none;
+}
+
+.station-popup a:link {
+  text-decoration: none;
+}
+
+.station-popup a:hover {
+  text-decoration: underline;
+}
+
+.busstop-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.busstop-popup-heading {
+  font-weight: bold;
+  padding-bottom: 1ex;
+}
+
+.busstop-popup-alert {
+  color: red;
+  padding-bottom: 1ex;
+}
+
+.station-popup-text {
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.station-popup-description {
+  padding-left: 0px;
+  text-indent: 0px;
+}
+
+.busstop-popup-bus {
+  color: white;
+  background-color: red;
+  padding-left: 1em;
+  padding-right: 1.1em;
+  margin-right: 0.2em;
+  font-weight: bold;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.busstop-popup-nightbus {
+  color: white;
+  background-color: black;
+  padding-left: 1em;
+  padding-right: 1.1em;
+  margin-right: 0.2em;
+  font-weight: bold;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.busstop-popup a:visited {
+  text-decoration: none;
+}
+
+.busstop-popup a:link {
+  text-decoration: none;
+}
+
+.busstop-popup a:hover {
+  text-decoration: underline;
+}
+
+.generic-popup {
+  max-width: 500px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 64;
+}
+
+.generic-popup-heading {
+  font-weight: bold;
+  padding-bottom: 1ex;
+}
+
+.generic-popup-alert {
+  color: red;
+  padding-bottom: 1ex;
+}
+
+.generic-popup-text {
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.generic-popup a:visited {
+  text-decoration: none;
+}
+
+.generic-popup a:link {
+  text-decoration: none;
+}
+
+.generic-popup a:hover {
+  text-decoration: underline;
+}
+
+.hotel:hover {
+  z-index: 32;
+}
+
+.hotel:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #3fb1ce;
+  color: white;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #0f718e;
+}
+
+.hotel-partner:hover {
+  z-index: 32;
+}
+
+.hotel-partner:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #005953;
+  color: white;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #008080;
+}
+
+.venue-tip:hover {
+  z-index: 32;
+}
+
+.venue-tip:hover:after {
+  content: attr(data-name);
+  white-space: nowrap;
+  background-color: #005953;
+  color: white;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #008080;
+}
+
+.transport:hover {
+  z-index: 32;
+}
+
+.dining-tip:hover {
+  z-index: 32;
+}
+
+.dining-tip:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #d5f6ff;
+  color: #404040;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #707070;
+}
+
+.dining-vegetarian-tip:hover {
+  z-index: 32;
+}
+
+.dining-vegetarian-tip:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #008c45;
+  color: #fef200;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #008020;
+}
+
+.dining-vegan-tip:hover {
+  z-index: 32;
+}
+
+.dining-vegan-tip:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #fef200;
+  color: #0a8944;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #008c45;
+}
+
+.dining-glutenfree-tip:hover {
+  z-index: 32;
+}
+
+.dining-glutenfree-tip:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #3fb1ce;
+  color: white;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #0f718e;
+}
+
+.transport:hover:after {
+  content: attr(data-name);
+  white-space: nowrap;
+  background-color: #4ab44a;
+  color: white;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #008000;
+}
+
+.poi:hover {
+  z-index: 32;
+}
+
+.poi:hover:after {
+  content: attr(data-name);
+  white-space: pre;
+  background-color: #3fb15c;
+  color: white;
+  padding: 4px;
+  font-size: 120%;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px green;
+}
+

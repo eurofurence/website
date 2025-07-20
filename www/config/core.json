@@ -216,6 +216,19 @@
 			"title": "The Daily Eurofurence",
 			"uri": "daily.php"
 		},
+        "restaurants": {
+			"owner": "@Sam_Mel",
+            "accessible": true,
+            "category": "Venue",
+            "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
+            "inMenu": true,
+            "keywords": "Hotel, Dining, Restaurants, Vegetarian, Vegan, Food, Eating",
+            "menuText": "Restaurants",
+            "ogpImage": "restaurants.png",
+            "robots": "",
+            "title": "Venue - Nearby Dining Options",
+            "uri": "restaurants.php"
+        },
 		"dealersden": {
 			"owner": "@Pattarchus",
 			"accessible": false,

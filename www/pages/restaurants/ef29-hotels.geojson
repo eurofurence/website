@@ -1,0 +1,1049 @@
+{
+"_meta": {
+  "copyright": "Copyright (c) 2025, Eurofurence e.V.",
+  "License": "CC-BY-SA",
+  "authors": "Jörg Reuter, Jürgen Roßkamp",
+  "changed": "2025-04-15T12:20+02:00",
+  "disclaimer": "No guarantees, claims, or promises are given about the accurarcy, completeness, currency, or integrity of the provided information."
+},
+"type": "FeatureCollection",
+"features": [
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "venue",
+       "title": "CCH",
+       "name": "Congress Center Hamburg",
+       "address": "Congressplatz 1, 20355 Hamburg",
+       "url": "https://www.cch.de/",
+       "description": "<div style='padding-bottom: 0.7ex;'>Venue of Eurofurence 29</div><div>The pedestrian entrance is from Dag-Hammarsköld-Platz/Congressplatz. Entry to the parking garage from Tiergartenstraße.</div>"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986, 53.561583]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "partner-hotel",
+       "title": "Radisson Blu",
+       "name": "Radisson Blu Hamburg-Dammtor",
+       "alert": "likely no vacancy, but check with hotel",
+       "stars": 4.5,
+       "rates": 4,
+       "rooms": 556,
+       "address": "Congressplatz 2, 20355 Hamburg",
+       "phone": "+49 40 35 020",
+       "email": "info.hamburg@radissonblue.com",
+       "url": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-hamburg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.987396, 53.561538]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Hotel Barceló Hamburg",
+       "name": "Barceló Hamburg",
+       "stars": 4,
+       "rates": 2,
+       "rooms": 193,
+       "address": "Ferdinandstraße 15, 20095 Hamburg",
+       "phone": "+49 40 226 3620",
+       "email": "hamburg@barcelo.com",
+       "url": "https://www.barcelo.com/de-de/barcelo-hamburg/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00083, 53.55424]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Baseler Hof",
+       "name": "Kleinhuis Hotel Baseler Hof",
+       "alert": "likely no vacancy, but check with hotel",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 168,
+       "address": "Esplanade 11, 20354 Hamburg",
+       "phone": "+49 40 35 90 60",
+       "email": "info@baselerhof.de",
+       "url": "https://baselerhof.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.991363, 53.557509]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Hotel Preuß",
+       "name": "Hotel Preuß im Dammtorpalais",
+       "alert": "there are 4 different hotels at this address",
+       "stars": 3,
+       "rates": 2,
+       "rooms": 20,
+       "address": "Moorweidenstraße 34, 20146 Hamburg",
+       "phone": "+49 40 44 57 16",
+       "email": "info@hotelpreuss.de",
+       "url": "https://www.hotelpreuss.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986926, 53.564079]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Hotel Bellmoor",
+       "name": "Hotel Bellmoor im Dammtorpalais",
+       "alert": "there are 4 different hotels at this address",
+       "stars": 3,
+       "rates": 2,
+       "rooms": 31,
+       "address": "Moorweidenstraße 34, 20146 Hamburg",
+       "phone": "+49 40 41 33 11 0",
+       "email": "info@hotel-bellmoor.de",
+       "url": "https://www.hotel-bellmoor.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.987047, 53.564074]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Hotel Amsterdam",
+       "name": "Hotel Amsterdam im Dammtorpalais",
+       "alert": "there are 4 different hotels at this address",
+       "stars": 3,
+       "rates": 2,
+       "rooms": 33,
+       "address": "Moorweidenstraße 34, 20146 Hamburg",
+       "phone": "+49 40 44 11 11 0",
+       "email": "info@hotelamsterdam.de",
+       "url": "https://www.hotelamsterdam.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.987268, 53.564068]
+    }
+  },
+ 
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Hotel Wagner",
+       "name": "Hotel Wagner im Dammtorpalais",
+       "alert": "there are 4 different hotels at this address",
+       "stars": 3,
+       "rates": 3,
+       "rooms": 51,
+       "address": "Moorweidenstraße 34, 20146 Hamburg",
+       "phone": "+49 40 450 1231 0",
+       "email": "info@hotel-wagner-hamburg.de",
+       "url": "https://www.hotel-wagner-hamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.9871, 53.5640]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hostel",
+       "title": "Generator Hostel",
+       "name": "Generator Hostel",
+       "rates": 1,
+       "address": "Steintorplatz 3, 20099 Hamburg",
+       "phone": "+49 40 226 358 460",
+       "url": "https://staygenerator.com/hostels/hamburg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.009335, 53.552742]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "partner-hotel",
+       "title": "Grand Elysée",
+       "name": "Grand Elysée Hamburg am Dammtor",
+       "stars": 5.5,
+       "rates": 4,
+       "address": "Rothenbaumchaussee 10, 20148 Hamburg",
+       "phone": "+49 40 41 41 2 0",
+       "email": "info@grand-elysee.com",
+       "url": "https://www.grand-elysee.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.990621, 53.563378]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Hotel Alameda",
+       "stars": 2,
+       "rates": 2,
+       "rooms": 20,
+       "address": "Colonnoaden 45, 20354 Hamburg",
+       "phone": "+49 40 34 40 00",
+       "email": "info@hotelalameda.de",
+       "url": "https://www.hotelalameda.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.989893, 53.557364]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "ibis Hamburg Alster Centrum",
+       "name": "ibis Hamburg Alster Centrum",
+       "stars": 2,
+       "rates": 3,
+       "rooms": 165,
+       "address": "Holzdamm 4-12 + 16, 20099 Hamburg",
+       "phone": "+49 40 248290 ",
+       "email": "H1395@accor.com",
+       "url": "https://all.accor.com/hotel/1395/index.en.shtml"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00429, 53.556742]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "ibis Hamburg Alsterring",
+       "name": "ibis Hamburg Alsterring",
+       "stars": 2,
+       "rates": 3,
+       "rooms": 150,
+       "address": "Pappelallee 61, 22089 Hamburg",
+       "phone": "+49 40 658020",
+       "email": "h3282@accor.com",
+       "url": "https://all.accor.com/hotel/3282/index.en.shtml"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.061236, 53.568964]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "ibis Hamburg City",
+       "name": "ibis Hamburg City",
+       "stars": 3,
+       "rates": 3,
+       "rooms": 252,
+       "address": "Amsinckstraße 3, 20097 Hamburg",
+       "phone": "+49 40 3099860",
+       "email": "H8740@accor.com",
+       "url": "https://all.accor.com/hotel/8740/index.en.shtml"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00946, 53.548248]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "ibis St. Pauli",
+       "name": "ibis St. Pauli-Messe",
+       "stars": 2,
+       "rates": 3,
+       "rooms": 162,
+       "address": "Simon-von-Utrecht Strasse 63, 20359 Hamburg",
+       "phone": "+49 40 650460",
+       "email": "h3680@accor.com",
+       "url": "https://all.accor.com/hotel/3680/index.en.shtml"
+
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.967082, 53.550891]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Marriott Hotel",
+       "name": "Hamburg Marriott Hotel",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 278,
+       "address": "ABC Straße 52, 20354 Hamburg",
+       "phone": "+49 40 3505 0",
+       "url": "https://www.marriott.de/hotels/travel/hamdt-hamburg-marriott-hotel/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.987248, 53.554759]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Mercure Hamburg Mitte",
+       "name": "Mercure Hamburg Mitte",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 180,
+       "address": "Schröderstiftstr. 3, 20146 Hamburg",
+       "phone": "+49 40 45069 0",
+       "email": "h5394@accor.com",
+       "url": "https://all.accor.com/hotel/5394/index.de.shtml"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.977099, 53.564656]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Scandic Emporio",
+       "name": "Scandic Hamburg Emporio",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 340,
+       "address": "Dammtorwall 19, 20355 Hamburg",
+       "phone": "+49 40 4321 870",
+       "email": "hamburg@scandichotels.com",
+       "url": "https://www.scandichotels.de/hotelsuche/deutschland/hamburg/scandic-hamburg-emporio"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.982077, 53.555995]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "SIDE",
+       "name": "SIDE Design Hotel Hamburg",
+       "stars": 5.5,
+       "rates": 4,
+       "rooms": 178,
+       "address": "Drehbahn 49, 20354 Hamburg",
+       "phone": "+49 40 30 99 90",
+       "email": "info@side-hamburg.de",
+       "url": "https://www.side-hamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986702, 53.55674]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Mövenpick",
+       "name": "Mövenpick Hotel Hamburg",
+       "stars": 4.5,
+       "rates": 3,
+       "rooms": 226,
+       "address": "Sternschanze 6, 20357 Hamburg",
+       "phone": "+49 40 3344 110",
+       "email": "hotel.hamburg@movenpick.com",
+       "url": "https://www.movenpick.com/en/europe/germany/hamburg/hotel-hamburg.html"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.971136, 53.564108]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "NH Hamburg City",
+       "name": "NH Collection Hamburg City",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 129,
+       "address": "Feldstr. 53-58, 20357 Hamburg",
+       "phone": "+49 40 4323 20",
+       "email": "nhcollectionhamburgcity@nh-hotels.com",
+       "url": "https://www.nh-hotels.de/hotel/nh-collection-hamburg-city"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.97403, 53.556938]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Fürst Bismarck",
+       "name": "Hotel Fürst Bismarck",
+       "stars": 3,
+       "rates": 3,
+       "rooms": 102,
+       "address": "Kirchenallee 49",
+       "phone": "+49 40 790 251 640",
+       "email": "hotel@fuerstbismarck.de",
+       "url": "https://www.fuerstbismarck.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.008848, 53.553376]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Kronprinz",
+       "name": "Novum Hotel Kronprinz",
+       "stars": 3,
+       "rates": 2,
+       "rooms": 65,
+       "address": "Kirchenallee 46, 20099 Hamburg",
+       "phone": "+49 40 271 4070",
+       "email": "kronprinz.hh@novum-hotels.com",
+       "url": "https://www.novum-hotels.com/hotel-kronprinz-hamburg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.008882, 53.553787]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Graf Moltke",
+       "name": "Novum Hotel Graf Moltke",
+       "stars": 3,
+       "rates": 2,
+       "rooms": 89,
+       "address": "Steindamm 1, 20099 Hamburg",
+       "phone": "+49 40 2442 4111 0",
+       "email": "grafmoltke@novum-hotels.com",
+       "url": "https://www.novum-hotels.com/hotel-graf-moltke-hamburg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.009932, 53.552888]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hostel",
+       "title": "Sleephotels",
+       "name": "Sleephotels Boardinghouse",
+       "stars": 2,
+       "rates": 1,
+       "rooms": 36,
+       "address": "Steindamm 52, 20099 Hamburg",
+       "phone": "+49 40 7420 4635",
+       "email": "info@sleephotels.de",
+       "url": "http://www.sleephotels.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.01407, 53.554018]
+    }
+  },
+
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Eleazar",
+       "name": "Novum Hotel Eleazar",
+       "stars": 3,
+       "rates": 2,
+       "rooms": 53,
+       "address": "Bremer Reihe 12-14, 20099 Hamburg",
+       "phone": "+49 40 878 8770",
+       "email": "eleazar@novum-hotels.com",
+       "url": "https://www.novum-hotels.com/hotel-eleazar-hamburg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.010396, 53.553618]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Reichshof Hamburg",
+       "name": "Reichshof Hotel Hamburg",
+       "stars": 4,
+       "rates": 4,
+       "rooms": 278,
+       "address": "Kirchenallee 34-36, 20099 Hamburg",
+       "phone": "+49 40 370 259 0",
+       "email": "info@hamburg-reichshof.com",
+       "url": "https://www.reichshof-hotel-hamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.008577, 53.554809]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Novotel Central Station",
+       "type": "hotel",
+       "name": "Novotel Hamburg Central Station",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 227,
+       "address": "Steinstraße 1, 20095 Hamburg",
+       "phone": "+49 40 7412301",
+       "email": "HB4C5@accor.com",
+       "url": "https://all.accor.com/hotel/B4C5/index.en.shtml"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00539, 53.54973]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "hotel",
+       "title": "Europäischer Hof",
+       "name": "Europäischer Hof Hamburg",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 275,
+       "address": "Kirchenallee 45, 20099 Hamburg",
+       "phone": "+49 40 248 248",
+       "email": "info@europaeischer-hof.de",
+       "url": "https://www.europaeischer-hof.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.008824, 53.553985]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "InterCityHotel Dammtor-Messe",
+       "type": "partner-hotel",
+       "name": "IntercityHotel Hamburg Dammtor-Messe",
+       "alert": "likely no vacancy, but check with hotel",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 275,
+       "address": "St. Petersburger Straße 1, 20355 Hamburg",
+       "phone": "+49 40 600014 0",
+       "email": "hamburg-dammtor@intercityhotel.com",
+       "url": "https://hrewards.com/en/intercityhotel-hamburg-dammtor-messe"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.981055, 53.560068]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "InterCityHotel Hauptbahnhof",
+       "type": "hotel",
+       "name": "IntercityHotel Hamburg Hauptbahnhof",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 155,
+       "address": "Glockengießerwall 14/15, 20095 Hamburg",
+       "phone": "+49 40 24870 0",
+       "email": "meetings.hamburg-hauptbahnhof@intercityhotel.com",
+       "url": "https://hrewards.com/de/intercityhotel-hamburg-hauptbahnhof"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00312, 53.553938]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Hotel Hafen",
+       "type": "hotel",
+       "name": "Hotel Hafen Hamburg",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 380,
+       "address": "Seewartenstraße 9, 20459 Hamburg",
+       "phone": "+49 40 31113 0",
+       "email": "info@hotel-hamburg.de",
+       "url": "https://www.hotel-hafen-hamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.969438, 53.546997]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Ruby Lotti",
+       "type": "hotel",
+       "name": "Ruby Lotti Hotel & Bar",
+       "stars": 4,
+       "rates": 3,
+       "rooms": 290,
+       "address": "Düsternstraße 1, 20355 Hamburg",
+       "phone": "+49 40 696 322 890",
+       "email": "lotti@ruby-hotels.com",
+       "url": "https://www.ruby-hotels.com/hotels-destinations/hamburg/ruby-lotti"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.98557, 53.55090]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Reverb",
+       "type": "hotel",
+       "name": "REVERB by Hard Rock",
+       "stars": 3.5,
+       "rates": 3,
+       "rooms": 134,
+       "address": "Feldstraße 66, 20359 Hamburg",
+       "phone": "+49 40 808 141 100",
+       "email": "info@reverbhotelhamburg.com",
+       "url": "https://reverb.hardrock.com/hamburg/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.970019,53.556422]
+    }
+  },
+
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Motel One",
+       "type": "hotel",
+       "name": "Motel One Hamburg am Michel",
+       "stars": 2.5,
+       "rates": 2,
+       "rooms": 437,
+       "address": "Ludwig-Erhard-Straße 26, 20459 Hamburg",
+       "phone": "+49 40 3571890-0",
+       "email": "hamburg-am-michel@motel-one.com",
+       "url": "https://www.motel-one.com/de/hotels/hamburg/hotel-hamburg-am-michel/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.974972, 53.549734]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Motel One",
+       "type": "hotel",
+       "name": "Motel One Hamburg-Fleetinsel",
+       "stars": 2.5,
+       "rates": 2,
+       "rooms": 441,
+       "address": "Admiralitätstraße 55, 20459 Hamburg",
+       "phone": "+49 40 2383084-0",
+       "email": "hamburg-fleetinsel@motel-one.com",
+       "url": "https://www.motel-one.com/de/hotels/hamburg/hotel-hamburg-fleetinsel"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.982959, 53.546763]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "Motel One",
+       "type": "hotel",
+       "name": "Motel One Hamburg-Alster",
+       "stars": 2.5,
+       "rates": 2,
+       "rooms": 460,
+       "address": "Steindamm 102, 20099 Hamburg",
+       "phone": "+49 40 4192497-0",
+       "email": "hamburg-alster@motel-one.com",
+       "url": "https://www.motel-one.com/de/hotels/hamburg/hotel-hamburg-alster/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.020175, 53.556544]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "title": "The Cloud One",
+       "type": "hotel",
+       "name": "The Cloud One Hamburg-Kontorhaus",
+       "stars": 3,
+       "rates": 3,
+       "rooms": 457,
+       "address": "Willy-Brandt-Straße 20-22, 20457 Hamburg",
+       "phone": "+49 40 5247163-0",
+       "email": "hamburg-kontorhaus@the-cloud-one.com",
+       "url": "https://www.the-cloud-one.com/de/hotels/hamburg/hotel-hamburg-kontorhaus/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.999298, 53.547886]
+    }
+  },
+
+  {
+    "type:": "Feature",
+    "properties": {
+      "type": "busstop",
+      "title": "Dammtor",
+      "name": "Bf. Dammtor",
+      "lines": ["4", "5", "19", "603", "604", "605"],
+       "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.9901, 53.5612]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Dammtor",
+      "name": "Hamburg Dammtor",
+      "lines": ["S2", "S5"],
+      "url": "https://www.hvv.de/",
+      "description": "S5 direction Neugraben / Stade terminates at Berliner Tor off-peak"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.98903, 53.56118]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Hauptbahnhof",
+      "name": "Hamburg Hauptbahnhof",
+      "lines": ["S1", "S2", "S3", "S5"],
+      "url": "https://www.hvv.de/",
+      "description": "S5 direction Neugraben / Stade terminates at Berliner Tor off-peak"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00644, 53.55319]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Jungfernstieg",
+      "name": "S+U Jungfernstieg",
+      "lines": ["S1", "S3"],
+      "url": "https://www.hvv.de/"
+
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.9940, 53.55229]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Steinstraße",
+      "name": "U Steinstraße",
+      "lines": ["U1"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00632, 53.54989]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Jungfernstieg",
+      "name": "S+U Jungfernstieg",
+      "lines": ["U1", "U2", "U4"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.9926, 53.553222]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Sternschanze",
+      "name": "S+U Sternschanze",
+      "lines": ["S2", "S5"],
+      "url": "https://www.hvv.de/",
+      "description": "S5 direction Neugraben / Stade terminates at Berliner Tor off-peak"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.96781, 53.56382]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Sternschanze",
+      "name": "S+U Sternschanze",
+      "lines": ["U3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.96921, 53.56439]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Hamburg Airport",
+      "name": "Hamburg Airport (Flughafen)",
+      "lines": ["S1"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.006649, 53.632312]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Gänsemarkt",
+      "name": "U Gänsemarkt",
+      "lines": ["U2"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.98604, 53.555659]
+    }
+  },
+   {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Messehallen",
+      "name": "U Messehallen",
+      "lines": ["U2"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.97671, 53.55807]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Hauptbahnhof Nord",
+      "name": "U Hauptbahnhof Nord",
+      "lines": ["U2", "U4"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00614, 53.55411]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Hauptbahnhof Süd",
+      "name": "U Hauptbahnhof Süd",
+      "lines": ["U1", "U3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.00934, 53.55215]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Berliner Tor",
+      "name": "S+U Berliner Tor",
+      "lines": ["U2", "U3", "U4"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.0231, 53.5534]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Berliner Tor",
+      "name": "S+U Berliner Tor",
+      "lines": ["S1", "S2", "S5"],
+      "url": "https://www.hvv.de/",
+      "description": "S5 terminates here off-peak"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.02459, 53.552878]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Hamburg-Altona",
+      "name": "S Hamburg-Altona",
+      "lines": ["S1", "S2", "S3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.93456, 53.55215]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Stephansplatz",
+      "name": "U Stephansplatz",
+      "lines": ["U1"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.98902, 53.55957]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "St. Pauli",
+      "name": "U St. Pauli",
+      "lines": ["U3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.97007, 53.55079]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Landungsbrücken",
+      "name": "U+S Landungsbrücken",
+      "lines": ["S1", "S3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.97114, 53.54622]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Landungsbrücken",
+      "name": "U+S Landungsbrücken",
+      "lines": ["U3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.97135, 53.54585]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "rail",
+      "title": "Reeperbahn",
+      "name": "S Reeperbahn",
+      "lines": ["S1", "S3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.95746, 53.54963]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "type": "subway",
+      "title": "Schlump",
+      "name": "U Schlump",
+      "lines": ["U2", "U3"],
+      "url": "https://www.hvv.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.97008, 53.56758]
+    }
+  }
+]
+}
