@@ -1,3 +1,15 @@
+<style>
+    @import url("css/mastodon-timeline.min.css");
+    #mt-container, #ef-intro-text {
+        height: 740px;
+        overflow: scroll;
+    }
+    .mt-container, .mt-container[data-theme="light"], .mt-dialog, .mt-dialog[data-theme="light"] {
+        --mt-color-bg: rgba(255, 255, 255, .1);
+        border-radius: 8px;
+    }
+</style>
+
 <div id="ef-home-banner">
     <h1>Eurofurence <?= $this->current->number ?></h1>
     <p>
@@ -15,17 +27,33 @@
     </p>
 </div>
 
-
-<div class="uk-margin-top">
-    <a href="#content" id="scrolldown" uk-scroll="offset: 50"><strong>Scroll Down<br /><span uk-icon="icon: chevron-down"></span></strong></a>
-
-    <h1><?= $this->current->title ?></h1>
+<div class="uk-grid-match uk-child-width-1-2@m uk-margin-medium-top" uk-grid>
+    <div>
+        <div id="mt-container" class="mt-container">
+            <div class="mt-body" role="feed">
+                <div class="mt-loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+    <div id="ef-intro-text" class="uk-padding uk-padding-remove-vertical">
+        <p>Lorem ipsum dolor sit amet duis dolor magna tincidunt et ea duo doming dolores gubergren consectetuer. Eum ipsum vero diam magna. Amet et assum invidunt exerci sea vero nam justo stet consetetur rebum blandit. At vero in et sanctus ipsum ut voluptua feugait eum kasd elitr iriure est et. Quod accumsan elitr sed dolores ipsum duis. Option ut amet clita vero lobortis lorem suscipit kasd feugiat no consectetuer rebum dolor vero ea gubergren in et. At diam amet eu justo ipsum sadipscing no lorem et diam minim takimata. Dolore dolore nihil et nulla et ut et euismod consequat et volutpat at sit clita ipsum tempor. Erat rebum et ipsum no. Illum dignissim nibh diam vero zzril no clita et diam vero. Justo et gubergren iriure takimata molestie vulputate tincidunt lorem diam sed et sanctus. In ipsum dolore accusam hendrerit nostrud sed lorem gubergren justo option voluptua kasd voluptua ut at gubergren facilisis et. Autem lorem takimata sanctus feugiat nisl dolor. Luptatum sea labore sea vel sanctus takimata sit dignissim sit elit est sit tempor.</p>
+        <p>Ullamcorper cum diam gubergren sed sit at invidunt adipiscing. Lobortis dolore kasd amet aliquyam et vero. Rebum sit rebum sadipscing. Sed et takimata kasd sanctus luptatum stet justo eu illum vulputate amet. Magna et diam ut rebum et sit nihil commodo odio sanctus rebum tempor et magna et. Et hendrerit labore ea sadipscing dolor suscipit at erat feugiat. Amet dignissim est erat esse aliquyam nonummy elitr clita praesent accusam justo sit tation. Eirmod nulla labore tempor ea sadipscing elitr congue sit vel sadipscing sea aliquam sed. Consetetur hendrerit praesent zzril elitr nonumy et stet. Lorem ut tation imperdiet iriure no dolore. Lorem aliquyam dolor in. Diam diam option sit zzril clita magna consetetur. Veniam delenit facer sed sed lorem dignissim justo dolor vero tincidunt gubergren diam sed dolores amet vulputate tempor. Tempor voluptua elitr tempor consetetur nonummy exerci amet lorem at et gubergren blandit. Dolor sit sea nibh consequat possim dolor justo consetetur blandit delenit stet ut vero dolores dolor kasd. Et sea velit velit consetetur nonumy nonummy accusam ut gubergren at stet sit et voluptua lorem duo dolor elitr. Sit diam labore labore dolore et no consetetur elitr dolor clita iriure adipiscing vero et feugiat kasd. Eirmod sanctus nulla sed est lobortis sed et elitr magna.</p>
+    </div>
 </div>
 
-<strong>Deployment Quick Start:</strong>
-<ul>
-    <li>update <em>partners.json</em> and run <a href="updatepartners.php">updatepartners.php</a> to update / load banners</li>
-    <li>run <a href="?export">/?export</a> to deploy to <em><?= $this->config->staticOut->path ?></em></li>
-</ul>
+<script src="js/mastodon-timeline/mastodon-timeline.umd.js"></script>
 
-<?php debug($this->current) ?>
+<script>
+    new MastodonTimeline.Init({
+        instanceUrl: "https://meow.social",
+        timelineType: "profile",
+        userId: "112331996724958954",
+        profileName: "@eurofurence",
+        dateLocale: "de-DE",
+        hideUnlisted: true,
+        hideReplies: true,
+        hideUserAccount: true,
+        hidePinnedPosts: true,
+        defaultTheme: "dark"
+    });
+</script>

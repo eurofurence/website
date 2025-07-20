@@ -46,7 +46,7 @@
 		<h2>Third Party Attributions</h2>
 		<ul>
 			<li><a href="https://getuikit.com" target="_blank">UIkit</a> by <a href="https://yootheme.com/" target="_blank">YOOtheme GmbH</a> (<a href="https://github.com/uikit/uikit/blob/develop/LICENSE.md" target="_blank">license</a>)</li>
-			<li><a href="http://www.myfont.de/fonts/infos/3586-Hemi-Head-426.html" target="_blank">Hemi Head 426</a> by Larabie Fonts (<a href="fonts/read_me.html" target="_blank">license</a>)</li>
+			<li><a href="" target="_blank">Mastodon Embed Timeline Widget</a> by i.j (<a href="https://gitlab.com/idotj/mastodon-embed-timeline/" target="_blank">source</a>, <a href="https://gitlab.com/idotj/mastodon-embed-timeline/-/blob/master/LICENSE" target="_blank">license</a>)
 		</ul>
 	</div>
 </section>
