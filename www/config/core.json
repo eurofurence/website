@@ -53,6 +53,7 @@
 	},
 	"pages": {
 		"404": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "",
 			"description": "",
@@ -65,6 +66,7 @@
 			"uri": "404.php"
 		},
 		"501": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "",
 			"description": "",
@@ -77,6 +79,7 @@
 			"uri": "501.php"
 		},
 		"accessibility": {
+			"owner": "@Sam_Mel",
 			"accessible": true,
 			"category": "Participate",
 			"description": "People have the right to participate in public life and society. Here we provide information on how we make our convention more accessible.",
@@ -89,6 +92,7 @@
 			"uri": "accessibility.php"
 		},
 		"archive": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Services",
 			"description": "",
@@ -101,6 +105,7 @@
 			"uri": "https://archive.eurofurence.org/"
 		},
 		"artshow": {
+			"owner": "@riffuchs",
 			"accessible": false,
 			"category": "Participate",
 			"description": "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
@@ -114,6 +119,7 @@
 			"uri": "artshow.php"
 		},
 		"artshow/bidding": {
+			"owner": "@riffuchs",
 			"accessible": true,
 			"category": "Policies",
 			"description": "A guide &amp; tips on how to bid on art at the Eurofurence Art Show.",
@@ -127,6 +133,7 @@
 			"uri": "artshow.bidding.php"
 		},
 		"artshow/guide": {
+			"owner": "@riffuchs",
 			"accessible": true,
 			"category": "Location",
 			"description": "A comprehensive guide on how to exhibit art in the Eurofurence Art Show.",
@@ -141,6 +148,7 @@
 			"uri": "artshow.guide.php"
 		},
 		"artshow/rules": {
+			"owner": "@riffuchs",
 			"accessible": true,
 			"category": "TODO",
 			"description": "Rules and guidelines for art exhibited in the Eurofurence Art Show.",
@@ -155,6 +163,7 @@
 			"uri": "artshow.rules.php"
 		},
 		"artshow/signup": {
+			"owner": "@riffuchs",
 			"accessible": false,
 			"category": "TODO",
 			"description": "Find out how and when to sign-up in order to exhibit your art in the Eurofurence Art Show.",
@@ -169,6 +178,7 @@
 			"uri": "artshow.signup.php"
 		},
 		"charity": {
+			"owner": "@Sniffer_raccoon",
 			"accessible": false,
 			"category": "Program",
 			"description": "This year all donations, collections and more will go to support {charity}.",
@@ -181,6 +191,7 @@
 			"uri": "charity.php"
 		},
 		"conbook": {
+			"owner": "@vinaru",
 			"accessible": true,
 			"category": "TODO",
 			"description": "The Conbook is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
@@ -193,6 +204,7 @@
 			"uri": "conbook.php"
 		},
 		"daily": {
+			"owner": "@Draugvorn",
 			"accessible": true,
 			"category": "Services",
 			"description": "The Daily Eurofurence is a printed daily newsletter that is distributed for free during Eurofurence.",
@@ -205,6 +217,7 @@
 			"uri": "daily.php"
 		},
 		"dealersden": {
+			"owner": "@Pattarchus",
 			"accessible": false,
 			"category": "Participate",
 			"description": "The Dealers' Den is the place for all you merchants and artists for selling your fine products.",
@@ -218,6 +231,7 @@
 		},
 		"dealersden/visiting":
 		{
+			"owner": "@Pattarchus",
 			"accessible": false,
 			"inMenu": true,
 			"menuText": "Visiting the Dealers' Den",
@@ -230,6 +244,7 @@
 			"robots": ""
 		},
 		"dealersden/alley": {
+			"owner": "@Pattarchus",
 			"accessible": false,
 			"category": "Participate",
 			"description": "The Artist Alley is an open, first-come-first-serve alternative to the Dealers' Den.",
@@ -242,6 +257,7 @@
 			"uri": "dealersden.alley.php"
 		},
 		"events": {
+			"owner": "@Akulatraxas",
 			"accessible": true,
 			"category": "Program",
 			"description": "General information for those interested in organizing a panel or event at Eurofurence. The schedule will be posted here shortly before the convention.",
@@ -254,6 +270,7 @@
 			"uri": "events.php"
 		},
 		"fursuits": {
+			"owner": "@Jake_R",
 			"accessible": true,
 			"category": "TODO",
 			"description": "All information for fursuiters: Everything about the Fursuit lounge, the parade and everything else.",
@@ -266,6 +283,7 @@
 			"uri": "fursuits.php"
 		},
 		"fursuitlounge": {
+			"owner": "@Jake_R",
 			"accessible": true,
 			"category": "Location",
 			"description": "",
@@ -278,6 +296,7 @@
 			"uri": "fursuitlounge.php"
 		},
 		"fursuits/photoshoot": {
+			"owner": "@Atkelar",
 			"accessible": true,
 			"category": "TODO",
 			"description": "",
@@ -290,6 +309,7 @@
 			"uri": "https://photo.eurofurence.org/"
 		},
 		"glympse": {
+			"owner": "@draconigen",
 			"accessible": false,
 			"category": "TODO",
 			"description": "Follow the surge of furries towards Hamburg and back live on Glympse.",
@@ -302,6 +322,7 @@
 			"uri": "glympse.php"
 		},
 		"goh": {
+			"owner": "@Arahn",
 			"accessible": false,
 			"category": "Program",
 			"description": "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
@@ -314,6 +335,7 @@
 			"uri": "goh.php"
 		},
 		"help": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Services",
 			"description": "",
@@ -326,6 +348,7 @@
 			"uri": "https://help.eurofurence.org/"
 		},
 		"home": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "",
 			"description": "Eurofurence {number} will take place from {dates}. Eurofurence is Europe's largest and longest-running annual gathering, celebrating the furry community across the continent.",
@@ -338,6 +361,7 @@
 			"uri": "home.php"
 		},
 		"hotels": {
+			"owner": "@draconigen",
 			"accessible": false,
 			"category": "Location",
 			"description": "Get a room! Here are some official options for you.",
@@ -350,6 +374,7 @@
 			"uri": "hotels.php"
 		},
 		"imprint": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Website",
 			"description": "",
@@ -362,6 +387,7 @@
 			"uri": "https://help.eurofurence.org/legal/imprint/"
 		},
         "jobs": {
+			"owner": "@draconigen",
             "accessible": true,
             "category": "Participate",
             "description": "You want to help Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
@@ -374,6 +400,7 @@
             "uri": "jobs.php"
         },
 		"lostandfound": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"inMenu": true,
 			"category": "Services",
@@ -386,6 +413,7 @@
 			"robots": ""
 		},
 		"nosecount": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Services",
 			"description": "Registration statistics visualized.",
@@ -398,6 +426,7 @@
 			"uri": "nosecount.php"
 		},
 		"photography": {
+			"owner": "@Atkelar",
 			"accessible": true,
 			"category": "TODO",
 			"description": "The Eurofurence photography team takes care of the \"official photography stuff\" that is happening at EF.",
@@ -410,6 +439,7 @@
 			"uri": "photography.php"
 		},
 		"policies": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Policies",
 			"description": "The necessary rules and guidelines you need to know before attending Eurofurence.",
@@ -422,6 +452,7 @@
 			"uri": "policies.php"
 		},
 		"registration": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Participate",
 			"description": "",
@@ -434,6 +465,7 @@
 			"uri": "https://reg.eurofurence.org/"
 		},
 		"roc": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Policies",
 			"description": "",
@@ -446,6 +478,7 @@
 			"uri": "https://help.eurofurence.org/legal/roc/"
 		},
 		"schedule": {
+			"owner": "@Akulatraxas",
 			"accessible": false,
 			"category": "Program",
 			"description": "",
@@ -458,6 +491,7 @@
 			"uri": "https://www.eurofurence.org/schedule/"
 		},
 		"terms": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Policies",
 			"description": "",
@@ -470,6 +504,7 @@
 			"uri": "https://help.eurofurence.org/legal/terms/"
 		},
 		"venue": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Location",
 			"description": "This year's venue is the Congress Center Hamburg (CCH). Come in and find out about the enormous venue we're about to fill with animal noises and fur.",
@@ -482,6 +517,7 @@
 			"uri": "venue.php"
 		},
 		"venue/map": {
+			"owner": "@draconigen",
 			"accessible": false,
 			"category": "Location",
 			"description": "The function space map! This is your ultimate 'How to get around!'",
@@ -494,6 +530,7 @@
 			"uri": "venue.map.php"
 		},
 		"venue/travel": {
+			"owner": "@Wawik",
 			"accessible": false,
 			"category": "Location",
 			"description": "How to travel to Eurofurence by train, by plane and where to leave your car.",
@@ -506,6 +543,7 @@
 			"uri": "venue.travel.php"
 		},
 		"website": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Services",
 			"description": "The website credits - see who helped and contributed this year.",
@@ -518,6 +556,7 @@
 			"uri": "website.php"
 		},
 		"website/banner": {
+			"owner": "@draconigen",
 			"accessible": true,
 			"category": "Services",
 			"description": "Eurofurence is participating in a banner exchange program to connect furry conventions.",
