@@ -33,7 +33,8 @@
 			"Program",
 			"Participate",
 			"Services",
-			"Policies"
+			"Policies",
+			"?"
 		],
 		"externalTarget": " target=\"_blank\"",
 		"hrefSuffix": "",
@@ -150,7 +151,7 @@
 		"artshow/rules": {
 			"owner": "@riffuchs",
 			"accessible": true,
-			"category": "TODO",
+			"category": "?",
 			"description": "Rules and guidelines for art exhibited in the Eurofurence Art Show.",
 			"inMenu": true,
 			"keywords": "Art Show, Rules, Limitations, Artwork, Display, Originals",
@@ -165,7 +166,7 @@
 		"artshow/signup": {
 			"owner": "@riffuchs",
 			"accessible": false,
-			"category": "TODO",
+			"category": "?",
 			"description": "Find out how and when to sign-up in order to exhibit your art in the Eurofurence Art Show.",
 			"inMenu": true,
 			"keywords": "Art Show, Display, Sign-up, Originals",
@@ -193,7 +194,7 @@
 		"conbook": {
 			"owner": "@vinaru",
 			"accessible": true,
-			"category": "TODO",
+			"category": "?",
 			"description": "The Conbook is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
 			"inMenu": true,
 			"keywords": "Conbook, Guide",
@@ -219,7 +220,7 @@
         "restaurants": {
 			"owner": "@Sam_Mel",
             "accessible": true,
-            "category": "Venue",
+            "category": "?",
             "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
             "inMenu": true,
             "keywords": "Hotel, Dining, Restaurants, Vegetarian, Vegan, Food, Eating",
@@ -298,7 +299,7 @@
 		"fursuits": {
 			"owner": "@Jake_R",
 			"accessible": true,
-			"category": "TODO",
+			"category": "?",
 			"description": "All information for fursuiters: Everything about the Fursuit lounge, the parade and everything else.",
 			"inMenu": true,
 			"keywords": "Fursuit Support, Suiter, Fursuit Lounge, Lounge, Headless Lounge",
@@ -324,7 +325,7 @@
 		"fursuits/photoshoot": {
 			"owner": "@Atkelar",
 			"accessible": true,
-			"category": "TODO",
+			"category": "?",
 			"description": "",
 			"inMenu": true,
 			"keywords": "",
@@ -337,7 +338,7 @@
 		"glympse": {
 			"owner": "@draconigen",
 			"accessible": false,
-			"category": "TODO",
+			"category": "?",
 			"description": "Follow the surge of furries towards Hamburg and back live on Glympse.",
 			"inMenu": true,
 			"keywords": "Glympse, Live, Travel, Map",
@@ -454,7 +455,7 @@
 		"photography": {
 			"owner": "@Atkelar",
 			"accessible": true,
-			"category": "TODO",
+			"category": "?",
 			"description": "The Eurofurence photography team takes care of the \"official photography stuff\" that is happening at EF.",
 			"inMenu": true,
 			"keywords": "Photography, Photo, Pictures",

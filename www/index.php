@@ -160,32 +160,8 @@
 			</button>
 
 			<nav>
-				<!-- <a href="home" id="ef-homelink">&lt; Home Page</a> -->
-				<?= $core->get_menu() ?>
-				<!--
-				<h3>Countdown</h3>
-				<div class="uk-grid-small uk-child-width-auto uk-margin-large-bottom" uk-grid uk-countdown="date: <?= $core->config->convention->opening ?>">
-					<div>
-						<div class="uk-countdown-number uk-countdown-days"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Days</div>
-					</div>
-					<div class="uk-countdown-separator">:</div>
-					<div>
-						<div class="uk-countdown-number uk-countdown-hours"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Hours</div>
-					</div>
-					<div class="uk-countdown-separator">:</div>
-					<div>
-						<div class="uk-countdown-number uk-countdown-minutes"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Minutes</div>
-					</div>
-					<div class="uk-countdown-separator">:</div>
-					<div>
-						<div class="uk-countdown-number uk-countdown-seconds"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Seconds</div>
-					</div>
-				</div>
-				-->
+				<div id="ef-nav-home"><a href="home"></a></div>
+				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
 

@@ -65,6 +65,7 @@ header h1 {
 
 /* navigation */
 nav {
+	display: flex;
 	position: relative;
 	z-index: 8;
 	width: fit-content;
@@ -81,6 +82,21 @@ nav {
 	); */
 	border-radius: 6px;
 }
+nav > div#ef-nav-home a {
+	display: block;
+	width: 34px;
+	height: 34px;
+	background-image: url(../img/logo.svg);
+	background-size: 66%;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: .66;
+	cursor: pointer;
+}
+nav > div#ef-nav-home a:hover {
+	opacity: 1;
+}
+
 nav a {
 	color: #fff;
 	text-decoration: none;
@@ -95,29 +111,29 @@ nav ul {
 	margin: 0;
 	padding: 0;
 }
-nav > ul {
+nav > div > ul {
 	display: flex;
 	text-align: center;
 }
-nav > ul > li {
+nav > div > ul > li {
 	position: relative;
 	min-width: 180px;
 }
-nav > ul > li > a,
-nav > ul > li > label {
+nav > div > ul > li > a,
+nav > div > ul > li > label {
 	display: inline-block;
 	padding: 5px 10px;
 	cursor: pointer;
 }
-/* nav > ul > li:first-child > a,
-nav > ul > li:first-child > label {
+/* nav > div > ul > li:first-child > a,
+nav > div > ul > li:first-child > label {
 	padding-left: 50px;
 }
-nav > ul > li:last-child > a,
-nav > ul > li:last-child > label {
+nav > div > ul > li:last-child > a,
+nav > div > ul > li:last-child > label {
 	padding-right: 50px;
 } */
-nav > ul > li > label:after {
+nav > div > ul > li > label:after {
 	content: " ▼";
 	font-size: .67em;
 }
@@ -127,12 +143,12 @@ input[name="subnav-ctl"] {
 	top: -100vh;
 	opacity: 0;
 }
-nav > ul > li:hover > ul,
-nav > ul > li > ul:hover,
+nav > div > ul > li:hover > ul,
+nav > div > ul > li > ul:hover,
 nav input[name="subnav-ctl"]:checked ~ ul {
 	max-height: 100vh;
 }
-nav > ul ul {
+nav > div > ul ul {
 	position: absolute;
 	top: 100%;
 	left: 10px;
@@ -142,15 +158,15 @@ nav > ul ul {
 	border-radius: 0 0 4px 4px;
 	transition: max-height .25s;
 }
-nav > ul ul a {
+nav > div > ul ul a {
 	display: inline-block;
 	width: 100%;
 	padding: 5px 10px;
 }
-nav > ul ul a:after {
+nav > div > ul ul a:after {
 	background-color: #fff !important;
 }
-nav > ul ul a:hover {
+nav > div > ul ul a:hover {
 	background-color: #fff;
 	color: var(--ef-green);
 	text-decoration: none;
@@ -185,7 +201,7 @@ label[for="nav-ctl"] {
 		max-width: 0;
 		transition: max-width .25s;
 	}
-	nav > ul {
+	nav > div > ul {
 		display: block;
 	}
 	nav ul ul {
@@ -199,15 +215,15 @@ label[for="nav-ctl"] {
 	nav ul label {
 		color: #333;
 	}
-	nav > ul ul a {
+	nav > div > ul ul a {
 		color: #fff;
 	}
-	nav > ul > li:first-child > a,
-	nav > ul > li:first-child > label {
+	nav > div > ul > li:first-child > a,
+	nav > div > ul > li:first-child > label {
 		padding-left: 10px;
 	}
-	nav > ul > li:last-child > a,
-	nav > ul > li:last-child > label {
+	nav > div > ul > li:last-child > a,
+	nav > div > ul > li:last-child > label {
 		padding-right: 10px;
 	}
 
@@ -230,7 +246,6 @@ label[for="nav-ctl"] {
 		border: 2px solid #fff;
 	}
 }
-
 
 
 
