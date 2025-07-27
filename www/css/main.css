@@ -1,4 +1,5 @@
 :root {
+	--ef-nav-height: 60px;
 	--ef-green: #005953;
 	--ef-green-light: #69a3a2;
 }
@@ -69,6 +70,7 @@ nav {
 	position: relative;
 	z-index: 8;
 	width: fit-content;
+	height: var(--ef-nav-height);
 	margin: 20px auto;
 	background: var(--ef-green);
 	/* background: linear-gradient(
@@ -84,9 +86,9 @@ nav {
 }
 nav > div#ef-nav-home a {
 	display: block;
-	width: 34px;
-	height: 34px;
-	background-image: url(../img/logo.svg);
+	width: var(--ef-nav-height);
+	height: var(--ef-nav-height);
+	background-image: url(../img/logo25.png);
 	background-size: 66%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -118,11 +120,14 @@ nav > div > ul {
 nav > div > ul > li {
 	position: relative;
 	min-width: 180px;
+	height: var(--ef-nav-height);
 }
 nav > div > ul > li > a,
 nav > div > ul > li > label {
 	display: inline-block;
-	padding: 5px 10px;
+	width: 100%;
+	height: 100%;
+	padding-top: calc(var(--ef-nav-height) / 2 - .8rem);
 	cursor: pointer;
 }
 /* nav > div > ul > li:first-child > a,
