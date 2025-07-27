@@ -195,6 +195,9 @@ label[for="nav-ctl"] {
 }
 
 @media (max-width: 640px) {
+	nav > div:nth-of-type(2) {
+		overflow-y: scroll;
+	}
 	nav {
 		position: fixed;
 		top: 0;
@@ -209,17 +212,30 @@ label[for="nav-ctl"] {
 		transition: max-width .25s;
 	}
 	nav > div > ul {
+		text-align: left;
+	}
+	nav > div > ul > li {
+		height: unset;
+	}
+	nav > div > ul > li > a {
+		color: var(--ef-green);
+		padding: 5px 10px;
+		background-color: #fff;
+		font-weight: 600;
+	}
+	nav > div > ul {
 		display: block;
 	}
-	nav ul ul {
+	nav > div ul ul {
 		position: relative;
+		top: auto;
 		max-height: unset;
 		backdrop-filter: none;
 		box-shadow: none;
 		background-color: transparent;
 		padding: 0 .66em;
 	}
-	nav ul label {
+	nav > div ul label {
 		color: #333;
 	}
 	nav > div > ul ul a {
@@ -227,11 +243,11 @@ label[for="nav-ctl"] {
 	}
 	nav > div > ul > li:first-child > a,
 	nav > div > ul > li:first-child > label {
-		padding-left: 10px;
+		/* padding-left: 10px; */
 	}
 	nav > div > ul > li:last-child > a,
 	nav > div > ul > li:last-child > label {
-		padding-right: 10px;
+		/* padding-right: 10px; */
 	}
 
 	/* Mobile nav toggle button */

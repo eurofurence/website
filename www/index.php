@@ -160,7 +160,7 @@
 			</button>
 
 			<nav>
-				<div id="ef-nav-home"><a href="home"></a></div>
+				<div id="ef-nav-home" class="uk-visible@s"><a href="home"></a></div>
 				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
