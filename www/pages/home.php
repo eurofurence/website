@@ -11,23 +11,29 @@
 </style>
 
 <div id="ef-home-banner">
-    <h1>Eurofurence <?= $this->current->number ?></h1>
-    <p>
-        <?= $this->current->theme ?> <br />
-        <?= $this->current->dates ?> <br />
-        <?= $this->current->location ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $this->current->datesAnnotation ?>"></span>
-    </p>
+    <div>
+        <h1>Eurofurence <?= $this->current->number ?></h1>
+        <p>
+            <?= $this->current->theme ?> <br />
+            <?= $this->current->dates ?> <br />
+            <?= $this->current->location ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $this->current->datesAnnotation ?>"></span>
+        </p>
+    </div>
 </div>
 
 <div id="ef-home-photo">
-    <p>
-        Lorem ipsum dolor sit amet adipiscing et te duo dolores justo sed consequat feugiat amet elitr amet at amet lorem et et et. Stet accusam eum dolores no duo ipsum sit clita illum aliquyam nonumy tempor elit sadipscing lorem amet. Cum justo possim kasd et et duo elitr suscipit et. Magna facilisis dolor diam et qui ipsum dolores. Dolor facilisi justo qui magna justo amet tempor.
-        <br /><br />
-        <a href="https://identity.eurofurence.org/" class="uk-button uk-button-primary" target="_blank">REGISTER NOW</a>
-    </p>
+    <div>
+        <p>Eurofurence is a unique furry convention held in Hamburg every year at the CCH</p>
+        <p>Unlike other cons we have a whole convention centre and over 100 hotels in the city to choose from</p>
+        <p>this makes a con like no other, your friends will be there so what's stopping you?</p>
+        
+        <p class="uk-margin-remove-bottom">
+            <a href="https://identity.eurofurence.org/" class="uk-button uk-button-primary" target="_blank">REGISTER NOW</a>
+        </p>
+    </div>
 </div>
 
-<div class="uk-grid-match uk-child-width-1-2@m uk-margin-medium-top" uk-grid>
+<div class="uk-grid-match uk-child-width-1-2@m uk-margin-top" uk-grid>
     <div>
         <div id="mt-container" class="mt-container">
             <div class="mt-body" role="feed">

@@ -87,7 +87,7 @@ nav > div#ef-nav-home a {
 	display: block;
 	width: var(--ef-nav-height);
 	height: var(--ef-nav-height);
-	background-image: url(../img/logo25.png);
+	background-image: url(../img/IMG_5904.PNG);
 	background-size: 66%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -194,87 +194,6 @@ label[for="nav-ctl"] {
 	display: none;
 }
 
-@media (max-width: 640px) {
-	nav > div:nth-of-type(2) {
-		overflow-y: scroll;
-	}
-	nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		margin: 0;
-		padding-top: 70px;
-		overflow: hidden;
-		border-radius: 0;
-		max-width: 0;
-		transition: max-width .25s;
-	}
-	nav > div > ul {
-		text-align: left;
-	}
-	nav > div > ul > li {
-		height: unset;
-	}
-	nav > div > ul > li > a {
-		color: var(--ef-green);
-		padding: 5px 10px;
-		background-color: #fff;
-		font-weight: 600;
-	}
-	nav > div > ul {
-		display: block;
-	}
-	nav > div ul ul {
-		position: relative;
-		top: auto;
-		max-height: unset;
-		backdrop-filter: none;
-		box-shadow: none;
-		background-color: transparent;
-		padding: 0 .66em;
-	}
-	nav > div ul label {
-		color: #333;
-	}
-	nav > div > ul ul a {
-		color: #fff;
-	}
-	nav > div > ul > li:first-child > a,
-	nav > div > ul > li:first-child > label {
-		/* padding-left: 10px; */
-	}
-	nav > div > ul > li:last-child > a,
-	nav > div > ul > li:last-child > label {
-		/* padding-right: 10px; */
-	}
-
-	/* Mobile nav toggle button */
-	#nav-toggle {
-		display: block;
-		position: relative;
-		z-index: 9;
-		margin: 0.5rem;
-		border: none;
-		border-radius: 9999px;
-		width: 3rem;
-		height: 3rem;
-		padding: 0.5rem;
-		background: none;
-		transition: ease 0.1s;
-	}
-	#nav-toggle:hover,
-	#nav-toggle:focus {
-		border: 2px solid #fff;
-	}
-}
-
-
-
-
-
-
 /* body area */
 main {
 	position: relative;
@@ -298,7 +217,16 @@ main {
 	color: #fff;
 	padding: 20px 30px;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
+	margin-bottom: 20px;
+}
+#ef-home-banner > div {
+	margin: 20px 30px;
+	padding: 20px;
+	width: min(50%, 480px, 100%);
+	position: absolute;
+	font-weight: 600;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 #ef-home-photo {
 	min-height: 400px;
@@ -306,13 +234,15 @@ main {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-#ef-home-photo > p {
+#ef-home-photo > div {
 	margin: 20px 30px;
 	padding: 20px;
-	background-color: rgba(255, 255, 255, .7);
+	background-color: rgba(255, 255, 255, .9);
 	width: min(50%, 480px, 100%);
 	position: absolute;
 	right: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 /* footer */
