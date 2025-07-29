@@ -48,6 +48,9 @@ class EFWebCore
 			$this->config->defaults->rootPage :
 			trim(parse_url($request_uri, PHP_URL_PATH), "/");
 
+		debug($request_uri);
+		debug($this->path);
+
 		// construct base url
 		$this->base = $this->get_base();
 
