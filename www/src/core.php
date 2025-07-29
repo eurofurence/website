@@ -4,7 +4,7 @@
  * Includes debug(), dirmtime(), dircopy() and is_external() as global functions
  * @author	draconigen@dogpixels.net
  * @since 	11/2015
- * @version	4.4c
+ * @version	4.5
  * @license	MIT
  */
 class EFWebCore
@@ -47,10 +47,6 @@ class EFWebCore
 			(in_array($request_uri,["", "/"]) || str_starts_with($request_uri, "?") || str_starts_with($request_uri, "/?")) ?
 			$this->config->defaults->rootPage :
 			trim(parse_url($request_uri, PHP_URL_PATH), "/");
-
-		debug($request_uri);
-		debug($this->path);
-		debug($_GET);
 
 		// construct base url
 		$this->base = $this->get_base();
