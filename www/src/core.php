@@ -4,7 +4,7 @@
  * Includes debug(), dirmtime(), dircopy() and is_external() as global functions
  * @author	draconigen@dogpixels.net
  * @since 	11/2015
- * @version	4.4b
+ * @version	4.4c
  * @license	MIT
  */
 class EFWebCore
@@ -44,7 +44,7 @@ class EFWebCore
 
 		// determine page property key
 		$this->path =
-			(in_array($request_uri,["", "/"]) || str_starts_with($request_uri, "?") || str_starts_with("/?")) ?
+			(in_array($request_uri,["", "/"]) || str_starts_with($request_uri, "?") || str_starts_with($request_uri, "/?")) ?
 			$this->config->defaults->rootPage :
 			trim(parse_url($request_uri, PHP_URL_PATH), "/");
 
