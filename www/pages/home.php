@@ -63,7 +63,3 @@
         defaultTheme: "dark"
     });
 </script>
-
-<?php debug($_SERVER); ?>
-<?php debug($_GET); ?>
-<?php debug($this); ?>
