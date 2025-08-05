@@ -8,6 +8,22 @@
         --mt-color-bg: rgba(255, 255, 255, .1);
         border-radius: 8px;
     }
+
+    /* Changes for feed contrasts */
+    time,
+    .mt-post-counter-bar,
+    .mt-post-counter-bar-replies {
+        color: #fff;
+    }
+    .mt-post-counter-bar svg path {
+        fill: #fff;
+    }
+    .mt-post-preview-title {
+        color: #a8a8ffff;
+    }
+    .mt-post-preview-description {
+        color: #7a7ae2ff;
+    }
 </style>
 
 <div id="ef-home-banner">
@@ -36,7 +52,7 @@
 <div class="uk-grid-match uk-child-width-1-2@m uk-margin-top" uk-grid>
     <div>
         <div id="mt-container" class="mt-container">
-            <div class="mt-body" role="feed">
+            <div class="mt-body" role="feed" tabindex="0">
                 <div class="mt-loading-spinner"></div>
             </div>
         </div>
