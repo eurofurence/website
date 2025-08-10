@@ -59,14 +59,6 @@
 	nav > div > ul ul a {
 		color: #fff;
 	}
-	nav > div > ul > li:first-child > a,
-	nav > div > ul > li:first-child > label {
-		/* padding-left: 10px; */
-	}
-	nav > div > ul > li:last-child > a,
-	nav > div > ul > li:last-child > label {
-		/* padding-right: 10px; */
-	}
 
 	/* Mobile nav toggle button */
 	#nav-toggle {
@@ -85,5 +77,11 @@
 	#nav-toggle:hover,
 	#nav-toggle:focus {
 		border: 2px solid #fff;
+	}
+
+	
+	footer #ef-footer-title {
+		background-image: unset;
+		padding-left: unset;
 	}
 }

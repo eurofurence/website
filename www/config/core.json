@@ -24,7 +24,7 @@
 		"pagesDirectory": "pages/",
 		"robots": "index, follow, noodp",
 		"rootPage": "home",
-		"titlePrefix": "Eurofurence: ",
+		"titlePrefix": "EF{number}: ",
 		"titleSuffix": ""
 	},
 	"menu": {

@@ -11,7 +11,7 @@
                 "status": 200,
                 "hash": "6fece737e6cd5b276b11be3a16a27ff9"
             },
-            "file": "img\/cons\/bayern-furs.png"
+            "file": "..\/img\/cons\/bayern-furs.png"
         },
         "cesfur": {
             "enable": false,
@@ -32,9 +32,9 @@
             "data": {
                 "timestamp": 1684878798,
                 "status": 200,
-                "hash": "c706c20f2b99757bf9fd4fa14916353e"
+                "hash": "8be5072d9187cbbabe380f390180cf10"
             },
-            "file": "img\/cons\/east.jpg"
+            "file": "..\/img\/cons\/east.jpg"
         },
         "fblacklight": {
             "enable": true,
@@ -46,7 +46,7 @@
                 "status": 200,
                 "hash": "82c337afbbad6c9c5627f901ecfdcac9"
             },
-            "file": "img\/cons\/fblacklight.jpg"
+            "file": "..\/img\/cons\/fblacklight.jpg"
         },
         "furrnion": {
             "enable": false,
@@ -56,9 +56,9 @@
             "data": {
                 "timestamp": 1684878798,
                 "status": 200,
-                "hash": "5e1a5393bc27e24664249c3dcb8df8a2"
+                "hash": "b3c5e7c23a6a17dfff41931476725086"
             },
-            "file": "img\/cons\/furrnion.gif"
+            "file": "..\/img\/cons\/furrnion.gif"
         },
         "gdakon": {
             "enable": true,
@@ -70,7 +70,7 @@
                 "status": 200,
                 "hash": "491e078415d50037552ad7e394bf8e8d"
             },
-            "file": "img\/cons\/gdakon.jpg"
+            "file": "..\/img\/cons\/gdakon.jpg"
         },
         "infurnity": {
             "enable": false,
@@ -81,7 +81,8 @@
                 "timestamp": 1684878798,
                 "status": 404,
                 "hash": "d41d8cd98f00b204e9800998ecf8427e"
-            }
+            },
+            "file": "img\/cons\/infurnity.png"
         },
         "jmof": {
             "enable": true,
@@ -102,33 +103,44 @@
             "country": "se",
             "data": {
                 "timestamp": 1684878798,
-                "status": 403,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "rusfurence": {
+            "enable": false,
+            "source": "https:\/\/rusfurence.ru\/banner_200x80.jpg",
+            "target": "https:\/\/www.rusfurence.ru\/",
+            "country": "ru",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 0,
                 "hash": "d41d8cd98f00b204e9800998ecf8427e"
             }
         },
         "silverfang": {
-            "enable": true,
+            "enable": false,
             "source": "https:\/\/con.silverfang.net\/wp-content\/themes\/con\/banner200x80.png",
             "target": "https:\/\/con.silverfang.net\/",
             "country": "us",
             "data": {
                 "timestamp": 1684880319,
-                "status": 200,
-                "hash": "2141f550d06105565c87eedbfc2e7a1d"
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
             },
             "file": "img\/cons\/silverfang.png"
         },
         "slofluffcon": {
             "enable": true,
-            "source": "https:\/\/slofluffcon.org\/assets\/banners\/sfc-2023.png",
-            "target": "https:\/\/slofluffcon.org\/",
+            "source": "https:\/\/slofluffcon.org\/static\/img\/sfc-banner.jpg",
+            "target": "https:\/\/slofluffcon.org\/?utm_source=eurofurence&utm_medium=banner_exchange",
             "country": "si",
-            "file": "img\/cons\/slofluffcon.png",
             "data": {
-                "timestamp": 1686858864,
+                "timestamp": 1752666760,
                 "status": 200,
-                "hash": "4f91044fb28ce3d2c10c971194c680cd"
-            }
+                "hash": "c304dc788c5c855e7c35fc06b1968241"
+            },
+            "file": "/img\/cons\/slofluffcon.jpg"
         }
     }
 }

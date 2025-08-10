@@ -1,5 +1,6 @@
 :root {
 	--ef-nav-height: 60px;
+	--ef-footer-title-height: 60px;
 	--ef-green: #005953;
 	--ef-green-light: #69a3a2;
 }
@@ -248,7 +249,8 @@ main {
 /* footer */
 footer {
 	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: var(--ef-green);
+	border-radius: 6px;
 }
 footer .uk-button-group {
 	display: inline-flex;
@@ -256,7 +258,36 @@ footer .uk-button-group {
 	position: relative;
 }
 footer .uk-button-group a ~ a {
-	margin-left: 6px; 
+	margin-left: 3.5px; 
+}
+footer #ef-footer-title {
+	position: relative;
+	background-image: url(../img/IMG_5904.PNG);
+	background-size: var(--ef-footer-title-height);
+	background-repeat: no-repeat;
+	min-height: var(--ef-footer-title-height);
+	padding-left: calc(var(--ef-footer-title-height) + .2em);
+}
+footer h2 img {
+	width: 1.2em;
+	height: 1.2em;
+}
+footer h2 .uk-text-meta {
+	position: absolute;
+	top: 2.75em;
+	color: #fff;
+}
+.page-rating-stars {
+	display: inline-flex;
+	font-size: 1.5em;
+	letter-spacing: .1em;
+}
+.page-rating-stars > *.selected {
+	filter: unset;
+	color: gold;
+}
+.page-rating-stars:hover {
+	text-decoration: none;
 }
 
 /* uikit overrides */

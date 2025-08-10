@@ -5,7 +5,7 @@
 
 echo '<pre>';
 
-$data_file = 'config/partners.json';
+$data_file = '../config/partners.json';
 
 $data = json_decode(file_get_contents($data_file), true);
 $new_data = $data; // since $data is an array, this is a copy
