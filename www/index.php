@@ -165,18 +165,6 @@
 			</nav>
 		</header>
 
-		<style>
-			#ef-nav-home a {
-				position: relative;
-				font-size: 0.65rem;
-			}
-			#ef-nav-home a span {
-				position: absolute;
-				bottom: 0;
-				left: 1rem;
-			}
-		</style>
-
 		<main <?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
 			<div id="content">
 				<?= $core->get_content() ?>
