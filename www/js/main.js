@@ -19,3 +19,19 @@ const job = document.getElementById(`ef-job-${window.location.hash.substring(1)}
 if (window.location.hash && job) {
     UIkit.modal(job).show();
 }
+
+/* Page Rating */
+const pageRatingStars = document.querySelectorAll('.page-rating-stars > *');
+pageRatingStars.forEach(star => {
+    star.addEventListener('mouseenter', () => {
+        const rating = parseInt(star.dataset.rating);
+        pageRatingStars.forEach(s => {
+            const current = parseInt(s.dataset.rating);
+            s.classList.toggle('selected', current <= rating);
+        });
+    });
+
+    star.addEventListener('mouseleave', () => {
+        pageRatingStars.forEach(s => s.classList.remove('selected'));
+    });
+})

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733332"
+   version="1.1"
+   id="svg142"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="subway-station.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview144"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.3786088"
+     inkscape:cx="411.37492"
+     inkscape:cy="136.42428"
+     inkscape:window-width="3052"
+     inkscape:window-height="1805"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs139" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#4ab44a;stroke:#000000;stroke-width:0.0902564;fill-opacity:1"
+       id="path250"
+       cx="33.914787"
+       cy="34.139866"
+       rx="33.852947"
+       ry="33.567039" />
+    <path
+       d="m 33.891574,9.608073 c -10.9985,0 -19.906783,1.244177 -19.906783,9.953394 v 23.639305 c 0,4.814956 3.906703,8.709221 8.709217,8.709221 l -3.732523,3.732523 v 1.244171 H 48.821663 V 55.642516 L 45.08914,51.909993 c 4.814952,0 8.709217,-3.894265 8.709217,-8.709221 V 19.561467 c 0,-8.709217 -8.908283,-9.953394 -19.906783,-9.953394 z M 22.694008,46.933294 c -2.065328,0 -3.732523,-1.66719 -3.732523,-3.732522 0,-2.065328 1.667195,-3.732523 3.732523,-3.732523 2.065327,0 3.732521,1.667195 3.732521,3.732523 0,2.065332 -1.667194,3.732522 -3.732521,3.732522 z M 31.403225,32.003205 H 18.961485 V 19.561467 h 12.44174 z M 45.08914,46.933294 c -2.065327,0 -3.732521,-1.66719 -3.732521,-3.732522 0,-2.065328 1.667194,-3.732523 3.732521,-3.732523 2.065328,0 3.732523,1.667195 3.732523,3.732523 0,2.065332 -1.667195,3.732522 -3.732523,3.732522 z M 48.821663,32.003205 H 36.379923 V 19.561467 h 12.44174 z"
+       id="path27"
+       style="stroke-width:1.24417;fill:#ffffff" />
+  </g>
+</svg>

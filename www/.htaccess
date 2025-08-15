@@ -6,4 +6,4 @@ FallbackResource /index.php
 RewriteCond %{REQUEST_URI} !^/index\.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?x=$1 [NC,QSA]
+RewriteRule ^(.*)$ index.php?p=$1 [NC,QSA]

@@ -1,0 +1,91 @@
+{
+  "geoJSON": "ef29-dining.geojson",
+  "options": {
+      "style": 	"ef-map.json",
+      "maxBounds": [9.7231695, 53.38005232, 10.3370589, 53.7492344],
+      "center": [9.985683,53.5575 ],
+      "zoom": 13,
+      "maxZoom": 16.9,
+      "minZoom": 10,
+      "hash": true,
+      "attributionControl": true
+  },
+
+  "osmTipLayers": [],
+
+  "markerCSSClasses": {
+    "venue": {
+      "tipClass": "venue-tip",	    
+      "types": ["venue"]
+    },
+    "hotel-featured-partner": {
+      "popupClass": "hotel-partner",
+      "tipClass": "hotel-partner",
+      "types": ["partner-hotel", "partner-hostel"]
+    },
+    "hotel-featured": {
+      "popupClass": "hotel",
+      "tipClass": "hotel",
+      "types": ["hotel", "hostel"]
+    },
+    "hotel-osm": {
+      "tipClass": "hotel",
+      "types": []
+    },
+    "dining": {
+       "popupClass": "dining",
+       "tipClass": "dining-tip",
+       "types": ["dining"]
+    },
+    "dining-vegan": {
+       "popupClass": "dining",
+       "tipClass": "dining-vegan-tip",
+       "types": ["dining-vegan"]
+    },
+    "dining-vegetarian": {
+       "popupClass": "dining",
+       "tipClass": "dining-vegetarian-tip",
+       "types": ["dining-vegetarian"]
+    },
+    "dining-glutenfree": {
+       "popupClass": "dining",
+       "tipClass": "dining-glutenfree-tip",
+       "types": ["dining-glutenfree"]
+    },
+    "rail": {
+      "popupClass": "station",
+      "tipClass": "transport",
+      "types": ["lightrail", "rail"]
+    },
+    "subway": {
+      "popupClass": "station",	    
+      "tipClass": "transport",
+      "types": ["subway"]
+    },
+    "bus": {
+      "popupClass": "busstop",
+      "tipClass": "transport",
+      "types": ["busstop"]
+    },
+    "museum": {
+      "popupClass": "generic",
+      "tipClass": "poi",
+      "types": ["museum"]
+    },
+    "park": {
+      "popupClass": "generic",
+      "tipClass": "poi",
+      "types": ["state park", "national park", "park", "outlook", "landmark"]
+    },
+    "photo": {
+      "popupClass": "generic",
+      "tipClass": "poi",
+      "types": ["vista", "vista point", "outlook", "overlook"]
+    },
+    "generic": {
+      "popupClass": "generic",
+      "tipClass": "poi",
+      "types": ["generic"]
+    }
+  }
+}

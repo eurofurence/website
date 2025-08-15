@@ -149,8 +149,8 @@
 
 		<link rel="stylesheet" href="css/uikit.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/theme.css" />
 		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="css/theme.css" />
 	</head>
 
 	<body>
@@ -160,32 +160,8 @@
 			</button>
 
 			<nav>
-				<!-- <a href="home" id="ef-homelink">&lt; Home Page</a> -->
-				<?= $core->get_menu() ?>
-				<!--
-				<h3>Countdown</h3>
-				<div class="uk-grid-small uk-child-width-auto uk-margin-large-bottom" uk-grid uk-countdown="date: <?= $core->config->convention->opening ?>">
-					<div>
-						<div class="uk-countdown-number uk-countdown-days"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Days</div>
-					</div>
-					<div class="uk-countdown-separator">:</div>
-					<div>
-						<div class="uk-countdown-number uk-countdown-hours"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Hours</div>
-					</div>
-					<div class="uk-countdown-separator">:</div>
-					<div>
-						<div class="uk-countdown-number uk-countdown-minutes"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Minutes</div>
-					</div>
-					<div class="uk-countdown-separator">:</div>
-					<div>
-						<div class="uk-countdown-number uk-countdown-seconds"></div>
-						<div class="uk-countdown-label uk-margin-small uk-text-center">Seconds</div>
-					</div>
-				</div>
-				-->
+				<div id="ef-nav-home" class="uk-visible@s"><a href="home"><span>Home</span></a></div>
+				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
 
@@ -194,34 +170,30 @@
 				<?= $core->get_content() ?>
 			</div>
 		</main>
-		
+
 		<footer>
-			<div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-expand@l uk-grid-divider" uk-grid>
+			<h2 id="ef-footer-title">
+				Eurofurence <?= $core->current->number ?></br />
+				<span class="uk-text-meta uk-text-italic"><?= $core->current->theme ?></span>
+			</h2>
+			<div class="uk-child-width-1-3@l" uk-grid>
 				<div>
-					<h3>Eurofurence <?= $core->current->number ?></h3>
-					<span><?= $core->current->theme ?></span>
-					<p>
+					<div class="uk-margin-medium-bottom">
 						<?= $core->current->location ?><br />
 						<?= $core->current->dates ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $core->current->datesAnnotation ?>"></span>
-					</p>
-				</div>
-				
-				<div>
-					<h3>Find us on</h3>
-					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">
-						<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
+					</div>
+					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">					
+						<a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a>
 						<a target="_blank" href="https://t.me/s/efnotifications" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Telegram" uk-icon="telegram"></a>
 						<a target="_blank" href="https://meow.social/@eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Mastodon" uk-icon="mastodon" rel="me"></a>
 						<a target="_blank" href="https://bsky.app/profile/eurofurence.org" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Bluesky" uk-icon="bluesky"></a>
 						<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Vimeo" uk-icon="vimeo"></a>
 						<a target="_blank" href="https://discord.com/invite/VMESBMM" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
 					</div>
-				</div>
-
-				<div>
-					<h3>Mobile Apps</h3>
-					<a href="https://itunes.apple.com/us/app/eurofurence-convention/id1112547322" target="_blank" class="ef-hide-ext ef-app-badge"><img src="img/apple-appstore.svg" alt="iOS App" class=" uk-margin-small-bottom" /></a>
-					<a href="https://play.google.com/store/apps/details?id=org.eurofurence.connavigator" target="_blank" class="ef-hide-ext ef-app-badge"><img src="img/google-playstore.png" alt="Android App" class=" uk-margin-small-bottom" /></a>
+					<div>
+						<a href="https://itunes.apple.com/us/app/eurofurence-convention/id1112547322" target="_blank" class="ef-hide-ext ef-app-badge"><img src="img/apple-appstore.svg" alt="iOS App" class=" uk-margin-small-bottom" /></a>
+						<a href="https://play.google.com/store/apps/details?id=org.eurofurence.connavigator" target="_blank" class="ef-hide-ext ef-app-badge"><img src="img/google-playstore.png" alt="Android App" class=" uk-margin-small-bottom" /></a>
+					</div>
 				</div>
 
 				<div>
@@ -236,23 +208,67 @@
 				</div>
 
 				<div>
-					<h3>Help</h3>
+					<h3 class="uk-margin-remove-bottom">Rate this Page</h3>
+					<div class="page-rating-stars">
+						<div class="ef-page-rating 1" uk-toggle="target: #page-rating" data-rating="1">★</div>
+						<div class="ef-page-rating 2" uk-toggle="target: #page-rating" data-rating="2">★</div>
+						<div class="ef-page-rating 3" uk-toggle="target: #page-rating" data-rating="3">★</div>
+						<div class="ef-page-rating 4" uk-toggle="target: #page-rating" data-rating="4">★</div>
+						<div class="ef-page-rating 5" uk-toggle="target: #page-rating" data-rating="5">★</div>
+					</div>
+					<h3>Help &amp; Legal</h3>
+					
 					<ul class="uk-list">
 						<li><a href="https://help.eurofurence.org/contact" target="_blank"><span uk-icon="icon:mail" class="ef-uk-icon-lift"></span>Contact Us</a></li>
-						<li><a href="https://help.eurofurence.org/faq" target="_blank"><span uk-icon="icon:question" class="ef-uk-icon-lift"></span>Frequently Asked Questions (FAQ)</a></li>
-					</ul>
-				</div>
-
-				<div>
-					<h3>Legal</h3>
-					<ul class="uk-list">
-						<li><a href="https://help.eurofurence.org/legal/imprint" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Imprint &amp; Legal Notice</a></li>
-						<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:lock" class="ef-uk-icon-lift"></span>Privacy Statement</a></li>
+						<!-- <li><a href="https://help.eurofurence.org/faq" target="_blank"><span uk-icon="icon:question" class="ef-uk-icon-lift"></span>Frequently Asked Questions (FAQ)</a></li> -->
+						<!-- <li><a href="https://help.eurofurence.org/legal/imprint" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Imprint &amp; Legal Notice</a></li> -->
+						<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Legal &amp; Privacy Statement</a></li>
 						<li><a href="website"><span uk-icon="icon:heart" class="ef-uk-icon-lift"></span>Site Attributions</a></li>
 					</ul>
 				</div>
 			</div>
 		</footer>
+
+		<!-- page rating modal dialog -->
+		<div id="page-rating" uk-modal>
+			<div class="uk-modal-dialog uk-modal-body">
+				<h2 class="uk-modal-title">Rate This Page</h2>
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<p>
+					You are rating <span class="uk-text-bold"><?= $core->current->title ?></span>.<br />
+					Your input will not be published, but manually reviewed and passed on to the responsible department within Eurofurence.<br />
+					If you are affiliated with this department, please be fair and abstain.
+				</p>
+
+				<div class="uk-margin-bottom">
+					Your Rating:
+					<a class="page-rating-stars">
+						<div class="ef-page-rating 1" data-rating="1">★</div>
+						<div class="ef-page-rating 2" data-rating="2">★</div>
+						<div class="ef-page-rating 3" data-rating="3">★</div>
+						<div class="ef-page-rating 4" data-rating="4">★</div>
+						<div class="ef-page-rating 5" data-rating="5">★</div>
+					</a>
+				</div>
+
+				<div class="uk-margin-bottom">
+					<label for="rating-name" class="uk-margin-bottom">
+						Your Name (optional):
+						<input type="text" id="rating-name" name="name" maxlength="255" placeholder="Anonymous" class="uk-input" />
+					</label>
+				</div>
+
+				<div class="uk-margin-bottom">
+					<label for="rating-comment" class="uk-margin-bottom">
+						Your Comment (optional):
+						<textarea id="rating-comment" placeholder="No Comment" class="uk-textarea"></textarea>
+					</label>
+				</div>
+
+				<button type="button" id="page-rating-submit" class="uk-button uk-button-primary">Submit</button>
+			</div>
+		</div>
+
 		<script src="js/uikit.min.js"></script>
 		<script src="js/uikit-icons.min.js"></script>
 		<script src="js/partners.js"></script>

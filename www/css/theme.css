@@ -2,13 +2,13 @@
     --ef-palette-1: #ffa500;
     --ef-palette-2: #fff;
 }
-main {
-    
-}
 
 #ef-home-banner {
-    background-image: url(../img/pages/home/banner_2025.gif);
+    background-image: url(../img/pages/home/banner_2025_2.gif);
     text-align: right;
+}
+#ef-home-banner > div {
+    right: 20px;
 }
 
 #ef-home-photo {
