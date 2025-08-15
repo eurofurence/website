@@ -160,10 +160,22 @@
 			</button>
 
 			<nav>
-				<div id="ef-nav-home" class="uk-visible@s"><a href="home"></a></div>
+				<div id="ef-nav-home" class="uk-visible@s"><a href="home"><span>Home</span></a></div>
 				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
+
+		<style>
+			#ef-nav-home a {
+				position: relative;
+				font-size: 0.65rem;
+			}
+			#ef-nav-home a span {
+				position: absolute;
+				bottom: 0;
+				left: 1rem;
+			}
+		</style>
 
 		<main <?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
 			<div id="content">
