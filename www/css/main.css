@@ -298,6 +298,12 @@ footer h2 .uk-text-meta {
 .page-rating-stars:hover {
 	text-decoration: none;
 }
+.ef-page-rating {
+	border: none;
+	font-size: 1.5rem;
+	color: white;
+	background: var(--ef-green);
+}
 
 /* uikit overrides */
 span.uk-icon {

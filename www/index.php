@@ -210,11 +210,11 @@
 				<div>
 					<h3 class="uk-margin-remove-bottom">Rate this Page</h3>
 					<div class="page-rating-stars">
-						<div class="ef-page-rating 1" uk-toggle="target: #page-rating" data-rating="1">★</div>
-						<div class="ef-page-rating 2" uk-toggle="target: #page-rating" data-rating="2">★</div>
-						<div class="ef-page-rating 3" uk-toggle="target: #page-rating" data-rating="3">★</div>
-						<div class="ef-page-rating 4" uk-toggle="target: #page-rating" data-rating="4">★</div>
-						<div class="ef-page-rating 5" uk-toggle="target: #page-rating" data-rating="5">★</div>
+						<button class="ef-page-rating 1" uk-toggle="target: #page-rating" data-rating="1">★</button>
+						<button class="ef-page-rating 2" uk-toggle="target: #page-rating" data-rating="2">★</button>
+						<button class="ef-page-rating 3" uk-toggle="target: #page-rating" data-rating="3">★</button>
+						<button class="ef-page-rating 4" uk-toggle="target: #page-rating" data-rating="4">★</button>
+						<button class="ef-page-rating 5" uk-toggle="target: #page-rating" data-rating="5">★</button>
 					</div>
 					<h3>Help &amp; Legal</h3>
 					
@@ -243,11 +243,11 @@
 				<div class="uk-margin-bottom">
 					Your Rating:
 					<a class="page-rating-stars">
-						<div class="ef-page-rating 1" data-rating="1">★</div>
-						<div class="ef-page-rating 2" data-rating="2">★</div>
-						<div class="ef-page-rating 3" data-rating="3">★</div>
-						<div class="ef-page-rating 4" data-rating="4">★</div>
-						<div class="ef-page-rating 5" data-rating="5">★</div>
+						<button class="ef-page-rating 1" data-rating="1">★</button>
+						<button class="ef-page-rating 2" data-rating="2">★</button>
+						<button class="ef-page-rating 3" data-rating="3">★</button>
+						<button class="ef-page-rating 4" data-rating="4">★</button>
+						<button class="ef-page-rating 5" data-rating="5">★</button>
 					</a>
 				</div>
 
