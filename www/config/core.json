@@ -1,18 +1,18 @@
 {
 	"convention": {
 		"charity": "(TBA!)",
-		"dates": "December 30th to 31st, 2000",
-		"datesAnnotation": "Opening is on the 30th, Closing on the 31st, with a dance following into the next day's morning hours. There is also a Dead Dog Party on the evening after; tickets sold separately.",
-		"end": "2000-12-31",
+		"dates": "August 19th to 23rd, 2026",
+		"datesAnnotation": "Opening is on the 19th, Closing on the 23rd, with a dance following into the next day's morning hours. There is also a Dead Dog Party on the evening after; tickets sold separately.",
+		"end": "2026-08-23",
 		"goh": "(TBA!)",
 		"location": "CCH Hamburg, Germany",
-		"number": "-1",
-		"opening": "2000-12-31T17:00:00+02:00",
-		"ordinal": "100th",
-		"start": "2000-12-30",
-		"theme": "Lorem Ipsum Dolor Sit Amet",
+		"number": "30",
+		"opening": "2026-08-19T17:00:00+02:00",
+		"ordinal": "30th",
+		"start": "2026-08-19",
+		"theme": "Fantastic Furry Festival",
 		"themeColor": "#005953",
-		"year": "2000"
+		"year": "2026"
 	},
 	"defaults": {
 		"externalEmbed": false,
