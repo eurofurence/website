@@ -1,37 +1,13 @@
 <section>
-	<h1>Featured Artist: Rudzik</h1>
-</section>
-<section class="uk-column-1-2@l">
-	<div>
-		<p class="uk-text-italic">Hey there, fellow travelers of imagination! I'm Rudzik, a digital artist hailing from Germany. 
-		<p class="uk-text-italic">I'm all about furry and fantasy art - think adorable fur creatures and majestic dragons! 
-		<p class="uk-text-italic">Since 2020, Rudzik's been making magic happen full-time. </p>
-		<p class="uk-text-italic">Let's embark on this creative journey together and explore the wonders of imagination in my enchanting art! </p>
-	
-		<h2>Links &amp; Projects</h2>
-		<ul>
-			<li><a href="https://rudzik.art/" target="_blank">Rudzik's Homepage</a></li>
-			<li><a href="https://coffeehousecreatures.com" target="_blank">Coffee House Creatures</a></li>
-		</ul>
-	</div>
+	<h1>Featured Artist: Jukajo</h1>
 
-	<div>
-		<?php
-			$images = [
-				"ef2024_sample1_by_rudzik.jpg",
-				"ef2024_sample2_by_rudzik.jpg",
-				"ef2024_sample3_by_rudzik.jpg",
-				"ef2024_sample4_by_rudzik.jpg"
-			]
-		?>
-		<div uk-slideshow="autoplay: true; autoplay-interval: 5000; animation: pull; ratio: 3:1">
-			<ul class="uk-slideshow-items" uk-lightbox>
-			<?php foreach ($images as $img) { ?>
-				<li><a href="img/art/<?= $img ?>"><img src="img/art/thumbs/<?= $img ?>" width="600" height="315" alt="Art by Rudzik" /></a></li>
-			<?php } ?>
-			</ul>
-		</div>
-	</div>
+	<p>Hallo Jukajo, hier sind die Rahmenbedingungen für den Banner, den wir von dir benötigen:</p>
+	<p>Das Bild zeigt den gesamten Banner, in seiner vollen Höhe. Diese volle Höhe ist nur in der mobilen Ansicht (schmale Bildschirme) sichtbar, und nahezu vollständig von dem dunklen Overlay mit EF-Thema & Datum verdeckt. Das Ergegnis kannst du dir auch anschauen, wenn du <a href="home">die Home-Seite</a> auf einem Smartphone öffnest.</p>
+	<p>Der Bereich oberhalb der Linie zeigt einen "mindestens sichtbaren" Abschnitt mitsamt Overlay, wie er auf größeren Bildschirmen (PC, Fernseher) oberhalb einer Grenze von 1200 Pixeln zu sehen sein sollte. AB 1200 Pixeln abwärts gilt: desto schmaler der Bildschirm (oder das Browser-Fenster), umso schmaler auch der Banner, und umso mehr Banner unterhalt der Linie wird sichtbar. Du kannst diesen Effekt auch testen, indem du <a href="home">die Home-Seite</a> auf einem großen Bildschirm öffnest und den Browser langsam schmaler ziehst.</p>
+
+	<img src="img/pages/website/banner_ratio_example.png" alt="Banner ratio example" />
+
+	<p>Es ist also wichtig, dass der Banner irgendwie so gestaltet ist, dass der Teil oberhalb der Linie eigenständig funktioniert, und der Rest in jeglicher Höhe funktioniert (weil zwischen Desktop und Mobil ja auch noch kleinere Bildschirme, Tablets, große Smartphones, usw. liegen).</p>
 </section>
 
 <hr />
@@ -61,7 +37,7 @@
 	<?php
 		$members = [
 			// ['Name', 'Title', 'Image', 'Link'],
-			['draconigen', 'Director &amp; Main Website', 'draconigen.png', 'https://www.dogpixels.net/draconigen/'],
+			['Flam', 'Director &amp; Main Website', 'flam.png', 'https://draconigen.dogpixels.net/'],
 			['fafnyr', 'Vice Director &amp; System Administration', 'fafnyr.png', 'https://www.furaffinity.net/user/fafnyr/'],
 			['Alex Dax', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
 			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
