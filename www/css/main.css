@@ -291,7 +291,7 @@ footer h2 .uk-text-meta {
 	font-size: 1.5em;
 	letter-spacing: .1em;
 }
-.page-rating-stars > *.selected {
+.page-rating-stars > *.glowing {
 	filter: unset;
 	color: gold;
 }
@@ -302,7 +302,8 @@ footer h2 .uk-text-meta {
 	border: none;
 	font-size: 1.5rem;
 	color: white;
-	background: var(--ef-green);
+	background: unset;
+	cursor: pointer;
 }
 
 /* uikit overrides */

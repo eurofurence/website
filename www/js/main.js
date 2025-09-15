@@ -21,17 +21,20 @@ if (window.location.hash && job) {
 }
 
 /* Page Rating */
-const pageRatingStars = document.querySelectorAll('.page-rating-stars > *');
-pageRatingStars.forEach(star => {
+const rating = document.getElementById('rating-rating');
+const stars = document.querySelectorAll('.page-rating-stars > *');
+stars.forEach(star => {
     star.addEventListener('mouseenter', () => {
-        const rating = parseInt(star.dataset.rating);
-        pageRatingStars.forEach(s => {
-            const current = parseInt(s.dataset.rating);
-            s.classList.toggle('selected', current <= rating);
+        stars.forEach(s => {
+            s.classList.toggle('glowing', s.dataset.rating <= star.dataset.rating);
         });
     });
 
-    star.addEventListener('mouseleave', () => {
-        pageRatingStars.forEach(s => s.classList.remove('selected'));
+    star.addEventListener('click', () => {
+        rating.value = star.dataset.rating;
     });
-})
+
+    star.addEventListener('mouseleave', () => {
+        stars.forEach(s => {s.classList.toggle('glowing', s.dataset.rating <= rating.value)});
+    });
+});
