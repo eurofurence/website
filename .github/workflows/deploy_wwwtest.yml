@@ -23,4 +23,6 @@ jobs:
         run: |
           rsync -av --delete -e "ssh -o StrictHostKeyChecking=no" \
           --exclude 'modified.json' \
+          --exclude 'telegram.config.php' \
+          --exclude 'schedule' \
           www/ ef-web@wwwtest.eurofurence.org:${{ vars.STAGE_PATH }}
