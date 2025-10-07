@@ -148,6 +148,19 @@
 			"title": "Art Show - Guide",
 			"uri": "artshow.guide.php"
 		},
+        "artshow/promote": {
+			"owner": "@riffuchs",
+            "accessible": true,
+            "category": "?",
+            "description": "The Eurofurence Art Show - Art Promotion Info",
+            "inMenu": true,
+            "keywords": "Art Show, Promotion, Artwork, Display",
+            "menuText": "Art Show Promotion",
+            "ogpImage": "artshow.jpg",
+            "robots": "",
+            "title": "The Eurofurence Art Show - Art Promotion Info",
+            "uri": "artshow.promote.php"
+        },
 		"artshow/rules": {
 			"owner": "@riffuchs",
 			"accessible": true,
@@ -191,6 +204,19 @@
 			"title": "Charity",
 			"uri": "charity.php"
 		},
+        "creators": {
+			"owner": "@TheFruitFox",
+            "accessible": true,
+            "category": "?",
+            "description": "",
+            "inMenu": true,
+            "keywords": "live, streamer, vtuber, content creator, twitch, instagram, tiktok, youtube, mastodon, social media",
+            "menuText": "Web Video Creators",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Web Video Creators",
+            "uri": "creators.php"
+        },
 		"conbook": {
 			"owner": "@vinaru",
 			"accessible": true,
@@ -217,19 +243,6 @@
 			"title": "The Daily Eurofurence",
 			"uri": "daily.php"
 		},
-        "restaurants": {
-			"owner": "@Sam_Mel",
-            "accessible": true,
-            "category": "?",
-            "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
-            "inMenu": true,
-            "keywords": "Hotel, Dining, Restaurants, Vegetarian, Vegan, Food, Eating",
-            "menuText": "Restaurants",
-            "ogpImage": "restaurants.png",
-            "robots": "",
-            "title": "Venue - Nearby Dining Options",
-            "uri": "restaurants.php"
-        },
         "dancecontests": {
 			"owner": "@Px0ssum",
             "accessible": true,
@@ -242,6 +255,19 @@
             "robots": "",
             "title": "Enter the Arena & Paws on Fire",
             "uri": "dancecontests.php"
+        },
+        "dances": {
+			"owner": "@Px0ssum",
+            "accessible": true,
+            "category": "?",
+            "description": "We are calling all DJs, beat captains, and interstellar sound engineers: The Eurofurence 29 Dance Stage is preparing for liftoff — we need you on board.",
+            "inMenu": true,
+            "keywords": "Dances, DJ, Application",
+            "menuText": "Dances",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Dances",
+            "uri": "dances.php"
         },
 		"dealersden": {
 			"owner": "@Pattarchus",
@@ -296,6 +322,19 @@
 			"title": "Events",
 			"uri": "events.php"
 		},
+        "furauction": {
+			"owner": "@Hakogori",
+            "accessible": true,
+            "category": "?",
+            "description": "At the Eurofurence Furauction, you get the chance to bid for a chance to spend quality time with your favourite fursuiter in a one-on-one setting, while also donate money to charity! From chats and hugs to photoshoots, everything is possible!",
+            "inMenu": true,
+            "keywords": "charity, furauction, fursuiterauction, fursuiter auction",
+            "menuText": "Fursuit Support",
+            "ogpImage": "furauction.png",
+            "robots": "",
+            "title": "Furauction",
+            "uri": "furauction.php"
+        },
 		"fursuits": {
 			"owner": "@Jake_R",
 			"accessible": true,
@@ -309,6 +348,19 @@
 			"title": "Fursuit Support",
 			"uri": "fursuits.php"
 		},
+        "fursuit/badges": {
+			"owner":"@Thiritin",
+            "accessible": true,
+            "category": "?",
+            "description": "",
+            "inMenu": true,
+            "keywords": "",
+            "menuText": "Fursuit Badges",
+            "ogpImage": "",
+            "robots": "",
+            "title": "",
+            "uri": "https://fursuit.eurofurence.org/"
+        },
 		"fursuitlounge": {
 			"owner": "@Jake_R",
 			"accessible": true,
@@ -413,6 +465,19 @@
 			"title": "",
 			"uri": "https://help.eurofurence.org/legal/imprint/"
 		},
+        "it_supporter": {
+			"owner": "@tarianwolf",
+            "accessible": true,
+            "category": "?",
+            "description": "A lists of companies supporting the Eurofurence IT Infrastructure.",
+            "inMenu": true,
+            "keywords": "supporters, IT",
+            "menuText": "Supporter",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Supporters",
+            "uri": "it_supporter.php"
+        },
         "jobs": {
 			"owner": "@draconigen",
             "accessible": true,
@@ -425,6 +490,19 @@
             "robots": "",
             "title": "Open Staff Positions",
             "uri": "jobs.php"
+        },
+        "volunteering": {
+			"owner": "@Pattarchus",
+            "accessible": true,
+            "category": "Participate",
+            "description": "You want to volunteer on-site at Eurofurence at Europe's biggest furry convention? Here is how you do it!'",
+            "inMenu": true,
+            "keywords": "Jobs, Volunteer, Crew, Help, Gopher, Critter, Volunteering",
+            "menuText": "On-Site Volunteering",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Becoming an Eurofurence Critter: On-Site Volunteering",
+            "uri": "volunteering.php"
         },
 		"lostandfound": {
 			"owner": "@draconigen",
@@ -452,6 +530,19 @@
 			"title": "Statistics",
 			"uri": "nosecount.php"
 		},
+        "openstage": {
+			"owner": "@Anheanger_der_Pestilenz",
+            "accessible": true,
+            "category": "?",
+            "description": "Eurofurence Open stage is here as always. Come in and join us for various smaller artists and events.",
+            "inMenu": true,
+            "keywords": "Open Stage, Stage, Freestyle, Music, Performance, Fureoke, Karaoke, Open Mic, Musicians, Bands, Independant",
+            "menuText": "Open Stage Lineup",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Open Stage Lineup",
+            "uri": "openstage.php"
+        },
 		"photography": {
 			"owner": "@Atkelar",
 			"accessible": true,
@@ -478,6 +569,19 @@
 			"title": "Policies",
 			"uri": "policies.php"
 		},
+        "prices": {
+			"owner": "(no owner)",
+            "accessible": true,
+            "inMenu": true,
+            "menuText": "Prices",
+            "category": "Participate",
+            "uri": "prices.php",
+            "title": "Convention Fees &amp; Prices",
+            "description": "Eurofurence {number} will take place from {dates} at the {location}. Eurofurence is Europe's largest annual gathering of the European furry community.",
+            "keywords": "Price, Ticket, Booking, Registration, Reg, Sign Up, How Much, Costs",
+            "ogpImage": "",
+            "robots": ""
+        },
 		"registration": {
 			"owner": "@draconigen",
 			"accessible": true,
@@ -491,6 +595,19 @@
 			"title": "",
 			"uri": "https://reg.eurofurence.org/"
 		},
+        "restaurants": {
+			"owner": "@Sam_Mel",
+            "accessible": true,
+            "category": "Location",
+            "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
+            "inMenu": true,
+            "keywords": "Hotel, Dining, Restaurants, Vegetarian, Vegan, Food, Eating",
+            "menuText": "Restaurants",
+            "ogpImage": "restaurants.png",
+            "robots": "",
+            "title": "Venue - Nearby Dining Options",
+            "uri": "restaurants.php"
+        },
 		"roc": {
 			"owner": "@draconigen",
 			"accessible": true,
@@ -569,6 +686,19 @@
 			"title": "Venue - Travel &amp; Parking",
 			"uri": "venue.travel.php"
 		},
+        "ledwall": {
+			"owner": "@Anheanger_der_Pestilenz",
+            "accessible": true,
+            "category": "?",
+            "description": "Your art on the really big screen. Find out everything you need to know to submit your animations for the Video Wall above the entrance, as well as some examples from the last year. Deadline August 10.",
+            "inMenu": true,
+            "keywords": "Venue, Video, LED, Wall, Entrance, Big, Large, Screen, Animation",
+            "menuText": "LED Wall",
+            "ogpImage": "videowall.jpg",
+            "robots": "",
+            "title": "LED Wall",
+            "uri": "ledwall.php"
+        },
 		"website": {
 			"owner": "@draconigen",
 			"accessible": true,
@@ -594,6 +724,19 @@
 			"robots": "",
 			"title": "Website Banner Exchange Program",
 			"uri": "website.banner.php"
-		}
+		},
+        "wallpapers": {
+			"owner": "@GermanCoyote / @Dingo",
+            "accessible": true,
+            "category": "?",
+            "description": "Enjoy these wallpapers to get you into the right mood for this years' theme.",
+            "inMenu": true,
+            "keywords": "wallpapers, graphics",
+            "menuText": "Wallpapers",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Wallpapers",
+            "uri": "wallpapers.php"
+        }
 	}
 }
