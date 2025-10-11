@@ -55,6 +55,7 @@
         <p>this makes a con like no other, your friends will be there so what's stopping you?</p>
         
         <p class="uk-margin-remove-bottom">
+            <a href="about" class="uk-button uk-button-primary" target="_blank">LEARN MORE</a>
             <a href="https://identity.eurofurence.org/" class="uk-button uk-button-primary" target="_blank">REGISTER NOW</a>
         </p>
     </div>

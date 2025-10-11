@@ -78,6 +78,19 @@
 			"title": "Page Not Available Yet",
 			"uri": "501.php"
 		},
+		"about": {
+			"owner": "@Jyanon",
+			"accessible": true,
+			"category": "?",
+			"description": "Learn more about Eurofurence, its theme, values, people and history.",
+			"inMenu": true,
+			"keywords": "Eurofurence, Media, Press, Journalist, Relation, Explanation, Details",
+			"menuText": "About Eurofurence",
+			"ogpImage": "",
+			"robots": "",
+			"title": "More about Eurofurence",
+			"uri": "about.php"
+		},
 		"accessibility": {
 			"owner": "@Sam_Mel",
 			"accessible": true,
