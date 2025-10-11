@@ -43,6 +43,10 @@ header, main, footer {
 	max-width: var(--uk-breakpoint-l, 1200px);
 }
 
+.ef-background {
+	background-color: var(--ef-green);
+}
+
 /* header */
 header {
 	z-index: 7;
@@ -219,7 +223,6 @@ main {
 	padding: 20px 30px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin-bottom: 20px;
 }
 #ef-home-banner > div {
 	margin: 20px 30px;
@@ -228,6 +231,12 @@ main {
 	position: absolute;
 	font-weight: 600;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#ef-home-countdown h2 {
+	margin: 0;
+	padding-top: .5rem;
+	font-size: 1.5rem;
 }
 
 #ef-intro-text {
@@ -319,6 +328,18 @@ span.ef-uk-icon-lift {
 }
 [class^="uk-"][class$="primary"]:hover {
 	background-color: var(--ef-green-light);
+}
+.uk-countdown-number,
+.uk-countdown-separator,
+.uk-countdown-label {
+	color: #fff;
+	font-size: 3rem;
+}
+.uk-countdown-label,
+.uk-countdown-separator {
+	position: relative;
+	top: -1rem;
+	font-size: 1rem;
 }
 
 /* convention links */

@@ -79,9 +79,21 @@
 		border: 2px solid #fff;
 	}
 
-	
 	footer #ef-footer-title {
 		background-image: unset;
 		padding-left: unset;
+	}
+
+	.uk-countdown-number,
+	.uk-countdown-separator,
+	.uk-countdown-label {
+		color: #fff;
+		font-size: 2rem;
+	}
+	.uk-countdown-label,
+	.uk-countdown-separator {
+		position: relative;
+		top: -1rem;
+		font-size: 1rem;
 	}
 }

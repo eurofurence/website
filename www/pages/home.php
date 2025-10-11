@@ -37,6 +37,31 @@
     </div>
 </div>
 
+<div id="ef-home-countdown" class="ef-background uk-margin uk-text-center">
+    <h2>Starting in</h2>
+    <div class="uk-grid-small uk-child-width-auto uk-flex-center uk-flex-middle" uk-grid uk-countdown="date: <?= $this->config->convention->opening ?>">
+        <div>
+            <div class="uk-countdown-number uk-countdown-days"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center">Days</div>
+        </div>
+        <div class="uk-countdown-separator">:</div>
+        <div>
+            <div class="uk-countdown-number uk-countdown-hours"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center">Hours</div>
+        </div>
+        <div class="uk-countdown-separator">:</div>
+        <div>
+            <div class="uk-countdown-number uk-countdown-minutes"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center">Minutes</div>
+        </div>
+        <div class="uk-countdown-separator">:</div>
+        <div>
+            <div class="uk-countdown-number uk-countdown-seconds"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center">Seconds</div>
+        </div>
+    </div>
+</div>
+
 <div id="ef-home-photo" class="uk-position-relative" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
     <div class="uk-slideshow-items">
         <?php 
