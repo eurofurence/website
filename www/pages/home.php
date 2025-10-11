@@ -32,7 +32,7 @@
         <p>
             <?= $this->current->theme ?> <br />
             <?= $this->current->dates ?> <br />
-            <?= $this->current->location ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $this->current->datesAnnotation ?>"></span>
+            <?= $this->current->location ?>
         </p>
     </div>
 </div>

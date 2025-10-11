@@ -181,7 +181,7 @@
 				<div>
 					<div class="uk-margin-medium-bottom">
 						<?= $core->current->location ?><br />
-						<?= $core->current->dates ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $core->current->datesAnnotation ?>"></span>
+						<?= $core->current->dates ?>
 					</div>
 					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">					
 						<a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a>
