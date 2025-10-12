@@ -283,13 +283,15 @@
 
 		<?php /* Page Rating Submit Handling */
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-			Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
-				htmlspecialchars($_POST['page']),
-				htmlspecialchars($_POST['rating']),
-				htmlspecialchars($_POST['name']),
-				htmlspecialchars($_POST['comment'])
-			));
-			header("Location: " . $_SERVER['REQUEST_URI']);
+			if (!empty($_POST['rating'])) {
+				Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
+					htmlspecialchars($_POST['page']),
+					htmlspecialchars($_POST['rating']),
+					htmlspecialchars($_POST['name']),
+					htmlspecialchars($_POST['comment'])
+				));
+				header("Location: " . $_SERVER['REQUEST_URI']);
+			}
 		}
 		?>
 	</body>
