@@ -32,8 +32,7 @@
 			"Program",
 			"Participate",
 			"Services",
-			"Policies",
-			"?"
+			"Policies"
 		],
 		"externalTarget": " target=\"_blank\"",
 		"hrefSuffix": "",
@@ -187,11 +186,11 @@
         "venue/supporters": {
 			"owner": "@tarianwolf",
             "accessible": false,
-            "category": "?",
+            "category": "Location",
             "description": "A lists of companies supporting the Eurofurence IT Infrastructure.",
             "inMenu": false,
             "keywords": "supporters, IT",
-            "menuText": "Supporter",
+            "menuText": "Supporters",
             "ogpImage": "",
             "robots": "",
             "title": "Supporters",
@@ -611,7 +610,7 @@
 		"roc": {
 			"owner": "@draconigen",
 			"accessible": true,
-			"category": "Rules of Conduct",
+			"category": "Policies",
 			"description": "",
 			"inMenu": true,
 			"keywords": "",
