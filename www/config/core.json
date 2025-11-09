@@ -184,18 +184,18 @@
 			"title": "More about Eurofurence",
 			"uri": "about.php"
 		},
-        "it_supporter": {
+        "venue/supporters": {
 			"owner": "@tarianwolf",
-            "accessible": true,
+            "accessible": false,
             "category": "?",
             "description": "A lists of companies supporting the Eurofurence IT Infrastructure.",
-            "inMenu": true,
+            "inMenu": false,
             "keywords": "supporters, IT",
             "menuText": "Supporter",
             "ogpImage": "",
             "robots": "",
             "title": "Supporters",
-            "uri": "it_supporter.php"
+            "uri": "venue.supporters.php"
         },
 
 
