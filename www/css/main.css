@@ -251,6 +251,19 @@ main {
 	font-weight: 600;
 	text-transform: uppercase;
 }
+
+#ef-flavor-text {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#ef-flavor-text > p:first-child:first-letter {
+	font-weight: 600;
+	float: left;
+	font-size: 3.34rem;
+	line-height: 3.34rem;
+	padding-top: .34rem;
+	padding-right: .34rem;
+	padding-left: .34rem;
+}
 #ef-nav-home a {
 	position: relative;
 	font-size: 0.65rem;
