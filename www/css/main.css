@@ -3,6 +3,7 @@
 	--ef-footer-title-height: 60px;
 	--ef-green: #005953;
 	--ef-green-light: #69a3a2;
+	--ef-border-radius: 6px;
 }
 
 * {
@@ -86,7 +87,7 @@ nav {
 		rgba(0, 76, 255, 0.4) 75%,
 		rgba(119, 0, 136, 0.4) 100%
 	); */
-	border-radius: 6px;
+	border-radius: var(--ef-border-radius);
 }
 nav > div#ef-nav-home a {
 	display: block;
@@ -167,7 +168,7 @@ nav > div > ul ul {
 	max-height: 0;
 	overflow: hidden;
 	background-color: var(--ef-green);
-	border-radius: 0 0 4px 4px;
+	border-radius: 0 0 var(--ef-border-radius) var(--ef-border-radius);
 	transition: max-height .25s;
 }
 nav > div > ul ul a {
@@ -220,12 +221,13 @@ main {
 #ef-home-banner {
 	height: 300px;
 	color: #fff;
-	padding: 20px 30px;
+	border-radius: var(--ef-border-radius);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 #ef-home-banner > div {
 	margin: 20px 30px;
+	border-radius: var(--ef-border-radius);
 	padding: 20px;
 	width: min(50%, 480px, 100%);
 	position: absolute;
@@ -233,6 +235,9 @@ main {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+#ef-home-countdown {
+	border-radius: var(--ef-border-radius);
+}
 #ef-home-countdown h2 {
 	margin: 0;
 	padding-top: .5rem;
@@ -280,7 +285,7 @@ main {
 footer {
 	padding: 20px;
 	background-color: var(--ef-green);
-	border-radius: 6px;
+	border-radius: var(--ef-border-radius);
 }
 footer .uk-button-group {
 	display: inline-flex;
@@ -355,6 +360,19 @@ span.ef-uk-icon-lift {
 	position: relative;
 	top: -1rem;
 	font-size: 1rem;
+}
+.uk-modal-dialog,
+.uk-modal-header,
+.uk-modal-footer,
+.uk-input,
+.uk-textarea,
+.uk-button,
+.uk-card,
+.rounded,
+.uk-tooltip,
+.uk-notification-message,
+iframe {
+  border-radius: var(--ef-border-radius);
 }
 
 /* convention links */
