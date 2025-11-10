@@ -62,10 +62,10 @@
     </div>
 </div>
 
-<div id="ef-home-photo" class="uk-position-relative" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
+<div id="ef-home-photos" class="uk-position-relative" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
     <div class="uk-slideshow-items">
         <?php 
-        $dir = 'img/pages/home/photo/';
+        $dir = 'img/pages/home/photos/';
         foreach (scandir($dir) as $file) {
             if (in_array($file, ['.', '..']))
                 continue;
