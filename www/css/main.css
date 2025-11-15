@@ -220,6 +220,7 @@ main {
 }
 #content {
 	padding: 20px;
+	min-height: calc(100vh - 520px);
 }
 [class^="uk-card-media-"] a:hover img,
 [uk-lightbox] a:hover img,
