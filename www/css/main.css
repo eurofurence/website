@@ -160,16 +160,18 @@ nav > div > ul > li:hover > ul,
 nav > div > ul > li > ul:hover,
 nav input[name="subnav-ctl"]:checked ~ ul {
 	max-height: 100vh;
+	padding-top: 4px;
 }
 nav > div > ul ul {
 	position: absolute;
 	top: calc(100% - 4px);
 	width: 100%;
 	max-height: 0;
+	padding-top: 0;
 	overflow: hidden;
 	background-color: var(--ef-green);
 	border-radius: 0 0 var(--ef-border-radius) var(--ef-border-radius);
-	transition: max-height .25s;
+	transition: max-height .25s, padding-top .15s ease;
 }
 nav > div > ul ul a {
 	display: inline-block;
