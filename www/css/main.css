@@ -163,8 +163,8 @@ nav input[name="subnav-ctl"]:checked ~ ul {
 }
 nav > div > ul ul {
 	position: absolute;
-	top: 100%;
-	left: 10px;
+	top: calc(100% - 4px);
+	width: 100%;
 	max-height: 0;
 	overflow: hidden;
 	background-color: var(--ef-green);
