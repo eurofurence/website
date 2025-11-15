@@ -1,7 +1,8 @@
 <style>
     @import url("css/mastodon-timeline.min.css");
-    #mt-container {
-        height: 740px;
+    #mt-container,
+    #ef-home-flavor-text {
+        height: 800px;
         overflow: scroll;
     }
     .mt-container, .mt-container[data-theme="light"], .mt-dialog, .mt-dialog[data-theme="light"] {
