@@ -200,6 +200,16 @@ label[for="nav-ctl"] {
 	display: none;
 }
 
+#ef-nav-home a {
+	position: relative;
+	font-size: 0.65rem;
+}
+#ef-nav-home a span {
+	position: absolute;
+	bottom: 0;
+	left: 1rem;
+}
+
 /* body area */
 main {
 	position: relative;
@@ -226,11 +236,13 @@ main {
 	background-size: cover;
 }
 #ef-home-banner > div {
+	position: absolute;
+	right: 20px;
+	top: 40px;
 	margin: 20px 30px;
 	border-radius: var(--ef-border-radius);
 	padding: 20px;
 	width: min(50%, 480px, 100%);
-	position: absolute;
 	font-weight: 600;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -244,25 +256,26 @@ main {
 	font-size: 1.5rem;
 }
 
-#ef-home-photos {
-	position: relative;
+#ef-home-intro-text {
 	border-radius: var(--ef-border-radius);
-	overflow: hidden;
-}
+	padding: 20px;
+	font-weight: 600;
 	background-color: rgba(255, 255, 255, .9);
 	color: #000;
-	width: min(50%, 480px, 100%);
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	font-weight: 600;
 	text-transform: uppercase;
 }
 
-#ef-flavor-text {
+#ef-home-photos {
+	border-radius: var(--ef-border-radius);
+	overflow: hidden;
+}
+
+#ef-home-flavor-text {
+	height: 740px;
+	overflow: scroll;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#ef-flavor-text > p:first-child:first-letter {
+#ef-home-flavor-text > p:first-child:first-letter {
 	font-weight: 600;
 	float: left;
 	font-size: 3.34rem;
@@ -271,15 +284,7 @@ main {
 	padding-right: .34rem;
 	padding-left: .34rem;
 }
-#ef-nav-home a {
-	position: relative;
-	font-size: 0.65rem;
-}
-#ef-nav-home a span {
-	position: absolute;
-	bottom: 0;
-	left: 1rem;
-}
+
 
 /* footer */
 footer {

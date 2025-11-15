@@ -4,10 +4,26 @@
 	--uk-breakpoint-l: 1200px;
 	--uk-breakpoint-xl: 1600px;
 */
- 
+
+@media (min-width: 1200px) {
+	#ef-home-intro-text {
+		position: absolute;
+		z-index: 2;
+		right: 20px;
+		top: 40px;
+		right: 0;
+		top: 10px;
+		margin: 20px 30px; 
+		width: min(50%, 480px, 100%);		
+	}
+	#ef-home-photos {
+		position: relative;
+		z-index: 1;		
+	}
+}
+
 @media (max-width: 960px) {
-	#ef-home-banner > div,
-	#ef-home-photo > div {
+	#ef-home-banner > div {
 		width: calc(100% - 100px);
 	}
 }

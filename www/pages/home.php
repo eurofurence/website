@@ -1,6 +1,6 @@
 <style>
     @import url("css/mastodon-timeline.min.css");
-    #mt-container, #ef-flavor-text {
+    #mt-container {
         height: 740px;
         overflow: scroll;
     }
@@ -62,19 +62,8 @@
     </div>
 </div>
 
-<div id="ef-home-photos" class="uk-position-relative" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
-    <div class="uk-slideshow-items">
-        <?php 
-        $dir = 'img/pages/home/photos/';
-        foreach (scandir($dir) as $file) {
-            if (in_array($file, ['.', '..']))
-                continue;
-        ?>
-        <div><img src="<?= $dir . $file ?>" alt="<?= $file ?>" uk-cover /></div>
-        <?php } ?>
-    </div>
-
-    <div id="ef-intro-text">
+<div class="uk-position-relative">
+    <div id="ef-home-intro-text" class="uk-margin">
         <p>Eurofurence is a unique furry convention held in Hamburg every year at the CCH</p>
         <p>Unlike other cons we have a whole convention centre and over 100 hotels in the city to choose from</p>
         <p>this makes a con like no other, your friends will be there so what's stopping you?</p>
@@ -83,6 +72,18 @@
             <a href="about" class="uk-button uk-button-primary" target="_blank">LEARN MORE</a>
             <a href="https://identity.eurofurence.org/" class="uk-button uk-button-primary" target="_blank">REGISTER NOW</a>
         </p>
+    </div>
+    <div id="ef-home-photos" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
+        <div class="uk-slideshow-items">
+            <?php 
+            $dir = 'img/pages/home/photos/';
+            foreach (scandir($dir) as $file) {
+                if (in_array($file, ['.', '..']))
+                    continue;
+            ?>
+            <div><img src="<?= $dir . $file ?>" alt="<?= $file ?>" uk-cover /></div>
+            <?php } ?>
+        </div>
     </div>
 </div>
 
@@ -94,7 +95,7 @@
             </div>
         </div>
     </div>
-    <div id="ef-flavor-text" class="uk-padding uk-padding-remove-vertical">
+    <div id="ef-home-flavor-text" class="uk-padding uk-padding-remove-vertical">
         <p class="uk-margin-remove-bottom">The desert stretches endlessly before you. Rising from the dust and dunes, like a mirage made real, stands the <span class="uk-text-italic">Fantastic Furry Festival</span>. You can faintly hear the pulse of drums, see the glimmer of light refracting off wild shapes and colors, and taste the air heavy with smoke, spice, and promise.</p>
         <p class="uk-margin-remove-bottom">At the gate, a volunteer with glowing fur and amber eyes hands you a badge with your name on it. “Welcome.” they say.</p>
         <p class="uk-margin-remove-bottom">Stepping forward, the world explodes into color. Glittering domes, patchwork tents, glowing towers built from scrap and dreams. Towering art installations shimmer: beasts of metal and fire that move with the wind, sculptures that breathe smoke, holograms whispering riddles as you pass.</p>

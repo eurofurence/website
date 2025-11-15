@@ -7,10 +7,6 @@
     background-image: url(../img/pages/home/banner_2025_2.gif);
     text-align: right;
 }
-#ef-home-banner > div {
-    right: 20px;
-}
-
 main a {
 	color: var(--ef-palette-1);
 }
