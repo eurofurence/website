@@ -203,6 +203,8 @@ label[for="nav-ctl"] {
 #ef-nav-home a {
 	position: relative;
 	font-size: 0.65rem;
+	left: 10px;
+	top: -4px;
 }
 #ef-nav-home a span {
 	position: absolute;
