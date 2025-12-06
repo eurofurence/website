@@ -1,6 +1,6 @@
 
+<h1>Our Venue &ndash; The Congress Center Hamburg</h1>
 <section class="uk-margin-bottom">
-	<h1>Our Venue &ndash; The Congress Center Hamburg</h1>
 	<div class="uk-column-1-2@l">
 		<p>In the center of Hamburg, Germany, amidst  lots of green and between Alster lake and a beatiful park to your leisure, lies the Congress Center Hamburg (CCH).</p>
 		<p>The Dammtor mainline train station and several other public transportation connections within walking distance allow for an easy travel.</p>
