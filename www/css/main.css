@@ -421,20 +421,6 @@ iframe {
 	height: 36px;
 }
 
-/* utility classes */
-.ef-people img {
-	display: inline;
-	float: left;
-	width: 80px;
-	height: 80px;
-	border-radius: 100%;
-	margin-right: 12px;
-}
-
-.ef-people h3 {
-	margin: 0;
-}
-
 /* js-disabled */
 .js-disabled {
 	font-family: monospace;
