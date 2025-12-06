@@ -367,7 +367,7 @@ footer h2 .uk-text-meta {
 .ef-page-rating {
 	border: none;
 	font-size: 1.5rem;
-	color: white;
+	color: darkgray;
 	background: unset;
 	cursor: pointer;
 }
