@@ -1,7 +1,7 @@
+<h1>Hotel Options</h1>
 <section>
-    <h1>Hotel Options</h1>
     <p>You can book a hotel room via our partner service:</p>
-				<!-- by the order of Cheetah, we are to allow all external domains; implemented by disabling CSP headers completely on vserver level -->
+	<!-- by the order of Cheetah, we are to allow all external domains; implemented by disabling CSP headers completely on vserver level -->
     <div
         class="consent-cover uk-width-1-1"
         data-element-type="iframe"
