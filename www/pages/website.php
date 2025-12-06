@@ -13,8 +13,8 @@
 }
 
 .attributions-icon {
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	text-decoration: none;
 }
 </style>
@@ -22,13 +22,7 @@
 <section>
 	<h1>Featured Artist: Jukajo</h1>
 
-	<p>Hallo Jukajo, hier sind die Rahmenbedingungen für den Banner, den wir von dir benötigen:</p>
-	<p>Das Bild zeigt den gesamten Banner, in seiner vollen Höhe. Diese volle Höhe ist nur in der mobilen Ansicht (schmale Bildschirme) sichtbar, und nahezu vollständig von dem dunklen Overlay mit EF-Thema & Datum verdeckt. Das Ergegnis kannst du dir auch anschauen, wenn du <a href="home">die Home-Seite</a> auf einem Smartphone öffnest.</p>
-	<p>Der Bereich oberhalb der Linie zeigt einen "mindestens sichtbaren" Abschnitt mitsamt Overlay, wie er auf größeren Bildschirmen (PC, Fernseher) oberhalb einer Grenze von 1200 Pixeln zu sehen sein sollte. AB 1200 Pixeln abwärts gilt: desto schmaler der Bildschirm (oder das Browser-Fenster), umso schmaler auch der Banner, und umso mehr Banner unterhalt der Linie wird sichtbar. Du kannst diesen Effekt auch testen, indem du <a href="home">die Home-Seite</a> auf einem großen Bildschirm öffnest und den Browser langsam schmaler ziehst.</p>
-
-	<img src="img/pages/website/banner_ratio_example.png" alt="Banner ratio example" />
-
-	<p>Es ist also wichtig, dass der Banner irgendwie so gestaltet ist, dass der Teil oberhalb der Linie eigenständig funktioniert, und der Rest in jeglicher Höhe funktioniert (weil zwischen Desktop und Mobil ja auch noch kleinere Bildschirme, Tablets, große Smartphones, usw. liegen).</p>
+	[TODO]
 </section>
 
 <section>
@@ -78,6 +72,8 @@
 					<div>
 						<h4><a href="https://gitlab.com/idotj/mastodon-embed-timeline/" target="_blank">Mastodon embed timeline widget</a> by i.j</h4>
 						<a href="https://gitlab.com/idotj/mastodon-embed-timeline/-/blob/master/LICENSE" target="_blank"><span uk-icon="file-text"></span>License</a>
+						<br />
+						compliance notice: this website's source is on <a href="https://github.com/eurofurence/website" target="_blank">github.com/eurofurence/website</a>.
 					</div>
 				</div>
 			</div>
