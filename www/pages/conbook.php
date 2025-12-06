@@ -5,11 +5,9 @@
 	<p><b>Deadline:</b> TBA</p>
 </section>
 
-<hr />
-
-<h2 class="uk-margin-remove-bottom">Illustrations</h2>
-<h3 class="uk-margin-remove-top">(If you're an artist, this one is for you!)</h3>
 <section>
+	<h2 class="uk-margin-remove-bottom">Illustrations</h2>
+	<h3 class="uk-margin-remove-top">(If you're an artist, this one is for you!)</h3>
 	<ul class="uk-column-1-2@l">
 		<li>The Conbook is in full color, so we prefer color illustrations as well.</li>
 		<br/>
@@ -31,21 +29,23 @@
 		<br />
 		<li>The artists for the cover art work and the centerfold will be chosen and approached directly by the team.</li>
 	</ul>
-</section>
-<section class="uk-column-1-2@l">
-	<p>While there is no ongoing contest (the book's cover and centerfold have been assigned), there's still a challenge in getting into the book! Acceptance depends on quality, total number of images submitted, layout requirements, and the implementation of the con's topic! We will not be able to tell you immediately whether your submission makes the cut; this can be decided only in the final layout, so please be patient.</p>
-	<p>If you have graphic ideas other than illustrations which fit with the topic, you're welcome to submit them as well!</p>
-	<p>Even if your artwork does not get featured in the Conbook itself, we will always try to include it if applicable in various media across the convention (e.g. banners, dance visuals ect.)</p>
-	<p>Please provide following information along with your submission:</p>
-	<ul>
-		<li>Artist Name</li>
-		<li>Short Artist Description</li>
-		<li>Main gallery link</li>
-		<li>Profile picture of 500x500px (either showing your character or something you like or identify with)</li>
-	</ul>
-</section>
+	
+	<hr />
 
-<hr />
+	<div class="uk-column-1-2@l">
+		<p>While there is no ongoing contest (the book's cover and centerfold have been assigned), there's still a challenge in getting into the book! Acceptance depends on quality, total number of images submitted, layout requirements, and the implementation of the con's topic! We will not be able to tell you immediately whether your submission makes the cut; this can be decided only in the final layout, so please be patient.</p>
+		<p>If you have graphic ideas other than illustrations which fit with the topic, you're welcome to submit them as well!</p>
+		<p>Even if your artwork does not get featured in the Conbook itself, we will always try to include it if applicable in various media across the convention (e.g. banners, dance visuals ect.)</p>
+		<p>Please provide following information along with your submission:</p>
+		<ul>
+			<li>Artist Name</li>
+			<li>Short Artist Description</li>
+			<li>Main gallery link</li>
+			<li>Profile picture of 500x500px (either showing your character or something you like or identify with)</li>
+		</ul>
+	</div>
+
+</section>
 
 <section>
 	<h2>Texts</h2>

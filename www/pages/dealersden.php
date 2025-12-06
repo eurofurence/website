@@ -1,7 +1,7 @@
 <h1>Dealers’ Den Rules &amp; Information</h1>
 
-<h2>The <i>Short</i> Version</h2>
 <section class="uk-column-1-2@l">
+	<h2 class="uk-column-span">The <i>Short</i> Version</h2>
 	<p>Sales in the Dealers’ Den are only allowed by registered dealers in  authorized dealerships within designated spaces. Sharing space at a dealership with unauthorized dealers is not allowed.</p>
 	<p>To be eligible for registration as a dealer or dealer assistant, a previous registration for Eurofurence (the event) is mandatory. After an additional registration on the Dealers’ Den website, a chosen dealership package is added to the dealer’s existing registration for the event.</p>
 	<p><strong>Electricity is available for dealerships.</strong> We offer electricity for low-power consumption devices only.</p>
@@ -17,138 +17,135 @@
 	<p>If you have any questions after reading the <span class="uk-text-italic">Dealers’ Den Rules & Information</span> and the FAQ, please feel free to email us at dealers@eurofurence.org.</p>
 </section>
 
-<hr />
-
-<h2>Dealers’ Den Hours</h2>
-<section class="uk-column-1-2@l">
-	<div>
-		<table class="uk-table">
-			<thead>
-				<tr>
-					<th colspan="2">Sunday, September 3rd, 2023</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>18:30&nbsp;&ndash; 21:00</td>
-					<td>Dealer Registration in Hall H</td>
-				</tr>
-				<tr>
-					<td>19:30&nbsp;&ndash; 21:00</td>
-					<td>Dealers / Dealer Assistants only</td>
-				</tr>
-				<tr>
-					<td>21:00&nbsp;onward</td>
-					<td>Off limits to all, including dealers.*</td>
-				</tr>
-			</tbody>
-			
-			<thead>
-				<tr>
-					<th colspan="2">Monday, September 4th, 2023</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>10:00&nbsp;&ndash; 12:00</td>
-					<td>Dealer Registration in Hall H</td>
-				</tr>
-				<tr>
-					<td>10:00&nbsp;&ndash; 12:00</td>
-					<td>Dealers / Dealer Assistants only</td>
-				</tr>
-				<tr>
-					<td>12:00&nbsp;&ndash; 13:00</td>
-					<td>Admission for Super Sponsors only</td>
-				</tr>
-				<tr>
-					<td>13:00&nbsp;&ndash; 14:00</td>
-					<td>Admission for Super Sponsors + Sponsors only</td>
-				</tr>
-				<tr>
-					<td>14:00&nbsp;&ndash; 18:00</td>
-					<td>Admission for all Attendees</td>
-				</tr>
-				<tr>
-					<td>18:00&nbsp;&ndash; 18:30</td>
-					<td>Dealers / Dealer Assistants only to close dealerships</td>
-				</tr>
-				<tr>
-					<td>18:30&nbsp;onward</td>
-					<td>Off limits to all, including dealers.*</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div>
-		<table class="uk-table">
-			<thead>
-				<tr>
-					<th colspan="2">Tuesday, September 5th, 2023</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>11:00&nbsp;&ndash; 12:00</td>
-					<td>Dealer Registration in Hall H</td>
-				</tr>
-				<tr>
-					<td>11:00&nbsp;&ndash; 12:00</td>
-					<td>Dealers / Dealer Assistants only</td>
-				</tr>
-				<tr>
-					<td>12:00&nbsp;&ndash; 13:00</td>
-					<td>Admission for Super Sponsors + Sponsors only</td>
-				</tr>
-				<tr>
-					<td>13:00&nbsp;&ndash; 18:00</td>
-					<td>Admission for all Attendees</td>
-				</tr>
-				<tr>
-					<td>18:00&nbsp;&ndash; 18:30</td>
-					<td>Dealers / Dealer Assistants only to close dealerships</td>
-				</tr>
-				<tr>
-					<td>18:30&nbsp;onward</td>
-					<td>Off limits to all, including dealers.*</td>
-				</tr>
-			</tbody>
-
-			<thead>
-				<tr>
-					<th colspan="2">Wednesday, September 6th, 2023</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>11:00&nbsp;&ndash; 12:00</td>
-					<td>Dealer Registration in Hall H</td>
-				</tr>
-				<tr>
-					<td>11:00&nbsp;&ndash; 12:00</td>
-					<td>Dealers / Dealer Assistants only</td>
-				</tr>
-				<tr>
-					<td>12:00&nbsp;&ndash; 18:00</td>
-					<td>Admission for all Attendees</td>
-				</tr>
-				<tr>
-					<td>18:00&nbsp;&ndash; 20:00</td>
-					<td>Dealers / Dealer Assistants only for Teardown</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</section>
 <section>
+	<h2>Dealers’ Den Hours</h2>
+	<div class="uk-column-1-2@l">
+		<div>
+			<table class="uk-table">
+				<thead>
+					<tr>
+						<th colspan="2">Sunday, September 3rd, 2023</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>18:30&nbsp;&ndash; 21:00</td>
+						<td>Dealer Registration in Hall H</td>
+					</tr>
+					<tr>
+						<td>19:30&nbsp;&ndash; 21:00</td>
+						<td>Dealers / Dealer Assistants only</td>
+					</tr>
+					<tr>
+						<td>21:00&nbsp;onward</td>
+						<td>Off limits to all, including dealers.*</td>
+					</tr>
+				</tbody>
+				
+				<thead>
+					<tr>
+						<th colspan="2">Monday, September 4th, 2023</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>10:00&nbsp;&ndash; 12:00</td>
+						<td>Dealer Registration in Hall H</td>
+					</tr>
+					<tr>
+						<td>10:00&nbsp;&ndash; 12:00</td>
+						<td>Dealers / Dealer Assistants only</td>
+					</tr>
+					<tr>
+						<td>12:00&nbsp;&ndash; 13:00</td>
+						<td>Admission for Super Sponsors only</td>
+					</tr>
+					<tr>
+						<td>13:00&nbsp;&ndash; 14:00</td>
+						<td>Admission for Super Sponsors + Sponsors only</td>
+					</tr>
+					<tr>
+						<td>14:00&nbsp;&ndash; 18:00</td>
+						<td>Admission for all Attendees</td>
+					</tr>
+					<tr>
+						<td>18:00&nbsp;&ndash; 18:30</td>
+						<td>Dealers / Dealer Assistants only to close dealerships</td>
+					</tr>
+					<tr>
+						<td>18:30&nbsp;onward</td>
+						<td>Off limits to all, including dealers.*</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div>
+			<table class="uk-table">
+				<thead>
+					<tr>
+						<th colspan="2">Tuesday, September 5th, 2023</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11:00&nbsp;&ndash; 12:00</td>
+						<td>Dealer Registration in Hall H</td>
+					</tr>
+					<tr>
+						<td>11:00&nbsp;&ndash; 12:00</td>
+						<td>Dealers / Dealer Assistants only</td>
+					</tr>
+					<tr>
+						<td>12:00&nbsp;&ndash; 13:00</td>
+						<td>Admission for Super Sponsors + Sponsors only</td>
+					</tr>
+					<tr>
+						<td>13:00&nbsp;&ndash; 18:00</td>
+						<td>Admission for all Attendees</td>
+					</tr>
+					<tr>
+						<td>18:00&nbsp;&ndash; 18:30</td>
+						<td>Dealers / Dealer Assistants only to close dealerships</td>
+					</tr>
+					<tr>
+						<td>18:30&nbsp;onward</td>
+						<td>Off limits to all, including dealers.*</td>
+					</tr>
+				</tbody>
+
+				<thead>
+					<tr>
+						<th colspan="2">Wednesday, September 6th, 2023</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11:00&nbsp;&ndash; 12:00</td>
+						<td>Dealer Registration in Hall H</td>
+					</tr>
+					<tr>
+						<td>11:00&nbsp;&ndash; 12:00</td>
+						<td>Dealers / Dealer Assistants only</td>
+					</tr>
+					<tr>
+						<td>12:00&nbsp;&ndash; 18:00</td>
+						<td>Admission for all Attendees</td>
+					</tr>
+					<tr>
+						<td>18:00&nbsp;&ndash; 20:00</td>
+						<td>Dealers / Dealer Assistants only for Teardown</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 	<p>*Subject to Dealers’ Den Management discretion. The room will be completely secured during this time.</p>
 </section>
 
-<hr />
-
-<h2>Glossary and Terms</h2>
 <section>
+	<h2>Glossary and Terms</h2>
 	<div>
 		<h3>Dealer</h3>
 		<p>The dealer is the single person ultimately responsible for the dealership and the authority for questions from staff. A dealer can only run one dealership. A dealer needs a valid Eurofurence event registration for the on-site Dealers’ Den Check-In.</p>
@@ -249,10 +246,8 @@
 	</div>
 </section>
 
-<hr />
-
-<h2>Obtaining a Dealership</h2>
 <section class="uk-column-1-2@l">
+	<h2 class="uk-column-span">Obtaining a Dealership</h2>
 	<div>
 		<h3>Step I: Application</h3>
 		<p>The dealership application period is planned to start in March 2023. It will be open for at least four weeks.</p>
@@ -303,20 +298,17 @@
 		<p><strong>It is not possible to cancel and refund a dealership package but the dealership package can be transferred from one dealer to another dealer on the waiting list.</strong> Please notify the Dealers’ Den Management about a desired  transfer of a dealership package in a timely manner to work out the necessary arrangements.</p>
 </section>
 
-<hr />
 
-<h2>Before the Dealers’ Den Opens</h2>
 <section>
+	<h2>Before the Dealers’ Den Opens</h2>
 	<p><strong>Dealers’ Check-In for 2023 will be located in Hall H</strong> - Segment “Arts & Crafts” and opened after the Opening Ceremony on Sunday. Entering the Dealers’ Den without checking in and receiving dealer’s credentials will not be possible.</p>
 	<p>Each dealer and their assistant(s) must personally present their official Eurofurence attendee badge at Dealers’ Check-In. A dealer assistant can only be checked in in the presence of the respective dealer.</p>
 	<p>Any dealer arriving later than Monday 12:00 is required to contact Dealers’ Den Management to prevent their dealership from being canceled and sold. <strong>Any dealer failing to claim their dealership without informing Dealers’ Den Management in advance will affect their curation priority for future events.</strong></p>
 </section>
 
-<hr />
-
-<h2>Dealers’ Den Setup</h2>
-<h3>On Site Dealers’ Check-In</h3>
 <section>
+	<h2>Dealers’ Den Setup</h2>
+	<h3>On Site Dealers’ Check-In</h3>
 	<p>
 		<ul>
 			<li>Setup for dealers will be possible during the times scheduled. Dealers may use a non-motorized cart to carry in their goods during this time only. Please contact Dealers’ Den Staff in advance if this might pose an issue for you.</li>
@@ -329,10 +321,8 @@
 	<p>Dealerships and build-ups will constantly be checked by Dealers’ Den Staff to ensure a safe environment for everyone.</p>
 </section>
 
-<hr />
-
-<h2>The Dealers’ Den is Open!</h2>
 <section class="uk-column-1-2@l">
+	<h2 class="uk-column-span">The Dealers’ Den is Open!</h2>
 	<p>Dealers’ Den will open to attendees at the time scheduled in the ConBook. An initial admission period is reserved for Sponsors and Super Sponsors before general admission begins.</p>
 
 	<h3>Guidelines on Dealerships</h3>
@@ -407,10 +397,8 @@
 	<p>Arising issues about Dealers’ Den operations should be directly addressed with the Dealers’ Den Management on site. Urgent matters of any kind can be addressed to any member of Eurofurence Staff.Members of the press, usually accompanied by a member of the Eurofurence Press Team and Dealers’ Den Management to answer their questions may be present in the Dealers’ Den during opening hours.</p>
 </section>
 
-<hr />
-
-<h2>Dealers’ Den Teardown</h2>
 <section>
+	<h2>Dealers’ Den Teardown</h2>
 	<h3>Closing, Cleanup, Check-out</h3>
 	<ul>
 		<li>Dealers’ Den closes on Wednesday at 18:00. After that time only dealers and their assistants are permitted entry to and presence in the Dealers’ Den.</li>
@@ -420,10 +408,8 @@
 	</ul>
 </section>
 
-<hr />
-
-<h2>Administrative Details</h2>
 <section>
+	<h2>Administrative Details</h2>
 	<ul>
 		<li>Issues about Dealers’ Den operations, arising prior to or after the convention, should be addressed with the <a href="mailto:dealers@eurofurence.org">Dealers’ Den Management via email</a>. </li>
 		<li>All decisions made by Dealers’ Den Management in regard to any issues concerning Dealers’ Den operations are final. When in doubt about any of the rules above, please don’t be afraid to ask - we will gladly answer all your questions. However, please understand that we will not debate these rules with you during the convention.</li>

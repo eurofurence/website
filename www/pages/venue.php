@@ -40,8 +40,6 @@
 	</div>
 </section>
 
-<hr />
-
 <section>
 	<h2>Planten un Blomen, Gardens and Parks</h2>
 
@@ -59,10 +57,8 @@
 	<p><strong>Note:</strong> All this information may change at any time. </a href="https://plantenunblomen.hamburg.de/">Check out their website</a> and local signage for possible changes.</p>	
 </section>
 
-<hr />
-
 <section>
-	<h2>Official </h2>
+	<h2>Official Resources</h2>
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-2@l uk-margin-bottom" uk-grid>
 		<div>
 			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls:uk-animation-fade">
@@ -108,9 +104,8 @@
 	</div>
 </section>
 
-<hr />
-
 <section>
+	<h2>Impressions</h2>
 	<div class="uk-grid-small uk-flex-center uk-margin-bottom" uk-grid uk-lightbox>
 		<div><a href="img/pages/venue/CCH-Außenansicht_07.jpg" data-caption="Exterior View"><img src="img/pages/venue/thumbs/CCH-Außenansicht_07.jpg" alt="Exterior View" /></a></div>
 		<div><a href="img/pages/venue/Eingangshalle_des_CCH_1.jpg" data-caption="Entrance Hall"><img src="img/pages/venue/thumbs/Eingangshalle_des_CCH_1.jpg" alt="Entrance Hall" /></a></div>
@@ -119,8 +114,7 @@
 		<div><a href="img/pages/venue/Planten_un_Blomen_1.jpg" data-caption="The adjacent parks, Planten un Blomen"><img src="img/pages/venue/thumbs/Planten_un_Blomen_1.jpg" alt="The adjacent parks, Planten un Blomen" /></a></div>
 		<div><a href="img/pages/venue/Planten_un_Blomen_8.jpg" data-caption="The adjacent parks, Planten un Blomen"><img src="img/pages/venue/thumbs/Planten_un_Blomen_8.jpg" alt="The adjacent parks, Planten un Blomen" /></a></div>
 	</div>
-</section>
-
-<section class="uk-text-right">
-	<p>All images &copy; The City of Hamburg, Hamburg Messe respectively.</p>
+	<div class="uk-text-right">
+		<p>All images &copy; The City of Hamburg, Hamburg Messe respectively.</p>
+	</div>
 </section>
