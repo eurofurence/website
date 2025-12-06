@@ -1,6 +1,19 @@
 :root {
-    --ef-palette-1: #ffa500;
+    --ef-palette-1: #005953;
     --ef-palette-2: #fff;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+main #content > section h1,
+main #content > section h2,
+main #content > section h3,
+main #content > section h4,
+main #content > section h5,
+main #content > section h6 {
+    color: #000;
 }
 
 #ef-home-banner {
@@ -9,11 +22,17 @@
 }
 main a {
 	color: var(--ef-palette-1);
+    text-decoration: underline;
 }
 main a:hover {
 	color: var(--ef-palette-1);
 	text-decoration: underline;
 }
+main #content > section {
+    background-color: rgba(255, 255, 255, .9);
+    color: #000;
+}
+
 footer a {
     color: var(--ef-palette-2);
 }

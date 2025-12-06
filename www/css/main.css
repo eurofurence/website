@@ -13,9 +13,6 @@ html {
 	background: #333;
 	color: #fff;
 }
-h1, h2, h3, h4, h5, h6 {
-	color: #fff;
-}
 .uk-modal,
 .uk-modal h1,
 .uk-modal h2,
@@ -293,6 +290,30 @@ main {
 	padding-left: .34rem;
 }
 
+/* content */
+main #content > section {
+	margin: 20px 0;
+	padding: 20px 12px;
+	border-radius: var(--ef-border-radius);
+}
+
+/* consent cover */
+
+.consent-cover {
+	background-color: rgba(0, 0, 0, .3);
+	color: #000;
+	font-size: 1.33em;
+	line-height: 1.33em;
+	font-weight: 600;
+	text-align: center;
+	min-height: 800px;
+	padding-top: 150px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.consent-cover:hover {
+	background-color: rgba(0, 0, 0, .2);
+}
 
 /* footer */
 footer {
