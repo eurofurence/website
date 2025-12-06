@@ -23,7 +23,8 @@ html {
 	color: #333;
 }
 
-.uk-modal a[href^="http"]:not(.hide-ext, .uk-icon-button):after {
+nav a[href^="http"]:not(.hide-ext, .uk-icon-button):after,
+main a[href^="http"]:not(.hide-ext, .uk-icon-button):after {
     display: inline-block;
     width: 14px;
     height: 10px;
@@ -33,8 +34,9 @@ html {
     mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBpZD0iUmVubm11dHplbCIgZD0ibTUuODgwNDc3LDQuODE0MTg3bC01LjE0Mjc2MSwwbDAsOC4xMjAxNDlsOC4xMjAxNTEsMGwwLC01LjE0Mjc2bS0yLjcwNjcxNywtNy4wMzc0NjRsMCwxLjM1MzM1OGwxLjM1MzM1OCwxLjM1MzM1OGwtNC4wNjAwNzUsNC4wNjAwNzVsMi43MDY3MTcsMi43MDY3MTZsNC4wNjAwNzUsLTQuMDYwMDc0bDEuMzUzMzU5LDEuMzUzMzU4bDEuMzUzMzU3LDBsMCwtNi43NjY3OTFsLTYuNzY2NzkxLDB6IiBzdHJva2U9IiM2NjYiIGZpbGw9InRyYW5zcGFyZW50Ii8+DQo8L3N2Zz4=);
     mask-repeat: no-repeat;
 	mask-size: contain;
-	background-color: #fff;
+	background-color: var(--ef-green);
 }
+
 
 header, main, footer {
 	margin: 20px auto;
@@ -183,6 +185,10 @@ nav > div > ul ul a:hover {
 	color: var(--ef-green);
 	text-decoration: none;
 }
+nav a[href^="http"]:not(.hide-ext, .uk-icon-button):hover:after {
+	background-color: var(--ef-green) !important;
+}
+
 /* nav responsive for mobile */
 label[for="nav-ctl"] {
 	display: block;

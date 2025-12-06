@@ -12,7 +12,8 @@ main #content > section h2,
 main #content > section h3,
 main #content > section h4,
 main #content > section h5,
-main #content > section h6 {
+main #content > section h6,
+main .uk-accordion-title {
     color: #000;
 }
 
@@ -20,7 +21,8 @@ main #content > section h6 {
     background-image: url(../img/pages/home/2025_Eurofurence_Banner_by_Jukajo.jpg);
     text-align: right;
 }
-main a {
+main a,
+.uk-modal-body a {
 	color: var(--ef-palette-1);
     text-decoration: underline;
 }
