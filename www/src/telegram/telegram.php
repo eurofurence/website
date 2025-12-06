@@ -50,7 +50,10 @@ class Telegram {
         # exec api call and check response
         $response = curl_exec($curl);
         if (!json_decode($response)->ok) {
-            throw new Exception("Telegram API Error:\n{$response}");
+            // throw new Exception("Telegram API Error:\n{$response}");
+            return false;
         }
+        
+        return true;
     }
 }

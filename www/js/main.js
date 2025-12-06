@@ -38,3 +38,11 @@ stars.forEach(star => {
         stars.forEach(s => {s.classList.toggle('glowing', s.dataset.rating <= rating.value)});
     });
 });
+
+/* Page Rating Success or Failure Message */
+if (document.location.hash.substring(1) === 'rate-success') {
+    UIkit.notification('Thank you! We will forward your rating to the appropriate department.', 'success');
+}
+if (document.location.hash.substring(1) === 'rate-failure') {
+    UIkit.notification('Uhoh, something went wrong on our side. Please tell @draconigen on Telegram.', 'danger');
+}
