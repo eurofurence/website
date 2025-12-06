@@ -88,7 +88,7 @@
     </div>
 </div>
 
-<div class="uk-grid-match uk-child-width-1-2@m uk-margin-top" uk-grid>
+<div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-margin-top" uk-grid>
     <div>
         <div id="mt-container" class="mt-container">
             <div class="mt-body" role="feed" tabindex="0">
@@ -96,13 +96,15 @@
             </div>
         </div>
     </div>
-    <div id="ef-home-flavor-text" class="uk-padding uk-padding-remove-vertical">
-        <p class="uk-margin-remove-bottom">The desert stretches endlessly before you. Rising from the dust and dunes, like a mirage made real, stands the <span class="uk-text-italic">Fantastic Furry Festival</span>. You can faintly hear the pulse of drums, see the glimmer of light refracting off wild shapes and colors, and taste the air heavy with smoke, spice, and promise.</p>
-        <p class="uk-margin-remove-bottom">At the gate, a volunteer with glowing fur and amber eyes hands you a badge with your name on it. “Welcome.” they say.</p>
-        <p class="uk-margin-remove-bottom">Stepping forward, the world explodes into color. Glittering domes, patchwork tents, glowing towers built from scrap and dreams. Towering art installations shimmer: beasts of metal and fire that move with the wind, sculptures that breathe smoke, holograms whispering riddles as you pass.</p>
-        <p class="uk-margin-remove-bottom">Wings trailing sparks, LED-furred coats, masks of bone and glass, scales glittering under neon lights. Everywhere you turn, beings in impossible costumes laugh, dance, and embrace.</p>
-        <p class="uk-margin-remove-bottom">At the festival’s heart, the fire circle beats with life. Drummers pound rhythms into the night, bodies twist and leap around the flames. Beyond, games spring up in chaotic arenas. Contests of wit, dance, and sheer absurdity. Laughter and music carry far across the desert air.</p>
-        <p>Food stalls spill scents of spice and sweetness, the kind you can’t quite name but can’t resist. Conversations flow like rivers between strangers who already feel like family. The deeper you wander, the more the noise and lights fold around you, pulling you into their orbit.</p>
+    <div>
+        <div id="ef-home-flavor-text" class="uk-padding">
+            <p class="uk-margin-remove-bottom">The desert stretches endlessly before you. Rising from the dust and dunes, like a mirage made real, stands the <span class="uk-text-italic">Fantastic Furry Festival</span>. You can faintly hear the pulse of drums, see the glimmer of light refracting off wild shapes and colors, and taste the air heavy with smoke, spice, and promise.</p>
+            <p class="uk-margin-remove-bottom">At the gate, a volunteer with glowing fur and amber eyes hands you a badge with your name on it. “Welcome.” they say.</p>
+            <p class="uk-margin-remove-bottom">Stepping forward, the world explodes into color. Glittering domes, patchwork tents, glowing towers built from scrap and dreams. Towering art installations shimmer: beasts of metal and fire that move with the wind, sculptures that breathe smoke, holograms whispering riddles as you pass.</p>
+            <p class="uk-margin-remove-bottom">Wings trailing sparks, LED-furred coats, masks of bone and glass, scales glittering under neon lights. Everywhere you turn, beings in impossible costumes laugh, dance, and embrace.</p>
+            <p class="uk-margin-remove-bottom">At the festival’s heart, the fire circle beats with life. Drummers pound rhythms into the night, bodies twist and leap around the flames. Beyond, games spring up in chaotic arenas. Contests of wit, dance, and sheer absurdity. Laughter and music carry far across the desert air.</p>
+            <p>Food stalls spill scents of spice and sweetness, the kind you can’t quite name but can’t resist. Conversations flow like rivers between strangers who already feel like family. The deeper you wander, the more the noise and lights fold around you, pulling you into their orbit.</p>
+        </div>
     </div>
 </div>
 

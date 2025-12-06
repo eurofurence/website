@@ -278,6 +278,9 @@ main {
 #ef-home-flavor-text {
 	height: 740px;
 	overflow: scroll;
+	border-radius: var(--ef-border-radius);
+	background: rgba(255, 255, 255, .67);
+	color: #000;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #ef-home-flavor-text > p:first-child:first-letter {
