@@ -244,13 +244,13 @@
 
 					<div class="uk-margin-bottom">
 						Your Rating:
-						<a class="page-rating-stars">
+						<div class="page-rating-stars">
 							<button type="button" class="ef-page-rating 1" data-rating="1">★</button>
 							<button type="button" class="ef-page-rating 2" data-rating="2">★</button>
 							<button type="button" class="ef-page-rating 3" data-rating="3">★</button>
 							<button type="button" class="ef-page-rating 4" data-rating="4">★</button>
 							<button type="button" class="ef-page-rating 5" data-rating="5">★</button>
-						</a>
+						</div>
 					</div>
 
 					<input type="text" name="page" value="<?= $core->current->key ?>" hidden />
