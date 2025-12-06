@@ -638,7 +638,7 @@
 			"accessible": true,
 			"category": "Policies",
 			"description": "The website credits - see who helped and contributed this year.",
-			"inMenu": true,
+			"inMenu": false,
 			"keywords": "Website, Credits, Featured Artist, Support, Webmaster, Design, Bug Report",
 			"menuText": "About the Website",
 			"ogpImage": "",
