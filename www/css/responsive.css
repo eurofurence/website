@@ -32,6 +32,13 @@
 	nav > div:nth-of-type(2) {
 		overflow-y: scroll;
 	}
+	main {
+		margin-top: calc(var(--ef-nav-height) - 20px);
+	}
+	header {
+		position: fixed;
+		top: calc(var(--ef-nav-height) * -1 + 38px);
+	}
 	nav {
 		position: fixed;
 		top: 0;
@@ -39,7 +46,7 @@
 		width: 100vw;
 		height: 100vh;
 		margin: 0;
-		padding-top: 70px;
+		padding-top: var(--ef-nav-height);
 		overflow: hidden;
 		border-radius: 0;
 		max-width: 0;
