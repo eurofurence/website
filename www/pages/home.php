@@ -70,8 +70,8 @@
         <p>this makes a con like no other, your friends will be there so what's stopping you?</p>
         
         <div class="uk-grid-small" uk-grid>
+            <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-primary" target="_blank">REGISTER NOW</a></div>
             <div><a href="about" class="uk-button uk-button-primary" target="_blank">LEARN MORE</a></div>
-            <div><a href="https://identity.eurofurence.org/" class="uk-button uk-button-primary" target="_blank">REGISTER NOW</a></div>
         </div>
     </div>
     <div id="ef-home-photos" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
