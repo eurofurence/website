@@ -278,6 +278,16 @@ main {
 	overflow: hidden;
 }
 
+#ef-home-goh {
+	border-radius: var(--ef-border-radius);
+	height: 200px;
+}
+
+#ef-home-charity {
+	border-radius: var(--ef-border-radius);
+	height: 200px;
+}
+
 #ef-home-flavor-text {
 	height: 740px;
 	overflow: scroll;
