@@ -30,7 +30,7 @@
 <div id="ef-home-banner">
     <div>
         <h1>Eurofurence <?= $this->current->number ?></h1>
-        <p>
+        <p class="uk-text-large">
             <?= $this->current->theme ?> <br />
             <?= $this->current->dates ?> <br />
             <?= $this->current->location ?>
