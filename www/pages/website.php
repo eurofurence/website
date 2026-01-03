@@ -27,8 +27,8 @@
 
 <section>
 	<h2>Third Party Attributions</h2>
-	<div class="uk-grid-small" uk-grid>
 		
+	<div class="uk-grid-small uk-child-width-1-1" uk-grid>
 		<div>
 			<div class="uk-card uk-card-default uk-card-small uk-card-body">
 				<div uk-grid>
@@ -73,12 +73,11 @@
 						<h4><a href="https://gitlab.com/idotj/mastodon-embed-timeline/" target="_blank">Mastodon embed timeline widget</a> by i.j</h4>
 						<a href="https://gitlab.com/idotj/mastodon-embed-timeline/-/blob/master/LICENSE" target="_blank"><span uk-icon="file-text"></span>License</a>
 						<br />
-						compliance notice: this website's source is on <a href="https://github.com/eurofurence/website" target="_blank">github.com/eurofurence/website</a>.
+						compliance note: this website's source is on <a href="https://github.com/eurofurence/website" target="_blank">github.com/eurofurence/website</a>.
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 </section>
 
