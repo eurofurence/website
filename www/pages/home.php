@@ -1,30 +1,12 @@
 <style>
-    @import url("css/mastodon-timeline.min.css");
-    #mt-container,
-    #ef-home-flavor-text {
-        height: 800px;
-        overflow: scroll;
-    }
-    .mt-container, .mt-container[data-theme="light"], .mt-dialog, .mt-dialog[data-theme="light"] {
-        --mt-color-bg: rgba(255, 255, 255, .1);
-        border-radius: 8px;
-    }
-
-    /* Changes for feed contrasts */
-    time,
-    .mt-post-counter-bar,
-    .mt-post-counter-bar-replies {
-        color: #fff;
-    }
-    .mt-post-counter-bar svg path {
-        fill: #fff;
-    }
-    .mt-post-preview-title {
-        color: #a8a8ffff;
-    }
-    .mt-post-preview-description {
-        color: #7a7ae2ff;
-    }
+.consent-cover {
+    color: #fff;
+    font-weight: normal;
+}
+iframe {
+    background-color: #181821;
+    border-radius: var(--ef-border-radius);
+}
 </style>
 
 <div id="ef-home-banner">
@@ -98,11 +80,14 @@
 
 <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-margin-top" uk-grid>
     <div>
-        <div id="mt-container" class="mt-container">
-            <div class="mt-body" role="feed" tabindex="0">
-                <div class="mt-loading-spinner"></div>
-            </div>
-        </div>
+        <div
+            class="consent-cover uk-width-1-1"
+            data-element-type="iframe"
+            data-src="pages/home/mastodon-timeline.html"
+            data-class="uk-width-1-1"
+            data-title="Eurofurence Hotels"
+            data-uk-height-viewport="offset-bottom: 120px"
+        ><h3>External Contents</h3><p>- click to accept -</p><p>subject to meow.social/privacy-policy</p></div>
     </div>
     <div>
         <div id="ef-home-flavor-text" class="uk-padding">
@@ -115,20 +100,3 @@
         </div>
     </div>
 </div>
-
-<script src="js/mastodon-timeline/mastodon-timeline.umd.js"></script>
-
-<script>
-    new MastodonTimeline.Init({
-        instanceUrl: "https://meow.social",
-        timelineType: "profile",
-        userId: "112331996724958954",
-        profileName: "@eurofurence",
-        dateLocale: "de-DE",
-        hideUnlisted: true,
-        hideReplies: true,
-        hideUserAccount: true,
-        hidePinnedPosts: true,
-        defaultTheme: "dark"
-    });
-</script>

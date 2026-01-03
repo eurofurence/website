@@ -289,7 +289,6 @@ main {
 }
 
 #ef-home-flavor-text {
-	height: 740px;
 	overflow: scroll;
 	border-radius: var(--ef-border-radius);
 	background: rgba(255, 255, 255, .67);
