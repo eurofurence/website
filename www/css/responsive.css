@@ -24,7 +24,7 @@
 
 @media (max-width: 960px) {
 	#ef-home-banner > div {
-		width: calc(100% - 100px);
+		width: calc(100% - 90px);
 	}
 }
 

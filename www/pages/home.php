@@ -1,4 +1,10 @@
 <style>
+@media (min-width: 640px) {
+    .ef-text-large-m {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
 .consent-cover {
     color: #fff;
     font-weight: normal;
@@ -12,7 +18,7 @@ iframe {
 <div id="ef-home-banner">
     <div>
         <h1>Eurofurence <?= $this->current->number ?></h1>
-        <p class="uk-text-large">
+        <p class="ef-text-large-m">
             <?= $this->current->theme ?> <br />
             <?= $this->current->dates ?> <br />
             <?= $this->current->location ?>
