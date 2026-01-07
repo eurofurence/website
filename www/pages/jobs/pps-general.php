@@ -24,7 +24,7 @@
 </div>
 <p>
     You want to help?<br />
-    Then <a href="https://help.eurofurence.org/contact/pps" target="_blank">send us a note</a> or contact <a href="https://t.me/ZefiroDragon" target="_blank">”@ZefiroDragon” on Telegram</a>.<br />
+    Then <a href="https://help.eurofurence.org/contact/pps" target="_blank">send us a note</a> or contact <a href="https://t.me/HakuGinko" target="_blank">”@@HakuGinko” on Telegram</a>.<br />
     For more Information and Questions:<br/>
     <img src="img/pages/jobs/pps.jpg" alt="" />
 </p>
