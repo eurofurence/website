@@ -3,6 +3,7 @@
 	--ef-footer-title-height: 60px;
 	--ef-green: #005953;
 	--ef-green-light: #69a3a2;
+	--ef-border-radius: 6px;
 }
 
 * {
@@ -10,9 +11,6 @@
 }
 html {
 	background: #333;
-	color: #fff;
-}
-h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 .uk-modal,
@@ -25,7 +23,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 }
 
-.uk-modal a[href^="http"]:not(.hide-ext, .uk-icon-button):after {
+nav a[href^="http"]:not(.hide-ext, .uk-icon-button):after,
+main a[href^="http"]:not(.hide-ext, .uk-icon-button):after {
     display: inline-block;
     width: 14px;
     height: 10px;
@@ -35,8 +34,9 @@ h1, h2, h3, h4, h5, h6 {
     mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBpZD0iUmVubm11dHplbCIgZD0ibTUuODgwNDc3LDQuODE0MTg3bC01LjE0Mjc2MSwwbDAsOC4xMjAxNDlsOC4xMjAxNTEsMGwwLC01LjE0Mjc2bS0yLjcwNjcxNywtNy4wMzc0NjRsMCwxLjM1MzM1OGwxLjM1MzM1OCwxLjM1MzM1OGwtNC4wNjAwNzUsNC4wNjAwNzVsMi43MDY3MTcsMi43MDY3MTZsNC4wNjAwNzUsLTQuMDYwMDc0bDEuMzUzMzU5LDEuMzUzMzU4bDEuMzUzMzU3LDBsMCwtNi43NjY3OTFsLTYuNzY2NzkxLDB6IiBzdHJva2U9IiM2NjYiIGZpbGw9InRyYW5zcGFyZW50Ii8+DQo8L3N2Zz4=);
     mask-repeat: no-repeat;
 	mask-size: contain;
-	background-color: #fff;
+	background-color: var(--ef-green);
 }
+
 
 header, main, footer {
 	margin: 20px auto;
@@ -86,7 +86,7 @@ nav {
 		rgba(0, 76, 255, 0.4) 75%,
 		rgba(119, 0, 136, 0.4) 100%
 	); */
-	border-radius: 6px;
+	border-radius: var(--ef-border-radius);
 }
 nav > div#ef-nav-home a {
 	display: block;
@@ -126,7 +126,7 @@ nav > div > ul {
 }
 nav > div > ul > li {
 	position: relative;
-	min-width: calc(100% / 6);
+	min-width: calc(100% / 5);
 	height: var(--ef-nav-height);
 }
 nav > div > ul > li > a,
@@ -159,16 +159,18 @@ nav > div > ul > li:hover > ul,
 nav > div > ul > li > ul:hover,
 nav input[name="subnav-ctl"]:checked ~ ul {
 	max-height: 100vh;
+	padding-top: 4px;
 }
 nav > div > ul ul {
 	position: absolute;
-	top: 100%;
-	left: 10px;
+	top: calc(100% - 4px);
+	width: 100%;
 	max-height: 0;
+	padding-top: 0;
 	overflow: hidden;
 	background-color: var(--ef-green);
-	border-radius: 0 0 4px 4px;
-	transition: max-height .25s;
+	border-radius: 0 0 var(--ef-border-radius) var(--ef-border-radius);
+	transition: max-height .25s, padding-top .15s ease;
 }
 nav > div > ul ul a {
 	display: inline-block;
@@ -183,6 +185,10 @@ nav > div > ul ul a:hover {
 	color: var(--ef-green);
 	text-decoration: none;
 }
+nav a[href^="http"]:not(.hide-ext, .uk-icon-button):hover:after {
+	background-color: var(--ef-green) !important;
+}
+
 /* nav responsive for mobile */
 label[for="nav-ctl"] {
 	display: block;
@@ -199,12 +205,25 @@ label[for="nav-ctl"] {
 	display: none;
 }
 
+#ef-nav-home a {
+	position: relative;
+	font-size: 0.65rem;
+	left: 10px;
+	top: -4px;
+}
+#ef-nav-home a span {
+	position: absolute;
+	bottom: 0;
+	left: 1rem;
+}
+
 /* body area */
 main {
 	position: relative;
 }
 #content {
 	padding: 20px;
+	min-height: calc(100vh - 520px);
 }
 [class^="uk-card-media-"] a:hover img,
 [uk-lightbox] a:hover img,
@@ -220,52 +239,102 @@ main {
 #ef-home-banner {
 	height: 300px;
 	color: #fff;
-	padding: 20px 30px;
+	border-radius: var(--ef-border-radius);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 #ef-home-banner > div {
-	margin: 20px 30px;
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	margin: 20px 25px;
+	border-radius: var(--ef-border-radius);
 	padding: 20px;
 	width: min(50%, 480px, 100%);
-	position: absolute;
 	font-weight: 600;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+#ef-home-countdown {
+	border-radius: var(--ef-border-radius);
+}
 #ef-home-countdown h2 {
 	margin: 0;
 	padding-top: .5rem;
 	font-size: 1.5rem;
 }
 
-#ef-intro-text {
-	margin: 20px 30px;
+#ef-home-intro-text {
+	border-radius: var(--ef-border-radius);
 	padding: 20px;
+	font-weight: 600;
 	background-color: rgba(255, 255, 255, .9);
 	color: #000;
-	width: min(50%, 480px, 100%);
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	font-weight: 600;
 	text-transform: uppercase;
 }
-#ef-nav-home a {
-	position: relative;
-	font-size: 0.65rem;
+
+#ef-home-photos {
+	border-radius: var(--ef-border-radius);
+	overflow: hidden;
 }
-#ef-nav-home a span {
-	position: absolute;
-	bottom: 0;
-	left: 1rem;
+
+#ef-home-goh {
+	border-radius: var(--ef-border-radius);
+	height: 200px;
+}
+
+#ef-home-charity {
+	border-radius: var(--ef-border-radius);
+	height: 200px;
+}
+
+#ef-home-flavor-text {
+	overflow: scroll;
+	border-radius: var(--ef-border-radius);
+	background: rgba(255, 255, 255, .67);
+	color: #000;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#ef-home-flavor-text > p:first-child:first-letter {
+	font-weight: 600;
+	float: left;
+	font-size: 3.34rem;
+	line-height: 3.34rem;
+	padding-top: .34rem;
+	padding-right: .34rem;
+	padding-left: .34rem;
+}
+
+/* content */
+main #content > section {
+	margin: 20px 0 0;
+	padding: 20px 20px;
+	border-radius: var(--ef-border-radius);
+}
+
+/* consent cover */
+
+.consent-cover {
+	background-color: rgba(0, 0, 0, .3);
+	color: #000;
+	font-size: 1.33em;
+	line-height: 1.33em;
+	font-weight: 600;
+	text-align: center;
+	min-height: 800px;
+	padding-top: 150px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.consent-cover:hover {
+	background-color: rgba(0, 0, 0, .2);
 }
 
 /* footer */
 footer {
 	padding: 20px;
 	background-color: var(--ef-green);
-	border-radius: 6px;
+	border-radius: var(--ef-border-radius);
 }
 footer .uk-button-group {
 	display: inline-flex;
@@ -307,7 +376,7 @@ footer h2 .uk-text-meta {
 .ef-page-rating {
 	border: none;
 	font-size: 1.5rem;
-	color: white;
+	color: darkgray;
 	background: unset;
 	cursor: pointer;
 }
@@ -341,6 +410,19 @@ span.ef-uk-icon-lift {
 	top: -1rem;
 	font-size: 1rem;
 }
+.uk-modal-dialog,
+.uk-modal-header,
+.uk-modal-footer,
+.uk-input,
+.uk-textarea,
+.uk-button,
+.uk-card,
+.rounded,
+.uk-tooltip,
+.uk-notification-message,
+iframe {
+  border-radius: var(--ef-border-radius);
+}
 
 /* convention links */
 #links {
@@ -352,20 +434,6 @@ span.ef-uk-icon-lift {
 /* apps */
 .ef-app-badge img {
 	height: 36px;
-}
-
-/* utility classes */
-.ef-people img {
-	display: inline;
-	float: left;
-	width: 80px;
-	height: 80px;
-	border-radius: 100%;
-	margin-right: 12px;
-}
-
-.ef-people h3 {
-	margin: 0;
 }
 
 /* js-disabled */

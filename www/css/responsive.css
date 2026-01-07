@@ -4,17 +4,48 @@
 	--uk-breakpoint-l: 1200px;
 	--uk-breakpoint-xl: 1600px;
 */
- 
+
+@media (min-width: 1200px) {
+	#ef-home-intro-text {
+		position: absolute;
+		z-index: 2;
+		right: 20px;
+		top: 40px;
+		right: 0;
+		top: 10px;
+		margin: 20px 30px; 
+		width: min(50%, 480px, 100%);		
+	}
+	#ef-home-photos {
+		position: relative;
+		z-index: 1;		
+	}
+}
+
 @media (max-width: 960px) {
-	#ef-home-banner > div,
-	#ef-home-photo > div {
-		width: calc(100% - 100px);
+	#ef-home-banner > div {
+		width: calc(100% - 90px);
 	}
 }
 
 @media (max-width: 640px) {
 	nav > div:nth-of-type(2) {
 		overflow-y: scroll;
+	}
+	main {
+		margin-top: calc(var(--ef-nav-height) - 20px);
+	}
+	header {
+		position: fixed;
+		top: calc(var(--ef-nav-height) * -1 + 38px);
+	}
+	#ef-nav-home {
+		position: absolute;
+		width: 80px;
+		height: 60px;
+		top: 0px;
+		z-index: 1;
+		right: 0;
 	}
 	nav {
 		position: fixed;
@@ -23,7 +54,7 @@
 		width: 100vw;
 		height: 100vh;
 		margin: 0;
-		padding-top: 70px;
+		padding-top: var(--ef-nav-height);
 		overflow: hidden;
 		border-radius: 0;
 		max-width: 0;

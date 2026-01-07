@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mastodon Timeline</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            @import url(../../css/mastodon-timeline.min.css);
+            #mt-container,
+            #ef-home-flavor-text {
+                height: 800px;
+                overflow: scroll;
+            }
+            .mt-container, .mt-container[data-theme="light"], .mt-dialog, .mt-dialog[data-theme="light"] {
+                --mt-color-bg: rgba(255, 255, 255, .1);
+                border-radius: 8px;
+            }
+
+            /* Changes for feed contrasts */
+            time,
+            .mt-post-counter-bar,
+            .mt-post-counter-bar-replies {
+                color: #fff;
+            }
+            .mt-post-counter-bar svg path {
+                fill: #fff;
+            }
+            .mt-post-preview-title {
+                color: #a8a8ffff;
+            }
+            .mt-post-preview-description {
+                color: #7a7ae2ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mt-container" class="mt-container">
+            <div class="mt-body" role="feed" tabindex="0">
+                <div class="mt-loading-spinner"></div>
+            </div>
+        </div>
+
+        <script src="../../js/mastodon-timeline/mastodon-timeline.umd.js"></script>
+
+        <script>
+            new MastodonTimeline.Init({
+                instanceUrl: "https://meow.social",
+                timelineType: "profile",
+                userId: "112331996724958954",
+                profileName: "@eurofurence",
+                dateLocale: "de-DE",
+                hideUnlisted: true,
+                hideReplies: true,
+                hideUserAccount: true,
+                hidePinnedPosts: true,
+                defaultTheme: "dark"
+            });
+        </script>
+    </body>
+</html>

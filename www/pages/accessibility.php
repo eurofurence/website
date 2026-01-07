@@ -66,8 +66,6 @@
 	</div>
 </section>
 
-<hr />
-
 <section>
 	<h2>Feedback and contact</h2>
 	<p>You can inform us of any issues in regards to our compliance with accessibility requirements by sending an e-mail to <a href="mailto:awareness@eurofurence.org" target="_blank">awareness@eurofurence.org</a></p>

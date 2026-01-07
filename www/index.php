@@ -161,7 +161,7 @@
 			</button>
 
 			<nav>
-				<div id="ef-nav-home" class="uk-visible@s"><a href="home"><span>Home</span></a></div>
+				<div id="ef-nav-home"><a href="home"><span>Home</span></a></div>
 				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
@@ -244,13 +244,13 @@
 
 					<div class="uk-margin-bottom">
 						Your Rating:
-						<a class="page-rating-stars">
+						<div class="page-rating-stars">
 							<button type="button" class="ef-page-rating 1" data-rating="1">★</button>
 							<button type="button" class="ef-page-rating 2" data-rating="2">★</button>
 							<button type="button" class="ef-page-rating 3" data-rating="3">★</button>
 							<button type="button" class="ef-page-rating 4" data-rating="4">★</button>
 							<button type="button" class="ef-page-rating 5" data-rating="5">★</button>
-						</a>
+						</div>
 					</div>
 
 					<input type="text" name="page" value="<?= $core->current->key ?>" hidden />
@@ -284,13 +284,17 @@
 		<?php /* Page Rating Submit Handling */
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			if (!empty($_POST['rating'])) {
-				Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
+				if (Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
 					htmlspecialchars($_POST['page']),
 					htmlspecialchars($_POST['rating']),
 					htmlspecialchars($_POST['name']),
 					htmlspecialchars($_POST['comment'])
-				));
-				header("Location: " . $_SERVER['REQUEST_URI']);
+				))) {
+					header("Location: " . $_SERVER['REQUEST_URI'] . '#rate-success');
+				}
+				else {
+					header("Location: " . $_SERVER['REQUEST_URI'] . '#rate-failure');
+				}
 			}
 		}
 		?>
@@ -316,3 +320,5 @@
 	</script>
 </html>
 <?php $core->end(); ?>
+
+<!-- in loving memories of Dokken and Oskar -->

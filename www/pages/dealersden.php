@@ -47,8 +47,8 @@ small {
 
 <p style="text-align:center;"><a href="dealersden#ddhours">Dealers' Den Hours</strong></a> | <a href="dealersden#ddobtainingdealership">Obtainting a Dealership</a> | <a href="dealersden#beforeddopens">Before the Dealers' Den Opens</a> | <a href="dealersden#ddsetup">Dealers' Den Setup</a> | <a href="dealersden#ddopen">The Dealers’ Den is Open!</a> | <a href="dealersden#ddteardown">Dealers' Den Teardown</a></p>
 
-<h2>The <i>Short</i> Version</h2>
 <section class="uk-column-1-2@l">
+	<h2 class="uk-column-span">The <i>Short</i> Version</h2>
 	<p>Sales in the Dealers’ Den are only allowed by registered dealers in  authorized dealerships within designated spaces. Sharing space at a dealership with unauthorized dealers is not allowed.</p>
 	<p>In order for your registration as a dealer or dealer assistant for the Eurofurence Dealers' Den to be taken into consideration, only a valid registration for the Eurofurence event via the Eurofurence <a href="https://identity.eurofurence.org" target="_blank">Registration System</a> itself is mandatory; payment for the ticket and Dealers' Den fees are handled after dealership approval. After registering for Eurofurence a dealership application can be submitted in the <a href="https://dealers.eurofurence.org" target="_blank">Dealers’ Den Registration System</a>.</p>
 	<p><strong>Electricity is available for dealerships.</strong> We offer electricity for low-power consumption devices only.</p>
@@ -68,22 +68,22 @@ small {
 
 <hr />
 
-<h2 id="ddhours">Dealers’ Den Hours</h2>
+<h2>Dealers’ Den Hours</h2>
 <section class="uk-column-1-2@l">
 	<div>
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Wednesday, September 3rd, 2025. (Con-Day 1)</th>
+					<th colspan="2">Sunday, September 3rd, 2023</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>17:00&nbsp;&ndash; 21:00</td>
+					<td>18:30&nbsp;&ndash; 21:00</td>
 					<td>Dealer Registration in Hall H</td>
 				</tr>
 				<tr>
-					<td>17:00&nbsp;&ndash; 21:00</td>
+					<td>19:30&nbsp;&ndash; 21:00</td>
 					<td>Dealers / Dealer Assistants only</td>
 				</tr>
 				<tr>
@@ -94,7 +94,7 @@ small {
 			
 			<thead>
 				<tr>
-					<th colspan="2">Thursday, September 4th, 2025. (Con-Day 2)</th>
+					<th colspan="2">Monday, September 4th, 2023</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -134,17 +134,21 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Friday, September 5th, 2025. (Con-Day 3)</th>
+					<th colspan="2">Tuesday, September 5th, 2023</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>12:00&nbsp;&ndash; 13:00</td>
+					<td>11:00&nbsp;&ndash; 12:00</td>
 					<td>Dealer Registration in Hall H</td>
 				</tr>
 				<tr>
-					<td>12:00&nbsp;&ndash; 13:00</td>
+					<td>11:00&nbsp;&ndash; 12:00</td>
 					<td>Dealers / Dealer Assistants only</td>
+				</tr>
+				<tr>
+					<td>12:00&nbsp;&ndash; 13:00</td>
+					<td>Admission for Super Sponsors + Sponsors only</td>
 				</tr>
 				<tr>
 					<td>13:00&nbsp;&ndash; 18:00</td>
@@ -162,7 +166,7 @@ small {
 
 			<thead>
 				<tr>
-					<th colspan="2">Saturday, September 6th, 2025. (Con-Day 4)</th>
+					<th colspan="2">Wednesday, September 6th, 2023</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -192,11 +196,11 @@ small {
 
 <hr />
 
-<h2 id="ddglossaryterms">Glossary and Terms</h2>
+<h2>Glossary and Terms</h2>
 <section>
-<div>
-		<h3 class="reset-font">Dealer</h3>
-		<p>The dealer is the single person ultimately responsible for the dealership and the authority for questions from staff. A dealer can only run one dealership. A dealer needs a valid Eurofurence event registration to purchase a dealership package and for the on-site Dealers’ Den Check-In.</p>
+	<div>
+		<h3>Dealer</h3>
+		<p>The dealer is the single person ultimately responsible for the dealership and the authority for questions from staff. A dealer can only run one dealership. A dealer needs a valid Eurofurence event registration for the on-site Dealers’ Den Check-In.</p>
 	</div>
 
 	<div>
@@ -301,8 +305,9 @@ small {
 
 <hr />
 
-<h2 id="ddobtainingdealership">Obtaining a Dealership</h2>
+<h2>Obtaining a Dealership</h2>
 <section class="uk-column-1-2@l">
+	<h2 class="uk-column-span">Obtaining a Dealership</h2>
 	<div>
 		<h3 class="reset-font">Step I: Application</h3>
 		<p>The application period for dealers will open on <strong>15th February 2025</strong> and will be accessible up to and <strong>including 30th March 2025</strong>.</p>
@@ -355,20 +360,21 @@ small {
 		<p><strong>Dealership packages are non-refundable and cannot be canceled. However, transfers of dealership packages are possible but can only be initiated and approved by the Dealers' Den Management. Dealers cannot select or nominate individuals from the waiting list for a transfer to bypass the curation process. </strong> If a transfer is desired, please contact the Dealers' Den Management with your suggestion. All transfer requests will be considered by the management team, who will have the final say in the approval of the new dealer.</p>
 </section>
 
-<hr />
 
-<h2 id="beforeddopens">Before the Dealers’ Den Opens</h2>
+<h2>Before the Dealers’ Den Opens</h2>
 <section>
-	<p><strong>Dealers’ Check-In for 2025 will be located in Hall H</strong> - Segment “Arts & Crafts” and opened after the Opening Ceremony on Wednesday. Entering the Dealers’ Den without checking in and receiving dealer’s credentials will not be possible.</p>
-	<p>Each dealer and their assistant(s) must personally present their official Eurofurence attendee badge at Dealers’ Check-In. A dealer assistant can also be checked in in the absence of the respective dealer.</p>
-	<p>Any dealer arriving later than Thursday 12:00 is required to contact Dealers’ Den Management to prevent their dealership from being canceled and sold. <strong>Any dealer failing to claim their dealership without informing Dealers’ Den Management in advance will affect their curation priority for future events.</strong></p>
+	<p><strong>Dealers’ Check-In for 2023 will be located in Hall H</strong> - Segment “Arts & Crafts” and opened after the Opening Ceremony on Sunday. Entering the Dealers’ Den without checking in and receiving dealer’s credentials will not be possible.</p>
+	<p>Each dealer and their assistant(s) must personally present their official Eurofurence attendee badge at Dealers’ Check-In. A dealer assistant can only be checked in in the presence of the respective dealer.</p>
+	<p>Any dealer arriving later than Monday 12:00 is required to contact Dealers’ Den Management to prevent their dealership from being canceled and sold. <strong>Any dealer failing to claim their dealership without informing Dealers’ Den Management in advance will affect their curation priority for future events.</strong></p>
 </section>
 
 <hr />
 
-<h2 id="ddsetup">Dealers’ Den Setup</h2>
-<h3 class="reset-font">On Site Dealers’ Check-In</h3>
+<h2>Dealers’ Den Setup</h2>
+<h3>On Site Dealers’ Check-In</h3>
 <section>
+	<h2>Dealers’ Den Setup</h2>
+	<h3>On Site Dealers’ Check-In</h3>
 	<p>
 		<ul>
 			<li>Setup for dealers will be possible during the times scheduled. Dealers may use a non-motorized cart to carry in their goods during this time only. Please contact Dealers’ Den Staff in advance if this might pose an issue for you.</li>
@@ -383,9 +389,9 @@ small {
 
 <hr />
 
-<h2 id="ddopen">The Dealers’ Den is Open!</h2>
+<h2>The Dealers’ Den is Open!</h2>
 <section class="uk-column-1-2@l">
-	<p>Dealers’ Den will open to attendees at the time scheduled in the ConBook. An initial admission period is reserved for Sponsors and Super Sponsors before general admission begins. Super Sponsors have all-time access through a dedicated queue during all regular opening hours.</p>
+	<p>Dealers’ Den will open to attendees at the time scheduled in the ConBook. An initial admission period is reserved for Sponsors and Super Sponsors before general admission begins.</p>
 
 	<h3 class="reset-font" id="ddopenguidelinsonedealerships">Guidelines on Dealerships</h3>
 	<p>All dealerships include approximately one meter of space behind them. Each dealership is required to maintain sufficient walking space to enable other dealers to move in and out. Pre-arranged safety paths for exit and emergency evacuation in between dealerships must not be obstructed; merchandise must not reach into these paths. Tables shall not be moved without approval of Dealers’ Den Management.</p>
@@ -462,140 +468,9 @@ small {
 
 <hr />
 
-<h2 id="ddgamesofchance">Games of Chance (Gambling)</h3>
-<p>Games of chance (gambling) are illegal in Germany without a state-issued permit. Therefore, games of chance or gambling are not permitted in the Dealers’ Den.</p>
-
-<p>A game of chance (gambling) is defined as a game in which the outcome is predominantly or entirely determined by chance, rather than by a player’s skill, ability, or decisions. Typically, participants risk something of value (usually money) for the chance of winning a reward, with uncertain outcomes.</p>
-
-<p>Common characteristics of gambling include:</p>
-<ul>
-    <li>The outcome is determined primarily by <strong>chance</strong></li>
-    <li><strong>Something of value</strong> (typically money) is at stake</li>
-    <li>There is a <strong>possibility to win or lose</strong></li>
-    <li>The player’s <strong>skill or knowledge has minimal or no influence</strong></li>
-</ul>
-
-<p>In general, if any one of these criteria is missing, the activity is not considered gambling under German law.</p>
-
-<p><strong><u>Examples:</u></strong></p>
-
-<figure class="table">
-    <table class="ck-table-resized">
-        <colgroup>
-            <col style="width:21%;">
-            <col style="width:10%;">
-            <col style="width:13%;">
-            <col style="width:8.5%;">
-            <col style="width:12.5%;">
-            <col style="width:12%;">
-            <col style="width:23.5%;">
-        </colgroup>
-        <thead>
-            <tr>
-                <th>Example</th>
-                <th>Random outcome</th>
-                <th>Something of value is at stake</th>
-                <th>Chance to win a prize</th>
-                <th>Skill or knowledge have no influence</th>
-                <th>Allowed?</th>
-                <th>Reason / Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Mystery Bags</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="no">❌ No</td>
-                <td class="no">❌ No</td>
-                <td class="yes"><strong>✅ Yes</strong></td>
-                <td>Sale of a product with no gameplay involved – not a game of chance</td>
-            </tr>
-            <tr>
-                <td><strong>“Get 15 random stickers for 10€”</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="no">❌ No</td>
-                <td class="no">❌ No</td>
-                <td class="yes"><strong>✅ Yes</strong></td>
-                <td>Buyer always gets something of value; randomness in product content is allowed</td>
-            </tr>
-            <tr>
-                <td><strong>Raffle entry automatically included with any purchase</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="no">❌ No<br><small>(no separate fee)</small></td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes"><strong>✅ Yes</strong></td>
-                <td>No extra cost; the raffle is a free promotional add-on</td>
-            </tr>
-            <tr>
-                <td><strong>Claw machine – every play wins</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="no">❌ No</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes"><strong>✅ Yes</strong></td>
-                <td>No risk of loss; randomness is fine if there is always a guaranteed outcome</td>
-            </tr>
-            <tr>
-                <td><strong>Free prize draw without payment</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="no">❌ No</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes"><strong>✅ Yes</strong></td>
-                <td>No stake involved – promotional giveaways are legal</td>
-            </tr>
-            <tr>
-                <td><strong>Raffle / prize draw for Telegram handle or E-Mail + ad consent</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="no">❌ No</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes"><strong>✅ Yes</strong></td>
-                <td>No payment or valuable consideration required; participation is voluntary</td>
-            </tr>
-            <tr>
-                <td><strong>Pay €5, spin a wheel to win either a mug or a towel</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="maybe">⚠️ Maybe</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="risky"><strong>⚠️ Risky*</strong></td>
-                <td>Even without losing, if the outcome is unequally desirable, this may qualify as gambling due to value disparity and chance-based outcome</td>
-            </tr>
-            <tr>
-                <td><strong>Pay €1 to draw from a box for a chance to get the gold ticket and win a prize</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="no"><strong>❌ No</strong></td>
-                <td>Payment + chance + win/loss outcome = gambling under German law</td>
-            </tr>
-            <tr>
-                <td><strong>Game where players can lose or win nothing despite paying</strong></td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="yes">✅ Yes</td>
-                <td class="no"><strong>❌ No</strong></td>
-                <td>Clearly gambling – chance, financial risk, and possibility of loss</td>
-            </tr>
-        </tbody>
-    </table>
-</figure>
-<p> * <span class="risky"><strong>Risky</strong></span>: Even without a total loss, games where outcomes are unequally valuable can still qualify as gambling if the higher reward is seen as an incentive and the outcome is left to chance.</p>
-
-<p>If you intend to offer <strong>any kind of game, draw, or contest</strong> at your table, it must clearly fall outside the definition of gambling. When in doubt, consult us beforehand to avoid issues.</p>
-	</p>
-
-<hr />
-
-<h2 id="ddteardown">Dealers’ Den Teardown</h2>
+<h2>Dealers’ Den Teardown</h2>
 <section>
-	<h3 class="reset-font">Closing, Cleanup, Check-out</h3>
+	<h3>Closing, Cleanup, Check-out</h3>
 	<ul>
 		<li>Dealers’ Den closes on Saturday at 18:00. After that time only dealers and their assistants are permitted entry to and presence in the Dealers’ Den.</li>
 		<li>Teardown begins immediately after closing. Dealers are expected to dismount their displays, pack up their belongings and clear the room before 20:00.</li>
@@ -606,8 +481,9 @@ small {
 
 <hr />
 
-<h2 id="ddaministrativedetails">Administrative Details</h2>
+<h2>Administrative Details</h2>
 <section>
+	<h2>Administrative Details</h2>
 	<ul>
 		<li>Issues about Dealers’ Den operations, arising prior to or after the convention, should be addressed with the <a href="mailto:dealers@eurofurence.org">Dealers’ Den Management via email</a>. </li>
 		<li>All decisions made by Dealers’ Den Management in regard to any issues concerning Dealers’ Den operations are final. When in doubt about any of the rules above, please don’t be afraid to ask - we will gladly answer all your questions. However, please understand that we will not debate these rules with you during the convention.</li>

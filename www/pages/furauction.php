@@ -28,8 +28,6 @@
 	</div>
 </section>
 
-<hr />
-
 <section>
 	<div>
 		<h2>Furauction General Rules</h2>

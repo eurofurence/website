@@ -36,8 +36,6 @@
 	</div>
 </section>
 
-<hr />
-
 <section>
 	<p>These offers are subject to constant change throughout the year. If you're interested in helping us out, make sure to check this page periodically so that you don't miss your favorite job!</p>
 </section>

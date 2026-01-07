@@ -4,8 +4,6 @@
 	<p>The Artist Alley will be open from <strong>Wednesday, 11 am, to Saturday, 6 pm</strong>, during Eurofurence.<br/>Security will be present but we can't support the Artist Alley with extra security service. Eurofurence e.V. as the host of the convention cannot be held responsible for any damaged, lost or stolen goods or money, and it is entirely up to you to take reasonable precautions yourself.</p>
 </section>
 
-<hr />
-
 <section>
 		<div>
 			<h2>How do I register for the Artist Alley?</h2>
@@ -46,16 +44,12 @@
 		</div>
 </section>
 
-<hr />
-
 <section>
 	<h2>Preferred Merchandise</h2>
 	<p>Because we're a furry convention, your goods or services should be of interest to furry fans. Typical items for sale are, for example, (badge) commissions, original furry artwork and prints, CDs and DVDs with artwork and other little items.</p>
 	<p><strong>Fan Art</strong> - that is, art based on TV series, games, or other intellectual property of a third party - can only be displayed and sold subject to some limitations. Ideally, the dealer can provide a legal agreement with the rights holder granting them the right to use the intellectual property in question. Failing this, any use of third-party intellectual property must be within the limits of Fair Use / Free Use or equivalent regulations. In any case, the dealers are responsible that the merchandise they offer does not violate copyright, trade law, or other applicable law. Nevertheless we reserve the right to check your offerings more than once during the convention and may ask you to remove conspicuous material / artwork out of your stock.</p>	
 	<p>If you are unsure you can contact the <a href="https://help.eurofurence.org/contact/dealersden" target="_blank">Dealers’ Den Management</a> for further information.</p> 
 </section>
-
-<hr />
 
 <section>
 	<h2>Information service for dealers and guests</h2>
