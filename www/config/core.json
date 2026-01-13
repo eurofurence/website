@@ -155,7 +155,7 @@
 			"ogpImage": "artshow.jpg",
 			"robots": "",
 			"title": "Art Show - General Information",
-			"uri": "artshow.php"
+			"uri": "artshow.visitor.php"
 		},
 		"dealersden/visiting": {
 			"owner": "@Pattarchus",
