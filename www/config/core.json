@@ -410,10 +410,10 @@
         },
 		"artshow/as-artist": {
 			"owner": "@riffuchs",
-			"accessible": false,
+			"accessible": true,
 			"category": "Participate",
 			"description": "Want to exhibit your art at Eurofurence? Here is everything you need to know.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Art Show, Gallery, Guide, Rules, Exhibition, Application",
 			"menuText": "Art Show (as Artist)",
 			"ogpImage": "artshow.jpg",
