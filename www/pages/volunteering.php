@@ -1,6 +1,7 @@
-<h1>Becoming an Eurofurence Critter: On-Site Volunteering</h1>
+
 
 <section>
+  <h1>Becoming an Eurofurence Critter: On-Site Volunteering</h1>
 	<div> 
 		<p>On-site volunteering is the backbone of any community event, and Eurofurence is no exception. Our event wouldn't be possible without the hard work and dedication of volunteers, affectionately called "Critters." By contributing your time and energy, you help make Eurofurence an unforgettable experience for everyone. All our Critters ensure that the event runs smoothly, attendees have a great time, and that the community spirit thrives. Every hour of your volunteer work plays a vital role in creating the magic of Eurofurence.</p>
 	</div> 
@@ -21,8 +22,6 @@
 			<p>For a detailed explanation of how the system works, you can also check out the <a href="files/2024-09-09_Critter-System_Critter-Manual.pdf">Critter System Manual for Critters.</a>.</p> 
 	</div> 
 </section> 
-
-<hr />
 
 <section> 
 	<div> 
@@ -45,8 +44,6 @@
 	</div> 
 </section> 
 
-<hr />
-
 <section> 
 	<div> 
 		<h2>Volunteer Roles and Special Requirements</h2> 
@@ -55,8 +52,6 @@
 			<p>Some tasks require an on-site certification before you can sign up, for example any shift that involves our theater and dance stages. Certifications are provided through short safety briefings or training sessions. These will be clearly marked in the Critter System together with the dates and times. If you are interested in these tasks, please complete the certification before signing up so that everything runs safely and smoothly.</p>			
 	</div> 
 </section> 
-
-<hr />
 
 <section>
 	<div> 
@@ -72,8 +67,6 @@
 	</div> 
 </section> 
 
-<hr />
-
 <section>
 	<div>
 		<h2>Requirements & Training</h2>
@@ -82,8 +75,6 @@
 			<p>Some tasks, such as stage work or roles involving safety and health responsibilities, require a certification before you can join. Certifications are provided through short safety briefings or training sessions or have to be obtained before the convention. These will be clearly listed in the Critter System along with the dates and times. If you are interested in these tasks, please complete the certification first so that everything runs safely and smoothly. If a certification only has to be verified for a department, ask the Critter Team at the Eurofurence Info Desk for assistance.</p>
 	</div>
 </section>
-
-<hr />
 
 <section>
 	<div> 
@@ -103,8 +94,6 @@
 	</div> 
 </section> 
 
-<hr />
-
 <section>
 	<div>
 		<h2>Support and Information</h2>
@@ -113,8 +102,6 @@
 			<p>Whether it is about the Critter System, your shifts, or any other volunteering matter, our team is happy to assist you and glad to see you. The Info Desk is open daily from Wednesday to Saturday, 9:00 until midnight. Feel free to come by at any time!</p>
 	</div>
 </section>
-
-<hr />
 
 <section id="art-raffle-contributors">
   <div>
