@@ -1,32 +1,24 @@
-<h1>Artist Alley</h1>
-
 <section>
-	<div>	
+	<h1>Artist Alley</h1>
+	<div>
 		<p> Welcome to the Artist Alley at Eurofurence! This document serves as your comprehensive guide to the rules, services, and code of conduct for participating in the Artist Alley. Our goal is to create a welcoming, creative, and safe environment for all artists and attendees. Please read the following regulations carefully to ensure a successful experience at the convention.</p>
 	</div>
 
-<section>
 	<div>
 		<h2>Opening Hours</h2>
 		<p>The Artist Alley will be open from <strong>Thursday at 11 AM until Saturday at 6 PM</strong> during Eurofurence. Please adhere to these hours for all setup, sales, and teardown activities.</p>
-	<div>
-</section>
+	</div>
 
-<section>
 	<div>
 		<h2>Security and Liability</h2>
 		<p>While Eurofurence Security personnel will be present, the Artist Alley does not receive additional security services beyond those provided to the general convention areas. Eurofurence e.V., as the host of the convention, is not responsible for any items that are damaged, lost, or stolen. Dealers and artists are advised to take reasonable precautions to secure their goods and money.</p>
-	<div>
-</section>
+	</div>
 
-<section>
 	<div>
 		<h2>Registration Process</h2>
 		<p>Registration for the Artist Alley operates on a "First come, first serve" basis each day of the convention. There are no advance reservations possible. If you follow the rules, you are welcome to sell your goods in the Artist Alley. Each artist is entitled to a full table (130x65 cm) with two chairs, which can be used individually or shared with fellow artists.</p>
 	</div>
-</section>
 
-<section>
 	<div>
 		<h2>Participation Requirements</h2>
 		<ul>
@@ -37,9 +29,7 @@
 			<li><strong>Compliance:</strong> The Dealers' Den team may instruct artists and dealers to remove material, merchandise or anything else on display or vacate their table if compliance issues arise.</li>
 		</ul>
 	</div>
-</section>
 
-<section>
 	<div>
 		<h2>Code of Conduct</h2>
 		<ul>
@@ -58,16 +48,12 @@
 			<li><strong>End of Sales:</strong> Artists are expected to clear their tables if they have completed their sales activities for the day, allowing opportunities for others</li>
 		</ul>
 	</div>
-</section>
-
-<section>
+	
 	<div>
 		<h2>Preferred Merchandise</h2>
 		<p>Since Eurofurence is a convention centered around furry culture, merchandise should appeal to attendees who are fans of this genre. Typical items for sale include (but are not limited to) commissions (e.g. badges or sketchbooks), original furry artwork featuring characters with two, four, or any number of limbs or body configurations, as well as prints, digital media, furry-themed jewelry, fursuit materials, and plushies made of faux fur.</p>
 	</div>
-</section>
-
-<section>
+	
 	<div>
 		<h2>Intellectual Property and Fan Art</h2>
 		<p>The display and sale of fan art or items based on movies, television series, games, or other third-party intellectual property are subject to certain restrictions:</p>
@@ -97,11 +83,8 @@
 			</ul>
 		</p>
 		<p>Any item that is deemed inappropriate may be banned from display or sale on the sole discretion of the Dealers’ Den Management or their deputies, namely the Dealers’ Den staff.</p>
-
 	</div>
-</section>
-
-<section>
+	
 	<div>
 		<h2>Information Service, Guidance and Support for Artist Alley Participants and Attendees</h2>
 		<p>During the Artist Alley's operating hours, a member of the Dealers' Den team will always be available to provide assistance and answer questions. You can contact the Dealers' Den management at the Dealers' Den Help Desk during the official Dealers' Den opening hours. Outside of these hours, the team can be reached through the Eurofurence Security Desk.</p>  
