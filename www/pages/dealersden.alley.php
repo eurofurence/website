@@ -1,4 +1,4 @@
-<section>
+<section class="uk-column-1-2@l">
 	<h1>Artist Alley</h1>
 	<div>
 		<p> Welcome to the Artist Alley at Eurofurence! This document serves as your comprehensive guide to the rules, services, and code of conduct for participating in the Artist Alley. Our goal is to create a welcoming, creative, and safe environment for all artists and attendees. Please read the following regulations carefully to ensure a successful experience at the convention.</p>
