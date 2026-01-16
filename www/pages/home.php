@@ -77,13 +77,13 @@ iframe {
     </div>
 </div>
 
-<div id="ef-home-goh" class="ef-background uk-margin uk-text-center uk-padding">
-    <h2>Guest of Honor: Kenket</h2>
-</div>
+<!-- <div id="ef-home-goh" class="ef-background uk-margin uk-text-center uk-padding">
+    <h2>Guest of Honor: <?= $this->current->goh ?></h2>
+</div> -->
 
-<div id="ef-home-charity" class="ef-background uk-margin uk-text-center uk-padding">
-    <h2>Charity: ???</h2>
-</div>
+<!-- <div id="ef-home-charity" class="ef-background uk-margin uk-text-center uk-padding">
+    <h2>Charity: <?= $this->current->charity ?></h2>
+</div> -->
 
 <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-margin-top" uk-grid>
     <div>
