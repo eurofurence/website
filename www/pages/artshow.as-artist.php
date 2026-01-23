@@ -49,7 +49,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asbasics" class="uk-column-span">The Basics</h2>
+		<h2 id="basics" class="uk-column-span">The Basics</h2>
 		<div>
 			<p>Exhibiting and/or selling art is only allowed for artists (or their respective agents) with a valid (accepted) registration in the the Art Show. Either the artist itself and/or their respective agent must also be a registered attendee of Eurofurence. We do not offer remote services to artist or agents not attending Eurofurence.</p>
 		</div>
@@ -74,7 +74,7 @@
 	</section>
 
 	<section>
-		<h2 id="asdocuments" class="uk-column-span">Ressources and Documents</h2>
+		<h2 id="documents" class="uk-column-span">Ressources and Documents</h2>
 		<div>
 			<p>	
 				<ul>
@@ -96,7 +96,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asschedule" class="uk-column-span">Preliminary Art Show Hours</h2>
+		<h2 id="schedule" class="uk-column-span">Preliminary Art Show Hours</h2>
 		<div>
 			<table class="uk-table">
 				<thead>
@@ -201,7 +201,7 @@
 	</section>
 
 	<section>
-		<h2 id="asfees">Exhibition space fees</h2>
+		<h2 id="fees">Exhibition space fees</h2>
 		<div class="uk-overflow-auto">
 			<table class="uk-table uk-margin-bottom ef-table-borders">
 			<caption><h3 class="reset-font">Types and Sizes</h3></caption>
@@ -250,7 +250,7 @@
 	</section>
 		
 	<section class="uk-column-1-2@l">
-		<h2 id="asterms" class="uk-column-span">Glossary and Terms</h2>
+		<h2 id="terms" class="uk-column-span">Glossary and Terms</h2>
 		<div>
 			<h3 class="reset-font">Artist</h3>
 			<p>The artist is the single person ultimately responsible for the space booked and the authority for questions from staff.</p>
@@ -275,7 +275,7 @@
 
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asregister" class="uk-column-span">Registration Process</h2>	
+		<h2 id="register" class="uk-column-span">Registration Process</h2>	
 		<div>
 			<h3 class="reset-font">Step I: Application</h3>
 			<p>The application period for Art Show will open on <strong>15th February 2025</strong> and will be accessible up to and <strong>including 30th March 2025</strong>.</p>
@@ -321,7 +321,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="assignup" class="uk-column-span">Signup and Application</h2>
+		<h2 id="signup" class="uk-column-span">Signup and Application</h2>
 		<div>
 			<ul>
 				<p><strong>Before applying, please take the following information into account:</strong></p>			
@@ -346,7 +346,7 @@
 
 
 	<section class="uk-column-1-2@l">
-		<h2 id="ascosts" class="uk-column-span">Participation and Cost</h2>
+		<h2 id="costs" class="uk-column-span">Participation and Cost</h2>
 		<p class="uk-column-span">You may display <strong>only art that you created yourself</strong> and not some you just happen to own. The show is not a market for selling leftover purchases or similar. Exceptions may only be made in rare cases, e.g. for Charity.</p>
 		<p class="uk-column-span">The name you or your agent are registered under must be the same as the one you register for the convention. (The artist name shown on the bidsheets can be freely selected.) The Art Show signup template requires your (or your agent's, if you don't participate yourself) Eurofurence registration number.</p>
 		<div>
@@ -370,7 +370,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asprocess" class="uk-column-span">Exhibition Process</h2>
+		<h2 id="process" class="uk-column-span">Exhibition Process</h2>
 		<p class="uk-column-span">The Eurofurence Art Show is handling hundreds of exhibits by a score of artists. To perform our service in an efficient manner, we need to keep to a standard process, which on the artist's side involves the following steps:</p>
 		<p class="uk-column-span">If necessary, we can deviate from the process; but make sure to read the whole documentation to understand how these processes work first, before asking for an exception.</p>  
 		<div>
@@ -397,7 +397,7 @@
 
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asdeadlines" class="uk-column-span">Deadlines</h2>
+		<h2 id="deadlines" class="uk-column-span">Deadlines</h2>
 		<p class="uk-column-span">The application / registration process has a number of dates and times you need to be aware of. If you don't meet these deadlines, you may cause grievances, delays, or even endanger your participation. Note that some dates for deadlines will be announced later when the convention's schedule has been finalized.</p>
 		<div>
 			<ul>
@@ -417,7 +417,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asagents" class="uk-column-span">For Agents</h2>
+		<h2 id="agents" class="uk-column-span">For Agents</h2>
 		<p class="uk-column-span">It is generally best practice for an artist to personally come to Eurofurence to hang their art. Sometimes however, an artist cannot make it due to time, money, or distance issues. In these cases, that artist may appoint an agent to handle the art, the payment, and the revenue for them.</p>
 		<p class="uk-column-span">Note: <strong>It is not possible to send exhibits to the Art Show by mail.</strong> If you find yourself unable to transport your artwork yourself, please find an agent to handle it for you.</p>
 		<p class="uk-column-span">"Agent" refers to the person that actually comes to Eurofurence and works with us in getting the art displayed, sold, and picked up. The agent will handle money for you, so it must be a person you trust.</p> 
@@ -440,7 +440,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asselling" class="uk-column-span">Bidsheets and Selling Art</h2>
+		<h2 id="selling" class="uk-column-span">Bidsheets and Selling Art</h2>
 		<div>
 			<ul>
 				<li>The Art Show allows you to sell your art. Please note that the show doesn't buy art, or sell art to bidders. The Art Show acts exclusively as a mediator in a contract between artist/owner and buyer (selling on commission).</lI>
@@ -461,7 +461,7 @@
 	</section>
 	
 	<section class="uk-column-1-2@l">
-		<h2 id="aspackaging" class="uk-column-span">Packaging</h2>
+		<h2 id="packaging" class="uk-column-span">Packaging</h2>
 		<div>
 			<ul>
 				<li>You can leave the packaging with the Art Show during the exhibition.</lI>
@@ -480,14 +480,14 @@
 	</section>
 	
 	<section>
-		<h2 id="asrequirements">Technical Requirements</h2>
+		<h2 id="requirements">Technical Requirements</h2>
 		<p>The Eurofurence Art Show provides panels and hooks for hanging art as well as tables. The panels are sturdy wooden constructs with predrilled pegboard sides where hooks can be inserted. All panels are usable from both sides. The managers lay out the panels in the room to meet a number of requirements. Panels are assigned and cannot be chosen freely.  The artists will normally not be able to request a certain layout (you can ask to be placed next to a friend; we try to honor these requests, but don't guarantee it).</p>
 		<p>Since 2024 we allow the installation of custom light solutions and also decoration.</p>
 		<p>A full technical documentation and guide on our panels can be found here: <a href="files/Art_Show_Guide_to_Decoration_and_Lighting_Options_(V1.0-20.08.2024).pdf" title="Guide to Decoration and Lighting Options (V1.0-20.08.2024)">Guide to Decoration and Lighting Options (V1.0-20.08.2024)</a></p>
 	</section>
 	
 	<section class="uk-column-1-2@l">
-		<h2 id="asdisplay" class="uk-column-span">Display Requirements</h2>
+		<h2 id="display" class="uk-column-span">Display Requirements</h2>
 		<p class="uk-column-span">The following requirements cover technical aspects of the artwork and the manner of display.</p>
 		<p class="uk-column-span">A full guide on how to use custom light and decoration on your panel can be found here: <a href="files/Art_Show_Guide_to_Decoration_and_Lighting_Options_(V1.0-20.08.2024).pdf" title="Guide to Decoration and Lighting Options (V1.0-20.08.2024)">Guide to Decoration and Lighting Options (V1.0-20.08.2024)</a></p>
 		<div>
@@ -513,7 +513,7 @@
 	</section>
 	
 	<section class="uk-column-1-2@l">
-		<h2 id="asprohibited" class="uk-column-span">Contents / Prohibited Topics</h2>
+		<h2 id="prohibited" class="uk-column-span">Contents / Prohibited Topics</h2>
 		<p class="uk-column-span">The following requirements cover technical aspects of the artwork and the manner of display.</p>
 		<div>
 			<ul>
@@ -537,7 +537,7 @@
 	</section>
 	
 	<section class="uk-column-1-2@l">
-		<h2 id="asownership" class="uk-column-span">IP and Ownership Rights</h2>
+		<h2 id="ownership" class="uk-column-span">IP and Ownership Rights</h2>
 		<p class="uk-column-span">These rules govern the requirements for artwork in relation to the intellectual property of the motif in question.</p>
 		<div>
 			<ul>
@@ -560,7 +560,7 @@
 	</section>
 
 	<section class="uk-column-1-2@l">
-		<h2 id="asagerating" class="uk-column-span">Age Rating in the Art Show</h2>
+		<h2 id="agerating" class="uk-column-span">Age Rating in the Art Show</h2>
 		<div>
 			<p>Since some guests of Eurofurence may not want to look at the more adult part of the show, and some "clean" artists may not feel comfortable to be displayed next to explicit artwork, the show will be divided into two separate sections – a General Section for clean and slightly erotic art, and an Adult Section for adult artwork. That way, any visitor can decide by themselves where to go, and artists don't need to worry about what will be displayed on the panels next to theirs.</p>
 			<p>To prepare the setup, an artist needs to include with their application email the number of panels or tables <em>per section</em>.</p>
