@@ -60,7 +60,7 @@ small {
 	<p><strong>Dealership packages are non-refundable and cannot be canceled. However, transfers of dealership packages are possible but can only be initiated and approved by the Dealers' Den Management. Dealers cannot select or nominate individuals from the waiting list for a transfer to bypass the curation process.</strong> If a transfer is desired, please contact the Dealers' Den Management with your suggestion. All transfer requests will be considered by the management team, who will have the final say in the approval of the new dealer.</p>
 	<p>Dealers will have setup slots on Wednesday evening and early Thursday to set up and prepare their dealerships. A convention badge is required for Dealers’ Den Check-In; for all dealers and their assistants.</p>
 	<p>Items and services in violation of applicable rules or laws must not be offered. Adult material is only permissible on public display in the “After Dark” section of the Dealers’ Den. Dealership build-ups must not reach into other dealerships or walkways. Lights, music or sound, and strong smells or fumes must be kept to a minimum.</p>
-	<p>The sale or offering of items that imitate third-party copyrighted material is prohibited. For further information, please refer to the full details down below.</p>
+	<p>The display, sale or offering of items and services that imitate third-party copyrighted material is prohibited. For further information, please refer to the full details down below.</p>
 	<p><strong>Teardown begins on Saturday at 18:00. All dealerships must be cleared out, and dealers must check out with the Dealers’ Den Staff no later than 20:00. Each dealer is responsible for cleaning up their dealership area. Before leaving the Dealers' Den, a checkout with a Dealers’ Den staff member is required. Please visit the help desk to complete your checkout process before departing.</strong></p>
 	<p>Dealers’ Den Staff have a say on all matters. The Dealers’ Den Management’s decisions are final.</p>
 	<p>Any person requesting a dealership at Eurofurence is required to agree to and accept the “Dealers’ Den Rules” set in this document.</p>
@@ -254,12 +254,12 @@ small {
 				</tr>
 				<tr>
 					<td><h4 class="reset-font">Price for all 3 days</h4></td>
-					<td class="uk-text-center">50&nbsp;&euro;</td>
-					<td class="uk-text-center">100&nbsp;&euro;</td>
-					<td class="uk-text-center">150&nbsp;&euro;</td>
-					<td class="uk-text-center">200&nbsp;&euro;</td>
-					<td class="uk-text-center">200&nbsp;&euro;</td>
-					<td class="uk-text-center">400&nbsp;&euro;</td>
+					<td class="uk-text-center">55&nbsp;&euro;</td>
+					<td class="uk-text-center">110&nbsp;&euro;</td>
+					<td class="uk-text-center">165&nbsp;&euro;</td>
+					<td class="uk-text-center">220&nbsp;&euro;</td>
+					<td class="uk-text-center">220&nbsp;&euro;</td>
+					<td class="uk-text-center">440&nbsp;&euro;</td>
 				</tr>
 			</tbody>
 			<tfoot>
@@ -301,8 +301,8 @@ small {
 	<h2 id="ddobtainingdealership" class="uk-column-span">Obtaining a Dealership</h2>
 	<div>
 		<h3 class="reset-font">Step I: Application</h3>
-		<p>The application period for dealers will open on <strong>15th February 2025</strong> and will be accessible up to and <strong>including 30th March 2025</strong>.</p>
-		<p>In order for your registration as a dealer or dealer assistant for the Eurofurence Dealers' Den to be taken into consideration, only a valid registration for the Eurofurence event via the Eurofurence <a href="https://identity.eurofurence.org" target="_blank">Registration System</a> itself is mandatory; payment for the ticket and Dealers' Den fees are handled after dealership approval. After registering for the event a dealership application can be submitted in the <a href="https://dealers.eurofurence.org" target="_blank">Dealers’ Den Registration System</a>. During Dealers’ Den registration, the desired size and table configuration for the dealership can be applied for.</p>
+		<p>The application period for dealers will open <strong>at the same time as registration for Eurofurence 30</strong> and and will be accessible up to and including 22 March 2026.</p>
+		<p>In order for your registration as a dealer or dealer assistant for the Eurofurence Dealers' Den to be taken into consideration, only a valid registration for the Eurofurence event via the Eurofurence <a href="https://identity.eurofurence.org" target="_blank">Registration System</a> itself is mandatory; payment for the ticket and Dealers' Den fees are handled after dealership approval. It is not necessary to pay the Eurofurence Ticket before the Dealers’ Den application was confirmed by the Dealers’ Den management and a table was assigned. After registering for the event a dealership application can be submitted in the <a href="https://dealers.eurofurence.org" target="_blank">Dealers’ Den Registration System</a>. During Dealers’ Den registration, the desired size and table configuration for the dealership can be applied for.</p>
 		<p>Dealership applications without valid Eurofurence (event) registration will be canceled.</p>
 		<p>After carefully reading, filling out and sending the dealership registration an email confirmation will automatically be sent to confirm our receiving of the application. <strong>This notification is NOT a confirmation for the dealership!</strong></p>
 		<p>The Dealers’ Den Management will review submissions after the registration period has ended. Status emails about approval, denial, or being put on the waiting list will be sent after the review. Upon approval, the dealer’s Eurofurence registration will be updated with a dealership package. The package will show up as an extra amount due in the dealer’s  registration. Payment is handled through the Eurofurence Registration website. </p>
@@ -328,14 +328,14 @@ small {
 
 	<div>
 		<h3 class="reset-font" id="ddobtainingdealershippayment">Step III: Payment</h3>
-		<p>After dealership approval, the dealer’s Eurofurence event registration will be updated to include the fee for the assigned dealership. The dealer is required to pay the fee at the same time as their respective Eurofurence event registration fee, using their preferred payment method.</p>
-		<p>Placement of dealerships with fees still due on their Eurofurence registration is not possible. If payment is overdue, Dealers’ Den Management may cancel an application and offer the space to the next dealer on the waiting list.</p>
+		<p>After dealership approval both by the Dealers’ Den Management as well as the dealer, the dealer’s Eurofurence event registration will be updated to include the fee for the assigned dealership. The dealer is obliged to pay the dealership fee within 14 days in the Eurofurence Registration System using their preferred payment method. Only after full payment of all charges will the application become a valid dealership.</p>
+		<p>If payment is overdue, Dealers’ Den Management may cancel an application and offer the space to the next dealer on the waiting list.</p>
 		<p>Eurofurence e.V. handles all transactions in Euro (€). Fees must be paid via credit or debit cards. Eurofurence e.V. does not accept PayPal, cash payment or any other method of payment. All payments must be handled through the Eurofurence Registration System. Do never send any credit card information via email!</p>
 	</div>
 
 	<div>
 	<h3 class="reset-font" id="ddobtainingdealershipplacement">Step IV: Placement</h3>
-		<p>Upon completion of payment, Dealers’ Den Management will commence dealership placement, based on requests and space availability. Although dealership placements are not final until the start of the event, an email containing the preliminary dealership placement will be sent to each dealer for information. Dealers’ Den management is open for any suggestions any dealer may offer about alternative placement.</p>
+		<p>Dealers’ Den Management will commence dealership placement, based on requests and space availability. Although dealership placements are not final until the start of the event, an email containing the preliminary dealership placement will be sent to each dealer for information. Dealers’ Den management is open for any suggestions any dealer may offer about alternative placement.</p>
 	</div>
 
 	<div>
@@ -353,9 +353,9 @@ small {
 
 <section>
 	<h2 id="beforeddopens">Dealers’ Den Opens</h2>
-	<p><strong>Dealers’ Check-In for 2025 will be located in Hall H</strong> - Segment “Arts & Crafts” and opened after the Opening Ceremony on Wednesday. Entering the Dealers’ Den without checking in and receiving dealer’s credentials will not be possible.</p>
+	<p>Dealers’ Check-In for 2026 will be located in Hall H - Segment “Arts & Crafts” and opened during the Opening Ceremony on Wednesday. Entering the Dealers’ Den without checking in and receiving dealer’s credentials will not be possible.</p>
 	<p>Each dealer and their assistant(s) must personally present their official Eurofurence attendee badge at Dealers’ Check-In. A dealer assistant can also be checked in in the absence of the respective dealer.</p>
-	<p>Any dealer arriving later than Thursday 12:00 is required to contact Dealers’ Den Management to prevent their dealership from being canceled and sold. <strong>Any dealer failing to claim their dealership without informing Dealers’ Den Management in advance will affect their curation priority for future events.</strong></p>
+	<p>Any dealer arriving later than Thursday 11:00 is required to contact Dealers’ Den Management to prevent their dealership from being canceled and sold. Any dealer failing to claim their dealership without informing Dealers’ Den Management in advance will affect their curation priority for future events.</p>
 </section>
 
 <section>
@@ -407,11 +407,11 @@ small {
 			</li>
 			<li>Items made of real fur or animal body parts, including taxidermy, clothing or accessories are prohibited. Items made from leather are accepted.</li>
 			<li>The sale of food and beverages for direct consumption is not allowed anywhere in the Convention Center, including the Dealers’ Den. Consumable items in closed containers can be permitted for sale with explicit (written) permission of the Dealers’ Den Management in individual cases.</li>
-			<li>The sale or offering of items that reproduce or otherwise directly imitate third parties’ copyrighted material without explicit, written permission from the copyright holder is strictly forbidden. The responsibility to ensure proper permission for use of copyrighted material rests solely with the Dealer. It is the Dealer's responsibility to ensure that the written permission is available to Dealer's Den management in either English or German. Other languages require a certified written translation.</li>
+			<li>The display, sale or offering of items (physical or digital) and services that reproduce or otherwise directly imitate third parties’ copyrighted material without explicit, personal, written permission from the copyright holder is strictly prohibited. The responsibility to ensure proper permission for use of copyrighted material rests solely with the Dealer. It is the Dealer's responsibility to ensure that the personal, written permission for the copyrighted material is available to Dealer's Den management in either English or German.  Other languages require a certified written translation. The permission must not be more than 12 months old.</li>
 		</ul>
 	</p>
 	<p>If an item or service requires a specific permit or a license for offering or selling the item or service, the Dealer is required to present the permit or license upon request at any time.</p>
-	<p>Any item that violates this policy may be banned from display or sale on the sole discretion of the Dealers’ Den Management. Copyrighted items prohibited for sale include, but are not limited to, unlicensed depictions of any characters appearing in any media or counterfeit merchandise of any kind.</p>
+	<p>Any item or service that violates this policy may be banned from display or sale on the sole discretion of the Dealers’ Den Management. Copyrighted items and services prohibited for display and sale include, but are not limited to, unlicensed depictions of any characters appearing in any media or counterfeit merchandise of any kind.</p>
 	<p>Unlike Common Law countries, the German copyright law does not include a general Fair Use / Fair Dealing exception. Dealers are advised to inform themselves about compliance with European and German copyright law, applicable trademarks, as well as topics like parodies and fan art prior to their attendance. The Eurofurence Dealers’ Den Staff must not give any legal advice on this matter.</p>
 	<p>
 		<ul>
@@ -445,6 +445,7 @@ small {
 			<li>Electricity is provided with the sole intent for usage by the Dealer with their own equipment and personal devices. The responsibility to ensure functional and electrical safety of own equipment and devices rests solely with the Dealer. Air compressors, laminators or any other high-power consumption devices, must explicitly be allowed by the Dealers’ Den Management during Setup.</li>
 			<li>There is a strict <strong>no smoking</strong> policy in the whole CCH. This also includes vaping.</li>
 			<li>Any equipment that produces an open flame or excessive heat is not allowed.</li>
+			<li>The installation and operation of surveillance cameras and/or other video recording devices is prohibited at all times, including during and outside the Dealers’ Den opening hours.</li>
 		</ul>
 	</p>
 	<p>Arising issues about Dealers’ Den operations should be directly addressed with the Dealers’ Den Management on site. Urgent matters of any kind can be addressed to any member of Eurofurence Staff. Members of the press, usually accompanied by a member of the Eurofurence Press Team and Dealers’ Den Management to answer their questions may be present in the Dealers’ Den during opening hours.</p>
