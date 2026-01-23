@@ -4,12 +4,12 @@
 			<caption><h3 class="reset-font">Getting Started</h3></caption>
 			<p>
 				<ul>
-					<li><a href="artshow#asbasics" title="Summary">The Basics</a></li>
-					<li><a href="artshow#asdocuments" title="Mandatory knowlegde">Ressources and Documents</a></li>
-					<li><a href="artshow#asschedule" title="What and when">Preliminary Art Show Hours</a></li>
-					<li><a href="artshow#asfees" title="Exhibition space and fees">Exhibition space fees</a></li>
-					<li><a href="artshow#asterms" title="Guide to terms used in the Art Show">Glossary and Terms</a></li>
-					<li><a href="artshow#asregister" title="How to register to the Art Show">Registration Process</a></li>
+					<li><a href="artshow/as-artist/#basics" title="Summary">The Basics</a></li>
+					<li><a href="artshow/as-artist/#documents" title="Mandatory knowlegde">Ressources and Documents</a></li>
+					<li><a href="artshow/as-artist/#schedule" title="What and when">Preliminary Art Show Hours</a></li>
+					<li><a href="artshow/as-artist/#fees" title="Exhibition space and fees">Exhibition space fees</a></li>
+					<li><a href="artshow/as-artist/#terms" title="Guide to terms used in the Art Show">Glossary and Terms</a></li>
+					<li><a href="artshow/as-artist/#register" title="How to register to the Art Show">Registration Process</a></li>
 				</ul>
 			</p>
 		</div>
@@ -17,11 +17,11 @@
 			<caption><h3 class="reset-font">Registration Process</h3></caption>
 			<p>
 				<ul>
-					<li><a href="artshow/signup#assignup" title="">Signup and Application</a></li>
-					<li><a href="artshow/signup#ascosts" title="Exhibition space and fees">Participation and Cost</a></li>
-					<li><a href="artshow/signup#asprocess" title="How the Art Show works">Exhibition Process</a></li>
-					<li><a href="artshow/signup#asdeadlines" title="About deadlines">Deadlines</a></li>
-					<li><a href="artshow/signup#asagents" title="Guide to being an agent">For Agents</a></li>
+					<li><a href="artshow/as-artist/#signup" title="">Signup and Application</a></li>
+					<li><a href="artshow/as-artist/#costs" title="Exhibition space and fees">Participation and Cost</a></li>
+					<li><a href="artshow/as-artist/#process" title="How the Art Show works">Exhibition Process</a></li>
+					<li><a href="artshow/as-artist/#deadlines" title="About deadlines">Deadlines</a></li>
+					<li><a href="artshow/as-artist/#agents" title="Guide to being an agent">For Agents</a></li>
 				</ul>
 			</p>
 		</div>
@@ -29,10 +29,10 @@
 			<caption><h3 class="reset-font">How to exhibit</h3></caption>
 			<p>
 				<ul>
-					<li><a href="artshow/guide#asselling" title="Technical details on the Art Show">Bidsheets and Selling Art</a></li>
-					<li><a href="artshow/guide#aspackaging" title="Transport and packaging">Packaging</a></li>
-					<li><a href="artshow/rules#asrequirements" title="How to display exhibits properly">Technical Requirements</a></li>
-					<li><a href="artshow/rules#asdisplay" title="How to display exhibits properly">Display Requirements</a></li>
+					<li><a href="artshow/as-artist/#selling" title="Technical details on the Art Show">Bidsheets and Selling Art</a></li>
+					<li><a href="artshow/as-artist/#packaging" title="Transport and packaging">Packaging</a></li>
+					<li><a href="artshow/as-artist/#requirements" title="How to display exhibits properly">Technical Requirements</a></li>
+					<li><a href="artshow/as-artist/#display" title="How to display exhibits properly">Display Requirements</a></li>
 				</ul>
 			</p>
 		</div>
@@ -40,9 +40,9 @@
 			<caption><h3 class="reset-font">Legal requirements and rules</h3></caption>
 			<p>
 				<ul>
-					<li><a href="artshow/rules#asprohibited" title="What goes and what not">Contents / Prohibited Topics</a></li>
-					<li><a href="artshow/rules#asownership" title="About IP and Ownership">IP and Ownership Rights</a></li>
-					<li><a href="artshow/rules#asagerating" title="Limit on age related topics">Age Rating in the Art Show</a></li>
+					<li><a href="artshow/as-artist/#prohibited" title="What goes and what not">Contents / Prohibited Topics</a></li>
+					<li><a href="artshow/as-artist/#ownership" title="About IP and Ownership">IP and Ownership Rights</a></li>
+					<li><a href="artshow/as-artist/#agerating" title="Limit on age related topics">Age Rating in the Art Show</a></li>
 				</ul>
 			</p>
 		</div>
@@ -74,17 +74,17 @@
 	</section>
 
 	<section>
-		<h2 id="asdocuments"" class="uk-column-span">Ressources and Documents</h2>
+		<h2 id="asdocuments" class="uk-column-span">Ressources and Documents</h2>
 		<div>
 			<p>	
 				<ul>
 					<li><strong>The application period for artists will open on 8th February 2026 and will be accessible up to and including 22th March 2026.</strong></li>
 				</ul>
 				<ul>
-					<li><strong><a href="https://help.eurofurence.org/contact/artshow/application" target="_blank" title="Register for the Art Show">Register for the Art Show</a></strong> (read the <a href="artshow/signup" target="_blank" title="Help on signing up">Signup Guide</a> first)</li>
+					<li><strong><a href="https://help.eurofurence.org/contact/artshow/application" target="_blank" title="Register for the Art Show">Register for the Art Show</a></strong> (read the <a href="artshow/as-artist/#signup" title="Help on signing up">Signup Guide</a> first)</li>
 				</ul>
 				<ul>
-					<li><a href="artshow/bidding" target="_blank" title="How to bid in the Art Show">Guide for guests (Bidder)</a></li>
+					<li><a href="artshow" title="How to bid in the Art Show">Guide for guests (Bidder)</a></li>
 				</ul>
 				<ul>
 					<li><a href="files/Art_Show_Guide_to_Decoration_and_Lighting_Options_(V1.0-20.08.2024).pdf" target="_blank" title="Guide to Decoration and Lighting Options (V1.0-20.08.2024)">[PDF] &nbsp; Guide to Decoration and Lighting Options (V1.0-20.08.2024)</a></li>
@@ -101,7 +101,7 @@
 			<table class="uk-table">
 				<thead>
 					<tr>
-						<th colspan="2">Wednesday, September 3rd, 2025. (Con-Day 1)</th>
+						<th colspan="2">Wednesday, August 19th, 2026. (Con-Day 1)</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -121,7 +121,7 @@
 				
 				<thead>
 					<tr>
-						<th colspan="2">Thursday, September 4th, 2025. (Con-Day 2)</th>
+						<th colspan="2">Thursday, August 20th, 2026. (Con-Day 2)</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -156,7 +156,7 @@
 			<table class="uk-table">
 				<thead>
 					<tr>
-						<th colspan="2">Friday, September 5th, 2025. (Con-Day 3)</th>
+						<th colspan="2">Friday, August 21st, 2026. (Con-Day 3)</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -175,7 +175,7 @@
 				</tbody>
 				<thead>
 					<tr>
-						<th colspan="2">Saturday, September 6th, 2025. (Con-Day 4)</th>
+						<th colspan="2">Saturday, August 22nd, 2026. (Con-Day 4)</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -201,7 +201,7 @@
 	</section>
 
 	<section>
-		<h2 id="asfees"">Exhibition space fees</h2>
+		<h2 id="asfees">Exhibition space fees</h2>
 		<div class="uk-overflow-auto">
 			<table class="uk-table uk-margin-bottom ef-table-borders">
 			<caption><h3 class="reset-font">Types and Sizes</h3></caption>
