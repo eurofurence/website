@@ -146,10 +146,10 @@
         },
 		"artshow": {
 			"owner": "@riffuchs",
-			"accessible": false,
+			"accessible": true,
 			"category": "Location",
 			"description": "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Art Show, Art, Display, Artwork, Prints, Originals, Bidding",
 			"menuText": "Art Show (as Visitor)",
 			"ogpImage": "artshow.jpg",
