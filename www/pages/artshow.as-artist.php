@@ -5,7 +5,7 @@
 			<p>
 				<ul>
 					<li><a href="artshow/as-artist/#basics" title="Summary">The Basics</a></li>
-					<li><a href="artshow/as-artist/#documents" title="Mandatory knowlegde">Ressources and Documents</a></li>
+					<li><a href="artshow/as-artist/#documents" title="Mandatory knowledge">Resources and Documents</a></li>
 					<li><a href="artshow/as-artist/#schedule" title="What and when">Preliminary Art Show Hours</a></li>
 					<li><a href="artshow/as-artist/#fees" title="Exhibition space and fees">Exhibition space fees</a></li>
 					<li><a href="artshow/as-artist/#terms" title="Guide to terms used in the Art Show">Glossary and Terms</a></li>
@@ -54,10 +54,10 @@
 			<p>Exhibiting and/or selling art is only allowed for artists (or their respective agents) with a valid (accepted) registration in the the Art Show. Either the artist itself and/or their respective agent must also be a registered attendee of Eurofurence. We do not offer remote services to artist or agents not attending Eurofurence.</p>
 		</div>
 		<div>
-			<p>A registration request can be submitted following a successful registration as an attendee of Eurofurence. A registration to the Art Show can be obtained through a separate registration form. Panel and table space is available in different quantities; see the list of available ressources below. All applications will be collected until the end of the registration phase. The Art Show Management will review all applications. Mind that the Art Show Management curates the setup to offer a great experience to all attendees and best possible sales for the artists. Thus, the management decides on the panel assignment and placement. Based on the decisions made, registrations will be accepted as is, reduced in display space quantity, or declined. This process may take up to six weeks after the end of the registration phase.</p>
+			<p>A registration request can be submitted following a successful registration as an attendee of Eurofurence. A registration to the Art Show can be obtained through a separate registration form. Panel and table space is available in different quantities; see the list of available resources below. All applications will be collected until the end of the registration phase. The Art Show Management will review all applications. Mind that the Art Show Management curates the setup to offer a great experience to all attendees and best possible sales for the artists. Thus, the management decides on the panel assignment and placement. Based on the decisions made, registrations will be accepted as is, reduced in display space quantity, or declined. This process may take up to six weeks after the end of the registration phase.</p>
 		</div>
 		<div>
-			<p>Registrations that were initially not accepted are put on hold and will be re-evaluated once space becomes available due to cancellations. Mind that, once accepted, booked panel- or table space and its fee is non-refundable. However, if requested, the transfer of your booked package can be arranged but must be approved by the Art Show managment. The curation process still applies here. Please get in touch with us to discuss possible options to transfer your package.</p>
+			<p>Registrations that were initially not accepted are put on hold and will be re-evaluated once space becomes available due to cancellations. Mind that, once accepted, booked panel- or table space and its fee is non-refundable. However, if requested, the transfer of your booked package can be arranged but must be approved by the Art Show management. The curation process still applies here. Please get in touch with us to discuss possible options to transfer your package.</p>
 		</div>
 		<div>
 			<p>The Art Show separates between general and adult artwork. Blood, violence and sexual content count as adult. Please consult our elaborate guide for further details. We understand that the lines sometimes blur. When in doubt, contact us beforehand. We glady offer advice and help. Furthermore, the display of copyrighted characters is prohibited. In addition, all art must comply with the national laws. The Art Show team reserves the right to deny the display of pieces.</p>
@@ -74,7 +74,7 @@
 	</section>
 
 	<section>
-		<h2 id="documents" class="uk-column-span">Ressources and Documents</h2>
+		<h2 id="documents" class="uk-column-span">Resources and Documents</h2>
 		<div>
 			<p>	
 				<ul>
@@ -257,7 +257,7 @@
 		</div>
 		<div>
 		<h3 class="reset-font">Artist Assistant</h3>
-			<p>A person that is supporting the artist with their tasks. The assistant must be an official guest of Eurofurence. That artist must officially name their assistant to the Art Show staff on check-in in the Art Show. The assistant will get an voucher that identifies them as an official assistant. An assistant is allowed to hande exhibits but is not allowed to handle any task related to money. Exceptions can be made but must be proven by an official signed document that is also accepted and signed by the Art Show Team</p>
+			<p>A person that is supporting the artist with their tasks. The assistant must be an official guest of Eurofurence. That artist must officially name their assistant to the Art Show staff on check-in in the Art Show. The assistant will get an voucher that identifies them as an official assistant. An assistant is allowed to handle exhibits but is not allowed to handle any task related to money. Exceptions can be made but must be proven by an official signed document that is also accepted and signed by the Art Show Team</p>
 		</div>
 		<div>
 			<h3 class="reset-font">Agent</h3>
@@ -269,7 +269,7 @@
 		</div>
 		<div>
 			<h3 class="reset-font">Eurofurence Registration</h3>
-			<p>The attendee registration for the Eurofurence event is available at <a href="https://identity.eurofurence.org" title="Eurofurence Identitiy" target="_blank">https://identity.eurofurence.org</a></p>
+			<p>The attendee registration for the Eurofurence event is available at <a href="https://identity.eurofurence.org" title="Eurofurence Identity" target="_blank">https://identity.eurofurence.org</a></p>
 		</div>
 	</section>
 
@@ -279,7 +279,7 @@
 		<div>
 			<h3 class="reset-font">Step I: Application</h3>
 			<p>The application period for Art Show will open on <strong>15th February 2025</strong> and will be accessible up to and <strong>including 30th March 2025</strong>.</p>
-			<p>To be eligible for registration as artist or agent, a prior registration for Eurofurence 2025 (the event) via the Eurofurence <a href="https://identity.eurofurence.org" title="Eurofurence Identitiy" target="_blank">Registration System</a> is mandatory. After registering for the event a Art Show application can be <a href="https://help.eurofurence.org/contact/artshow/application" title="Register for the Art Show" target="_blank">submitted here</a>. During Art Show registration, the desired panel and table configuration can be applied for.</p>
+			<p>To be eligible for registration as artist or agent, a prior registration for Eurofurence 2025 (the event) via the Eurofurence <a href="https://identity.eurofurence.org" title="Eurofurence Identity" target="_blank">Registration System</a> is mandatory. After registering for the event a Art Show application can be <a href="https://help.eurofurence.org/contact/artshow/application" title="Register for the Art Show" target="_blank">submitted here</a>. During Art Show registration, the desired panel and table configuration can be applied for.</p>
 			<p>Art Show applications without valid previous event registration will be canceled.</p>
 			<p>The Art Show Management will review submissions after the registration period has ended. Status emails about approval, denial, or being put on the waiting list will be sent after the review. Upon approval, the artists'/agents' Eurofurence registration will be updated with a granted package. The package will show up as an extra amount due in the Eurofurence registration once approved and booked. Payment is handled through the Eurofurence registration website. </p>
 			<p>Please note that any and all additional obligations like trade fair and exhibition visa, sales tax or income tax declarations have to be fulfilled by the artist. Eurofurence expects all artists to be fully aware of their responsibilities in accordance with applicable law in Germany as well as their country of origin and will neither assist nor advise on these matters. Please set up an appointment with your nearest German embassy or consulate regarding questions about the application process for a trade fair and exhibition visa / Schengen visa.</p>
@@ -291,7 +291,7 @@
 			<p>Curation will be performed by the Art Show management. Panels and tables be assigned based on a variety of factors, including, but not limited to:
 				<ul>
 					<li>Quality, style, media, techniques, space available, past experiences with the artist</li>
-					<li>Prominence: the Eurofurence Art Show aims to promote newcommers as well as showcase well known artists.</li>
+					<li>Prominence: the Eurofurence Art Show aims to promote newcomers as well as showcase well known artists.</li>
 					<li>New Concepts and showcases: the Eurofurence Art Show is not only a place to sell art, but also to showcase craftsmanship.</li>
 					<li>Performance: Art is not only a still object observe but also experience. The Eurofurence Art Show also offers a stage for Art performances. Get in touch with us.</li>
 				</ul>
@@ -299,7 +299,7 @@
 		</div>
 		<div>
 			<h3 class="reset-font">Step III: Payment</h3>
-			<p>After approval, the Art Show registration will be updated to include the fee for the assigned ressources. The artist is required to pay the fee at the same time as their respective Eurofurence event registration fee, using their preferred payment method.</p>
+			<p>After approval, the Art Show registration will be updated to include the fee for the assigned resources. The artist is required to pay the fee at the same time as their respective Eurofurence event registration fee, using their preferred payment method.</p>
 			<p>Please pay on time. If payment is overdue, Art Show management may cancel an application and offer the space to the next artist on the waiting list.</p>
 			<p>Eurofurence e.V. handles all transactions in Euro (€). Fees must be paid via credit or debit cards. Eurofurence e.V. does not accept PayPal, cash payment or any other method of payment. All payments must be handled through the Eurofurence Registration System. Never send any credit card information via email!</p>
 		</div>
@@ -481,7 +481,7 @@
 	
 	<section>
 		<h2 id="requirements">Technical Requirements</h2>
-		<p>The Eurofurence Art Show provides panels and hooks for hanging art as well as tables. The panels are sturdy wooden constructs with predrilled pegboard sides where hooks can be inserted. All panels are usable from both sides. The managers lay out the panels in the room to meet a number of requirements. Panels are assigned and cannot be chosen freely.  The artists will normally not be able to request a certain layout (you can ask to be placed next to a friend; we try to honor these requests, but don't guarantee it).</p>
+		<p>The Eurofurence Art Show provides panels and hooks for hanging art as well as tables. The panels are sturdy wooden constructs with pre-drilled pegboard sides where hooks can be inserted. All panels are usable from both sides. The managers lay out the panels in the room to meet a number of requirements. Panels are assigned and cannot be chosen freely.  The artists will normally not be able to request a certain layout (you can ask to be placed next to a friend; we try to honor these requests, but don't guarantee it).</p>
 		<p>Since 2024 we allow the installation of custom light solutions and also decoration.</p>
 		<p>A full technical documentation and guide on our panels can be found here: <a href="files/Art_Show_Guide_to_Decoration_and_Lighting_Options_(V1.0-20.08.2024).pdf" title="Guide to Decoration and Lighting Options (V1.0-20.08.2024)">Guide to Decoration and Lighting Options (V1.0-20.08.2024)</a></p>
 	</section>
@@ -551,7 +551,7 @@
 		<div>
 			<ul>
 				<li>No traces or "heavily referenced" images. The art should be your own work, done with confidence and skill. Of course we realize that tracing and referencing has its place in the learning process, but if you are not yet able to create works on your own, you should reconsider participating in an art show. With thousands of patrons, active on all kinds of forums and galleries, the trace will most likely be discovered, and that is a very embarrassing thing.</lI>
-				<li>Trying to pass and resell such traced work as your own is also widely regarded offensive behaviour.</lI>
+				<li>Trying to pass and resell such traced work as your own is also widely regarded offensive behavior.</lI>
 				<li>No AI generated images. AI generation is a controversial topic and widely thought to infringe the rights of artists whose imagery has been used to train the algorithm.</lI>
 				<li>The Eurofurence Art Show is aware that many tools in image editing programs nowadays are based on AI support and those tools are of course still permitted as long as the overall result ultimately shows your own skill set.</lI>
 				<li>It is obvious that it is not always possible to recognize AI art as such, so we would count on the honesty of artists to not present auto-generated stuff.</lI>
