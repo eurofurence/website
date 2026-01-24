@@ -37,7 +37,7 @@
             "file": "..\/img\/cons\/east.jpg"
         },
         "fblacklight": {
-            "enable": true,
+            "enable": false,
             "source": "https:\/\/data.fblacklight.org\/uploads\/banner_exchange_w_EF_5cd4a81ad7.jpg",
             "target": "https:\/\/fblacklight.org\/",
             "country": "fr",
@@ -56,12 +56,12 @@
             "data": {
                 "timestamp": 1684878798,
                 "status": 200,
-                "hash": "b3c5e7c23a6a17dfff41931476725086"
+                "hash": "5a441d112535b12224e49b11157be8e5"
             },
             "file": "..\/img\/cons\/furrnion.gif"
         },
         "gdakon": {
-            "enable": true,
+            "enable": false,
             "source": "https:\/\/static.gdakon.org\/banner_200_80.jpg",
             "target": "https:\/\/gdakon.org\/",
             "country": "pl",
@@ -125,7 +125,7 @@
             "country": "us",
             "data": {
                 "timestamp": 1684880319,
-                "status": 404,
+                "status": 403,
                 "hash": "d41d8cd98f00b204e9800998ecf8427e"
             },
             "file": "img\/cons\/silverfang.png"
@@ -140,7 +140,7 @@
                 "status": 200,
                 "hash": "c304dc788c5c855e7c35fc06b1968241"
             },
-            "file": "/img\/cons\/slofluffcon.jpg"
+            "file": "..\/img\/cons\/slofluffcon.jpg"
         }
     }
 }
