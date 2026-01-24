@@ -172,7 +172,7 @@
 		},
 		"about": {
 			"owner": "@Jyanon",
-			"accessible": true,
+			"accessible": false,
 			"category": "Location",
 			"description": "Learn more about Eurofurence, its theme, values, people and history.",
 			"inMenu": false,
