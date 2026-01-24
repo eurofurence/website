@@ -1,6 +1,6 @@
 <?php
     $frontmatter["department"] = "Guest of Honor";
-    $frontmatter["title"] = "Liaison";
+    $frontmatter["title"] = "On-Site Team";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
 
