@@ -161,7 +161,7 @@
 			</button>
 
 			<nav>
-				<div id="ef-nav-home"><a href="home"><span>Home</span></a></div>
+				<div id="ef-nav-home"><a href="home"></a></div>
 				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
