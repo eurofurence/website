@@ -54,9 +54,9 @@ iframe {
 
 <div class="uk-position-relative">
     <div id="ef-home-intro-text" class="uk-margin">
-        <p>Eurofurence is a unique furry convention held in Hamburg every year at the CCH</p>
-        <p>Unlike other cons we have a whole convention centre and over 100 hotels in the city to choose from</p>
-        <p>this makes a con like no other, your friends will be there so what's stopping you?</p>
+        <p>EUROFURENCE IS A YEARLY, INTERNATIONAL FURRY CONVENTION HELD IN HAMBURG, GERMANY.</p>
+        <p>WE TAKE OVER AN ENTIRE CONVENTION CENTER, WITH OVER 100 HOTELS ACROSS HAMBURG TO CHOOSE FROM.</p>
+        <p>YOUR FRIENDS WILL BE HERE AND SO SHOULD YOU!</p>
         
         <div class="uk-grid-small" uk-grid>
             <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-primary" target="_blank">REGISTER NOW</a></div>
