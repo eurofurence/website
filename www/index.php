@@ -201,9 +201,9 @@
 					<h3>Convention Network</h3>
 					<div id="links">
 						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
-							<ul class="uk-slideshow-items js-disabled" id="partners">
-								<li>JavaScript required to view links to other conventions.</li>
-							</ul>
+							<div class="uk-slideshow-items js-disabled" id="partners">
+								<div>JavaScript required to view links to other conventions.</div>
+							</div>
 						</div>
 					</div>
 				</div>
