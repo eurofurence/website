@@ -15,8 +15,8 @@
       "url": "pmtiles://hamburg.pmtiles"
     }
   },
-  "sprite": "https://www.eurofurence.org/EF29/pages/restaurants/sprites/sprite",
-  "glyphs": "https://www.eurofurence.org/EF29/pages/restaurants/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://www.eurofurence.org/EF30/pages/restaurants/sprites/sprite",
+  "glyphs": "https://www.eurofurence.org/EF30/pages/restaurants/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",

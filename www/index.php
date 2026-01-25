@@ -1,6 +1,7 @@
 <?php
 	header("Content-Type: text/html; charset=UTF-8");
 	include("src/core.php");
+	include("src/telegram/telegram.php");
 	$core = new EFWebCore("config/core.json");
 ?>
 
@@ -160,7 +161,7 @@
 			</button>
 
 			<nav>
-				<div id="ef-nav-home" class="uk-visible@s"><a href="home"><span>Home</span></a></div>
+				<div id="ef-nav-home"><a href="home"></a></div>
 				<div id="ef-nav-menu"><?= $core->get_menu() ?></div>
 			</nav>
 		</header>
@@ -180,7 +181,7 @@
 				<div>
 					<div class="uk-margin-medium-bottom">
 						<?= $core->current->location ?><br />
-						<?= $core->current->dates ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $core->current->datesAnnotation ?>"></span>
+						<?= $core->current->dates ?>
 					</div>
 					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">					
 						<a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a>
@@ -200,9 +201,9 @@
 					<h3>Convention Network</h3>
 					<div id="links">
 						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
-							<ul class="uk-slideshow-items js-disabled" id="partners">
-								<li>JavaScript required to view links to other conventions.</li>
-							</ul>
+							<div class="uk-slideshow-items js-disabled" id="partners">
+								<div>JavaScript required to view links to other conventions.</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -232,40 +233,45 @@
 		<!-- page rating modal dialog -->
 		<div id="page-rating" uk-modal>
 			<div class="uk-modal-dialog uk-modal-body">
-				<h2 class="uk-modal-title">Rate This Page</h2>
-				<button class="uk-modal-close-default" type="button" uk-close></button>
-				<p>
-					You are rating <span class="uk-text-bold"><?= $core->current->title ?></span>.<br />
-					Your input will not be published, but manually reviewed and passed on to the responsible department within Eurofurence.<br />
-					If you are affiliated with this department, please be fair and abstain.
-				</p>
+				<form action="" method="POST">
+					<h2 class="uk-modal-title">Rate This Page</h2>
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<p>
+						You are rating <span class="uk-text-bold"><?= $core->current->title ?></span>.<br />
+						Your input will not be published, but manually reviewed and passed on to the responsible department within Eurofurence.<br />
+						If you are affiliated with this department, please be fair and abstain.
+					</p>
 
-				<div class="uk-margin-bottom">
-					Your Rating:
-					<a class="page-rating-stars">
-						<button class="ef-page-rating 1" data-rating="1">★</button>
-						<button class="ef-page-rating 2" data-rating="2">★</button>
-						<button class="ef-page-rating 3" data-rating="3">★</button>
-						<button class="ef-page-rating 4" data-rating="4">★</button>
-						<button class="ef-page-rating 5" data-rating="5">★</button>
-					</a>
-				</div>
+					<div class="uk-margin-bottom">
+						Your Rating:
+						<div class="page-rating-stars">
+							<button type="button" class="ef-page-rating 1" data-rating="1">★</button>
+							<button type="button" class="ef-page-rating 2" data-rating="2">★</button>
+							<button type="button" class="ef-page-rating 3" data-rating="3">★</button>
+							<button type="button" class="ef-page-rating 4" data-rating="4">★</button>
+							<button type="button" class="ef-page-rating 5" data-rating="5">★</button>
+						</div>
+					</div>
 
-				<div class="uk-margin-bottom">
-					<label for="rating-name" class="uk-margin-bottom">
-						Your Name (optional):
-						<input type="text" id="rating-name" name="name" maxlength="255" placeholder="Anonymous" class="uk-input" />
-					</label>
-				</div>
+					<input type="text" name="page" value="<?= $core->current->key ?>" hidden />
+					<input type="number" min="1" max="5" name="rating" id="rating-rating" hidden /> 
 
-				<div class="uk-margin-bottom">
-					<label for="rating-comment" class="uk-margin-bottom">
-						Your Comment (optional):
-						<textarea id="rating-comment" placeholder="No Comment" class="uk-textarea"></textarea>
-					</label>
-				</div>
+					<div class="uk-margin-bottom">
+						<label for="rating-name" class="uk-margin-bottom">
+							Your Name (optional):
+							<input type="text" id="rating-name" name="name" maxlength="255" placeholder="Anonymous" class="uk-input" />
+						</label>
+					</div>
 
-				<button type="button" id="page-rating-submit" class="uk-button uk-button-primary">Submit</button>
+					<div class="uk-margin-bottom">
+						<label for="rating-comment" class="uk-margin-bottom">
+							Your Comment (optional):
+							<textarea id="rating-comment" name="comment" placeholder="No Comment" class="uk-textarea"></textarea>
+						</label>
+					</div>
+
+					<button type="submit" class="uk-button uk-button-primary">Submit</button>
+				</form>
 			</div>
 		</div>
 
@@ -274,6 +280,24 @@
 		<script src="js/partners.js"></script>
 		<script src="js/main.js"></script>
 		<?= $core->current->key === 'lostandfound'? '<script src="js/lostandfound.js"></script>' : ''?>
+
+		<?php /* Page Rating Submit Handling */
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			if (!empty($_POST['rating'])) {
+				if (Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
+					htmlspecialchars($_POST['page']),
+					htmlspecialchars($_POST['rating']),
+					htmlspecialchars($_POST['name']),
+					htmlspecialchars($_POST['comment'])
+				))) {
+					header("Location: " . $_SERVER['REQUEST_URI'] . '#rate-success');
+				}
+				else {
+					header("Location: " . $_SERVER['REQUEST_URI'] . '#rate-failure');
+				}
+			}
+		}
+		?>
 	</body>
 
 	<script defer>
@@ -296,3 +320,5 @@
 	</script>
 </html>
 <?php $core->end(); ?>
+
+<!-- in loving memories of Dokken and Oskar -->

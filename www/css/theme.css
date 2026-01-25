@@ -1,28 +1,64 @@
 :root {
-    --ef-palette-1: #ffa500;
+    --ef-palette-1: #005953;
     --ef-palette-2: #fff;
 }
 
+html::before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+}
+@media only screen and (min-width: 1080px) {
+	html::before {
+		background-attachment: fixed;
+		background-size: cover;
+		background-position-x: center;
+	}
+}
+@media only screen and (max-width: 1080px) {
+	html::before {
+		background-attachment: scroll;
+		background-position-y: 0;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+main #content > section h1,
+main #content > section h2,
+main #content > section h3,
+main #content > section h4,
+main #content > section h5,
+main #content > section h6,
+main .uk-accordion-title {
+    color: #000;
+}
+
 #ef-home-banner {
-    background-image: url(../img/pages/home/banner_2025_2.gif);
+    background-image: url(../img/pages/home/2025_Eurofurence_Banner_by_Jukajo.jpg);
     text-align: right;
 }
-#ef-home-banner > div {
-    right: 20px;
-}
-
-#ef-home-photo {
-    background-image: url(../img/pages/home/photo_2025.jpg);
-    background-position: bottom;
-}
-
-main a {
+main a,
+.uk-modal-body a {
 	color: var(--ef-palette-1);
+    text-decoration: underline;
 }
 main a:hover {
 	color: var(--ef-palette-1);
 	text-decoration: underline;
 }
+main #content > section {
+    background-color: rgba(255, 255, 255, .9);
+    color: #000;
+}
+
 footer a {
     color: var(--ef-palette-2);
 }
@@ -35,5 +71,4 @@ nav a {
 }
 nav a:hover {
 	color: var(--ef-palette-2);
-    text-decoration: underline;
 }

@@ -11,7 +11,7 @@
                 "status": 200,
                 "hash": "6fece737e6cd5b276b11be3a16a27ff9"
             },
-            "file": "..\/img\/cons\/bayern-furs.png"
+            "file": "img\/cons\/bayern-furs.png"
         },
         "cesfur": {
             "enable": false,
@@ -34,10 +34,10 @@
                 "status": 200,
                 "hash": "8be5072d9187cbbabe380f390180cf10"
             },
-            "file": "..\/img\/cons\/east.jpg"
+            "file": "img\/cons\/east.jpg"
         },
         "fblacklight": {
-            "enable": true,
+            "enable": false,
             "source": "https:\/\/data.fblacklight.org\/uploads\/banner_exchange_w_EF_5cd4a81ad7.jpg",
             "target": "https:\/\/fblacklight.org\/",
             "country": "fr",
@@ -46,7 +46,7 @@
                 "status": 200,
                 "hash": "82c337afbbad6c9c5627f901ecfdcac9"
             },
-            "file": "..\/img\/cons\/fblacklight.jpg"
+            "file": "img\/cons\/fblacklight.jpg"
         },
         "furrnion": {
             "enable": false,
@@ -56,12 +56,12 @@
             "data": {
                 "timestamp": 1684878798,
                 "status": 200,
-                "hash": "b3c5e7c23a6a17dfff41931476725086"
+                "hash": "5a441d112535b12224e49b11157be8e5"
             },
-            "file": "..\/img\/cons\/furrnion.gif"
+            "file": "img\/cons\/furrnion.gif"
         },
         "gdakon": {
-            "enable": true,
+            "enable": false,
             "source": "https:\/\/static.gdakon.org\/banner_200_80.jpg",
             "target": "https:\/\/gdakon.org\/",
             "country": "pl",
@@ -70,7 +70,7 @@
                 "status": 200,
                 "hash": "491e078415d50037552ad7e394bf8e8d"
             },
-            "file": "..\/img\/cons\/gdakon.jpg"
+            "file": "img\/cons\/gdakon.jpg"
         },
         "infurnity": {
             "enable": false,
@@ -125,7 +125,7 @@
             "country": "us",
             "data": {
                 "timestamp": 1684880319,
-                "status": 404,
+                "status": 403,
                 "hash": "d41d8cd98f00b204e9800998ecf8427e"
             },
             "file": "img\/cons\/silverfang.png"
@@ -140,7 +140,7 @@
                 "status": 200,
                 "hash": "c304dc788c5c855e7c35fc06b1968241"
             },
-            "file": "/img\/cons\/slofluffcon.jpg"
+            "file": "img\/cons\/slofluffcon.jpg"
         }
     }
 }

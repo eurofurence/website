@@ -1,9 +1,5 @@
 <h1>Photography</h1>
-<section>
-	<p>The Eurofurence photography team takes care of the "official photography stuff" that is happening at EF. This includes for the most part the group pictures and the fursuit photoshoot.</p>
-</section>
-
-<hr />
+<p>The Eurofurence photography team takes care of the "official photography stuff" that is happening at EF. This includes for the most part the group pictures and the fursuit photoshoot.</p>
 
 <section class="uk-column-1-2@l">
 	<div>
@@ -24,8 +20,6 @@
 		<p>Another measure to increase fairness is that we will prefer people who didn't get a slot the year before. There is no 100% surefire way of detecting this though so please consider this more of a guideline than a hard rule and be fair to others: if you had your picture taken the year before, please don't even get in line for a slot if there is a queue!</p>
 	</div>
 </section>
-
-<hr />
 
 <section>
 	<h3>FAQ: Why is there a registration system for the fursuit photoshoot?</h3>

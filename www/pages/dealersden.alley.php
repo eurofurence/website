@@ -1,64 +1,108 @@
-<h1>Artist Alley</h1>
-<section>
-	<h2>Opening Times</h2>
-	<p>The Artist Alley will be open from <strong>Wednesday, 11 am, to Saturday, 6 pm</strong>, during Eurofurence.<br/>Security will be present but we can't support the Artist Alley with extra security service. Eurofurence e.V. as the host of the convention cannot be held responsible for any damaged, lost or stolen goods or money, and it is entirely up to you to take reasonable precautions yourself.</p>
-</section>
-
-<hr />
-
-<section>
-		<div>
-			<h2>How do I register for the Artist Alley?</h2>
-			<p>You can't! To make it simple: “First come, first serve.”<br/>Everyone, following the rules, can sell their goods there. The Alley holds an extra capacity of single tables (180x80cm / 71"x31.5") with two chairs per table. You can get it for yourself or share it with some fellow artists. The layout is published in the <a href="https://forum.eurofurence.org/index.php/board,10.0.html">Eurofurence Forum</a>.</p>
-		</div>
-</section>
-
 <section class="uk-column-1-2@l">
-		<div>
-			<strong>What rules did you talk about?</strong>
+	<h1>Artist Alley</h1>
+	<div>
+		<p> Welcome to the Artist Alley at Eurofurence! This document serves as your comprehensive guide to the rules, services, and code of conduct for participating in the Artist Alley. Our goal is to create a welcoming, creative, and safe environment for all artists and attendees. Please read the following regulations carefully to ensure a successful experience at the convention.</p>
+	</div>
+
+	<div>
+		<h2>Opening Hours</h2>
+		<p>The Artist Alley will be open from <strong>Thursday at 11 AM until Saturday at 6 PM</strong> during Eurofurence. Please adhere to these hours for all setup, sales, and teardown activities.</p>
+	</div>
+
+	<div>
+		<h2>Security and Liability</h2>
+		<p>While Eurofurence Security personnel will be present, the Artist Alley does not receive additional security services beyond those provided to the general convention areas. Eurofurence e.V., as the host of the convention, is not responsible for any items that are damaged, lost, or stolen. Dealers and artists are advised to take reasonable precautions to secure their goods and money.</p>
+	</div>
+
+	<div>
+		<h2>Registration Process</h2>
+		<p>Registration for the Artist Alley operates on a "First come, first serve" basis each day of the convention. There are no advance reservations possible. If you follow the rules, you are welcome to sell your goods in the Artist Alley. Each artist is entitled to a full table (130x65 cm) with two chairs, which can be used individually or shared with fellow artists.</p>
+	</div>
+
+	<div>
+		<h2>Participation Requirements</h2>
+		<ul>
+			<li><strong>Identification:</strong> Participants must be registered attendees of Eurofurence and identified by their convention badge.</li>
+			<li><strong>No Advance Reservations:</strong> Tables are allocated on a daily first-come, first-serve basis without exceptions.</li>
+			<li><strong>Content Restrictions:</strong> The sale or display of sexually explicit material is strictly prohibited in the Artist Alley, maintaining a "PG-13" rating environment.</li>
+			<li><strong>Utilities:</strong> Public WiFi is available, but each table will not be equipped with power access. Artists are advised to prepare accordingly.</li>
+			<li><strong>Compliance:</strong> The Dealers' Den team may instruct artists and dealers to remove material, merchandise or anything else on display or vacate their table if compliance issues arise.</li>
+		</ul>
+	</div>
+
+	<div>
+		<h2>Code of Conduct</h2>
+		<ul>
+			<li><strong>Table Usage:</strong> Do not occupy more than one table for your display or sales activities.</li>
+			<li><strong>Courtesy:</strong> Maintain a polite demeanor towards fellow artists and attendees.</li>
+			<li><strong>Conflict Resolution:</strong> Should disputes arise among artists, the Dealers' Den team is available to assist and mediate.</li>
+			<li><strong>Fire Safety Rules:</strong> 
+				<ul>
+					<li>Any tablecloth, fabric or other materials used for covering or decoration purposes must comply with the "B1 - schwer entflammbar" (flame retardant) classification or better, in accordance with DIN 4102 or EN 13501-1 B - s1 d0 standards. To prove meeting this class, they must have a certificate, usually printed on the label. <strong>Please note</strong> that applying a flame-retardant spray to otherwise uncertified materials does not make them certified. The treated material (e.g., tablecloth) would need to undergo a <strong>full certification process</strong>, including all necessary tests, to verify its flame-retardant properties and receive such a certification.</li>
+					<li>Dealers are responsible for providing proof of certification of any tablecloth, fabric or other materials used for covering or decoration purposes. Proof can be provided in printed or digital form. If an artist or dealer cannot provide sufficient proof of the flame-retardant certification for any material upon request, the material or item has to be removed.</li>
+					<li>Tablecloths and/or similar are not provided by Eurofurence.</li>
+					<li>Activities that cause dirt or contamination are not allowed.</li>
+					<li>There is a strict <strong>no smoking</strong> policy in the whole CCH. This also includes vaping.</li>
+					<li>Any equipment that produces an open flame or excessive heat is not allowed.</li>
+				</ul>
+			<li><strong>End of Sales:</strong> Artists are expected to clear their tables if they have completed their sales activities for the day, allowing opportunities for others</li>
+		</ul>
+	</div>
+	
+	<div>
+		<h2>Preferred Merchandise</h2>
+		<p>Since Eurofurence is a convention centered around furry culture, merchandise should appeal to attendees who are fans of this genre. Typical items for sale include (but are not limited to) commissions (e.g. badges or sketchbooks), original furry artwork featuring characters with two, four, or any number of limbs or body configurations, as well as prints, digital media, furry-themed jewelry, fursuit materials, and plushies made of faux fur.</p>
+	</div>
+	
+	<div>
+		<h2>Intellectual Property and Fan Art</h2>
+		<p>The display and sale of fan art or items based on movies, television series, games, or other third-party intellectual property are subject to certain restrictions:</p>
+		<ul>
+			<li>Any item that is prohibited for sale is also not permitted for display, giveaway, advertisement or delivery. Items generally prohibited for sale include, but are not limited to:
+				<ul>
+					<li>weapons and weapon look-alikes,</li>
+					<li>items and symbols of forbidden organizations according to §86 and §86a of the German Penal Code (StGB) (Nazi symbols and others),</li>
+					<li>items with symbols relating to groups associated with the “alt furry” movement,</li>
+					<li>items with variations or modifications similar enough to be mistaken for a symbol mentioned above or intentionally obscured renderings of those symbols,</li>
+					<li>any kind of drugs and medications,</li>
+					<li>items depicting pedophilia or zoophilia,</li>
+					<li>items depicting any kind of excessive violence, cruelty or rape.</li>
+				</ul>
+			</li>
+			<li>Items made of real fur or animal body parts, including taxidermy, clothing or accessories are prohibited. Items made from leather are accepted.</li>
+			<li>The sale of food and beverages for direct consumption is not allowed anywhere in the Convention Center, including the Dealers’ Den. Consumable items in closed containers can be permitted for sale with explicit (written) permission of the Dealers’ Den Management in individual cases.</li>
+			<li>The sale or offering of items that reproduce or otherwise directly imitate third parties’ copyrighted material without explicit, written permission from the copyright holder is strictly forbidden. The responsibility to ensure proper permission for use of copyrighted material rests solely with the Dealer.</li>
+		</ul>
+		<p>If an item or service requires a specific permit or a license for offering or selling the item or service, the Dealer is required to present the permit or license upon request at any time.</p>
+		<p>Any item that violates this policy may be banned from display or sale on the sole discretion of the Dealers’ Den Management. Copyrighted items prohibited for sale include, but are not limited to, unlicensed depictions of any characters appearing in any media or counterfeit merchandise of any kind.</p>
+		<p>Unlike Common Law countries, the German copyright law does not include a general Fair Use / Fair Dealing exception. Dealers are advised to inform themselves about compliance with European and German copyright law, applicable trademarks, as well as topics like parodies and fan art prior to their attendance. The Eurofurence Dealers’ Den Staff must not give any legal advice on this matter.</p>
+		<p>
 			<ul>
-				<li>You must be an attendee of Eurofurence and can be identified with your conbadge, which says you paid the convention fee.</li>
-				<li>No reservation: First come, first serve every day!</li>
-				<li>No extra security service. But when you see something suspicious or have trouble with one of the customers you can always talk to the Security or the Dealers' Den team.</li>
-				<li>Absolutely NO adult material! This is a transition area which must stay “clean” at all costs unless you want to bear the consequences.</li>
-				<li>We try to provide every table with power.</li>
-				<li>Anybody with the convention status “Staff” or higher can order you to remove suspicious material, anybody from the Dealers' Den or the Security Team can ask you to clean your table and leave the Artist Alley.</li>
+				<li><strong>Items that were created using any kind of AI based generators are excluded from sale, display, trade or giveaway</strong>. This also applies to works (e.g. stories, audio, backgrounds), that are derived from such items.</li>
+				<li>No items shall be produced, displayed, given away, advertised, delivered or sold that bear the official “Eurofurence” logo or CI without explicit, written permission of the Board of Directors.</li>
 			</ul>
-		</div>
-		<div>
-			<p><strong>Apart from that the Dealers' Den rules have validity:</strong></p>
-			<ul>
-				<li>Anything that violates German Law, including, but not limited to: weapons, weapon look-alikes, all kind of Nazi symbols, illegal drugs or pornography depicting pedophilia or zoophilia, racist and religious content, all kind of excessive violence or cruelty even in nonsexual content, rape, toilet activities.</li>
-				<li>Items made of real fur or animal body parts, such as taxidermy animals, clothing or accessories (leather may be excepted).</li>
-				<li>Additionally, we do not allow the sale of sex toys, fetish gear and other items that the management of the Dealers' Den deems inappropriate.</li>
-				<li>Copyrighted material (see the subject "Fan Art" below) might be displayed but not for sale!</li>
-				<li>Hotel regulations prohibit selling food or beverages. The sale of beverages or food in closed containers may be permitted in special cases, with explicit permission from the Dealers' Den Management.</li>
-			</ul>
-		</div>
-		<div>
-			<p><strong>Some rules you might follow in consideration to fellow artists:</strong></p>
-			<ul>
-				<li>Do not block more than one single table for yourself.</li>
-				<li>Be polite.</li>
-				<li>If there are any problems among the artists please feel free to contact the Dealers' Den team we are there to help.</li>
-				<li>When you are done for the day or got enough commissions/work to spend some time with, we appreciate to clear the table for some other artist or dealer to get a chance offering their goods and talent.</li>
-			</ul>
-		</div>
+		</p>
+		<p>Any item that is deemed inappropriate may be banned from display or sale on the sole discretion of the Dealers’ Den Management or their deputies, namely the Dealers’ Den staff.</p>
+	</div>
+	
+	<div>
+		<h2>Information Service, Guidance and Support for Artist Alley Participants and Attendees</h2>
+		<p>During the Artist Alley's operating hours, a member of the Dealers' Den team will always be available to provide assistance and answer questions. You can contact the Dealers' Den management at the Dealers' Den Help Desk during the official Dealers' Den opening hours. Outside of these hours, the team can be reached through the Eurofurence Security Desk.</p>  
+
+		<p> The regulations governing the Artist Alley are supplementary to the existing rules of the Dealers' Den. The Dealers' Den rules also apply significantly to the Artist Alley and can be reviewed in detail here: <a href="https://www.eurofurence.org/EF29/dealersden" target="_blank">Dealers' Den Rules</a>. Additionally, the Artist Alley is subject to further rules and restrictions listed on this site.
+
+		<p>Should any issues arise concerning the operations of the Artist Alley, they should be directly addressed with the Dealers’ Den Management on site. In urgent situations of any kind, attendees are encouraged to speak to any member of the Eurofurence Staff. Members of the press, typically accompanied by a member of the Eurofurence Press Team, may be present in the Artist Alley during opening hours.
+
+		<p>All decisions made by the Dealers’ Den Management regarding any issues related to Artist Alley operations are final. If there is any uncertainty regarding the rules, please do not hesitate to ask for clarification. We are here to help and provide answers to all your questions. However, please understand that while we welcome inquiries, we will not engage in debates about these rules during the convention.
+
+		<p>The Dealers’ Den Management reserves the right to revoke their Artist Alley participation, access to the Artist Alley, or any other privileges regarding the Artist Alley and the Dealers' Den at any time for any reason, without issuing a refund.
+
+		<p>If your question wasn't addressed in this document, please do not hesitate  <a href="https://help.eurofurence.org/contact/dealersden" target="_blank">to contact the Dealers’ Den Management</a> with any inquiries regarding the Artist Alley.</p> 
+	</div>
 </section>
 
-<hr />
-
 <section>
-	<h2>Preferred Merchandise</h2>
-	<p>Because we're a furry convention, your goods or services should be of interest to furry fans. Typical items for sale are, for example, (badge) commissions, original furry artwork and prints, CDs and DVDs with artwork and other little items.</p>
-	<p><strong>Fan Art</strong> - that is, art based on TV series, games, or other intellectual property of a third party - can only be displayed and sold subject to some limitations. Ideally, the dealer can provide a legal agreement with the rights holder granting them the right to use the intellectual property in question. Failing this, any use of third-party intellectual property must be within the limits of Fair Use / Free Use or equivalent regulations. In any case, the dealers are responsible that the merchandise they offer does not violate copyright, trade law, or other applicable law. Nevertheless we reserve the right to check your offerings more than once during the convention and may ask you to remove conspicuous material / artwork out of your stock.</p>	
-	<p>If you are unsure you can contact the <a href="https://help.eurofurence.org/contact/dealersden" target="_blank">Dealers’ Den Management</a> for further information.</p> 
-</section>
-
-<hr />
-
-<section>
-	<h2>Information service for dealers and guests</h2>
-	<p>During the opening times there will always be a contact person from the Dealers' Den team around.</p>
-	<p>For the bulletin and additional service please follow us on <a href="https://twitter.com/EF_DealersDen" target="_blank">Twitter @ EF_DealersDen</a>.</p>
+	<div>
+		<p>Please note that all details provided on this website are subject to change until the event starts. We recommend checking for updates regularly.</p>  
+	</div>
 </section>
