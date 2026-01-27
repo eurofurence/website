@@ -239,6 +239,7 @@
 					<p>
 						You are rating <span class="uk-text-bold"><?= $core->current->title ?></span>.<br />
 						Your input will not be published, but manually reviewed and passed on to the responsible department within Eurofurence.<br />
+						Please <strong>do not include any links</strong> in your comment.<br />
 						If you are affiliated with this department, please be fair and abstain.
 					</p>
 
@@ -283,7 +284,7 @@
 
 		<?php /* Page Rating Submit Handling */
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-			if (!empty($_POST['rating'])) {
+			if (!empty($_POST['rating']) && !str_contains(htmlspecialchars($_POST['comment']), 'http')) {
 				if (Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
 					htmlspecialchars($_POST['page']),
 					htmlspecialchars($_POST['rating']),
