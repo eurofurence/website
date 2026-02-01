@@ -59,7 +59,8 @@ iframe {
         <p>YOUR FRIENDS WILL BE HERE AND SO SHOULD YOU!</p>
         
         <div class="uk-grid-small" uk-grid>
-            <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-primary" target="_blank">REGISTER NOW</a></div>
+            <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-secondary uk-disabled" target="_blank">REGISTRATION OPENS FEB 8</a></div>
+            <!-- <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-primary" target="_blank">REGISTER NOW</a></div> -->
             <!-- <div><a href="about" class="uk-button uk-button-primary" target="_blank">LEARN MORE</a></div> -->
         </div>
     </div>
