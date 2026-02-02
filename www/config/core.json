@@ -183,18 +183,18 @@
 			"title": "More about Eurofurence",
 			"uri": "about.php"
 		},
-        "venue/supporters": {
+        "sponsors": {
 			"owner": "@tarianwolf",
-            "accessible": false,
+            "accessible": true,
             "category": "Location",
-            "description": "A lists of companies supporting the Eurofurence IT Infrastructure.",
-            "inMenu": false,
-            "keywords": "supporters, IT",
-            "menuText": "Supporters",
+            "description": "A lists of companies supporting Eurofurence.",
+            "inMenu": true,
+            "keywords": "sponsors, supporters, infrastructure",
+            "menuText": "Sponsors",
             "ogpImage": "",
             "robots": "",
-            "title": "Supporters",
-            "uri": "venue.supporters.php"
+            "title": "Sponsors",
+            "uri": "sponsors.php"
         },
 
 
