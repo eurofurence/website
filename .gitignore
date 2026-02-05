@@ -1,5 +1,14 @@
-_workfiles/
-_archive/
-www/modified.json
+# macOS system files
 .DS_Store
+
+# source files not meant for publishing (e.g. layered image sources; nosecounter dummy data)
+_workfiles/
+
+# static html output directory
+_archive/
+
+# used by core.json -> staticOut -> lastModifiedMapFile
+www/modified.json
+
+# error and page rating reporting via telegram, contains api keys
 www/telegram.config.php
