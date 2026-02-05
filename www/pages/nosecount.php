@@ -106,19 +106,6 @@
 	}
 </style>
 
-<section>
-	<p>Lorem Ipsum. Available placeholder IDs:</p>
-	<ul>
-		<li>#ef-rs-intro-timestamp: <span id="ef-rs-intro-timestamp"></span></li>
-		<li>#ef-rs-intro-total: <span id="ef-rs-intro-total"></span></li>
-		<li>#ef-rs-intro-new: <span id="ef-rs-intro-new"></span></li>
-		<li>#ef-rs-intro-approved: <span id="ef-rs-intro-approved"></span></li>
-		<li>#ef-rs-intro-partially-paid: <span id="ef-rs-intro-partially-paid"></span></li>
-		<li>#ef-rs-intro-paid: <span id="ef-rs-intro-paid"></span></li>
-		<li>#ef-rs-intro-checked-in: <span id="ef-rs-intro-checked-in"></span></li>
-	</ul>
-</section>
-
 <section id="ef-regstats">
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div>
