@@ -196,8 +196,6 @@
             "title": "Sponsors",
             "uri": "sponsors.php"
         },
-
-
 		"charity": {
 			"owner": "@Sniffer_raccoon",
 			"accessible": false,
