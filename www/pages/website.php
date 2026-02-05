@@ -142,7 +142,7 @@
 	<p><a href="https://help.eurofurence.org/contact/web/bugreport" target="_blank">Contact the Website Team</a></p>
 </section>
 
-<section>
+<section id="team">
 	<h2>Website Team</h2>
 	<p>Please direct any comments, ideas or critique about our website to the following folks:</p>
 
