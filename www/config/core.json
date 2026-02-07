@@ -569,7 +569,7 @@
 			"accessible": true,
 			"category": "Services",
 			"description": "Registration statistics visualized.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up, Diagram, Chart",
 			"menuText": "Registration Statistics",
 			"ogpImage": "nosecount.png",
