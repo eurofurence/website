@@ -18,6 +18,7 @@ class RegStats
         },
         lanyard: {
             normal: '#49854b',
+            contributor: '#49854b',
             sponsor: '#f5ca20',
             supersponsor: '#83559e',
             staff: '#e37529',
@@ -451,6 +452,7 @@ class RegStats
             data: {
                 labels: [
                     "Attendee",
+                    "Contributor",
                     "Sponsor",
                     "Super Sponsor"
                 ],
@@ -459,6 +461,7 @@ class RegStats
                         data: [0, 0, 0],
                         backgroundColor: [
                             this.colors.lanyard.normal,
+                            this.colors.lanyard.contributor,
                             this.colors.lanyard.sponsor,
                             this.colors.lanyard.supersponsor
                         ]
@@ -485,6 +488,7 @@ class RegStats
     {
         const values = [
             this.data.sponsor.normal || 0,
+            this.data.sponsor.contributor || 0,
             this.data.sponsor.sponsor || 0,
             this.data.sponsor.supersponsor || 0
         ];
