@@ -458,7 +458,7 @@ class RegStats
                 ],
                 datasets: [
                     {
-                        data: [0, 0, 0],
+                        data: [0, 0, 0, 0],
                         backgroundColor: [
                             this.colors.lanyard.normal,
                             this.colors.lanyard.contributor,
@@ -475,7 +475,7 @@ class RegStats
                     },
                     htmlLegend: {
                         containerID: 'ef-rs-reg-types-legend',
-                        values: [0, 0, 0]
+                        values: [0, 0, 0, 0]
                     }
                 },
                 events: []
