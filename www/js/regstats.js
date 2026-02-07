@@ -330,7 +330,13 @@ class RegStats
     {
         this.data = await this.fetch(year);
 
+        // update reg opening indicator, and then …
         this.updateTotal();
+
+        // … skip the rest if reg is not open yet
+        if (!this.data.open)
+            return;
+
         this.updateInterests();
         this.updateStatus();
         this.updateTypes();
@@ -675,20 +681,25 @@ class RegStats
         // prevent caching for live data
         url += `?${Date.now()}`
 
-        var data = null;
+        // minimum default data for updateTotal() to run
+        // used only in case the backend does not provide a json file yet
+        var data = {
+            open: false,
+            totalcount: "N/A",
+        };
 
         try {
             data = await (await fetch(url)).json();
             if (!data)
             {
                 console.info("[ef-regstats] data", data);
-                throw "malformed data";
+                throw "no data";
             }
         }
         catch(ex)
         {
             console.error(`[ef-regstats] failed to load ${url}, reason: ${ex}`);
-            return;
+            return data;
         }
 
         return data;
