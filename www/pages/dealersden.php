@@ -73,7 +73,7 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Wednesday, September 3rd, 2025. (Con-Day 1)</th>
+					<th colspan="2">Wednesday, August 19th, 2026. (Con-Day 1)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -93,7 +93,7 @@ small {
 			
 			<thead>
 				<tr>
-					<th colspan="2">Thursday, September 4th, 2025. (Con-Day 2)</th>
+					<th colspan="2">Thursday, August 20th, 2026. (Con-Day 2)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -133,7 +133,7 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Friday, September 5th, 2025. (Con-Day 3)</th>
+					<th colspan="2">Friday, August 21st, 2026. (Con-Day 3)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -161,7 +161,7 @@ small {
 
 			<thead>
 				<tr>
-					<th colspan="2">Saturday, September 6th, 2025. (Con-Day 4)</th>
+					<th colspan="2">Saturday, August 22nd, 2026. (Con-Day 4)</th>
 				</tr>
 			</thead>
 			<tbody>
