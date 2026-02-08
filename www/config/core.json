@@ -395,10 +395,10 @@
         },
         "volunteering": {
 			"owner": "@Pattarchus",
-            "accessible": true,
+            "accessible": false,
             "category": "Participate",
             "description": "You want to volunteer on-site at Eurofurence at Europe's biggest furry convention? Here is how you do it!'",
-            "inMenu": true,
+            "inMenu": false,
             "keywords": "Jobs, Volunteer, Crew, Help, Gopher, Critter, Volunteering",
             "menuText": "On-Site Volunteering",
             "ogpImage": "",
