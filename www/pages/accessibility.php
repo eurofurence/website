@@ -1,73 +1,99 @@
 <h1>Accessibility</h1>
 
-<p>Everyone has the right to participate in public life and society, and no one should be disadvantaged because of their disability. Here we provide information on what we are doing to make our convention more accessible and provide a better experience for all attendees.</p>
+<p>Everyone deserves the right to participate fully in Eurofurence and our community - regardless of needs or disabilities. Below, attendees can find details on the steps we’re taking to ensure our convention is as accessible and inclusive as possible.</p>
 
 <section class="uk-column-1-2@l">
 	<div>
 		<h2>Queuing</h2>
-		<p>If you can not walk / stand, you do not have to queue up and wait in a line.</p>
-		<p>If you have a "Handicapped ID" (Behindertenausweis) or you are (without handicapped ID) disabled in regard of <strong>walking or standing</strong> (i.e. after an operation or because of an injury such as a broken foot/leg) or in <strong>need of a wheelchair</strong> you are <strong>not</strong> required to queue yourself at all for our events. The Queue Management Security Group will let you enter directly into the respective event at the command doors open.</p>
-		<p>Example for Handicapped ID: German "Behindertenausweis" with signs außergewöhnlich gehbehindert ("<strong>aG</strong>"), blind ("<strong>Bl</strong>") or hilflos ("<strong>H</strong>")</p>
+		<p>Attendees who are disabled, rely on a wheelchair, or temporarily injured in a way that limits their ability to walk or stand for longer periods of time are eligible for a Priority Access Wearable (P.A.W.).</p>
+		<p>P.A.W.s are available at the ConOps Info Desk, and enable our security team to guide attendees inside an event immediately as soon as the command to open doors is given.</p>
+		<p>Having a disability ID or medical certificate present when requesting a P.A.W. is helpful and recommended.</p>
+		<p>For special cases or additional questions, please <a href="https://help.eurofurence.org/contact/awareness" target="_blank">contact our Awareness & Inclusion Team</a> - we’re here to help.</p>
+	</div>
 
+	<div>
 		<h2>Seating</h2>
-		<p>Every Show and Event is accessible with a wheelchair.</p>
-		<p>We normally have special seats/places reserved for physically handicapped Attendees and wheelchair users. Please ask any member of the Queue Management Security Group about them at the respective event. If you want to know more about the accessibility of the venue, please visit <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">their website</a>.</p>
+		<p>All shows and events are wheelchair accessible.</p>
+		<p>Dedicated seating is typically reserved for wheelchair users and physically disabled attendees - just ask a member of queue security at the event for assistance.</p>
+		<p>For detailed information on overall venue accessibility, please visit the <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">CCH website</a>.</p>
+	</div>
 
-		<h2>Flashing lights</h2>
-		<p>Some of our events, like the dances and the main shows (i.e. opening ceremony), may include flashing lights.</p> 
+	<div>
+		<h2>Flashing Lights</h2>
+		<p>Please note that certain events, such as dances, the opening ceremony and the Paw Pet Show, may include flashing lights and other intense visual effects.</p> 
 	</div>
 
 	<div>
 		<h2>Venue</h2>
-		<p>The Congress Center Hamburg provides barrier-free access. Every room is accessible by wheelchair and there are 18 disabled parking spaces in total. You can find more detailed information about the <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">accessibility of the CCH</a> on their website.</p>
+		<p>The Congress Center Hamburg (CCH) is fully barrier-free. All rooms are wheelchair accessible, and 18 designated disabled parking spaces are available on the premises. For complete venue accessibility details, please refer to the <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">CCH website</a>.</p>
+		<p>The train and U-Bahn stations at Dammtor and Stephansplatz are barrier-free, and have lifts provided for easy access.
+However, occasional technical issues and outages can occur. To check the status of the lifts and other facilities at these stations at any given time, please visit the <a href="https://www.hvv.de/en/lifts" target="_blank">HVV website</a>.</p>
+
 	</div>
 
 	<div>
 		<h2>The Dealers' Den</h2>
-		<p>The Dealers’ Den is a lively and bustling area with priority access for attendees with mobility and standing limitations. However, the Dealers' Den can sometimes be crowded, noisy, and filled with various scents. If you need assistance, please reach out to the Dealers' Den Team at the Dealers' Den Help Desk or the Eurofurence Security near the entrance. For more information on how we are striving to make the Dealers' Den' a wonderful experience for everyone, including those with specific needs, visit our <a href="dealersden/visiting">Visiting Dealers Den'</a> page.</p>
+		<p>The Dealers’ Den is a bustling, high-traffic area, and as such offers priority access to attendees with mobility or standing limitations. In general, please be aware it can be crowded, noisy, and potentially overwhelming.</p>
+		<p>If assistance is required, visit the Dealers’ Den Help Desk, or speak to a Eurofurence Security team member near the entrance. For more information on how we’re working to make the Dealer’s Den an amazing and accessible experience for everyone, visit <a href="https://www.eurofurence.org/EF29/dealersden/visiting" target="_blank">our guide</a> (this page will be made available in the weeks before the convention).</p>
 	</div>
 
 	<div>
-		<h2>Quiet Room</h2>
-		<p>If you're in need of some silence or rest, you can use the quiet room. It's a place where you can spend time away from noise, light, big crowds and other stimuli.</p>
-		<p>It's important to keep this place a quiet space, so please follow the rules. You can find them in the room and in the Conbook. For locations, please check the Conbook or the map in the App.</p>
+		<h2>The Quiet Room</h2>
+		<p>Need a break from the noise and crowds? The Quiet Room offers a peaceful, low-stimulation environment for rest and recovery.</p>
+		<p>While the Quiet Room is available and accessible to all attendees, please follow the posted rules to help maintain a calm atmosphere. The Quiet Room’s location can be found in the Con Book, or on the map in the Eurofurence app.</p>
 	</div>
 
 	<div>
-		<h2>Service animal</h2>
-		<p>Due to Convention Center rules, dogs (those without zippers) and other pet animals are generally not allowed on the CCH premises.</p>
-		<p>There are, however, circumstances under which an Attendee can bring an <strong>assistant dog</strong> (Assistenzhund), if the attendee and their dog are certified according to the German Assistenhundeverordnung (AHundV) and can provide the photo ID according to Att. 9 AHundV. Only valid certifications will be accepted.</p>
-		<p>Certifications for <strong>Assistant dogs</strong> can be verified OnSite in the Security Office at any time according to the AHundV. A verification is only valid for one convention and has to be renewed every year (in the same way).</p>
+		<h2>Service Animals</h2>
+		<p>In short:</p>
+		<ul>
+			<li>Dogs and other pet animals are not allowed in the CCH</li>
+			<li>Only fully certified assistant dogs are allowed</li>
+			<li>Relevant certifications have to be verified by the CCH upon entry to the building </li>
+			<li>Please register your assistant dog in advance via mail or telephone at the CCH</li>
+		<ul>
+		<p>In detail:</p>
+		<p>Due to venue regulations, pet animals - including dogs without zippers - are not permitted inside the CCH.</p>
+		<p>The sole exception to this rule is for fully certified assistance dogs and owners that meet the requirements of the <a href="https://www.gesetze-im-internet.de/ahundv/BJNR243600022.html" target="_blank">German Assistenzhundeverordnung (AHundV)</a>. A valid photo ID and certificate (per Att. 9 AHundV) must be presented for on-site verification at the CCH Info Desk.</p>
+		<p>For attendees that know in advance that they would like to attend Eurofurence with a service animal - please register in advance vial mail at <a href="mailto:info@cch.de">info@cch.de</a>, or via telephone at +49 40 3569 2000.</p>
+		<p>Without proper certification and verification, entry with animals will not be allowed. Violations may result in removal from the venue and expulsion from the convention.</p>
 	</div>
 
 	<div>
-		<h2>Gender neutral bathrooms</h2>
-		<p>There are gender neutral bathrooms available. For locations, please check the Conbook or the map in the App.</p>
+		<h2>Accompanying Persons</h2>
+		<p>If persistent personal assistance is required during the event, one person may accompany any one attendee free of charge.</p>
+		<p>To qualify, please submit proof - such as a German disability ID card with a ‘B’ symbol - and a short explanation of the need for assistance through our <a href="https://help.eurofurence.org/contact/reg" target="_blank">contact form</a>.</p>
+		<p>Equivalent international documentation is also accepted. For special cases or additional questions, please also use the contact form linked above - we’re here to help.</p>
 	</div>
 
 	<div>
-		<h2>Sign language interpretation</h2>
-		<p>Currently, we cannot provide sign language interpretation for our events. If you are in need of interpretation, please let us know anyway, so we can work on it in the future. Send an e-mail to <a href="mailto:awareness@eurofurence.org" target="_blank">awareness@eurofurence.org</a>.</p>
-		<p>We try to have subtitles for some of our main shows. But we cannot guarantee them for every event yet.</p>
+		<h2>Gender-neutral Bathrooms</h2>
+		<p>Both gender-neutral and gender-coded bathrooms will be available and clearly marked throughout the venue.</p>
 	</div>
 
 	<div>
-		<h2>Website</h2>
-		<p>Eurofurence strives to make its websites accessible.</p>
-		<p>This website is predominantly accessible. The requirements of WCAG 2.2 AA are largely met from a technical point of view.</p>
-		<p>
-			Still, we have some points, that are not accessible or hardly accessible. We strive to eliminate those remaining barriers.
-			<ul>
-				<li>Modals are not accessible using only keyboard navigation.</li>
-				<li>Menu does not expand while only using keyboard navigation.</li>
-				<li>The graphics for the nose count are not accessible for some people with certain disabilities.</li>
-			</ul>
-		</p>
+		<h2>Sign Language Interpretation and Live Captioning</h2>
+		<p>Currently, we are unable to provide sign language interpretation at events. This is, however, a strong focus for improvement in the future. If interpretation is required, please let us know in advance via our <a href="https://help.eurofurence.org/contact/awareness" target="_blank">contact form</a>.</p>
+		<p>We do aim to provide subtitles for some main shows, but cannot guarantee availability for all events.</p>
+	</div>
+
+	<div>
+		<h2>Our Website</h2>
+		<p>Eurofurence is committed to making our website as accessible as possible, and strive to meet the WCAG 2.2 AA standard. The vast majority of content is accessible, but some limitations remain -</p>
+		<ul>
+			<li>Modals are not fully compatible with keyboard navigation</li>
+			<li>Menus cannot be expanded using only a keyboard</li>
+			<li>Some visual elements (like the ‘registration statistics’ graphics) may not be accessible for users with specific disabilities</li>
+		</ul>
+		<p>We are actively working to address these issues, and aim to make all aspects of our website accessible in the future.</p>
 	</div>
 </section>
 
+<hr />
+
 <section>
-	<h2>Feedback and contact</h2>
-	<p>You can inform us of any issues in regards to our compliance with accessibility requirements by sending an e-mail to <a href="mailto:awareness@eurofurence.org" target="_blank">awareness@eurofurence.org</a></p>
-	<p>At the convention, you can always ask a staff member. Staff member have orange (staff), red (director) or blue and yellow (security) lanyards and badge marks. We also provide call boxes with direct communication to Con Ops and/or Security.</p>
+	<h2>Feedback and Contact</h2>
+	<p>Feedback from our attendees is essential. If any accessibility barriers or unfulfilled needs for assistance present themselves before or during the con, please contact us at <a href="mailto:awareness@eurofurence.org">awareness@eurofurence.org</a>.</p>
+	<p>At the convention, staff members (wearing orange lanyards), directors (red), and security (blue/yellow) are available to help. We also have call boxes on site for direct communication with ConOps or Security.</p>
+	<p>To get in touch with our dedicated Awareness and Inclusion Team during the convention, please look for team members wearing labelled pink sashes and/or cloths, or inquire at the Info Desk or with any staff member to be placed in contact.</p>
 </section>
