@@ -1,5 +1,6 @@
-<h1>Open Staff Positions at Eurofurence</h1>
+
 <section>
+	<h1>Open Staff Positions at Eurofurence</h1>
 	<p>A convention as big as Eurofurence can't simply grow without people committing some of their time and skills to it - people like you. Every now and then we are looking for creative people willing to volunteer, to help us with making Eurofurence the best possible experience for everyone! In case you find yourself addressed by one of the following job-offers, feel free to drop us a line. We will gladly have you aboard.<br/><br/>We can't offer any form of payment, but we're sure that seeing all those happy attendees will be reward enough.</p>
 </section>
 
