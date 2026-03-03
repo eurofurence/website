@@ -161,6 +161,7 @@ input[name="subnav-ctl"] {
 	opacity: 0;
 }
 nav > div > ul > li:hover > ul,
+nav > div > ul > li:focus-within > ul,
 nav > div > ul > li > ul:hover,
 nav input[name="subnav-ctl"]:checked ~ ul {
 	max-height: 100vh;
