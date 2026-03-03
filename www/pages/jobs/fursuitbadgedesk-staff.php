@@ -40,4 +40,4 @@
     <li>Be able to work in a potentially loud environment, with fans running, fursuiters talking and printers roaring.</li>
 </ul>
 
-<p>If you are interested in joining contact <a href="https://t.me/Thiritin" target="_blank">@Thiritin</a> on Telegram!</p>
+<p>If you are interested in joining contact <a href="https://t.me/@takemurahusky" target="_blank">@takemurahusky</a> on Telegram!</p>
