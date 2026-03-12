@@ -368,17 +368,17 @@
 
 		
         "prices": {
-			"owner": "(no owner)",
-            "accessible": false,
+			"owner": "@RakanHowls",
+            "accessible": true,
             "category": "Participate",
 			"description": "Eurofurence {number} will take place from {dates} at the {location}. Eurofurence is Europe's largest annual gathering of the European furry community.",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "Price, Ticket, Booking, Registration, Reg, Sign Up, How Much, Costs",
             "menuText": "Tickets &amp; Prices",
             "ogpImage": "",
             "robots": "",
             "title": "Convention Fees &amp; Prices",
-            "uri": "prices.php"
+            "uri": "prices.html"
         },
         "jobs": {
 			"owner": "@draconigen",
