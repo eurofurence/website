@@ -174,7 +174,7 @@
 	</div>
 </section>
 
-<section>
+<section id="banner-exchange">
 	<h2>Banner Exchange</h2>
 	<p><strong>Dear Convention Owner</strong>,<br />you want your convention to appear in the partners slide on the bottom of our website? <a href="https://help.eurofurence.org/contact/web" target="_blank">Drop us a message</a>.
 
