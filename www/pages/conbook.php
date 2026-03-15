@@ -1,4 +1,6 @@
-<?php $deadline = 'June 19th'; ?>
+<?php $images_deadline = 'June 19th'; ?>
+<?php $stories_deadline = 'June 01st, 2026'; ?>
+
 <section>
 	<h1>Conbook</h1>
 	<p>As every year, we will have a Conbook as guide through the convention and its events, as map, and as souvenir. If you're interested in contributing content, here are the guidelines.</p>
@@ -10,7 +12,7 @@
 		Make sure it has a good resolution and quality for printing following the instructions further below.
 	</p>
 	
-	<p><b>Deadline:</b> <?= $deadline ?></p>
+	<p><b>Deadline:</b> <?= $images_deadline ?></p>
 
 	<b>Theme Guideline</b>
 	<p>
@@ -64,9 +66,37 @@
 
 <section>
 	<h2>Short Stories</h2>
-	<p>
-		We would love to include a couple of short stories, poems and similar again! 
-		The story has to be written in English, a theme fitting speech style can be used. 
-		Word count for short stories: Roughly a full or half page so 300-500 words.
-	</p>
+
+	<div class="uk-column-1-2@l">
+		<div>
+			<h3>Ideas for Inspiration</h3>
+			<p>What surprising adventures or challenges happen when the festival takes an unexpected twist? Could a mischievous or mysterious character stir chaos or fun during the festival? How do furries from different worlds, species, or cultures interact when something extraordinary occurs? Is there a hidden secret, treasure, or festival tradition that leads the protagonist on an unusual adventure? How do friendships, romance, or teamwork help solve problems or uncover mysteries during the festival? What strange creatures might appear at the festival?</p>
+		</div>
+		<div>
+			<h3>Thematic Framework</h3>
+			<p>The overarching theme of <strong class="uk-text-italic"><?= $this->current->theme ?></strong> must be present, but may be interpreted creatively. The texts must be set in a furry world, though humans may appear. We encourage you to explore a wide range of genres, including fantasy, comedy, drama, sci-fi, crime, and much more. While the stories can include challenges, mysteries, or conflicts, we are especially looking for narratives that lead to positive resolutions and happy endings. The festival setting may serve as a backdrop for adventures, discoveries, or extraordinary events, capturing the spirit, fun, and imagination of the furry fandom.</p>
+			<p>We are aiming for a PG-13 rating.  </p>
+			<p>Pornographic or racist texts will not be considered. </p>
+			<p>Texts that focus on gore will not be accepted, but violence used as a means to create conflict or drive the story is permitted. </p>
+		</div>
+		<div>
+			<h3>Formal Requirements</h3>
+			<p>Each writer may submit only one story. The text must not exceed 22,000 characters (including spaces according to Word count). Submissions must be written in English. Contributions must be submitted as a .doc/.docx (MS Word) or .odt text document. Please ensure consistent font type and size throughout the text. Italics within the text are permitted.</p>
+			<p>Submit by <?= $stories_deadline ?> to: <a href="mailto:conbook@eurofurence.org">conbook@eurofurence.org</a></p>
+			<p>Please include a short biography and your contact details (real name, nickname, address, and email). Any questions can also be addressed to the email above.</p>
+		</div>
+		<div>
+			<h3>Planned Publication</h3>
+			<p>Publication of the highest ranked story in Eurofurence <?= $this->current->number ?>‘s conbook is planned. The writer whose contribution is selected for publication will receive one complimentary copy of the publication if they are not attending Eurofurence <?= $this->current->number ?>. Remuneration is not planned at this time. We reserve the right to publish selected texts digitally.</p>
+		</div>
+	</div>
+
+	<hr />
+	
+	<div>
+		<h3>Legal Information</h3>
+		<p>Submitted contributions must not have been previously published, either in print or digitally in any form. By submitting, participants agree that their contribution and author name may be published if applicable.</p>
+		<p>All rights remain with the author. Eurofurence is granted only a non-exclusive right of publication, unlimited in time and location. Authors therefore remain free to dispose of their text as they wish. By participating, authors confirm that the submitted work is their own and does not infringe upon third-party rights. Furthermore, participants agree that the text may be published in the Eurofurence Conbook (print and digitally). There is no entitlement to remuneration. Each author whose contribution is included will receive one complimentary copy if not attending Eurofurence <?= $this->current->number ?>.</p>
+		<p>By submitting their story, participants agree to all conditions of this call. There is no entitlement to publication. The sole criterion for publication is the quality of the text. Legal recourse is excluded.</p>
+	</div>
 </section>
