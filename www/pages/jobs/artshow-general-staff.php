@@ -50,6 +50,6 @@
     <li>You understand that communication is key and that deadlines must be met.</li>
 </ul>
 
-<p><strong>Interested? Got questions?</strong> Reach out to us by writing a mail to <a href="mailto: artshow@eurofurence.org">artshow@eurofurence.org</a> or contact <a href="https://t.me/riffuchs" target="_blank">@riffuchs on Telegram</a>.</p>
+<p><strong>Interested? Got questions?</strong> Reach out to us by writing a mail to <a href="mailto: artshow@eurofurence.org">artshow@eurofurence.org</a>.</p>
 
 <p>We get back to you swiftly.</p>
