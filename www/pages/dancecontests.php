@@ -1,12 +1,13 @@
 <style>
-    .uk-accordion-title {
-        color: #fff;
-    }
 
     .ef-reg-button {
         border-width: 3px;
         background-color: var(--ef-palette-1);
         color: var(--ef-palette-2);
+    }
+
+    .ef-reg-button::after {
+        display: none!important;
     }
 
     .ef-reg-button:hover {
@@ -18,12 +19,6 @@
         color: var(--ef-palette-1);
     }
 
-    .competition-page iframe {
-        overflow-x: hidden;
-        inline-size: 100%;
-        height: 90vh;
-    }
-
 </style>
 
 <h1>Dance Contests</h1>
@@ -33,8 +28,8 @@
             <section class="uk-clearfix">
                 <h2>Paws on Fire</h2>
                 <img alt="Paws on Fire"
-                    class="uk-float-left uk-width-1-1 uk-width-1-2@s uk-width-1-2@m uk-margin-right uk-padding-small uk-padding-remove-horizontal uk-padding-remove-top"
-                    src="img/pages/dancecontests/pof_winner_2025.jpg"/>
+                    src="img/pages/dancecontests/paws-on-fire_banner.jpg"/>
+                <small>credit: SinusFox</small>
                 <p>Join us for Paws on Fire, Eurofurence's take on the popular "Floor Wars" dance battle!</p>
                 <p>Watch or participate as passionate dancers face off in thrilling one-on-one improvised dance battles.
                     A jury will decide the winner of each round, with both fursuit and non-fursuit categories available.
@@ -43,8 +38,8 @@
                     remains. Expect the finals to be a blazing hot showdown!</p>
                 <p>Are you ready to witness these brave contestants showcase their skills? Be there to cheer for your
                     favorites as they set the dance floor ablaze with their Paws on Fire!</p>
-                <div class="reg-closed-display">
-                    <strong>Registration is closed — See you on stage!</strong>
+                <div class="">
+                    <a href="https://cloud.eurofurence.org/index.php/apps/forms/s/xt78fMcZLxR9mHgZBnnRHCKT" target="_blank" type="button" class="uk-button ef-reg-button">Register Now</a>
                 </div>
             </section>
 
@@ -53,8 +48,8 @@
             <section>
                 <h2>Enter the Arena</h2>
                 <img alt="Enter the Arena"
-                    class="uk-float-left uk-width-1-1 uk-width-1-2@s uk-width-1-2@m uk-margin-right uk-padding-small uk-padding-remove-horizontal uk-padding-remove-top"
-                    src="img/pages/dancecontests/eta_winner_2025.jpg"/>
+                    src="img/pages/dancecontests/enter-the-arena_banner.jpg"/>
+                <small>credit: Aeverus</small>
                 <p>The official annual Eurofurence Fursuit Dance Contest is back!</p>
                 <p>This spectacular two-hour show gives dancers 90 seconds to showcase their unique and expressive
                     styles on stage. Contestants from around the world will dazzle the audience with performances
@@ -65,8 +60,8 @@
                     locking, tutting and even creative blends of krumping with Krav Maga and Aztec warfare. Some might
                     even perform every move from "Dance Central" and "Just Dance" by heart!</p>
                 <p>Join us and cheer on these talented performers as they Enter the Arena.</p>
-                <div class="reg-closed-display">
-                    <strong>Registration is closed — See you on stage!</strong>
+                <div class="">
+                    <a href="https://cloud.eurofurence.org/index.php/apps/forms/s/ASq9nrgq5jLeFqAkrZYRcGME" target="_blank" type="button" class="uk-button ef-reg-button">Register Now</a>
                 </div>
             </section>
         </div>
