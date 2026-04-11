@@ -4,7 +4,7 @@
 	<p>To help you finding your way around the convention, following you can find some information and useful tips for fursuiters at Eurofurence.</p>
 
 	<h2>Fursuit Badges</h2>
-	<p>Eurofurence offers every registered fursuiter one free personal fursuit badge. Bringing more than one fursuit? No problem! You can get a badge for each of them for just 2 € per additional badge. These badges are a fantastic way to show off your fursuit and make it easier for others to recognize you.</p>
+	<p>Eurofurence offers every registered fursuiter one free personal fursuit badge. Bringing more than one fursuit? No problem! You can get more badges for a fee per additional badge. These badges are a fantastic way to show off your fursuit and make it easier for others to recognize you.</p>
 	<p>Plus, you can join in on the fun with our Catch-Em-All Game! Meet fellow fursuiters, exchange badge codes, and see how many you can collect. The top collector will be celebrated at the closing ceremony and earn a spot on our eternal leaderboard.</p>
 	<p>How to Get Your Badge:
 		<ul>
