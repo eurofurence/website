@@ -89,7 +89,7 @@
 		<h2>Information Service, Guidance and Support for Artist Alley Participants and Attendees</h2>
 		<p>During the Artist Alley's operating hours, a member of the Dealers' Den team will always be available to provide assistance and answer questions. You can contact the Dealers' Den management at the Dealers' Den Help Desk during the official Dealers' Den opening hours. Outside of these hours, the team can be reached through the Eurofurence Security Desk.</p>  
 
-		<p> The regulations governing the Artist Alley are supplementary to the existing rules of the Dealers' Den. The Dealers' Den rules also apply significantly to the Artist Alley and can be reviewed in detail here: <a href="https://www.eurofurence.org/EF29/dealersden" target="_blank">Dealers' Den Rules</a>. Additionally, the Artist Alley is subject to further rules and restrictions listed on this site.
+		<p> The regulations governing the Artist Alley are supplementary to the existing rules of the Dealers' Den. The Dealers' Den rules also apply significantly to the Artist Alley and can be reviewed in detail here: <a href="https://www.eurofurence.org/EF30/dealersden" target="_blank">Dealers' Den Rules</a>. Additionally, the Artist Alley is subject to further rules and restrictions listed on this site.
 
 		<p>Should any issues arise concerning the operations of the Artist Alley, they should be directly addressed with the Dealers’ Den Management on site. In urgent situations of any kind, attendees are encouraged to speak to any member of the Eurofurence Staff. Members of the press, typically accompanied by a member of the Eurofurence Press Team, may be present in the Artist Alley during opening hours.
 
