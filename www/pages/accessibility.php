@@ -1,3 +1,4 @@
+<?php $current_ef = $this->current->number; ?>
 <section>
 	<h1>Accessibility</h1>
 	<p>Everyone deserves the right to participate fully in Eurofurence and our community - regardless of needs or disabilities. Below, attendees can find details on the steps we’re taking to ensure our convention is as accessible and inclusive as possible.</p>
@@ -35,7 +36,7 @@ However, occasional technical issues and outages can occur. To check the status 
 	<div>
 		<h2>The Dealers' Den</h2>
 		<p>The Dealers’ Den is a bustling, high-traffic area, and as such offers priority access to attendees with mobility or standing limitations. In general, please be aware it can be crowded, noisy, and potentially overwhelming.</p>
-		<p>If assistance is required, visit the Dealers’ Den Help Desk, or speak to a Eurofurence Security team member near the entrance. For more information on how we’re working to make the Dealer’s Den an amazing and accessible experience for everyone, visit <a href="https://www.eurofurence.org/EF29/dealersden/visiting" target="_blank">our guide</a> (this page will be made available in the weeks before the convention).</p>
+		<p>If assistance is required, visit the Dealers’ Den Help Desk, or speak to a Eurofurence Security team member near the entrance. For more information on how we’re working to make the Dealer’s Den an amazing and accessible experience for everyone, visit <a href="https://www.eurofurence.org/EF<?= $current_ef ?>/dealersden/visiting" target="_blank">our guide</a> (this page will be made available in the weeks before the convention).</p>
 	</div>
 
 	<div>
