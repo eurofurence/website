@@ -2,25 +2,12 @@
 
 <?php
     $landscape = [
-        ['img' =>  'ef29_wallpaper_1_pc.png', 'cap' => 'Art by @Tel_McGrew on Telegram'],
-        ['img' =>  'ef29_wallpaper_2_pc.png', 'cap' => 'Art by https://raironu.art/'],
-        ['img' =>  'ef29_wallpaper_3_pc.png', 'cap' => 'Art by @mona_thehoofeddragon on Telegram'],
-        ['img' => 'ef29_wallpaper_4a_pc.png', 'cap' => 'Art by @mona_thehoofeddragon on Telegram'],
-        ['img' => 'ef29_wallpaper_4b_pc.png', 'cap' => 'Art by @mona_thehoofeddragon on Telegram'],
-        ['img' => 'ef29_wallpaper_5a_pc.png', 'cap' => 'Art by @mona_thehoofeddragon on Telegram'],
-        ['img' => 'ef29_wallpaper_5b_pc.png', 'cap' => 'Art by @mona_thehoofeddragon on Telegram'],
-        ['img' =>  'ef29_wallpaper_6_pc.png', 'cap' => 'Art by @Tel_McGrew on Telegram'],
-        ['img' =>  'ef29_wallpaper_7_pc.png', 'cap' => 'Art by https://raironu.art/'],
-        ['img' =>  'ef29_wallpaper_8_pc.png', 'cap' => 'Art by https://raironu.art/'],
-        ['img' =>  'ef29_wallpaper_9_pc.png', 'cap' => 'Art by https://raironu.art/'],
-        ['img' => 'ef29_wallpaper_10_pc.png', 'cap' => 'Art by https://raironu.art/'],
-        ['img' => 'ef29_wallpaper_11_pc.png', 'cap' => 'Art by https://raironu.art/'],
-        ['img' => 'ef29_wallpaper_12_pc.png', 'cap' => 'Art by https://raironu.art/'],
+        ['img' =>  'ef30_wallpaper_1_pc.png', 'cap' => 'Art by x'],
     ];
 
     $mobile = [
-        ['img' =>  'ef29_wallpaper_1_mobile.png', 'cap' => 'Art by @Tel_McGrew on Telegram'],
-        ['img' =>  'ef29_wallpaper_6_mobile.png', 'cap' => 'Art by @Tel_McGrew on Telegram'],
+        ['img' =>  'ef30_wallpaper_1_mobile.png', 'cap' => 'Art by x'],
+        ['img' =>  'ef30_wallpaper_6_mobile.png', 'cap' => 'Art by x'],
     ]
 ?>
 
