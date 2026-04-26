@@ -153,26 +153,6 @@
     "type": "Feature",
     "properties": {
        "type": "dining",
-       "title": "Quán 19",
-       "name": "The Grand Garden: Quán 19",
-       "style": "Vietnamese",
-       "attributes": ["vegan", "glutenfree"],
-       "price": 2,
-       "distance": 950,
-       "address": "Rentzelstr. 6, 20146 Hamburg",
-       "phone": "+49 40 521 568 76",
-       "email": "info@bythegrandgarden.com",
-       "url": "https://www.bythegrandgarden.com/"
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [9.980269, 53.566838]
-    }
-  },
-  {
-    "type": "Feature",
-    "properties": {
-       "type": "dining",
        "title": "Edelcurry",
        "style": "Bratwurst",
        "attributes": ["vegan", "glutenfree"],
@@ -195,7 +175,7 @@
        "title": "Happenpappen",
        "name": "HAPPENPAPPEN",
        "style": "Vegan",
-       "attributes": ["vegan"],
+       "attributes": ["vegan", "glutenfree"],
        "price": 1,
        "distance": 1400,
        "address": "Feldstraße 36, 20357 Hamburg",
@@ -320,6 +300,216 @@
     "geometry": {
       "type": "Point",
       "coordinates": [10.012716, 53.558708]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "DAS PEACE",
+       "name": "DAS PEACE Hamburg",
+       "style": "Oriental",
+       "attributes": ["vegetarian", "vegan"],
+       "price": 2,
+       "distance": 1100,
+       "address": "Karolinenstraße 14, 20357 Hamburg",
+       "phone": "+49 40 594 58 777",
+       "url": "https://das-peace.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.974817661862012, 53.559222503372325]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Rudolph's",
+       "name": "Rudolph's Restaurant",
+       "style": "Mediterranean",
+       "attributes": ["vegetarian", "vegan"],
+       "price": 2,
+       "distance": 2600,
+       "address": "Poggenmühle 5, 20457 Hamburg",
+       "phone": "+49 40 182 977 89",
+       "url": "https://www.rudolphs-hamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.002687105133326, 53.545362189572]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Helo",
+       "name": "Helo do Brasil",
+       "style": "Brazilian",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 2,
+       "distance": 450,
+       "address": "COLONNADEN 104, 20354 Hamburg",
+       "phone": "+49 40 430 987 88",
+       "url": "https://www.helorestaurant.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.990137391564417, 53.55770885960523]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Kleinhuis",
+       "name": "Kleinhuis´ Restaurant bei der Staatsoper",
+       "style": "North German",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 2,
+       "distance": 700,
+       "address": "Fehlandtstraße 26, 20354 Hamburg",
+       "phone": "+49 40 353 399",
+       "url": "https://kleinhuis-restaurant.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.991164964759639, 53.55733221505354]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-glutenfree",
+       "title": "Gregor`s Superfood",
+       "name": "Gregor`s Superfood",
+       "style": "Bakery",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 1,
+       "distance": 950,
+       "address": "Gerhofstraße 2-8, 20354 Hamburg",
+       "phone": "+49 40 521 560 50",
+       "url": "http://www.gregors-superfood.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.989519468659722, 53.554115412839856]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Capo’s Coffee",
+       "name": "Capo’s Coffee",
+       "style": "Café & Deli",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 1,
+       "distance": 1300,
+       "address": "Grindelhof 85, 20146 Hamburg",
+       "phone": "+49 40 226 668 76",
+       "url": "https://www.caposcoffee.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.984813560374436, 53.57153624367672]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "mama trattoria",
+       "name": "mama trattoria - Pöseldorf",
+       "style": "Italian",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 2,
+       "distance": 1400,
+       "address": "Mittelweg 138, 20148 Hamburg",
+       "phone": "+49 40 537 797 99",
+       "url": "https://www.mama.eu/hamburg-poeseldorf"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.995364878315723, 53.571025006088554]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "mama trattoria",
+       "name": "mama trattoria - Hamburg Rathaus",
+       "style": "Italian",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 2,
+       "distance": 1500,
+       "address": "Schauenburgerstraße 44, 20095 Hamburg",
+       "phone": "+49 40 360 999 93",
+       "url": "https://www.mama.eu/hamburg-rathaus"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.993280677805167, 53.550346693951454]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Quintessenz",
+       "name": "Restaurant Quintessenz",
+       "style": "European",
+       "attributes": ["glutenfree", "vegetarian"],
+       "price": 3,
+       "distance": 1600,
+       "address": "Rödingsmarkt 2, 20459 Hamburg",
+       "phone": "+49 40 380 863 64 00",
+       "url": "https://restaurant-quintessenz.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.986636614698424, 53.548733432835355]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining",
+       "title": "Bullerei",
+       "name": "Bullerei",
+       "style": "European",
+       "attributes": ["glutenfree", "vegetarian"],
+       "price": 3,
+       "distance": 1900,
+       "address": "Lagerstraße 34b, 20357 Hamburg",
+       "phone": "+49 40 334 421 10",
+       "url": "https://bullerei.com/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [9.96613447420816, 53.56326515961302]
+    }
+  }
+  ,
+  {
+    "type": "Feature",
+    "properties": {
+       "type": "dining-vegetarian",
+       "title": "Erdapfel",
+       "name": "Erdapfel Hamburg",
+       "style": "Vegetarian/Vegan",
+       "attributes": ["glutenfree", "vegetarian", "vegan"],
+       "price": 2,
+       "distance": 2100,
+       "address": "Burchardstraße 10, 20095 Hamburg",
+       "phone": "+49 40 521 673 05",
+       "url": "https://erdapfel-hamburg.de/"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [10.002855627343289, 53.54873025866571]
     }
   }
 ]

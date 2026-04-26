@@ -68,13 +68,13 @@ For the hotel map:
 
   * _static/ef-hotels.html_ — HTML code. No Javascript!
   * _static/ef-hotels.json_ — Configuration, map parameters, and POI to CSS mappings
-  * _static/ef29-hotels.geojson_ — GeoJSON file of the hotel map POIs
+  * _static/ef-hotels.geojson_ — GeoJSON file of the hotel map POIs
 
 For the restaurant map:
 
   * _static/ef-dining.html_ — HTML code. No Javascript!
   * _static/ef-dining.json_ — Configuration, map parameters, and POI to CSS mappings
-  * _static/ef29-dining.geojson_ — GeoJSON file of the hotel map POIs
+  * _static/ef-dining.geojson_ — GeoJSON file of the hotel map POIs
 
 You get the idea.
 
@@ -104,7 +104,7 @@ is the container for the copyright message and other links.
 The configuration file has the following top-level sections:
 
     {
-      "geoJSON": "ef29-hotels.geojson",
+      "geoJSON": "ef-hotels.geojson",
       "options": { },
       "markerCSSClasses": { }
     }
