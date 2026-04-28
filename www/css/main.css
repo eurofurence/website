@@ -291,7 +291,6 @@ main #content > section {
 }
 
 /* consent cover */
-
 .consent-cover {
 	background-color: rgba(0, 0, 0, .3);
 	color: #000;
@@ -306,6 +305,23 @@ main #content > section {
 }
 .consent-cover:hover {
 	background-color: rgba(0, 0, 0, .2);
+}
+
+/* video creators */
+.ef-people img {
+	display: inline;
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-right: 12px;
+}
+
+.ef-people h3 {
+	margin: 0;
+}
+.ef-people a {
+	text-decoration: none;
 }
 
 /* footer */

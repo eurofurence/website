@@ -1,13 +1,13 @@
 <?php
     $creators = [
         [
-            'title' => '',
-            'image' => '.jpg',
+            'title' => 'BBF TV',
+            'image' => 'bbftv.jpg',
             'links' => [
                 [
-                    'name' => '',
-                    'icon' => '',
-                    'link' => ''
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@BBFTV'
                 ]
             ]
         ]

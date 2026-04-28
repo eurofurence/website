@@ -447,10 +447,10 @@
 		},
         "creators": {
 			"owner": "@TheFruitFox",
-            "accessible": false,
+            "accessible": true,
             "category": "Participate",
             "description": "",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "live, streamer, vtuber, content creator, twitch, instagram, tiktok, youtube, mastodon, social media",
             "menuText": "Content Creators",
             "ogpImage": "",
