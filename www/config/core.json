@@ -452,10 +452,10 @@
             "description": "",
             "inMenu": true,
             "keywords": "live, streamer, vtuber, content creator, twitch, instagram, tiktok, youtube, mastodon, social media",
-            "menuText": "Content Creators",
+            "menuText": "Video Creators",
             "ogpImage": "",
             "robots": "",
-            "title": "Web Video Creators",
+            "title": "Video Creators",
             "uri": "creators.php"
         },
 		"accessibility": {
