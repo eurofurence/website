@@ -287,6 +287,7 @@
 			if (
 				!empty($_POST['rating']) && 
 				!str_contains(htmlspecialchars($_POST['comment']), 'http') &&
+				intval(htmlspecialchars($_POST['rating'])) > 0 && intval(htmlspecialchars($_POST['rating'])) < 6 &&
 				property_exists($core->config->pages, htmlspecialchars($_POST['page']))) {
 				if (Telegram::report(sprintf("Page Rating Receipt\nPage: %s\nRating: %s / 5\nName: %s\nComment: %s",
 					htmlspecialchars($_POST['page']),
