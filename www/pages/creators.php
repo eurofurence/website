@@ -1,5 +1,5 @@
 <?php
-    $deadline = 'August 9th, 2026';
+    $deadline = 'August 5th, 2026';
     $creators = [
         [
             'title' => 'BBF TV',
