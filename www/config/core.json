@@ -643,6 +643,19 @@
 			"robots": "",
 			"title": "About the Website",
 			"uri": "website.php"
+		},
+		"website/art": {
+			"owner": "@draconigen",
+			"accessible": true,
+			"category": "Policies",
+			"description": "",
+			"inMenu": false,
+			"keywords": "",
+			"menuText": "",
+			"ogpImage": "",
+			"robots": "",
+			"title": "Website Art Details",
+			"uri": "website.art.php"
 		}
 	}
 }

@@ -215,11 +215,15 @@ main {
 
 /* landing page */
 #ef-home-banner {
+	position: relative;
 	height: 300px;
 	color: #fff;
 	border-radius: var(--ef-border-radius);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+main > #content > section > #ef-home-banner h1 {
+	color: #fff;
 }
 #ef-home-banner > div {
 	position: absolute;
