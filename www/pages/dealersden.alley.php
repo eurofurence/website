@@ -6,7 +6,7 @@
 
 	<div>
 		<h2>Opening Hours</h2>
-		<p>The Artist Alley will be open from <strong>Thursday at 11 AM until Saturday at 6 PM</strong> during Eurofurence. Please adhere to these hours for all setup, sales, and teardown activities.</p>
+		<p>The Artist Alley will be open from <strong>Thursday at 11:00 until Saturday at 18:00</strong> during Eurofurence. Please adhere to these hours for all setup, sales, and teardown activities.</p>
 	</div>
 
 	<div>
