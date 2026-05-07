@@ -67,7 +67,7 @@ usort($sponsors, function ($a, $b) {
 <section>
 	<h1>Supporters</h1>
 
-	<p>This is a list of organizations providing network hardware and connectivity. We couldn’t build the network without them – plus a few unlisted - and we thank them their support.</p>
+	<p>This is an overview of the organizations that generously support us and without our convention would not be possible.</p>
 
 	<div class="uk-child-width-1-3@m uk-grid-match" uk-grid>
 		<?php foreach ($sponsors as $sponsor) {
