@@ -50,8 +50,8 @@
 	<hr />
 
 	<div class="uk-column-1-2@l">
-		<p>While there is no ongoing contest, there's still a challenge in getting into the book! Acceptance depends on quality, total number of images submitted, layout requirements, and the implementation of the con's topic! We will not be able to tell you immediately whether your submission makes the cut; this can be decided only in the final layout, so please be patient.</p>
-		<p>If you have graphic ideas other than illustrations which fit with the topic, you're welcome to submit them as well!</p>
+		<p>While there is no ongoing contest, there's still a challenge in getting into the book! Acceptance depends on quality, total number of images submitted, layout requirements, and the implementation of the con's theme! We will not be able to tell you immediately whether your submission makes the cut; this can be decided only in the final layout, so please be patient.</p>
+		<p>If you have graphic ideas other than illustrations which fit with the theme, you're welcome to submit them as well!</p>
 		<p>Even if your artwork does not get featured in the Conbook itself, we will always try to include it if applicable in various media across the convention (e.g. banners, dance visuals ect.)</p>
 		<p>Please provide following information along with your submission:</p>
 		<ul>
