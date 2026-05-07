@@ -286,7 +286,7 @@
 <section class="uk-column-1-2@l">
 	<h2 id="register" class="uk-column-span">Registration Process</h2>	
 	<div>
-		<h3 class="reset-font">Step I: Application</h3>
+		<h3 class="reset-font">Step 1: Application</h3>
 		<p>The application period for Art Show will open on <strong><?= $applications_start ?></strong> and will be accessible up to and <strong>including <?= $applications_end ?></strong>.</p>
 		<p>To be eligible for registration as artist or agent, a prior registration for Eurofurence <?= $this->current->year ?> (the event) via the Eurofurence <a href="https://identity.eurofurence.org" title="Eurofurence Identity" target="_blank">Registration System</a> is mandatory. After registering for the event a Art Show application can be <a href="https://help.eurofurence.org/contact/artshow/application" title="Register for the Art Show" target="_blank">submitted here</a>. During Art Show registration, the desired panel and table configuration can be applied for.</p>
 		<p>Art Show applications without valid previous event registration will be canceled.</p>
@@ -295,7 +295,7 @@
 		<p>The date of registration neither influences the amount of panel or table space nor the chance of any space being allocated to an artist at all.</p>
 	</div>
 	<div>
-		<h3 class="reset-font">Step II: Approval</h3>
+		<h3 class="reset-font">Step 2: Approval</h3>
 		<p>Partaking in the Art Show will be approved on a curated basis.</p>
 		<p>Curation will be performed by the Art Show management. Panels and tables be assigned based on a variety of factors, including, but not limited to:
 			<ul>
@@ -307,18 +307,18 @@
 		</p>
 	</div>
 	<div>
-		<h3 class="reset-font">Step III: Payment</h3>
+		<h3 class="reset-font">Step 3: Payment</h3>
 		<p>After approval, the Art Show registration will be updated to include the fee for the assigned resources. The artist is required to pay the fee at the same time as their respective Eurofurence event registration fee, using their preferred payment method.</p>
 		<p>Please pay on time. If payment is overdue, Art Show management may cancel an application and offer the space to the next artist on the waiting list.</p>
 		<p>Eurofurence e.V. handles all transactions in Euro (€). Fees must be paid via credit or debit cards. Eurofurence e.V. does not accept PayPal, cash payment or any other method of payment. All payments must be handled through the Eurofurence Registration System. Never send any credit card information via email!</p>
 	</div>
 	<div>
-	<h3 class="reset-font">Step IV: Placement</h3>
+	<h3 class="reset-font">Step 4: Placement</h3>
 		<p>Upon completion of payment, the Art Show management will assign the granted space (panels and tables). The position of the panel assigned is entirely up to the Art Show management. When more than one panel was assigned, all panels will be assigned next to each other. Except for regular and adult themed panels. Those exist of two separate sections. </p>
 	</div>
 	<div>
 		<h3 class="reset-font">Waiting List</h3>
-		<p>Any application not initially accepted in Step II will be placed on a waiting list curated under the same factors. Information about this status will also be sent to the respective artist or agent after Step IV is completed. Changes to the original applications via email reply to the waiting list information might lead to a reevaluation of the application on the waiting list.</p>
+		<p>Any application not initially accepted in Step 2 will be placed on a waiting list curated under the same factors. Information about this status will also be sent to the respective artist or agent after Step 4 is completed. Changes to the original applications via email reply to the waiting list information might lead to a reevaluation of the application on the waiting list.</p>
 		<p>If panel or table space becomes available again due to the cancellation of another artist, the next best match based on curation from the waiting list will be contacted. There will be limited time to respond, usually only about a week. Once the artist has confirmed their newly assigned space, the (not yet paid) corresponding package will be added to the artists or agents Eurofurence registration, and the payment will be due immediately.</p>
 		<p>There might be last-minute sales of canceled panel or table spaces on a first come, first serve basis at the convention itself, starting 12:00 (noon) on Thursday for unclaimed panels or tables.</p>
 	</div>
