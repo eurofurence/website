@@ -39,7 +39,7 @@
 				<li>Collusion between artist/agent and buyer is forbidden. Fake bids, bids on one's own exhibit for the purpose of raising the price, or bidding in another's name against that person's will is prohibited.</li>
 			</ul>
 		</div>
-		<p class="uk-column-span">A buyer may get new bid stickers any time if he needs more stickers than available on a sheet. He/she can bid as often as desired on any "for sale" exhibit (if no bidding fields are left, further bidding must be taken to auction). There are exhibits which are not for sale, and cannot be bid on.</p>	
+		<p class="uk-column-span">A buyer may get new bid stickers any time if he needs more stickers than available on a sheet. they can bid as often as desired on any "for sale" exhibit (if no bidding fields are left, further bidding must be taken to auction). There are exhibits which are not for sale, and cannot be bid on.</p>	
 	</section>
 	
 	<section>
