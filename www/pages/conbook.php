@@ -30,12 +30,12 @@
 		<li>We are looking for full page illustrations as well as smaller fillers.</li>
 
 		<li>The format for full page illustrations is A4, upright (210 x 297mm) plus 3mm cropping area along all edges, adding up to a total of 216 x 303 mm or 2551 x 3578 pixels at 300 dpi.<br /><br />
-			<img src="img/pages/conbook/How-to-conbook_1.jpg" alt="How to Conbook" />
+			<img src="img/pages/conbook/How-to-conbook_1.jpg" alt="" />
 		</li>
 		<li>File format should be JPG set to highest quality (low information loss). Other formats are acceptable too but may cause issues due to the resulting file size.</li><br/>
 		<li>For a full page illustration, do not draw anything important into the cropping area. Please avoid symmetrical motifs or motifs that rely on exact cutting of the page &ndash; for technical reasons, the cropping of the finished book may occur anywhere in the cropping area of each page.</li><br/>
 		<li>Fillers that do not have an illustrated background (extracted cutouts) need to have a fully transparent image background, since the pages themselves will have their own color background. The foreground needs to be intransparent (opaque). Be careful about holes in the foreground (transparent) and white foreground elements (opaque)!
-			<img src="img/pages/conbook/How-to-conbook_2.jpg" alt="How to Fillers" class="uk-margin uk-margin-top" /> 
+			<img src="img/pages/conbook/How-to-conbook_2.jpg" alt="" class="uk-margin uk-margin-top" /> 
 		</li>
 
 		<li>To submit illustrations that contain transparency, please use the PNG format.</li>
