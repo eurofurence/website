@@ -107,12 +107,12 @@
 <section>
 	<h2>Impressions</h2>
 	<div class="uk-grid-small uk-flex-center uk-margin-bottom" uk-grid uk-lightbox>
-		<div><a href="img/pages/venue/CCH-Außenansicht_07.jpg" data-caption="Exterior View"><img src="img/pages/venue/thumbs/CCH-Außenansicht_07.jpg" alt="Exterior View" /></a></div>
-		<div><a href="img/pages/venue/Eingangshalle_des_CCH_1.jpg" data-caption="Entrance Hall"><img src="img/pages/venue/thumbs/Eingangshalle_des_CCH_1.jpg" alt="Entrance Hall" /></a></div>
-		<div><a href="img/pages/venue/Saal_1_3.jpg" data-caption="The largest theater, Saal 1"><img src="img/pages/venue/thumbs/Saal_1_3.jpg" alt="The largest theater, Saal 1" /></a></div>
-		<div><a href="img/pages/venue/CCH_4.jpg" data-caption=""><img src="img/pages/venue/thumbs/CCH_4.jpg" alt="" /></a></div>
-		<div><a href="img/pages/venue/Planten_un_Blomen_1.jpg" data-caption="The adjacent parks, Planten un Blomen"><img src="img/pages/venue/thumbs/Planten_un_Blomen_1.jpg" alt="The adjacent parks, Planten un Blomen" /></a></div>
-		<div><a href="img/pages/venue/Planten_un_Blomen_8.jpg" data-caption="The adjacent parks, Planten un Blomen"><img src="img/pages/venue/thumbs/Planten_un_Blomen_8.jpg" alt="The adjacent parks, Planten un Blomen" /></a></div>
+		<div><a href="img/pages/venue/CCH-Außenansicht_07.jpg" data-caption="Exterior View"><img src="img/pages/venue/thumbs/CCH-Außenansicht_07.jpg" alt="Empty Plaza in front of the CCH" /></a></div>
+		<div><a href="img/pages/venue/Eingangshalle_des_CCH_1.jpg" data-caption="Entrance Hall"><img src="img/pages/venue/thumbs/Eingangshalle_des_CCH_1.jpg" alt="CCH Entrance Hall, immediately after entering" /></a></div>
+		<div><a href="img/pages/venue/Saal_1_3.jpg" data-caption="The largest theater, Saal 1"><img src="img/pages/venue/thumbs/Saal_1_3.jpg" alt="The largest theater, Saal 1, within the CCH" /></a></div>
+		<div><a href="img/pages/venue/CCH_4.jpg" data-caption=""><img src="img/pages/venue/thumbs/CCH_4.jpg" alt="One of the narrow seating areas on the upper floors, around the edges of the building" /></a></div>
+		<div><a href="img/pages/venue/Planten_un_Blomen_1.jpg" data-caption="The adjacent parks, Planten un Blomen"><img src="img/pages/venue/thumbs/Planten_un_Blomen_1.jpg" alt="The adjacent park, Planten un Blomen, with its Japanese Palais within" /></a></div>
+		<div><a href="img/pages/venue/Planten_un_Blomen_8.jpg" data-caption="The adjacent parks, Planten un Blomen"><img src="img/pages/venue/thumbs/Planten_un_Blomen_8.jpg" alt="The adjacent park, Planten un Blomen, with the CCH and Radisson Blu Hotel in the background" /></a></div>
 	</div>
 	<div class="uk-text-right">
 		<p>All images &copy; The City of Hamburg, Hamburg Messe respectively.</p>
