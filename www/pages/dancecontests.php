@@ -27,7 +27,7 @@
         <div>
             <section class="uk-clearfix">
                 <h2>Paws on Fire</h2>
-                <img alt="Paws on Fire"
+                <img alt="A photo by SinusFox showing all participants and organising team of the Paws on Fire dance contest 2025"
                     src="img/pages/dancecontests/paws-on-fire_banner.jpg"/>
                 <small>credit: SinusFox</small>
                 <p>Join us for Paws on Fire, Eurofurence's take on the popular "Floor Wars" dance battle!</p>
@@ -47,7 +47,7 @@
 
             <section>
                 <h2>Enter the Arena</h2>
-                <img alt="Enter the Arena"
+                <img alt="A photo by Aeverus showing all participants of the Enter the Arena dance contest 2025"
                     src="img/pages/dancecontests/enter-the-arena_banner.jpg"/>
                 <small>credit: Aeverus</small>
                 <p>The official annual Eurofurence Fursuit Dance Contest is back!</p>
