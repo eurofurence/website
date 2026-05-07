@@ -1,5 +1,5 @@
-<h1>Events at Eurofurence</h1>
 <section>
+	<h1>Events at Eurofurence</h1>
 	<p><strong>Eurofurence is looking for panelists!</strong></p>
 	<p>You've got something to show, tell or share? Then we would like to encourage you to run a panel, workshop, roundtable etc. of your own interest at this year's Eurofurence. The topic of your workshop can be anything related to furry and/or this year's theme. Everyone is welcome to share experiences, lead a discussion or even help others getting started with a new hobby and new inspiration.</p>
 	<p>As much as we like to see the experts at their profession holding panels about some very advanced topics, concepts and techniques, we also really like to see panelists holding introductory panels for beginners and newcomers, e.g. something as plain as how to draw basic forms like muzzles or an introductory panel to pawpeteering.</p>

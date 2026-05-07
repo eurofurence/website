@@ -21,8 +21,8 @@
 
 </style>
 
-<h1>Dance Contests</h1>
 <section>
+    <h1>Dance Contests</h1>
     <div class="uk-column-1-2@l competition-page">
         <div>
             <section class="uk-clearfix">

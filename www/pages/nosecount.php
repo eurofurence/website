@@ -1,5 +1,3 @@
-<h1>Registration Statistics</h1>
-
 <style>
 	@import url('css/countries.css');
 
@@ -107,6 +105,7 @@
 </style>
 
 <section id="ef-regstats">
+	<h1>Registration Statistics</h1>
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">

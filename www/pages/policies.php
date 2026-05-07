@@ -1,9 +1,7 @@
-<h1>Policies &ndash; Overview</h1>
+
 <section>
-	<div>
-		Eurofurence has grown into a large event, meaning that we need to put down some terms, conditions and agreements. Upon registration for the convention, or when signing up for participation in certain events, you will be referred to the rules on this page, which then become a part of your contract with Eurofurence e.V. and are legally binding. This does not mean that we want to spoil your fun or want to act up as German bureaucrats - it is simply necessary: For your safety as well as for ours.
-	</div>
-	<br />
+	<h1>Policies &ndash; Overview</h1>
+	<p>Eurofurence has grown into a large event, meaning that we need to put down some terms, conditions and agreements. Upon registration for the convention, or when signing up for participation in certain events, you will be referred to the rules on this page, which then become a part of your contract with Eurofurence e.V. and are legally binding. This does not mean that we want to spoil your fun or want to act up as German bureaucrats - it is simply necessary: For your safety as well as for ours.</p>
 </section>
 
 <section>

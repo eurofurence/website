@@ -1,5 +1,7 @@
-<h1>Photography</h1>
-<p>The Eurofurence photography team takes care of the "official photography stuff" that is happening at EF. This includes for the most part the group pictures and the fursuit photoshoot.</p>
+<section>
+	<h1>Photography</h1>
+	<p>The Eurofurence photography team takes care of the "official photography stuff" that is happening at EF. This includes for the most part the group pictures and the fursuit photoshoot.</p>
+</section>
 
 <section class="uk-column-1-2@l">
 	<div>

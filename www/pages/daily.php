@@ -1,6 +1,8 @@
-<h1>The Daily Eurofurence</h1>
-<p>The Daily Eurofurence is a printed daily newsletter that is distributed for free at Eurofurence. Introduced at Eurofurence 15, it quickly found a broad readership among the attendees.</p>
-<p>The Daily features articles, reviews and interviews on various topics concerning Eurofurence and the Furry Fandom in general. It also includes stories, cartoons, announcements and the latest timetable information.</p>
+<section>
+	<h1>The Daily Eurofurence</h1>
+	<p>The Daily Eurofurence is a printed daily newsletter that is distributed for free at Eurofurence. Introduced at Eurofurence 15, it quickly found a broad readership among the attendees.</p>
+	<p>The Daily features articles, reviews and interviews on various topics concerning Eurofurence and the Furry Fandom in general. It also includes stories, cartoons, announcements and the latest timetable information.</p>
+</section>
 
 <section>
 	<h2>Contact</h2>

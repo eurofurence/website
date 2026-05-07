@@ -1,5 +1,5 @@
-<h1>Fursuit Lounge Rules</h1>
 <section>
+	<h1>Fursuit Lounge Rules</h1>
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@m uk-margin-bottom" uk-grid>
 		<div>
 			<section>
