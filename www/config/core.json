@@ -62,7 +62,7 @@
 			"ogpImage": "",
 			"robots": "noindex, nofollow, noodp",
 			"title": "Page Not Found",
-			"uri": "404.php"
+			"uri": "404.html"
 		},
 		"501": {
 			"owner": "@draconigen",
@@ -75,7 +75,7 @@
 			"ogpImage": "",
 			"robots": "noindex, nofollow, noodp",
 			"title": "Page Not Available Yet",
-			"uri": "501.php"
+			"uri": "501.html"
 		},
 		"home": {
 			"owner": "@draconigen",
@@ -103,7 +103,7 @@
 			"ogpImage": "venue.jpg",
 			"robots": "",
 			"title": "The CCH Hamburg (Venue)",
-			"uri": "venue.php"
+			"uri": "venue.html"
 		},
 		"venue/map": {
 			"owner": "@draconigen",
@@ -116,7 +116,7 @@
 			"ogpImage": "venue.jpg",
 			"robots": "",
 			"title": "Venue Map",
-			"uri": "venue.map.php"
+			"uri": "venue.map.html"
 		},
 		"hotels": {
 			"owner": "@draconigen",
@@ -129,7 +129,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Venue - Nearby Hotel Options",
-			"uri": "hotels.php"
+			"uri": "hotels.html"
 		},
         "restaurants": {
 			"owner": "@Sam_Mel",
@@ -142,7 +142,7 @@
             "ogpImage": "restaurants.png",
             "robots": "",
             "title": "Venue - Nearby Dining Options",
-            "uri": "restaurants.php"
+            "uri": "restaurants.html"
         },
 		"artshow": {
 			"owner": "@riffuchs",
@@ -155,7 +155,7 @@
 			"ogpImage": "artshow.jpg",
 			"robots": "",
 			"title": "Art Show - General Information",
-			"uri": "artshow.visitor.php"
+			"uri": "artshow.visitor.html"
 		},
 		"dealersden/visiting": {
 			"owner": "@Pattarchus",
@@ -163,7 +163,7 @@
 			"inMenu": false,
 			"menuText": "Dealers' Den (as Visitor)",
 			"category": "Location",
-			"uri": "dealersden.visiting.php",
+			"uri": "dealersden.visiting.html",
 			"title": "Dealers' Den",
 			"description": "The Dealers' Den is the place for you to browse and buy all kinds of arts and fine products for your favorite merchants and artists.",
 			"keywords": "Dealers' Den, Buying, Merchants, Artists, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
@@ -181,7 +181,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "More about Eurofurence",
-			"uri": "about.php"
+			"uri": "about.html"
 		},
         "sponsors": {
 			"owner": "@tarianwolf",
@@ -220,7 +220,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Events",
-			"uri": "events.php"
+			"uri": "events.html"
 		},
 		"schedule": {
 			"owner": "@Akulatraxas",
@@ -259,7 +259,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Guests of Honor",
-			"uri": "goh.php"
+			"uri": "goh.html"
 		},
 		"fursuiting": {
 			"owner": "@Jake_R",
@@ -272,7 +272,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Fursuiting",
-			"uri": "fursuits.php"
+			"uri": "fursuits.html"
 		},
         "fursuit/badges": {
 			"owner":"@takemurahusky",
@@ -298,7 +298,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Fursuit Lounge",
-			"uri": "fursuitlounge.php"
+			"uri": "fursuitlounge.html"
 		},
 		"fursuits/photoshoot": {
 			"owner": "@Atkelar",
@@ -324,7 +324,7 @@
             "ogpImage": "furauction.png",
             "robots": "",
             "title": "Furauction",
-            "uri": "furauction.php"
+            "uri": "furauction.html"
         },
         "dances": {
 			"owner": "@Anheanger_der_Pestilenz",
@@ -337,7 +337,7 @@
             "ogpImage": "",
             "robots": "",
             "title": "Dances",
-            "uri": "dances.php"
+            "uri": "dances.html"
         },
         "dancecontests": {
 			"owner": "@Px0ssum",
@@ -350,7 +350,7 @@
             "ogpImage": "dancecontests.jpg",
             "robots": "",
             "title": "Enter the Arena & Paws on Fire",
-            "uri": "dancecontests.php"
+            "uri": "dancecontests.html"
         },
 		"photography": {
 			"owner": "@Atkelar",
@@ -363,7 +363,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Photography",
-			"uri": "photography.php"
+			"uri": "photography.html"
 		},
 
 		
@@ -404,7 +404,7 @@
             "ogpImage": "",
             "robots": "",
             "title": "Becoming an Eurofurence Critter: On-Site Volunteering",
-            "uri": "volunteering.php"
+            "uri": "volunteering.html"
         },
 		"artshow/as-artist": {
 			"owner": "@riffuchs",
@@ -430,7 +430,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Dealers' Den",
-			"uri": "dealersden.php"
+			"uri": "dealersden.html"
 		},
 		"dealersden/alley": {
 			"owner": "@Pattarchus",
@@ -443,7 +443,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Artist Alley",
-			"uri": "dealersden.alley.php"
+			"uri": "dealersden.alley.html"
 		},
         "creators": {
 			"owner": "@TheFruitFox",
@@ -482,7 +482,7 @@
             "ogpImage": "videowall.jpg",
             "robots": "",
             "title": "LED Wall",
-            "uri": "ledwall.php"
+            "uri": "ledwall.html"
         },
 		"conbook": {
 			"owner": "@vinaru",
@@ -508,7 +508,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Glympse Map",
-			"uri": "glympse.php"
+			"uri": "glympse.html"
 		},
 
 		
@@ -530,7 +530,7 @@
 			"accessible": true,
 			"inMenu": true,
 			"category": "Services",
-			"uri": "lostandfound.php",
+			"uri": "lostandfound.html",
 			"title": "Lost and Found",
 			"description": "Browse all items that were lost and found during the convention, and handed to Security for safekeeping.",
 			"keywords": "lost and found, loss, lost, missing, items",
@@ -575,7 +575,7 @@
 			"ogpImage": "nosecount.png",
 			"robots": "",
 			"title": "Statistics",
-			"uri": "nosecount.php"
+			"uri": "nosecount.html"
 		},
 		"daily": {
 			"owner": "@Draugvorn",
@@ -588,7 +588,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "The Daily Eurofurence",
-			"uri": "daily.php"
+			"uri": "daily.html"
 		},
 
 
@@ -629,7 +629,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Policies",
-			"uri": "policies.php"
+			"uri": "policies.html"
 		},
 		"website": {
 			"owner": "@draconigen",
