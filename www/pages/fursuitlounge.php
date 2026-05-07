@@ -3,7 +3,7 @@
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@m uk-margin-bottom" uk-grid>
 		<div>
 			<section>
-				<img src="img/pages/fursuitlounge/fsl_rules_fans.jpg" alt="Fursuit Lounge Rules: Fans" class="uk-margin uk-margin-right uk-float-left uk-width-1-2@xl" />
+				<img src="img/pages/fursuitlounge/fsl_rules_fans.jpg" alt="Fursuit Lounge Rules: Do not put anything on the fans" class="uk-margin uk-margin-right uk-float-left uk-width-1-2@xl" />
 				<p class="uk-margin-remove-top">Fans in the Fursuit Lounge should only be used for cooling fursuiters and not for drying fursuits, their parts, towels, or other things. Blocking or misusing fans can disrupt airflow and create safety hazards, potentially causing harm to both the equipment and the users.</p>
 				<p>Fans are strategically placed to maximize cooling efficiency and ensure a comfortable environment for fursuiters. Hanging or placing items on fans obstructs their function, reducing the overall cooling effect and potentially causing overheating issues. This rule ensures that fans remain unobstructed and effective for their intended purpose.</p>
 				<p>Moreover, hanging fursuit parts on fans can lead to serious safety concerns. Items could get sucked into the fan blades, causing damage to both the fan and the fursuit parts. Additionally, moisture and sweat from the suits can be blown onto other people, creating an unpleasant and unsanitary situation. By regulating the use of fans, we maintain a safe, clean, and efficient lounge environment for all fursuiters.</p>
