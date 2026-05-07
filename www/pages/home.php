@@ -72,7 +72,7 @@ iframe {
                 if (in_array($file, ['.', '..']))
                     continue;
             ?>
-            <div><img src="<?= $dir . $file ?>" alt="<?= $file ?>" uk-cover /></div>
+            <div><img src="<?= $dir . $file ?>" alt="" uk-cover /></div>
             <?php } ?>
         </div>
     </div>
