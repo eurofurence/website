@@ -73,15 +73,15 @@ usort($sponsors, function ($a, $b) {
 		<?php foreach ($sponsors as $sponsor) {
 			echo sprintf('
 				<div>
-					<a href="%s" target="_blank" class="hide-ext sp_link uk-card uk-card-default uk-card-small uk-card-body uk-text-center">
-						<div class="sp_bg" style="background-image: url(img/pages/sponsors/%s)"></div>
+					<a href="%s" aria-label="%s" target="_blank" class="hide-ext sp_link uk-card uk-card-default uk-card-small uk-card-body uk-text-center">
+						<div class="sp_bg" style="background-image: url(img/pages/sponsors/%s)" aria-hidden="true"></div>
 						<p>%s</p>
 					</a>
 				</div>',
-				$sponsor['url'],
-				$sponsor['img'],
-				$sponsor['txt'],
-				$sponsor['name']
+				$sponsor['url'],	// a.href
+				$sponsor['name'],	// a.ariaLabel
+				$sponsor['img'],	// div/backgroundImage
+				$sponsor['txt'],	// p
 			);
 		} ?>
 	</div>
