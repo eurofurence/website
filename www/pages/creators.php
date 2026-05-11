@@ -134,7 +134,7 @@
             ]
         ],
 		[
-            'title' => 'OLeok 64',
+            'title' => 'Leok 64',
             'image' => 'leok_64.jpg',
             'links' => [
                 [
