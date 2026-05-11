@@ -11,6 +11,160 @@
                     'link' => 'https://www.youtube.com/@BBFTV'
                 ]
             ]
+        ],
+		[
+            'title' => 'xfireFX -Josh',
+            'image' => 'xfirefx_josh.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@xfirefx_josh'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Tai Enigma',
+            'image' => 'Tai_Enigma.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Tai_Enigma'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Contigo',
+            'image' => 'ContigoVR.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@ContigoVR'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Kana Mau',
+            'image' => 'KanaMau.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@KanaMau'
+                ]
+            ]
+        ],
+		[
+            'title' => 'KodaWolf_IRL Chaos',
+            'image' => 'KodaWolf_IRL.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@KodaWolf_IRL'
+                ]
+            ]
+        ],
+        [
+            'title' => 'SojaSoosse',
+            'image' => 'sojasoosse.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/sojasoosse'
+                ]
+            ]
+        ],
+		[
+            'title' => 'JankoGoo',
+            'image' => 'JankoGoo.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/JankoGoo'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Orr-Tastic',
+            'image' => 'OrrTastic.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@OrrTastic'
+                ]
+            ]
+        ],
+		[
+            'title' => 'DRAGONIX FANTASY',
+            'image' => 'dragonixfantasy.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/dragonixfantasy/'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Hako',
+            'image' => 'Hakogori.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@Hakogori'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Alice',
+            'image' => 'fenalice.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@fenalice_'
+                ]
+            ]
+        ],
+		[
+            'title' => 'OLeok 64',
+            'image' => 'leok_64.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@leok_64'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Akira.Floof05',
+            'image' => 'Akira_Floof.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@akira.floof05'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Hoshino',
+            'image' => 'tschipaw.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/tschipaw'
+                ]
+            ]
         ]
     ];
 
