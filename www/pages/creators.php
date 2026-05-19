@@ -145,6 +145,28 @@
             ]
         ],
 		[
+            'title' => 'Eugen',
+            'image' => 'Eugen.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/eugen45_'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Wispaw',
+            'image' => 'Wispaw.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/wispaw_'
+                ]
+            ]
+        ],
+		[
             'title' => 'Akira.Floof05',
             'image' => 'Akira_Floof.jpg',
             'links' => [
@@ -165,7 +187,40 @@
                     'link' => 'https://www.instagram.com/tschipaw'
                 ]
             ]
-        ]
+        ],
+		[
+            'title' => 'SLASH',
+            'image' => 'slashfurr.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/slashfurr'
+                ]
+            ]
+        ],
+		[
+            'title' => 'StardustGamez',
+            'image' => 'StardustGamez.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/stardustgamez'
+                ]
+            ]
+        ],
+		[
+            'title' => 'DevollyChan',
+            'image' => 'DevollyChan.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/devollychan'
+                ]
+            ]
+        ],
     ];
 
     usort($creators, function($a, $b) {
