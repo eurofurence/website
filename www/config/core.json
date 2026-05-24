@@ -198,10 +198,10 @@
         },
 		"charity": {
 			"owner": "@Sniffer_raccoon",
-			"accessible": false,
+			"accessible": true,
 			"category": "Program",
 			"description": "This year all donations, collections and more will go to support {charity}.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Donations, Good cause, Benefaction",
 			"menuText": "Charity",
 			"ogpImage": "charity.jpg",
