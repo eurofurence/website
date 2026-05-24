@@ -221,6 +221,72 @@
                 ]
             ]
         ],
+			[
+            'title' => 'Schnuri',
+            'image' => 'Schnuri.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@schnuribroccoli'
+                ]
+            ]
+        ],
+		[
+            'title' => 'ThatDogCoda',
+            'image' => 'ThatDogCoda.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/thatdogcoda'
+                ]
+            ]
+        ],
+		[
+            'title' => 'RFurwing',
+            'image' => 'RFurwing.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/RFurwing'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Ruzdrakeid',
+            'image' => 'Ruzdrakeid.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Drakheniel'
+                ]
+            ]
+        ],
+		[
+            'title' => 'MaltNoodlez',
+            'image' => 'MaltNoodlez.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/maltnoodlez'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Fireclaw',
+            'image' => 'Fireclaw.jpg',
+            'links' => [
+                [
+                    'name' => 'Mastodon',
+                    'icon' => 'mastodon',
+                    'link' => 'https://bark.lgbt/@fireclaw'
+                ]
+            ]
+        ]
     ];
 
     usort($creators, function($a, $b) {
