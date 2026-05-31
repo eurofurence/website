@@ -221,7 +221,7 @@
                 ]
             ]
         ],
-			[
+		[
             'title' => 'Schnuri',
             'image' => 'Schnuri.jpg',
             'links' => [
@@ -284,6 +284,39 @@
                     'name' => 'Mastodon',
                     'icon' => 'mastodon',
                     'link' => 'https://bark.lgbt/@fireclaw'
+                ]
+            ]
+        ],
+		[
+            'title' => 'PianoGhoul',
+            'image' => 'PianoGhoul.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@_pianoghoul_'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Taioyaki',
+            'image' => 'Taioyaki.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/taioyaki'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Bloomy',
+            'image' => 'Bloomy.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@bloomydoggo'
                 ]
             ]
         ]
