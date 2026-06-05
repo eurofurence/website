@@ -1,5 +1,5 @@
 <?php $images_deadline = 'June 19th'; ?>
-<?php $stories_deadline = 'June 01st, 2026'; ?>
+<?php $stories_deadline = 'June 19th, 2026'; ?>
 
 <section>
 	<h1>Conbook</h1>
