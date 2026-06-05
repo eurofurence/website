@@ -40,6 +40,12 @@
 		'txt' => 'Project Management',
 		'url' => 'https://www.openproject.org',
 		'img' => 'openproject-logo-original-color-7266162e.png'
+	],
+	[
+		'name' => 'PawHost',
+		'txt' => 'Datacenter Services & Hosting',
+		'url' => 'https://pawhost.de/',
+		'img' => 'pawhost.png'
 	]
 ]; 
 
