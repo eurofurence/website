@@ -1,7 +1,18 @@
 <?php
-    $deadline = 'August 5th, 2026';
+    $deadline = 'August 3rd, 2026';
     $creators = [
         [
+            'title' => 'Greykas',
+            'image' => 'Greykas.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Greykas'
+                ]
+            ]
+        ],
+		[
             'title' => 'BBF TV',
             'image' => 'bbftv.jpg',
             'links' => [
@@ -317,6 +328,39 @@
                     'name' => 'Youtube',
                     'icon' => 'youtube',
                     'link' => 'https://www.youtube.com/@bloomydoggo'
+                ]
+            ]
+        ],
+		[
+            'title' => 'F3tziPlap',
+            'image' => 'F3tziPlap.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/f3tziplap'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Hyroe',
+            'image' => 'Hyroe.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@hyroe'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Tako_Wolf',
+            'image' => 'Tako_Wolf.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/tako_wolf'
                 ]
             ]
         ]
