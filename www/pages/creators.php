@@ -378,7 +378,7 @@
     <p>The Video Creator Badge is Eurofurence's seal of approval for video creators like streamers or vloggers. It is meant to recognize the dedication and hard work our creators invest in making Eurofurence special, and it also serves as a symbol of your commitment to ethical media creation.</p>
     <p>If you have an established online presence and are planning to post Eurofurence related content for your audience, you are invited to apply for the badge <a href=" https://help.eurofurence.org/contact/press-media-relations/creator" target="_blank">here</a>. Application deadline is <strong><?= $deadline ?></strong>.</p>
     <p>Please make sure to check our <a href="https://help.eurofurence.org/faq/view/108" target="_blank">FAQ</a> to see if the badge is right for you: </p>
-    <p>Once checked and approved, your channel will be added to the list of official video creators below.</p>
+    <p>Once checked and approved, your channel will be added to the list of officially approved video creators below.</p>
     <p>Thank you for spreading the joy of the Fantastic Furry Festival!</p>
     <p>Officially approved video creators at Eurofurence 30 (this will be updated weekly):</p>
 </section>
