@@ -5,13 +5,14 @@
 
 	<div class="uk-text-center">
 		<img src="img/pages/website/banner_ratio_example.png" alt="Banner ratio example" />
+		<!-- <img src="img/pages/website/darbaras.png" alt="Banner ratio example" /> -->
 	</div>
 
 	<p>Above is a banner example in its full height. This full height would only be visible on mobile devices (or narrow windows) and covered almost entirely by the dark box with the Eurofurence theme & date that grows with the narrow view. This is how it looks live:</p>
 	
 	<!-- copy from home.php -->
 	 
-	<div id="ef-home-banner">
+	<div id="ef-home-banner" style="background-image: url(img/pages/website/darbaras.png)">
 		<div>
 			<h1>Eurofurence <?= $this->current->number ?></h1>
 			<p class="ef-text-large-m">
