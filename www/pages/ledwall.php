@@ -9,13 +9,13 @@ $examples = [
 $formUrl = 'https://cloud.eurofurence.org/index.php/apps/forms/s/P2SG7WnzGizyP3e3GpnREQiF';
 ?>
 
-<h1>Video-Wall Submission</h1>
 <section>
+    <h1>Video-Wall Submission</h1>
     <div class="uk-text-center"><strong>Submission Deadline: <?= $deadline ?></strong></div>
 
     <div style="max-width: 800px; margin: 1rem auto 0;">
         <ul uk-accordion="active: 0; collapsible: false">
-            <? foreach ($examples as $title => $file) { ?>
+            <?php foreach ($examples as $title => $file) { ?>
                 <li>
                     <a class="uk-accordion-title" href="ledwall#"><?= $title ?></a>
                     <div class="uk-accordion-content">
