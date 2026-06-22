@@ -21,8 +21,9 @@
 		</p>
 
 		<?php if ($badgesRegistrationOpen) { ?>
-			<p>The registration for the Fursuit Badges will open on <?= $badgesRegistrationOpeningDate ?> at <a href="https://fursuit.eurofurence.org" target="_blank">fursuit.eurofurence.org</a></p>
-		<?php } else { ?>
+			<!-- <p>The registration for the Fursuit Badges will open on <?= $badgesRegistrationOpeningDate ?> at <a href="https://fursuit.eurofurence.org" target="_blank">fursuit.eurofurence.org</a></p> -->
+			<p>The registration is open at <a href="https://fursuit.eurofurence.org" target="_blank">fursuit.eurofurence.org</a></p>
+			<?php } else { ?>
 			<p>Stay tuned for a registration opening time to be announced here.</p>
 		<?php } ?>
 
