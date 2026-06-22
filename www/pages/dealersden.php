@@ -1,3 +1,10 @@
+<?php 
+	$con_day_1 = "Wednesday, August 19, 2026";
+	$con_day_2 = "Thursday, August 20, 2026";
+	$con_day_3 = "Friday, August 21, 2026";
+	$con_day_4 = "Saturday, August 22, 2026";
+?>
+
 <style>
 figure.table {
     width: 95%;
@@ -73,7 +80,7 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Wednesday, August 19th, 2026. (Con-Day 1)</th>
+					<th colspan="2"><?= $con_day_1 ?>. (Con-Day 1)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -93,7 +100,7 @@ small {
 			
 			<thead>
 				<tr>
-					<th colspan="2">Thursday, August 20th, 2026. (Con-Day 2)</th>
+					<th colspan="2"><?= $con_day_2 ?>. (Con-Day 2)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -133,7 +140,7 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Friday, August 21st, 2026. (Con-Day 3)</th>
+					<th colspan="2"><?= $con_day_3 ?>. (Con-Day 3)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -161,7 +168,7 @@ small {
 
 			<thead>
 				<tr>
-					<th colspan="2">Saturday, August 22nd, 2026. (Con-Day 4)</th>
+					<th colspan="2"><?= $con_day_4 ?>. (Con-Day 4)</th>
 				</tr>
 			</thead>
 			<tbody>

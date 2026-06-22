@@ -430,7 +430,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Dealers' Den",
-			"uri": "dealersden.html"
+			"uri": "dealersden.php"
 		},
 		"dealersden/alley": {
 			"owner": "@Pattarchus",

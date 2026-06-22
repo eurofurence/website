@@ -1,10 +1,10 @@
 <?php 
-	$applications_start = "9th February 2026";
-	$applications_end   = "22nd March 2026";
-	$con_day_1 = "Wednesday, August 19th, 2026";
-	$con_day_2 = "Thursday, August 20th, 2026";
-	$con_day_3 = "Friday, August 21st, 2026";
-	$con_day_4 = "Saturday, August 22nd, 2026";
+	$applications_start = "February 9, 2026";
+	$applications_end   = "March 22, 2026";
+	$con_day_1 = "Wednesday, August 19, 2026";
+	$con_day_2 = "Thursday, August 20, 2026";
+	$con_day_3 = "Friday, August 21, 2026";
+	$con_day_4 = "Saturday, August 22, 2026";
 ?>
 
 <section class="uk-column-1-2@l">
