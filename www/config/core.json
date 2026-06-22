@@ -272,12 +272,12 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Fursuiting",
-			"uri": "fursuits.html"
+			"uri": "fursuiting.php"
 		},
         "fursuit/badges": {
 			"owner":"@takemurahusky",
             "accessible": true,
-            "inMenu": false,
+            "inMenu": true,
             "category": "Program",
             "description": "",
             "keywords": "",
