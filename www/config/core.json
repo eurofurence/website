@@ -523,7 +523,19 @@
 			"title": "Glympse Map",
 			"uri": "glympse.html"
 		},
-
+		"taiko-bastards": {
+			"owner": "@MafunDi",
+			"accessible": true,
+			"category": "Participate",
+			"description": "Taiko Bastards Eurofurence Workshop explained.",
+			"inMenu": false,
+			"keywords": "taiko bastards",
+			"menuText": "Taiko Bastards",
+			"ogpImage": "taiko-bastards.jpg",
+			"robots": "",
+			"title": "Taiko Bastards",
+			"uri": "taiko-bastards.html"
+		},
 		
 		"help": {
 			"owner": "@draconigen",
