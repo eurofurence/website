@@ -363,6 +363,94 @@
                     'link' => 'https://www.twitch.tv/tako_wolf'
                 ]
             ]
+        ],
+		[
+            'title' => 'Sky Bluefin',
+            'image' => 'Sky_Bluefin.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Sky_Bluefin'
+                ]
+            ]
+        ],
+		[
+            'title' => 'ReptiLune',
+            'image' => 'ReptiLune.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/reptilune'
+                ]
+            ]
+        ],
+		[
+            'title' => 'nyrox_furry',
+            'image' => 'nyrox_furry.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/nyrox_furry'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Lucky_The_Fosky',
+            'image' => 'Lucky_The_Fosky.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@lucky_the_fosky_official'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Asuroh',
+            'image' => 'Asuroh.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/asuroh'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Max Fluffy',
+            'image' => 'Max_Fluffy.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@maxfluffy'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Furries United Germany',
+            'image' => 'FurriesUnitedGermany.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@FurriesUnitedGermany'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Merenek',
+            'image' => 'Merenek.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Merenek'
+                ]
+            ]
         ]
     ];
 
