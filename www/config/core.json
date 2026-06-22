@@ -91,6 +91,19 @@
 			"uri": "home.php"
 		},
 
+		"tools/ratings": {
+			"owner": "@draconigen",
+			"accessible": true,
+			"category": "",
+			"description": "Import feedback feed and visualize all given feedback through the EF Website Feedback Feature.",
+			"inMenu": false,
+			"keywords": "",
+			"menuText": "",
+			"ogpImage": "",
+			"robots": "",
+			"title": "Page Ratings",
+			"uri": "tools/ratings.html"
+		},
 		
 		"venue": {
 			"owner": "@draconigen",
