@@ -12,7 +12,7 @@
 			// shuffle($files);
 
 			foreach ($files as $file) {
-				if ($file === "." || $file === "..")
+				if ($file === "." || $file === ".." || $file === '.DS_Store')
 					continue;
 
 				$frontmatter = ["id" => pathinfo($file, PATHINFO_FILENAME)];
