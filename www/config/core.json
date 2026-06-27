@@ -341,10 +341,10 @@
         },
         "dances": {
 			"owner": "@Anheanger_der_Pestilenz",
-            "accessible": false,
+            "accessible": true,
             "category": "Program",
             "description": "We are calling all DJs, beat captains, and interstellar sound engineers: The Eurofurence 29 Dance Stage is preparing for liftoff — we need you on board.",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "Dances, DJ, Application",
             "menuText": "Dances",
             "ogpImage": "",
