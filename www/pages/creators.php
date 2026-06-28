@@ -1,5 +1,5 @@
 <?php
-    $deadline = 'August 3rd, 2026';
+    $deadline = 'July 31th, 2026';
     $creators = [
         [
             'title' => 'Greykas',
@@ -449,6 +449,17 @@
                     'name' => 'Youtube',
                     'icon' => 'youtube',
                     'link' => 'https://www.youtube.com/@Merenek'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Rakurim',
+            'image' => 'Rakurim.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@rakurim'
                 ]
             ]
         ]
