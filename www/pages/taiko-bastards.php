@@ -3,7 +3,7 @@
 
     <div class="uk-column-1-2@l">
         <p>Big drums go boom! TAIKO BASTARDS are an international group of artists mostly local from Hamburg with an original take on traditional Taiko drumming. Their energetic stage performance will have you on the edge of your seat.</p>
-        <p>Exclusively for their Eurofurence Arena Stage concert, TAIKO BASTARDS composed a new piece called "Cats & Dogs". And you can be a part of it! Performing along with the band, up to 125 volunteer musicians will make the convention center shake.</p>
+        <p>Exclusively for their Eurofurence Arena Stage concert, TAIKO BASTARDS composed a new piece called "Cats & Dogs". And you can be a part of it! Performing along with the band, up to 100 volunteer musicians will make the convention center shake.</p>
         <p>Be part of an unforgettable and unique experience. There are three different roles to choose from: Cat, Dog or Fox. The parts are beginner-friendly. Previous experience is welcome but not required. </p>
         <p>To get you ready for the big stage, the TAIKO BASTARDS will take you through a Taiko crash-course. You will get everything you need to practice your part at home. At Eurofurence, a Taiko workshop before the concert will help you get familiar with your instrument and practice your drills in the big group.</p>
         <p>And then... it's show-time! When TAIKO BASTARDS perform their concert, you will join them on stage for the grand finale. Together, as a big, powerful drum ensemble, you will bring "Cats & Dogs" alive!</p>
@@ -13,7 +13,7 @@
     <hr />
 
     <div class="uk-text-center">
-        <a href="#" class="uk-button hide-ext uk-button-primary" target="_blank">SIGN UP NOW</a>
+        <a href="https://cloud.eurofurence.org/index.php/apps/forms/s/jfdq2BpXmZ4Tty8tHGD9rD5W" class="uk-button hide-ext uk-button-primary" target="_blank">SIGN UP NOW</a>
     </div>
 
     <video controls class="uk-margin-medium">
@@ -27,7 +27,7 @@
     <div class="uk-column-1-2@l">
         <p>
             <strong>How many slots are there?</strong><br />
-            There are 50 slots each for the Dog and the Cat parts as well as 25 slots for the Fox part. Be fast as there might be more applications than slots.
+            There are a bit less than 50 slots each for the Dog and the Cat parts as well as close to 25 slots for the Fox part. Be fast as there might be more applications than slots.
         </p>
 
         <p>
@@ -61,15 +61,8 @@
     <hr />
 
 	<div class="uk-child-width-1-4@m uk-grid-small uk-margin-top" uk-lightbox="animation: fade" uk-grid>
-		<div><a href="img/pages/taiko-bastards/_DSC6139.jpg"><img src="img/pages/taiko-bastards/s/_DSC6139.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<div><a href="img/pages/taiko-bastards/_DSC6513.jpg"><img src="img/pages/taiko-bastards/s/_DSC6513.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<div><a href="img/pages/taiko-bastards/_DSC6550.jpg"><img src="img/pages/taiko-bastards/s/_DSC6550.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<div><a href="img/pages/taiko-bastards/_DSC6565.jpg"><img src="img/pages/taiko-bastards/s/_DSC6565.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<!-- <div><a href="img/pages/taiko-bastards/_DSC6575.jpg"><img src="img/pages/taiko-bastards/s/_DSC6575.jpg" alt="Photo of the Taiko Bastards" /></a></div> -->
-		<div><a href="img/pages/taiko-bastards/_DSC6632.jpg"><img src="img/pages/taiko-bastards/s/_DSC6632.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<div><a href="img/pages/taiko-bastards/_DSC6687.jpg"><img src="img/pages/taiko-bastards/s/_DSC6687.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<!-- <div><a href="img/pages/taiko-bastards/_DSC6816.jpg"><img src="img/pages/taiko-bastards/s/_DSC6816.jpg" alt="Photo of the Taiko Bastards" /></a></div> -->
-		<div><a href="img/pages/taiko-bastards/_DSC6918.jpg"><img src="img/pages/taiko-bastards/s/_DSC6918.jpg" alt="Photo of the Taiko Bastards" /></a></div>
-		<div><a href="img/pages/taiko-bastards/_DSC7363.jpg"><img src="img/pages/taiko-bastards/s/_DSC7363.jpg" alt="Photo of the Taiko Bastards" /></a></div>
+        <?php foreach (['_DSC6550', '_DSC6562', '_DSC6567', '_DSC6632', '_DSC7363', '6', '7', '_DSC6687'] as $f) { ?>
+            <div><a href="img/pages/taiko-bastards/<?= $f ?>.jpg"><img src="img/pages/taiko-bastards/s/<?= $f ?>.jpg" alt="Photo of the Taiko Bastards" /></a></div>
+        <?php } ?>
 	</div>
 </section>
