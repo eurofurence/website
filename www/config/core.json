@@ -224,10 +224,10 @@
 		},
 		"events": {
 			"owner": "@Akulatraxas",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "General information for those interested in organizing a panel or event at Eurofurence. The schedule will be posted here shortly before the convention.",
-			"inMenu": true,
+			"inMenu": false,
 			"keywords": "Events, Time Table, Schedule, Program",
 			"menuText": "Event Submission",
 			"ogpImage": "",
