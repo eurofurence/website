@@ -3,7 +3,7 @@
 		"charity": "(TBA!)",
 		"dates": "August 19th to 23rd, 2026",
 		"end": "2026-08-23",
-		"goh": "Art Crimes",
+		"goh": "Animal Art Crimes",
 		"location": "CCH Hamburg, Germany",
 		"number": "30",
 		"opening": "2026-08-19T17:00:00+02:00",
@@ -262,7 +262,7 @@
             "uri": "openstage.php"
         },
 		"goh": {
-			"owner": "@Arahn",
+			"owner": "@Nerventee",
 			"accessible": false,
 			"category": "Program",
 			"description": "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
