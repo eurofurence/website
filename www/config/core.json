@@ -391,7 +391,20 @@
 			"title": "Photography",
 			"uri": "photography.html"
 		},
-
+		"poker-tournament": {
+			"owner": "@RefrTarks",
+			"accessible": false,
+			"category": "Program",
+			"description": "",
+			"inMenu": false,
+			"keywords": "poker, Tournament",
+			"menuText": "Poker Tournament",
+			"ogpImage": "",
+			"robots": "",
+			"title": "Poker Tournament",
+			"uri": "poker-tournament.html"
+		},
+		
 		
         "prices": {
 			"owner": "@RakanHowls",
