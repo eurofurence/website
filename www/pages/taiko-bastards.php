@@ -10,16 +10,20 @@
         <p>Interested? Fill in the form below. You will receive further instructions by e-mail. Slots are limited, so be fast.</p>
     </div>
     
-    <hr />
-
-    <div class="uk-text-center">
+    <div class="uk-text-center uk-margin-medium">
         <a href="https://cloud.eurofurence.org/index.php/apps/forms/s/jfdq2BpXmZ4Tty8tHGD9rD5W" class="uk-button hide-ext uk-button-primary" target="_blank">SIGN UP NOW</a>
     </div>
 
-    <video controls class="uk-margin-medium">
+    <video controls>
         <source src="img/pages/taiko-bastards/TAIKO_WORKSHOP_Introduction.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+
+    <p class="uk-text-bold">
+        More videos: <a href="https://www.eurofurence.org/static/taiko-bastards/CATs%20n%20DOGs%20I%20-%20Main%20Theme%20-%20CATs%20n%20DOGs%20voice.mp4" target="_blank">CATs'n'DOGs Voice</a> | <a href="https://www.eurofurence.org/static/taiko-bastards/CATs%20n%20DOGs%20I%20-%20Main%20Theme%20-%20FOXes%20voice.mp4" target="_blank">FOXes Voice</a>
+    </p>
+    
+    <hr />
 
     <p>
         <strong>FAQ:</strong>
