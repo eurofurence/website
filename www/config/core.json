@@ -263,10 +263,10 @@
         },
 		"goh": {
 			"owner": "@Nerventee",
-			"accessible": false,
+			"accessible": true,
 			"category": "Program",
 			"description": "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Special guests, GOH, Guests of Honor",
 			"menuText": "Guests of Honor",
 			"ogpImage": "",
