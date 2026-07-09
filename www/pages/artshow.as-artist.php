@@ -156,7 +156,7 @@
 				</tr>
 				<tr>
 					<td>22:00&nbsp;– 01:00</td>
-					<td>Late night event</td>
+					<td>Midnight Canvas</td>
 				</tr>
 			</tbody>
 		</table>
@@ -169,10 +169,6 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>12:00&nbsp;– 13:00</td>
-					<td>Art Setup</td>
-				</tr>
 				<tr>
 					<td>13:00&nbsp;– 18:00</td>
 					<td>Admission for all Attendees</td>
