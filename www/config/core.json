@@ -172,8 +172,8 @@
 		},
 		"dealersden/visiting": {
 			"owner": "@Pattarchus",
-			"accessible": false,
-			"inMenu": false,
+			"accessible": true,
+			"inMenu": true,
 			"menuText": "Dealers' Den (as Visitor)",
 			"category": "Location",
 			"uri": "dealersden.visiting.php",
