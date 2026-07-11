@@ -1,3 +1,10 @@
+<?php 
+	// $con_day_1 = "Wednesday, August 19, 2026";
+	$con_day_2 = "Thursday, August 20, 2026";
+	$con_day_3 = "Friday, August 21, 2026";
+	$con_day_4 = "Saturday, August 22, 2026";
+?>
+
 <h1>Visiting the Dealers’ Den</h1>
 
 <section class="uk-column-1-2@l">
@@ -24,9 +31,9 @@
 		<h3>Opening Times</h3>
 		<p>The Dealers' Den opens on a set schedule to make the most of your time to discover and engage with our talented community of artists and makers. The schedule for each day is as follows:</p>
 		<ul>
-			<li><strong>Thursday, September 4th:</strong> 14:00 - 18:00 (Super Sponsor early access at 12:00; Sponsor early access at 13:00)</li>
-			<li><strong>Friday, September 5th:</strong> 13:00 - 18:00 (Super Sponsors have access to the Arts & Crafts Fast Lane)</li>
-			<li><strong>Saturday, September 6th:</strong> 12:00 - 18:00 (Super Sponsors have access to the Arts & Crafts Fast Lane) </li>
+			<li><strong><?= $con_day_2 ?>:</strong> 14:00 - 18:00 (Super Sponsor early access at 12:00; Sponsor early access at 13:00)</li>
+			<li><strong><?= $con_day_3 ?></strong> 13:00 - 18:00 (Super Sponsors have access to the Arts & Crafts Fast Lane)</li>
+			<li><strong><?= $con_day_4 ?>:</strong> 12:00 - 18:00 (Super Sponsors have access to the Arts & Crafts Fast Lane) </li>
 		</ul>
 
 		<p>For those in possession of a <strong>Super Sponsor</strong> upgrade, <strong>an exclusive perk awaits: the Fast Lane</strong>. Wave goodbye to the conventional queues and tedious waits; with the Fast Lane, Super Sponsors can bypass the regular queue and enter directly into the Art Show & Dealers' Den. Simply approach the entrance through the Fast Lane Queue, show your Super Sponsor badge to our Eurofurence Security at the entrance, and be welcomed to the Dealers' Den, provided room capacity permits direct entry.</p>
