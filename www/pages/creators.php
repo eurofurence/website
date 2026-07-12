@@ -68,7 +68,7 @@
             ]
         ],
 		[
-            'title' => 'KodaWolf_IRL Chaos',
+            'title' => 'KodaWolf_IRL',
             'image' => 'KodaWolf_IRL.jpg',
             'links' => [
                 [
@@ -123,7 +123,7 @@
             ]
         ],
 		[
-            'title' => 'Hako',
+            'title' => 'Hakog',
             'image' => 'Hakogori.jpg',
             'links' => [
                 [
@@ -234,7 +234,7 @@
         ],
 		[
             'title' => 'Schnuri',
-            'image' => 'Schnuri.jpg',
+            'image' => 'schnuribroccoli.jpg',
             'links' => [
                 [
                     'name' => 'TikTok',
@@ -267,7 +267,7 @@
         ],
 		[
             'title' => 'Ruzdrakeid',
-            'image' => 'Ruzdrakeid.jpg',
+            'image' => 'Drakheniel.jpg',
             'links' => [
                 [
                     'name' => 'Youtube',
@@ -322,7 +322,7 @@
         ],
 		[
             'title' => 'Bloomy',
-            'image' => 'Bloomy.jpg',
+            'image' => 'BloomyDoggo.jpg',
             'links' => [
                 [
                     'name' => 'Youtube',
@@ -460,6 +460,226 @@
                     'name' => 'TikTok',
                     'icon' => 'tiktok',
                     'link' => 'https://www.tiktok.com/@rakurim'
+                ]
+            ]
+        ],
+		[
+            'title' => 'FluffyAbaddon',
+            'image' => 'FluffyAbaddon.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@fluffyabaddon'
+                ]
+            ]
+        ],
+		[
+            'title' => 'ArkoTheFloof',
+            'image' => 'ArkoTheFloof.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@arkothefloof'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Bad Gene',
+            'image' => 'Bad_Gene.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@badgene'
+                ]
+            ]
+        ],
+		[
+            'title' => 'furrylizz',
+            'image' => 'furrylizz.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@furrylizz'
+                ]
+            ]
+        ],
+		[
+            'title' => 'TheRaichuuu',
+            'image' => 'TheRaichuuu.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/theraichuuu'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Keenora Fluffball',
+            'image' => 'Keenora.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Keenora'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Zeralun',
+            'image' => 'Zeralun.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/zeralun'
+                ]
+            ]
+        ],
+		[
+            'title' => 'meowdymomo',
+            'image' => 'meowdymomo.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/meowdymomo'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Gahone VR',
+            'image' => 'VRvollDeutsch.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@VRvollDeutsch'
+                ]
+            ]
+        ],
+		[
+            'title' => 'PsycheCyclops',
+            'image' => 'psychecyclops.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/psychecyclops'
+                ]
+            ]
+        ],
+		[
+            'title' => 'ash_dog987',
+            'image' => 'ash_dog987.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/ash_dog987'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Dasher',
+            'image' => 'dasherprotogen.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@dasherprotogen'
+                ]
+            ]
+        ],
+		[
+            'title' => 'TheTechWolf',
+            'image' => 'TheTechWolf.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/_thetechwolf_'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Valkorey',
+            'image' => 'Valkorey.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@valkorey'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Sorsaky',
+            'image' => 'Sorsaky.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@Sorsaky'
+                ]
+            ]
+        ],
+		[
+            'title' => 'SuperSahama',
+            'image' => 'SuperSahama.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/supersahama'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Ravi | Tolfie',
+            'image' => 'molotolf.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@molotolf'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Kira Resari',
+            'image' => 'TravellingFox.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@TravellingFox'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Jay | SaturnRingzz',
+            'image' => 'SaturnRingzz.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@SaturnRingzz'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Flaiky',
+            'image' => 'Flaiky.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@flaiky'
                 ]
             ]
         ]
