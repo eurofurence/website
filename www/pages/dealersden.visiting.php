@@ -20,7 +20,7 @@
 		<div class="uk-margin-bottom">
 			<h3>Official Map</h3>
 			<p>Consult our official map to better navigate the sprawling landscape of the Dealers' Den. The map provides a detailed layout of the space, identifying the location of each artist, creator, and vendor. With this resource in hand, you can efficiently plan your journey through the Dealers’ Den, making sure you visit all the tables that capture your interest. </p>
-			<!-- <p>... our map isn't publically released yet.. please come back another day. Thank you. </p> -->
+			<!-- <p>... our map isn't publicly released yet.. please come back another day. Thank you. </p> -->
 			<div>
 				<a href="img/pages/dealersden-visiting/DD_seatingplan_alphabetical.pdf">
 					<img src="img/pages/dealersden-visiting/DD_seatingplan_alphabetical.thumb.jpg" alt="Dealers Den Map thumbnail" target="_blank">
@@ -65,7 +65,7 @@
 	Valid convention badge required, always wear your badge visibly!
 	Fursuits, partials and large or stiff tails are not allowed.
 	Food or drinks are not allowed.
-	Hand-carried bags and belt pouchesof a reasonable size are allowed.
+	Hand-carried bags and belt pouches of a reasonable size are allowed.
 	Suitcases and backpacks of any size or other big items and props are not.
 	Please always follow the staff's instructions.
 	Each rule is accompanied by a small illustration of anthro characters clearly ignoring them in silly ways." />
