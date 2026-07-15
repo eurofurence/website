@@ -3,8 +3,8 @@
 	$con_day_2 = "Thursday, August 20, 2026";
 	$con_day_3 = "Friday, August 21, 2026";
 	$con_day_4 = "Saturday, August 22, 2026";
-	$seating_plan_thumb = "2026v2_DD_seatingplan_alphabetical.thumb.jpg";
-	$seating_plan_file = "2026v2_DD_seatingplan_alphabetical.pdf"
+	$seating_plan_thumb = "img/pages/dealersden-visiting/2026v2_DD_seatingplan_alphabetical.thumb.jpg";
+	$seating_plan_file = "img/pages/dealersden-visiting/2026v2_DD_seatingplan_alphabetical.pdf"
 ?>
 
 <section>
@@ -23,8 +23,8 @@
 			<p>Consult our official map to better navigate the sprawling landscape of the Dealers' Den. The map provides a detailed layout of the space, identifying the location of each artist, creator, and vendor. With this resource in hand, you can efficiently plan your journey through the Dealers’ Den, making sure you visit all the tables that capture your interest. </p>
 			<!-- <p>... our map isn't publicly released yet.. please come back another day. Thank you. </p> -->
 			<div>
-				<a href="img/pages/dealersden-visiting/<?= $seating_plan_file ?>">
-					<img src="img/pages/dealersden-visiting/<?= $seating_plan_thumb ?>" alt="Dealers Den Map thumbnail" target="_blank">
+				<a href="<?= $seating_plan_file ?>">
+					<img src="<?= $seating_plan_thumb ?>" alt="Dealers Den Map thumbnail" target="_blank">
 				</a>
 			</div> 
 		</div>
