@@ -1,8 +1,19 @@
-	<section>
+<?php 
+	// $seating_plan_thumb = "www/img/pages/artshow/XXX.jpg";
+	$seating_plan_version = "Version 1 as of July 15, 2026";
+	$seating_plan_file = "www/files/Art_Show_Panel_Assignment_Online_Version_V1_5_1_B3R9_15_07_2026.pdf";
+?>
+
+<section>
 		<h1 id="start">Art Show - Guide for Bidders</h1>
 		<p class="uk-text-center"><a href="artshow#bidnumber" title="How to register as a bidder">Register for a Bidder Number</strong></a> | <a href="artshow#howtobid" title="How bidding works">How to bid</strong></a> |	<a href="artshow#closing" title="How the closing works">Closing and final Auction</strong></a> | <a href="artshow#pickup" title="How to collect your artwork">Sales and Artwork Pickup</strong></a> | <a href="artshow#tips" title="Tip on how to bid">Tips on bidding</strong></a></p>
 
 		<p>This section will inform you in advance about the bidding process. You don't actually have to take any action before the convention itself; there is no bidder pre-registration.</p>
+
+		<div uk-alert>
+			<h3>Seating Plan</h3>
+			<p>The Seating Plan is now available: <a href="<?= $seating_plan_file ?>" target="_blank"><span uk-icon="file-pdf"></span><?= $seating_plan_version ?></a>.</p>
+		</div>
 	</section>
 
 	<section>
