@@ -237,16 +237,16 @@
 		},
 		"schedule": {
 			"owner": "@Akulatraxas",
-			"accessible": false,
+			"accessible": true,
 			"category": "Program",
 			"description": "",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "",
 			"menuText": "Event Schedule",
 			"ogpImage": "",
 			"robots": "",
 			"title": "",
-			"uri": "https://www.eurofurence.org/schedule/"
+			"uri": "https://cfp.eurofurence.org/ef-schedule-2026/"
 		},
         "openstage": {
 			"owner": "@Anheanger_der_Pestilenz",
