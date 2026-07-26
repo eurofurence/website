@@ -682,6 +682,94 @@
                     'link' => 'https://www.tiktok.com/@flaiky'
                 ]
             ]
+        ],
+		[
+            'title' => 'Rothritter',
+            'image' => 'Rothritter.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@rothritter'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Draki',
+            'image' => 'Draki.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@DrakiDrakiDraki'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Dukeysuits',
+            'image' => 'Dukeysuits.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@dukeysuits'
+                ]
+            ]
+        ],
+		[
+            'title' => 'askara.fluffball',
+            'image' => 'askara_fluffball.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/askara.fluffball'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Flurckyy',
+            'image' => 'Flurckyy.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/flurckyy'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Feral Day  FURRY ASMR',
+            'image' => 'feraldayasmr.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@feraldayasmr'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Fursuiting Raishy',
+            'image' => 'Raishy_Redson.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@fursuiting.raishy'
+                ]
+            ]
+        ],
+		[
+            'title' => 'KurtdeVos',
+            'image' => 'KurtdeVos.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/kurtdevos'
+                ]
+            ]
         ]
     ];
 
