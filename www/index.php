@@ -280,7 +280,6 @@
 		<script src="js/uikit-icons.min.js"></script>
 		<script src="js/partners.js"></script>
 		<script src="js/main.js"></script>
-		<?= $core->current->key === 'lostandfound'? '<script src="js/lostandfound.js"></script>' : ''?>
 
 		<?php /* Page Rating Submit Handling */
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
