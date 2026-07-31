@@ -13,6 +13,8 @@ either
 * Navigate a cli to the root directory and run `docker compose up`, or
 * deploy all files from `www` to `/var/html` to be served through Apache Web Server.
 
+> To run mock enviroment use `docker compose -f docker-compose.mock.yml up` instead of `docker compose up`
+
 ## Continuous Deployment
 
 GitHub Workflows described in `.github/workflows/` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:
