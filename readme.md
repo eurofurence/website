@@ -1,6 +1,6 @@
 # Eurofurence Website
 
-Version 4.2, last updated: 2024-02-21
+Version 4.3, last updated: 2026-08-01
 
 ## Requirements
 
