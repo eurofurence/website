@@ -13,6 +13,21 @@ either
 * Navigate a cli to the root directory and run `docker compose up`, or
 * deploy all files from `www` to `/var/html` to be served through Apache Web Server.
 
+#### Telegram Configuration
+
+The *Page Rating* feature requires a Telegram bot to be configured. If, upon the attempt to use this feature, the file does not exist, you will run into an Exception saying "*Telegram config missing in FILE*", *FILE* usually being ´telegram.config.php´. The script will attempt to create the file for you, but this will most likely fail due to filesystem permissions within the container, so you will have to create the *FILE* yourself with the following contents:
+
+```php
+<?php
+define('TELEGRAM_BOT_API_TOKEN', ''); # insert your Telegram BOT API token here
+define('TELEGRAM_TARGET_USERID', ''); # insert the Telegram Chat ID the bot shall post updates to
+```
+
+> Read the [Telegram bot tutorial](https://core.telegram.org/bots/tutorial#obtain-your-bot-token) on how to create a bot and obtain its API token.
+
+> In order to obtain either your own Chat ID or that of a group your bot is part of, there are various 3rd party tutorials and clients that help you with that.
+
+
 ## Continuous Deployment
 
 GitHub Workflows described in `.github/workflows/` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:
