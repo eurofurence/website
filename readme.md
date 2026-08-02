@@ -6,7 +6,7 @@ Version 4.3, last updated: 2026-08-01
 
 either
 * docker, or
-* Apache Web Server with PHP 7.4 + modrewrite
+* Apache Web Server with PHP 8.4 + modrewrite
 
 ## Setup
 
