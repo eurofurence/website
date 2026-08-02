@@ -146,7 +146,7 @@
 		},
         "restaurants": {
 			"owner": "@Sam_Mel",
-            "accessible": false,
+            "accessible": true,
             "category": "Location",
             "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
             "inMenu": true,
