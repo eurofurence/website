@@ -1,17 +1,17 @@
 {
 	"convention": {
-		"charity": "Seehundstation Friedrichskoog",
-		"dates": "August 19th to 23rd, 2026",
-		"end": "2026-08-23",
-		"goh": "Animal Art Crimes",
+		"number": "31",
+		"ordinal": "31st",
+		"year": "2027",
+		"dates": "December 31st to 31st, 2027",
+		"opening": "2027-12-31T17:00:00+02:00",
+		"start": "2027-12-31",
+		"end": "2027-12-31",
 		"location": "CCH Hamburg, Germany",
-		"number": "30",
-		"opening": "2026-08-19T17:00:00+02:00",
-		"ordinal": "30th",
-		"start": "2026-08-19",
-		"theme": "Fantastic Furry Festival",
-		"themeColor": "#005953",
-		"year": "2026"
+		"theme": "Midnight at the Lab",
+		"charity": "(TBA)",
+		"goh": "(TBA)",
+		"themeColor": "#005953"
 	},
 	"defaults": {
 		"externalEmbed": false,
@@ -146,7 +146,7 @@
 		},
         "restaurants": {
 			"owner": "@Sam_Mel",
-            "accessible": true,
+            "accessible": false,
             "category": "Location",
             "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
             "inMenu": true,
