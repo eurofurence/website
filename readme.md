@@ -27,6 +27,15 @@ define('TELEGRAM_TARGET_USERID', ''); # insert the Telegram Chat ID the bot shal
 
 > In order to obtain either your own Chat ID or that of a group your bot is part of, there are various 3rd party tutorials and clients that help you with that.
 
+#### Create modified.json
+
+If `StaticOut.lastModifiedEnabled` is set to `true`, the website will seek out a `modified.json` file to insert when page files have last been modified based on their reported filesystem modification timestamp. If the file is not present or cannot be written, a warning message will be displayed at the bottom of the page. To fix this, simply create the file:
+
+```bash
+echo "{}" > www/modified.json 
+```
+
+Don't forget to add writing permission for the user running the web server is being run as!
 
 ## Continuous Deployment
 
