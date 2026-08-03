@@ -26,6 +26,22 @@ const StatusFilter = Object.freeze({
     UNKNOWN: Status.UNKNOWN,
 });
 
+const LFPageData = Object.freeze({
+    PAGE_SIZE_KEY: "eflf.pageSize",
+    DEFAULT_PAGE_SIZE: 36,
+    VALID_PAGE_SIZES: [12, 24, 36, 48, 60, 120],
+    MAX_PAGES_TO_SHOW: 5,
+
+    loadPageSize() {
+        const stored = parseInt(localStorage.getItem(this.PAGE_SIZE_KEY), 10);
+        return this.VALID_PAGE_SIZES.includes(stored) ? stored : this.DEFAULT_PAGE_SIZE;
+    },
+
+    savePageSize(size) {
+        localStorage.setItem(this.PAGE_SIZE_KEY, size);
+    },
+});
+
 class LostAndFound {
     #config = {
         baseUrl: "https://www.eurofurence.org/data/lf",
@@ -36,8 +52,15 @@ class LostAndFound {
     #stateContainer = null;
     #searchInput = null;
     #statusFilter = null;
+    #yearFilter = null;
+    #summaryContainer = null;
+    #pageSizeSelect = null;
+    #paginationTop = null;
+    #paginationBottom = null;
     #items = [];
     #filteredItems = [];
+    #currentPage = 1;
+    #pageSize = LFPageData.loadPageSize();
     #eventsBound = false;
 
     constructor(options) {
@@ -45,6 +68,11 @@ class LostAndFound {
         this.#stateContainer = options.stateContainer;
         this.#searchInput = options.searchInput;
         this.#statusFilter = options.statusFilter;
+        this.#yearFilter = options.yearFilter;
+        this.#summaryContainer = options.summaryContainer;
+        this.#pageSizeSelect = options.pageSizeSelect;
+        this.#paginationTop = options.paginationTop;
+        this.#paginationBottom = options.paginationBottom;
     }
 
     async build() {
@@ -75,6 +103,8 @@ class LostAndFound {
                 return right.numericId - left.numericId;
             });
 
+        this.#populateYearFilter();
+        this.#syncPageSizeSelect();
         this.#bindEvents();
         this.#applyFilters();
     }
@@ -84,12 +114,29 @@ class LostAndFound {
             return;
         }
 
+        const resetAndFilter = () => {
+            this.#currentPage = 1;
+            this.#applyFilters();
+        };
+
         if (this.#searchInput) {
-            this.#searchInput.addEventListener("input", () => this.#applyFilters());
+            this.#searchInput.addEventListener("input", resetAndFilter);
         }
 
         if (this.#statusFilter) {
-            this.#statusFilter.addEventListener("change", () => this.#applyFilters());
+            this.#statusFilter.addEventListener("change", resetAndFilter);
+        }
+
+        if (this.#yearFilter) {
+            this.#yearFilter.addEventListener("change", resetAndFilter);
+        }
+
+        if (this.#pageSizeSelect) {
+            this.#pageSizeSelect.addEventListener("change", () => {
+                this.#pageSize = parseInt(this.#pageSizeSelect.value, 10);
+                LFPageData.savePageSize(this.#pageSize);
+                resetAndFilter();
+            });
         }
 
         this.#eventsBound = true;
@@ -98,14 +145,18 @@ class LostAndFound {
     #applyFilters() {
         const query = this.#searchInput ? this.#searchInput.value.trim().toLowerCase() : "";
         const status = this.#statusFilter ? this.#statusFilter.value : StatusFilter.ALL;
+        const year = this.#yearFilter ? this.#yearFilter.value : "all";
 
         this.#filteredItems = this.#items.filter((item) => {
             const statusMatches = status === StatusFilter.ALL || item.status === status;
             const queryMatches = !query || item.searchBlob.includes(query);
-            return statusMatches && queryMatches;
+            const yearMatches = year === "all" || item.years.has(year);
+            return statusMatches && queryMatches && yearMatches;
         });
 
         this.#renderItems();
+        this.#renderPagination();
+        this.#renderSummary();
 
         if (this.#filteredItems.length === 0) {
             this.#renderState(StateType.EMPTY, "No items match your current filters.");
@@ -118,9 +169,94 @@ class LostAndFound {
     #renderItems() {
         this.#targetContainer.replaceChildren();
 
-        this.#filteredItems.forEach((item) => {
+        const start = (this.#currentPage - 1) * this.#pageSize;
+        const pageItems = this.#filteredItems.slice(start, start + this.#pageSize);
+
+        pageItems.forEach((item) => {
             this.#targetContainer.appendChild(this.#createCard(item));
         });
+    }
+
+    #renderPagination() {
+        const totalPages = Math.ceil(this.#filteredItems.length / this.#pageSize);
+
+        const render = (container) => {
+            if (!container) return;
+            container.replaceChildren();
+
+            if (totalPages <= 1) return;            
+
+            const isFirstPage = this.#currentPage === 1;
+            container.appendChild(this.#createPageItem(1, null, "chevron-double-left", false, isFirstPage));
+            container.appendChild(this.#createPageItem(this.#currentPage - 1, null, "chevron-left", false, isFirstPage));
+
+            const startPage = Math.min(
+                Math.max(1, this.#currentPage - Math.floor(LFPageData.MAX_PAGES_TO_SHOW / 2)),
+                totalPages - LFPageData.MAX_PAGES_TO_SHOW + 1
+            );
+            for (let i = 0; i < LFPageData.MAX_PAGES_TO_SHOW; i++) {
+                const page = startPage + i;
+                if (page > 0 && page <= totalPages) {
+                    container.appendChild(this.#createPageItem(page, page, null, page === this.#currentPage));
+                }
+            }
+
+            const isLastPage = this.#currentPage === totalPages;
+            container.appendChild(this.#createPageItem(this.#currentPage + 1, null, "chevron-right", false, isLastPage));
+            container.appendChild(this.#createPageItem(totalPages, null, "chevron-double-right", false, isLastPage));
+        };
+
+        render(this.#paginationTop);
+        render(this.#paginationBottom);
+    }
+
+    #createPageItem(targetPage, label, icon, isActive = false, isDisabled = false) {
+        const li = document.createElement("li");
+        if (isActive) {
+            li.classList.add("uk-active");
+        }
+        if (isDisabled) {
+            li.classList.add("uk-disabled");
+        }
+
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        if (!isActive && !isDisabled) {
+            a.addEventListener("click", (e) => {
+                e.preventDefault();
+                this.#currentPage = targetPage;
+                this.#renderItems();
+                this.#renderPagination();
+                this.#renderSummary();
+                this.#targetContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        }
+
+        if (icon) {
+            const span = document.createElement("span");
+            span.setAttribute("uk-icon", `icon: ${icon}`);
+            a.appendChild(span);
+            a.classList.add("uk-padding-remove");
+        } else {
+            a.textContent = label;
+        }
+
+        li.appendChild(a);
+        return li;
+    }
+
+    #renderSummary() {
+        if (!this.#summaryContainer) return;
+
+        const total = this.#filteredItems.length;
+        if (total === 0) {
+            this.#summaryContainer.textContent = "";
+            return;
+        }
+
+        const start = (this.#currentPage - 1) * this.#pageSize + 1;
+        const end = Math.min(this.#currentPage * this.#pageSize, total);
+        this.#summaryContainer.textContent = `Showing ${start}-${end} of ${total} item${total !== 1 ? "s" : ""}`;
     }
 
     #createCard(item) {
@@ -221,6 +357,30 @@ class LostAndFound {
         return image;
     }
 
+    #populateYearFilter() {
+        if (!this.#yearFilter) return;
+
+        const counts = new Map();
+        this.#items.forEach((item) => {
+            item.years.forEach((year) => {
+                counts.set(year, (counts.get(year) ?? 0) + 1);
+            });
+        });
+
+        const sorted = [...counts.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+        sorted.forEach(([year, count]) => {
+            const option = document.createElement("option");
+            option.value = year;
+            option.textContent = `${year} (${count})`;
+            this.#yearFilter.appendChild(option);
+        });
+    }
+
+    #syncPageSizeSelect() {
+        if (!this.#pageSizeSelect) return;
+        this.#pageSizeSelect.value = String(this.#pageSize);
+    }
+
     #normalizeItem(item) {
         const normalizedStatus = this.#normalizeStatus(item.status);
         const title = this.#asText(item.title, "Untitled item");
@@ -252,6 +412,7 @@ class LostAndFound {
             thumbUrl,
             imageUrl,
             sortTimestamp,
+            years: this.#extractYears(lostTimestamp, foundTimestamp, returnTimestamp),
             searchBlob: `${id} ${title} ${description}`.toLowerCase(),
         };
     }
@@ -269,6 +430,18 @@ class LostAndFound {
             }
         });
         return latest;
+    }
+
+    #extractYears(...values) {
+        const years = new Set();
+        values.forEach((value) => {
+            if (!value) return;
+            const parsed = Date.parse(value);
+            if (!Number.isNaN(parsed)) {
+                years.add(String(new Date(parsed).getFullYear()));
+            }
+        });
+        return years;
     }
 
     #normalizeStatus(status) {
@@ -367,6 +540,11 @@ const lostandfound = new LostAndFound({
     stateContainer: document.getElementById("ef-lostandfound-state"),
     searchInput: document.getElementById("ef-lostandfound-search"),
     statusFilter: document.getElementById("ef-lostandfound-status"),
+    yearFilter: document.getElementById("ef-lostandfound-year"),
+    summaryContainer: document.getElementById("ef-lostandfound-summary"),
+    pageSizeSelect: document.getElementById("ef-lostandfound-pagesize"),
+    paginationTop: document.getElementById("ef-lostandfound-pagination-top"),
+    paginationBottom: document.getElementById("ef-lostandfound-pagination-bottom"),
 });
 
 lostandfound.build();
