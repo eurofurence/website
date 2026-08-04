@@ -1,7 +1,7 @@
 <section>
 	<h1>Animal Art Crimes</h1>
 
-	<div class="uk-column-1-2@l uk-clearfix">
+	<div class="uk-column-1-2@l uk-clearfix" uk-lightbox>
 		<p>ƒ<a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
 
 		<p>Their creations include colorful murals, stickers, illustrations, and mixed-media works featuring expressive characters such as bats, hyenas, coyotes, dogs, and many other creatures. Their name is a playful reference to the rebellious spirit traditionally associated with street art, reflected in their motto: <span class="uk-text-italic">"So many walls, so little time..."</span></p>
@@ -13,7 +13,7 @@
 	<hr />
 	<p>Representing Animal Art Crimes at Eurofurence this year are <a href="goh#dominotwist" uk-toggle><strong>Domino Twist</strong></a>, <a href="goh#kenket" uk-toggle><strong>Kenket</strong></a>, <a href="goh#nofair" uk-toggle><strong>No Fair</strong></a>, and <a href="goh#wopbol" uk-toggle><strong>WopboL</strong></a>. Be sure to stop by and experience their live painting and creative process firsthand at Eurofurence.</p>
 
-	<div class="uk-child-width-1-5@m uk-child-width-1-3@s uk-grid-small uk-margin-top" uk-grid>
+	<div class="uk-child-width-1-5@m uk-child-width-1-3@s uk-grid-small uk-margin-top" uk-grid uk-lightbox>
 		<div><a href="img/pages/goh/artcrimes-2.jpg"><img src="img/pages/goh/s/artcrimes-2.jpg" alt="Be a Problem Money can't solve" /></a></div>
 		<div><a href="img/pages/goh/artcrimes-3.jpg"><img src="img/pages/goh/s/artcrimes-3.jpg" alt="Animal Art Crimes at Work" /></a></div>
 		<div><a href="img/pages/goh/artcrimes-0.jpg"><img src="img/pages/goh/s/artcrimes-0.jpg" alt="Various Work" /></a></div>
