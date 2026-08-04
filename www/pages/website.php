@@ -49,7 +49,7 @@
 	</p>
 	<p>See you around at Eurofurence 30!</p>
 
-	<div class="uk-position-relative" uk-slideshow="autplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
+	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
 		<div class="uk-slideshow-items uk-text-center">
 			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/waloyo-yamoni-reupload-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
 			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/sunflower-new-wide-reupload-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
