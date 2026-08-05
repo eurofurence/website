@@ -48,36 +48,57 @@ class LostAndFound {
         noImageUrl: "img/pages/lostandfound/no-photo.png",
     };
     #env = window.__EF_ENVIRONMENT__ || { USE_MOCK_DATA: false, MOCK_LF_DATA: "__mocks__/lostandfound.mock.json" };
-    #targetContainer = null;
+    #container = null;
+    #itemsContainer = null;
     #stateContainer = null;
     #searchInput = null;
+    #searchSuggestions = null;
     #statusFilter = null;
     #yearFilter = null;
     #summaryContainer = null;
     #pageSizeSelect = null;
     #paginationTop = null;
     #paginationBottom = null;
+    #modalRoot = null;
+    #modalImageLink = null;
+    #modalImage = null;
+    #modalStatus = null;
+    #modalTitle = null;
+    #modalId = null;
+    #modalDescription = null;
+    #modalTimeline = null;
     #items = [];
     #filteredItems = [];
     #currentPage = 1;
     #pageSize = LFPageData.loadPageSize();
+    #selectedItemId = "";
     #eventsBound = false;
 
     constructor(options) {
-        this.#targetContainer = options.targetContainer;
+        this.#container = options.container;
+        this.#itemsContainer = options.itemsContainer;
         this.#stateContainer = options.stateContainer;
         this.#searchInput = options.searchInput;
+        this.#searchSuggestions = options.searchSuggestions;
         this.#statusFilter = options.statusFilter;
         this.#yearFilter = options.yearFilter;
         this.#summaryContainer = options.summaryContainer;
         this.#pageSizeSelect = options.pageSizeSelect;
         this.#paginationTop = options.paginationTop;
         this.#paginationBottom = options.paginationBottom;
+        this.#modalRoot = options.modalRoot;
+        this.#modalImageLink = options.modalImageLink;
+        this.#modalImage = options.modalImage;
+        this.#modalStatus = options.modalStatus;
+        this.#modalTitle = options.modalTitle;
+        this.#modalId = options.modalId;
+        this.#modalDescription = options.modalDescription;
+        this.#modalTimeline = options.modalTimeline;
     }
 
     async build() {
-        if (!this.#targetContainer) {
-            console.error("[eflf] Target container not found.");
+        if (!this.#itemsContainer) {
+            console.error("[eflf] Items target container not found.");
             return;
         }
 
@@ -85,7 +106,7 @@ class LostAndFound {
 
         const payload = await this.#fetch(`${this.#config.baseUrl}/data.json`);
         if (!payload || !Array.isArray(payload.data)) {
-            this.#targetContainer.replaceChildren();
+            this.#itemsContainer.replaceChildren();
             this.#renderState(
                 StateType.ERROR,
                 "Could not load lost and found items. Please try again later.",
@@ -104,9 +125,12 @@ class LostAndFound {
             });
 
         this.#populateYearFilter();
+        this.#populateStatusFilter();
         this.#syncPageSizeSelect();
         this.#bindEvents();
+        this.#bindModalEvents();
         this.#applyFilters();
+        this.#openModalFromUrl();
     }
 
     #bindEvents() {
@@ -157,6 +181,7 @@ class LostAndFound {
         this.#renderItems();
         this.#renderPagination();
         this.#renderSummary();
+        this.#renderSuggestions(query);
 
         if (this.#filteredItems.length === 0) {
             this.#renderState(StateType.EMPTY, "No items match your current filters.");
@@ -167,14 +192,21 @@ class LostAndFound {
     }
 
     #renderItems() {
-        this.#targetContainer.replaceChildren();
+        this.#itemsContainer.replaceChildren();
 
         const start = (this.#currentPage - 1) * this.#pageSize;
         const pageItems = this.#filteredItems.slice(start, start + this.#pageSize);
 
         pageItems.forEach((item) => {
-            this.#targetContainer.appendChild(this.#createCard(item));
+            this.#itemsContainer.appendChild(this.#createCard(item));
         });
+
+        if (this.#selectedItemId) {
+            const stillVisible = this.#filteredItems.some((item) => String(item.id) === this.#selectedItemId);
+            if (!stillVisible) {
+                this.#closeModal(true);
+            }
+        }
     }
 
     #renderPagination() {
@@ -228,7 +260,7 @@ class LostAndFound {
                 this.#renderItems();
                 this.#renderPagination();
                 this.#renderSummary();
-                this.#targetContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+                this.#container.scrollIntoView({ behavior: "smooth", block: "start" });
             });
         }
 
@@ -265,22 +297,22 @@ class LostAndFound {
         const card = document.createElement("article");
         card.classList.add("uk-card", "uk-card-default", "uk-flex", "uk-flex-column", "lf-card");
         card.setAttribute("uk-scrollspy", "cls: uk-animation-slide-bottom-small; repeat: true");
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", `Open details for ${item.title}`);
+        card.addEventListener("click", () => this.#openModalForItem(item));
+        card.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                this.#openModalForItem(item);
+            }
+        });
         outerDiv.appendChild(card);
 
         const media = document.createElement("div");
         media.classList.add("lf-media");
         card.appendChild(media);
-
-        if (item.imageUrl) {
-            media.setAttribute("uk-lightbox", "animation: slide");
-            const link = document.createElement("a");
-            link.classList.add("hide-ext", "lf-image-link");
-            link.href = item.imageUrl;
-            media.appendChild(link);
-            link.appendChild(this.#createImage(item));
-        } else {
-            media.appendChild(this.#createImage(item));
-        }
+        media.appendChild(this.#createImage(item));
 
         const body = document.createElement("div");
         body.classList.add("uk-card-body", "uk-flex", "uk-flex-column", "uk-flex-1", "lf-card-body");
@@ -376,9 +408,223 @@ class LostAndFound {
         });
     }
 
+    #populateStatusFilter() {
+        if (!this.#statusFilter) return;
+
+        const counts = new Map([
+            [Status.LOST, 0],
+            [Status.FOUND, 0],
+            [Status.UNKNOWN, 0],
+        ]);
+
+        this.#items.forEach((item) => {
+            counts.set(item.status, (counts.get(item.status) ?? 0) + 1);
+        });
+
+        [...this.#statusFilter.options].forEach((option) => {
+            if (option.value !== StatusFilter.ALL) {
+                const count = counts.get(option.value) ?? 0;
+                const meta = StatusMeta[option.value];
+                const label = meta ? meta.label : option.textContent;
+
+                // Show "Unknown" option only if there are items with unknown status
+                if (option.value === StatusFilter.UNKNOWN && count === 0) {
+                    option.remove();
+                    return;
+                }
+
+                option.textContent = `${label} (${count})`;
+                option.disabled = count === 0;
+            }
+        });
+    }
+
     #syncPageSizeSelect() {
         if (!this.#pageSizeSelect) return;
         this.#pageSizeSelect.value = String(this.#pageSize);
+    }
+
+    #renderSuggestions(query) {
+        if (!this.#searchSuggestions) {
+            return;
+        }
+
+        this.#searchSuggestions.replaceChildren();
+        if (!query || query.length < 2) {
+            return;
+        }
+
+        const titleStats = new Map();
+        this.#filteredItems.forEach((item) => {
+            const key = item.title.trim();
+            const prev = titleStats.get(key) ?? { count: 0, latest: 0, label: key };
+            prev.count += 1;
+            prev.latest = Math.max(prev.latest, item.sortTimestamp);
+            titleStats.set(key, prev);
+        });
+
+        const normalizedQuery = query.toLowerCase();
+        const suggestions = [...titleStats.values()]
+            .filter((entry) => entry.label.toLowerCase().includes(normalizedQuery))
+            .sort((a, b) => {
+                if (a.count !== b.count) {
+                    return b.count - a.count;
+                }
+                if (a.latest !== b.latest) {
+                    return b.latest - a.latest;
+                }
+                return a.label.localeCompare(b.label);
+            })
+            .slice(0, 10);
+
+        suggestions.forEach((entry) => {
+            const option = document.createElement("option");
+            option.value = entry.label;
+            this.#searchSuggestions.appendChild(option);
+        });
+    }
+
+    #bindModalEvents() {
+        if (!this.#modalRoot) {
+            return;
+        }
+
+        this.#modalRoot.addEventListener("hidden", () => {
+            this.#closeModal(true);
+        });
+
+        window.addEventListener("popstate", () => {
+            this.#openModalFromUrl();
+        });
+    }
+
+    #getModalInstance() {
+        if (!this.#modalRoot || typeof UIkit === "undefined" || !UIkit.modal) {
+            return null;
+        }
+        return UIkit.modal(this.#modalRoot);
+    }
+
+    #openModalFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const itemId = params.get("item");
+        if (!itemId) {
+            this.#closeModal(false);
+            return;
+        }
+
+        const item = this.#items.find((entry) => String(entry.id) === itemId);
+        if (!item) {
+            this.#closeModal(true);
+            return;
+        }
+
+        this.#openModalForItem(item, false);
+    }
+
+    #openModalForItem(item, pushState = true) {
+        if (!this.#modalRoot || !item) {
+            return;
+        }
+
+        this.#clearModal();
+        this.#selectedItemId = String(item.id);
+        this.#fillModal(item);
+
+        if (pushState) {
+            const params = new URLSearchParams(window.location.search);
+            params.set("item", this.#selectedItemId);
+            const query = params.toString();
+            const next = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+            history.pushState({}, "", next);
+        }
+
+        const modal = this.#getModalInstance();
+        if (modal) {
+            modal.show();
+        }
+    }
+
+    #closeModal(removeParam) {
+        if (removeParam) {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has("item")) {
+                params.delete("item");
+                const query = params.toString();
+                const next = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+                history.replaceState({}, "", next);
+            }
+        }
+
+        this.#selectedItemId = "";
+        this.#clearModal();
+        const modal = this.#getModalInstance();
+        if (modal && modal.isActive()) {
+            modal.hide();
+        }
+    }
+
+    #clearModal() {
+        if (!this.#modalImage || !this.#modalImageLink || !this.#modalStatus || !this.#modalTitle || !this.#modalId || !this.#modalDescription || !this.#modalTimeline) {
+            return;
+        }
+        this.#modalImage.onerror = null;
+        this.#modalImage.src = this.#config.noImageUrl;
+        this.#modalImage.alt = "";
+        this.#modalImageLink.href = "#";
+        this.#modalImageLink.style.pointerEvents = "none";
+        this.#modalImageLink.tabIndex = -1;
+        this.#modalImageLink.setAttribute("aria-disabled", "true");
+        this.#modalStatus.className = "uk-label lf-label";
+        this.#modalStatus.textContent = "";
+        this.#modalTitle.textContent = "";
+        this.#modalId.textContent = "";
+        this.#modalDescription.textContent = "";
+        this.#modalTimeline.replaceChildren();
+    }
+
+    #fillModal(item) {
+        if (!this.#modalImage || !this.#modalImageLink || !this.#modalStatus || !this.#modalTitle || !this.#modalId || !this.#modalDescription || !this.#modalTimeline) {
+            return;
+        }
+
+        const { label, cssClass } = StatusMeta[item.status] ?? StatusMeta[Status.UNKNOWN];
+        const source = item.imageUrl || item.thumbUrl;
+        const hasRealImage = Boolean(source) && source !== this.#config.noImageUrl;
+
+        this.#modalImage.src = hasRealImage ? source : this.#config.noImageUrl;
+        this.#modalImage.alt = item.title;
+        this.#modalImage.onerror = () => {
+            this.#modalImage.onerror = null;
+            this.#modalImage.src = this.#config.noImageUrl;
+        };
+
+        if (hasRealImage) {
+            this.#modalImageLink.href = source;
+            this.#modalImageLink.style.pointerEvents = "";
+            this.#modalImageLink.removeAttribute("tabindex");
+            this.#modalImageLink.removeAttribute("aria-disabled");
+        } else {
+            this.#modalImageLink.href = "#";
+            this.#modalImageLink.style.pointerEvents = "none";
+            this.#modalImageLink.tabIndex = -1;
+            this.#modalImageLink.setAttribute("aria-disabled", "true");
+        }
+
+        this.#modalStatus.className = "uk-label lf-label";
+        this.#modalStatus.classList.add(cssClass);
+        this.#modalStatus.textContent = label;
+        this.#modalTitle.textContent = item.title;
+        this.#modalId.textContent = `Item ID: ${item.id}`;
+        this.#modalDescription.textContent = item.description;
+        this.#modalTimeline.replaceChildren();
+        this.#appendTimelineRow(this.#modalTimeline, StatusMeta[Status.LOST].label, item.lostTimestamp);
+        this.#appendTimelineRow(this.#modalTimeline, StatusMeta[Status.FOUND].label, item.foundTimestamp);
+        this.#appendTimelineRow(this.#modalTimeline, StatusMeta[Status.RETURNED].label, item.returnTimestamp);
+
+        if (this.#modalTimeline.childElementCount === 0) {
+            this.#appendTimelineRow(this.#modalTimeline, "Timeline", "Not available yet");
+        }
     }
 
     #normalizeItem(item) {
@@ -536,15 +782,25 @@ class LostAndFound {
 }
 
 const lostandfound = new LostAndFound({
-    targetContainer: document.getElementById("ef-lostandfound"),
+    container: document.getElementById("ef-lostandfound"),
+    itemsContainer: document.getElementById("ef-lostandfound-items"),
     stateContainer: document.getElementById("ef-lostandfound-state"),
     searchInput: document.getElementById("ef-lostandfound-search"),
+    searchSuggestions: document.getElementById("ef-lostandfound-suggestions"),
     statusFilter: document.getElementById("ef-lostandfound-status"),
     yearFilter: document.getElementById("ef-lostandfound-year"),
     summaryContainer: document.getElementById("ef-lostandfound-summary"),
     pageSizeSelect: document.getElementById("ef-lostandfound-pagesize"),
     paginationTop: document.getElementById("ef-lostandfound-pagination-top"),
     paginationBottom: document.getElementById("ef-lostandfound-pagination-bottom"),
+    modalRoot: document.getElementById("ef-lostandfound-modal"),
+    modalImageLink: document.getElementById("ef-lostandfound-modal-image-link"),
+    modalImage: document.getElementById("ef-lostandfound-modal-image"),
+    modalStatus: document.getElementById("ef-lostandfound-modal-status"),
+    modalTitle: document.getElementById("ef-lostandfound-modal-title"),
+    modalId: document.getElementById("ef-lostandfound-modal-id"),
+    modalDescription: document.getElementById("ef-lostandfound-modal-description"),
+    modalTimeline: document.getElementById("ef-lostandfound-modal-timeline"),
 });
 
 lostandfound.build();
