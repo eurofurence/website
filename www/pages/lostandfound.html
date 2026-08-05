@@ -1,4 +1,3 @@
-
 <style>
     .lf-card {
         transition: transform 128ms ease;
@@ -273,8 +272,9 @@
 
 <section id="ef-lostandfound">
     <h1>Lost and Found</h1>
-
-    <p>All Items found at the convention are stored and can be redeemed only at the Security FrontDesk at next Eurofurence in Hamburg.</p>
+    <p>
+        All Items found at the convention are stored and can be redeemed only at the Security FrontDesk at next Eurofurence in Hamburg.
+    </p>
 
     <div class="uk-card uk-card-default uk-card-body uk-margin-bottom lf-toolbar-card">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -282,7 +282,13 @@
                 <label for="ef-lostandfound-search" class="uk-form-label">Search Items</label>
                 <div class="uk-inline uk-width-1-1">
                     <span class="uk-form-icon" uk-icon="icon: search"></span>
-                    <input id="ef-lostandfound-search" type="search" class="uk-input" list="ef-lostandfound-suggestions" placeholder="Search by title, description, or item ID" />
+                    <input
+                        id="ef-lostandfound-search"
+                        type="search"
+                        class="uk-input"
+                        list="ef-lostandfound-suggestions"
+                        placeholder="Search by title, description, or item ID"
+                    />
                     <datalist id="ef-lostandfound-suggestions"></datalist>
                 </div>
             </div>
@@ -328,7 +334,11 @@
         </div>
     </div>
 
-    <div id="ef-lostandfound-items" class="uk-grid-small uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@l uk-child-width-1-4@xl uk-margin-bottom" uk-grid></div>
+    <div
+        id="ef-lostandfound-items"
+        class="uk-grid-small uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@l uk-child-width-1-4@xl uk-margin-bottom"
+        uk-grid
+    ></div>
 
     <ul id="ef-lostandfound-pagination-bottom" class="uk-pagination uk-flex-center uk-margin-remove"></ul>
 

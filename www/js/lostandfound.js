@@ -107,10 +107,7 @@ class LostAndFound {
         const payload = await this.#fetch(`${this.#config.baseUrl}/data.json`);
         if (!payload || !Array.isArray(payload.data)) {
             this.#itemsContainer.replaceChildren();
-            this.#renderState(
-                StateType.ERROR,
-                "Could not load lost and found items. Please try again later.",
-            );
+            this.#renderState(StateType.ERROR, "Could not load lost and found items. Please try again later.");
             return;
         }
 
@@ -216,7 +213,7 @@ class LostAndFound {
             if (!container) return;
             container.replaceChildren();
 
-            if (totalPages <= 1) return;            
+            if (totalPages <= 1) return;
 
             const isFirstPage = this.#currentPage === 1;
             container.appendChild(this.#createPageItem(1, null, "chevron-double-left", false, isFirstPage));
@@ -224,7 +221,7 @@ class LostAndFound {
 
             const startPage = Math.min(
                 Math.max(1, this.#currentPage - Math.floor(LFPageData.MAX_PAGES_TO_SHOW / 2)),
-                totalPages - LFPageData.MAX_PAGES_TO_SHOW + 1
+                totalPages - LFPageData.MAX_PAGES_TO_SHOW + 1,
             );
             for (let i = 0; i < LFPageData.MAX_PAGES_TO_SHOW; i++) {
                 const page = startPage + i;
@@ -564,10 +561,21 @@ class LostAndFound {
         }
     }
 
+    #allModalElementsPresent() {
+        return (
+            this.#modalImage &&
+            this.#modalImageLink &&
+            this.#modalStatus &&
+            this.#modalTitle &&
+            this.#modalId &&
+            this.#modalDescription &&
+            this.#modalTimeline
+        );
+    }
+
     #clearModal() {
-        if (!this.#modalImage || !this.#modalImageLink || !this.#modalStatus || !this.#modalTitle || !this.#modalId || !this.#modalDescription || !this.#modalTimeline) {
-            return;
-        }
+        if (!this.#allModalElementsPresent()) return;
+
         this.#modalImage.onerror = null;
         this.#modalImage.src = this.#config.noImageUrl;
         this.#modalImage.alt = "";
@@ -584,9 +592,7 @@ class LostAndFound {
     }
 
     #fillModal(item) {
-        if (!this.#modalImage || !this.#modalImageLink || !this.#modalStatus || !this.#modalTitle || !this.#modalId || !this.#modalDescription || !this.#modalTimeline) {
-            return;
-        }
+        if (!this.#allModalElementsPresent()) return;
 
         const { label, cssClass } = StatusMeta[item.status] ?? StatusMeta[Status.UNKNOWN];
         const source = item.imageUrl || item.thumbUrl;
