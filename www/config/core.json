@@ -1,9 +1,9 @@
 {
 	"convention": {
-		"charity": "(TBA!)",
+		"charity": "Seehundstation Friedrichskoog",
 		"dates": "August 19th to 23rd, 2026",
 		"end": "2026-08-23",
-		"goh": "Art Crimes",
+		"goh": "Animal Art Crimes",
 		"location": "CCH Hamburg, Germany",
 		"number": "30",
 		"opening": "2026-08-19T17:00:00+02:00",
@@ -62,7 +62,7 @@
 			"ogpImage": "",
 			"robots": "noindex, nofollow, noodp",
 			"title": "Page Not Found",
-			"uri": "404.php"
+			"uri": "404.html"
 		},
 		"501": {
 			"owner": "@draconigen",
@@ -75,7 +75,7 @@
 			"ogpImage": "",
 			"robots": "noindex, nofollow, noodp",
 			"title": "Page Not Available Yet",
-			"uri": "501.php"
+			"uri": "501.html"
 		},
 		"home": {
 			"owner": "@draconigen",
@@ -91,6 +91,19 @@
 			"uri": "home.php"
 		},
 
+		"tools/ratings": {
+			"owner": "@draconigen",
+			"accessible": true,
+			"category": "",
+			"description": "Import feedback feed and visualize all given feedback through the EF Website Feedback Feature.",
+			"inMenu": false,
+			"keywords": "",
+			"menuText": "",
+			"ogpImage": "",
+			"robots": "",
+			"title": "Page Ratings",
+			"uri": "tools/ratings.html"
+		},
 		
 		"venue": {
 			"owner": "@draconigen",
@@ -103,7 +116,7 @@
 			"ogpImage": "venue.jpg",
 			"robots": "",
 			"title": "The CCH Hamburg (Venue)",
-			"uri": "venue.php"
+			"uri": "venue.html"
 		},
 		"venue/map": {
 			"owner": "@draconigen",
@@ -116,7 +129,7 @@
 			"ogpImage": "venue.jpg",
 			"robots": "",
 			"title": "Venue Map",
-			"uri": "venue.map.php"
+			"uri": "venue.map.html"
 		},
 		"hotels": {
 			"owner": "@draconigen",
@@ -129,7 +142,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Venue - Nearby Hotel Options",
-			"uri": "hotels.php"
+			"uri": "hotels.html"
 		},
         "restaurants": {
 			"owner": "@Sam_Mel",
@@ -142,7 +155,7 @@
             "ogpImage": "restaurants.png",
             "robots": "",
             "title": "Venue - Nearby Dining Options",
-            "uri": "restaurants.php"
+            "uri": "restaurants.html"
         },
 		"artshow": {
 			"owner": "@riffuchs",
@@ -159,8 +172,8 @@
 		},
 		"dealersden/visiting": {
 			"owner": "@Pattarchus",
-			"accessible": false,
-			"inMenu": false,
+			"accessible": true,
+			"inMenu": true,
 			"menuText": "Dealers' Den (as Visitor)",
 			"category": "Location",
 			"uri": "dealersden.visiting.php",
@@ -181,61 +194,59 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "More about Eurofurence",
-			"uri": "about.php"
+			"uri": "about.html"
 		},
-        "venue/supporters": {
+        "sponsors": {
 			"owner": "@tarianwolf",
-            "accessible": false,
+            "accessible": true,
             "category": "Location",
-            "description": "A lists of companies supporting the Eurofurence IT Infrastructure.",
-            "inMenu": false,
-            "keywords": "supporters, IT",
-            "menuText": "Supporters",
+            "description": "A lists of companies supporting Eurofurence.",
+            "inMenu": true,
+            "keywords": "sponsors, supporters, infrastructure",
+            "menuText": "Sponsors",
             "ogpImage": "",
             "robots": "",
-            "title": "Supporters",
-            "uri": "venue.supporters.php"
+            "title": "Sponsors",
+            "uri": "sponsors.php"
         },
-
-
 		"charity": {
 			"owner": "@Sniffer_raccoon",
-			"accessible": false,
+			"accessible": true,
 			"category": "Program",
 			"description": "This year all donations, collections and more will go to support {charity}.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Donations, Good cause, Benefaction",
 			"menuText": "Charity",
-			"ogpImage": "charity.jpg",
+			"ogpImage": "",
 			"robots": "",
 			"title": "Charity",
-			"uri": "charity.php"
+			"uri": "charity.html"
 		},
 		"events": {
 			"owner": "@Akulatraxas",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "General information for those interested in organizing a panel or event at Eurofurence. The schedule will be posted here shortly before the convention.",
-			"inMenu": true,
+			"inMenu": false,
 			"keywords": "Events, Time Table, Schedule, Program",
 			"menuText": "Event Submission",
 			"ogpImage": "",
 			"robots": "",
 			"title": "Events",
-			"uri": "events.php"
+			"uri": "events.html"
 		},
 		"schedule": {
 			"owner": "@Akulatraxas",
-			"accessible": false,
+			"accessible": true,
 			"category": "Program",
 			"description": "",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "",
 			"menuText": "Event Schedule",
 			"ogpImage": "",
 			"robots": "",
 			"title": "",
-			"uri": "https://www.eurofurence.org/schedule/"
+			"uri": "https://cfp.eurofurence.org/ef-schedule-2026/"
 		},
         "openstage": {
 			"owner": "@Anheanger_der_Pestilenz",
@@ -251,11 +262,11 @@
             "uri": "openstage.php"
         },
 		"goh": {
-			"owner": "@Arahn",
-			"accessible": false,
+			"owner": "@Nerventee",
+			"accessible": true,
 			"category": "Program",
 			"description": "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Special guests, GOH, Guests of Honor",
 			"menuText": "Guests of Honor",
 			"ogpImage": "",
@@ -274,12 +285,12 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Fursuiting",
-			"uri": "fursuits.php"
+			"uri": "fursuiting.php"
 		},
         "fursuit/badges": {
-			"owner":"@Thiritin",
+			"owner":"@takemurahusky",
             "accessible": true,
-            "inMenu": false,
+            "inMenu": true,
             "category": "Program",
             "description": "",
             "keywords": "",
@@ -300,7 +311,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Fursuit Lounge",
-			"uri": "fursuitlounge.php"
+			"uri": "fursuitlounge.html"
 		},
 		"fursuits/photoshoot": {
 			"owner": "@Atkelar",
@@ -326,20 +337,20 @@
             "ogpImage": "furauction.png",
             "robots": "",
             "title": "Furauction",
-            "uri": "furauction.php"
+            "uri": "furauction.html"
         },
         "dances": {
 			"owner": "@Anheanger_der_Pestilenz",
-            "accessible": false,
+            "accessible": true,
             "category": "Program",
             "description": "We are calling all DJs, beat captains, and interstellar sound engineers: The Eurofurence 29 Dance Stage is preparing for liftoff — we need you on board.",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "Dances, DJ, Application",
             "menuText": "Dances",
             "ogpImage": "",
             "robots": "",
             "title": "Dances",
-            "uri": "dances.php"
+            "uri": "dances.html"
         },
         "dancecontests": {
 			"owner": "@Px0ssum",
@@ -352,8 +363,21 @@
             "ogpImage": "dancecontests.jpg",
             "robots": "",
             "title": "Enter the Arena & Paws on Fire",
-            "uri": "dancecontests.php"
+            "uri": "dancecontests.html"
         },
+		"taiko-bastards": {
+			"owner": "@MafunDi",
+			"accessible": true,
+			"category": "Program",
+			"description": "Taiko Bastards Eurofurence Workshop explained.",
+			"inMenu": true,
+			"keywords": "taiko bastards workshop",
+			"menuText": "Taiko Workshop",
+			"ogpImage": "taiko-bastards.jpg",
+			"robots": "",
+			"title": "Taiko Workshop",
+			"uri": "taiko-bastards.php"
+		},
 		"photography": {
 			"owner": "@Atkelar",
 			"accessible": true,
@@ -365,22 +389,35 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Photography",
-			"uri": "photography.php"
+			"uri": "photography.html"
 		},
-
+		"poker-tournament": {
+			"owner": "@RefrTarks",
+			"accessible": false,
+			"category": "Program",
+			"description": "",
+			"inMenu": false,
+			"keywords": "poker, Tournament",
+			"menuText": "Poker Tournament",
+			"ogpImage": "",
+			"robots": "",
+			"title": "Poker Tournament",
+			"uri": "poker-tournament.html"
+		},
+		
 		
         "prices": {
-			"owner": "(no owner)",
-            "accessible": false,
+			"owner": "@RakanHowls",
+            "accessible": true,
             "category": "Participate",
 			"description": "Eurofurence {number} will take place from {dates} at the {location}. Eurofurence is Europe's largest annual gathering of the European furry community.",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "Price, Ticket, Booking, Registration, Reg, Sign Up, How Much, Costs",
             "menuText": "Tickets &amp; Prices",
             "ogpImage": "",
             "robots": "",
             "title": "Convention Fees &amp; Prices",
-            "uri": "prices.php"
+            "uri": "prices.html"
         },
         "jobs": {
 			"owner": "@draconigen",
@@ -397,16 +434,16 @@
         },
         "volunteering": {
 			"owner": "@Pattarchus",
-            "accessible": true,
+            "accessible": false,
             "category": "Participate",
             "description": "You want to volunteer on-site at Eurofurence at Europe's biggest furry convention? Here is how you do it!'",
-            "inMenu": true,
+            "inMenu": false,
             "keywords": "Jobs, Volunteer, Crew, Help, Gopher, Critter, Volunteering",
             "menuText": "On-Site Volunteering",
             "ogpImage": "",
             "robots": "",
             "title": "Becoming an Eurofurence Critter: On-Site Volunteering",
-            "uri": "volunteering.php"
+            "uri": "volunteering.html"
         },
 		"artshow/as-artist": {
 			"owner": "@riffuchs",
@@ -445,19 +482,19 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Artist Alley",
-			"uri": "dealersden.alley.php"
+			"uri": "dealersden.alley.html"
 		},
         "creators": {
 			"owner": "@TheFruitFox",
-            "accessible": false,
+            "accessible": true,
             "category": "Participate",
             "description": "",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "live, streamer, vtuber, content creator, twitch, instagram, tiktok, youtube, mastodon, social media",
-            "menuText": "Content Creators",
+            "menuText": "Video Creators",
             "ogpImage": "",
             "robots": "",
-            "title": "Web Video Creators",
+            "title": "Video Creators",
             "uri": "creators.php"
         },
 		"accessibility": {
@@ -471,14 +508,14 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Accessibility",
-			"uri": "accessibility.php"
+			"uri": "accessibility.html"
 		},
         "ledwall": {
 			"owner": "@Anheanger_der_Pestilenz",
-            "accessible": false,
+            "accessible": true,
             "category": "Participate",
             "description": "Your art on the really big screen. Find out everything you need to know to submit your animations for the Video Wall above the entrance, as well as some examples from the last year. Deadline August 10.",
-            "inMenu": false,
+            "inMenu": true,
             "keywords": "Venue, Video, LED, Wall, Entrance, Big, Large, Screen, Animation",
             "menuText": "LED Wall",
             "ogpImage": "videowall.jpg",
@@ -510,9 +547,8 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Glympse Map",
-			"uri": "glympse.php"
+			"uri": "glympse.html"
 		},
-
 		
 		"help": {
 			"owner": "@draconigen",
@@ -532,7 +568,7 @@
 			"accessible": true,
 			"inMenu": true,
 			"category": "Services",
-			"uri": "lostandfound.php",
+			"uri": "lostandfound.html",
 			"title": "Lost and Found",
 			"description": "Browse all items that were lost and found during the convention, and handed to Security for safekeeping.",
 			"keywords": "lost and found, loss, lost, missing, items",
@@ -571,13 +607,13 @@
 			"accessible": true,
 			"category": "Services",
 			"description": "Registration statistics visualized.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up, Diagram, Chart",
 			"menuText": "Registration Statistics",
 			"ogpImage": "nosecount.png",
 			"robots": "",
 			"title": "Statistics",
-			"uri": "nosecount.php"
+			"uri": "nosecount.html"
 		},
 		"daily": {
 			"owner": "@Draugvorn",
@@ -590,7 +626,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "The Daily Eurofurence",
-			"uri": "daily.php"
+			"uri": "daily.html"
 		},
 
 
@@ -631,7 +667,7 @@
 			"ogpImage": "",
 			"robots": "",
 			"title": "Policies",
-			"uri": "policies.php"
+			"uri": "policies.html"
 		},
 		"website": {
 			"owner": "@draconigen",
@@ -645,6 +681,19 @@
 			"robots": "",
 			"title": "About the Website",
 			"uri": "website.php"
+		},
+		"website/art": {
+			"owner": "@draconigen",
+			"accessible": true,
+			"category": "Policies",
+			"description": "",
+			"inMenu": false,
+			"keywords": "",
+			"menuText": "",
+			"ogpImage": "",
+			"robots": "",
+			"title": "Website Art Details",
+			"uri": "website.art.php"
 		}
 	}
 }

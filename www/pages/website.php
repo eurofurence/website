@@ -49,7 +49,7 @@
 	</p>
 	<p>See you around at Eurofurence 30!</p>
 
-	<div class="uk-position-relative" uk-slideshow="autplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
+	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
 		<div class="uk-slideshow-items uk-text-center">
 			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/waloyo-yamoni-reupload-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
 			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/sunflower-new-wide-reupload-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
@@ -142,7 +142,7 @@
 	<p><a href="https://help.eurofurence.org/contact/web/bugreport" target="_blank">Contact the Website Team</a></p>
 </section>
 
-<section>
+<section id="team">
 	<h2>Website Team</h2>
 	<p>Please direct any comments, ideas or critique about our website to the following folks:</p>
 
@@ -174,7 +174,7 @@
 	</div>
 </section>
 
-<section>
+<section id="banner-exchange">
 	<h2>Banner Exchange</h2>
 	<p><strong>Dear Convention Owner</strong>,<br />you want your convention to appear in the partners slide on the bottom of our website? <a href="https://help.eurofurence.org/contact/web" target="_blank">Drop us a message</a>.
 

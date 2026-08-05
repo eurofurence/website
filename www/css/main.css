@@ -161,6 +161,7 @@ input[name="subnav-ctl"] {
 	opacity: 0;
 }
 nav > div > ul > li:hover > ul,
+nav > div > ul > li:focus-within > ul,
 nav > div > ul > li > ul:hover,
 nav input[name="subnav-ctl"]:checked ~ ul {
 	max-height: 100vh;
@@ -214,11 +215,15 @@ main {
 
 /* landing page */
 #ef-home-banner {
+	position: relative;
 	height: 300px;
 	color: #fff;
 	border-radius: var(--ef-border-radius);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+main > #content > section > #ef-home-banner h1 {
+	color: #fff;
 }
 #ef-home-banner > div {
 	position: absolute;
@@ -290,7 +295,6 @@ main #content > section {
 }
 
 /* consent cover */
-
 .consent-cover {
 	background-color: rgba(0, 0, 0, .3);
 	color: #000;
@@ -305,6 +309,23 @@ main #content > section {
 }
 .consent-cover:hover {
 	background-color: rgba(0, 0, 0, .2);
+}
+
+/* video creators */
+.ef-people img {
+	display: inline;
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-right: 12px;
+}
+
+.ef-people h3 {
+	margin: 0;
+}
+.ef-people a {
+	text-decoration: none;
 }
 
 /* footer */

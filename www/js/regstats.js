@@ -18,6 +18,7 @@ class RegStats
         },
         lanyard: {
             normal: '#49854b',
+            contributor: '#49854b',
             sponsor: '#f5ca20',
             supersponsor: '#83559e',
             staff: '#e37529',
@@ -329,7 +330,13 @@ class RegStats
     {
         this.data = await this.fetch(year);
 
+        // update reg opening indicator, and then …
         this.updateTotal();
+
+        // … skip the rest if reg is not open yet
+        if (!this.data.open)
+            return;
+
         this.updateInterests();
         this.updateStatus();
         this.updateTypes();
@@ -451,14 +458,16 @@ class RegStats
             data: {
                 labels: [
                     "Attendee",
+                    "Contributor",
                     "Sponsor",
                     "Super Sponsor"
                 ],
                 datasets: [
                     {
-                        data: [0, 0, 0],
+                        data: [0, 0, 0, 0],
                         backgroundColor: [
                             this.colors.lanyard.normal,
+                            this.colors.lanyard.contributor,
                             this.colors.lanyard.sponsor,
                             this.colors.lanyard.supersponsor
                         ]
@@ -472,7 +481,7 @@ class RegStats
                     },
                     htmlLegend: {
                         containerID: 'ef-rs-reg-types-legend',
-                        values: [0, 0, 0]
+                        values: [0, 0, 0, 0]
                     }
                 },
                 events: []
@@ -485,6 +494,7 @@ class RegStats
     {
         const values = [
             this.data.sponsor.normal || 0,
+            this.data.sponsor.contributor || 0,
             this.data.sponsor.sponsor || 0,
             this.data.sponsor.supersponsor || 0
         ];
@@ -671,20 +681,25 @@ class RegStats
         // prevent caching for live data
         url += `?${Date.now()}`
 
-        var data = null;
+        // minimum default data for updateTotal() to run
+        // used only in case the backend does not provide a json file yet
+        var data = {
+            open: false,
+            totalcount: "N/A",
+        };
 
         try {
             data = await (await fetch(url)).json();
             if (!data)
             {
                 console.info("[ef-regstats] data", data);
-                throw "malformed data";
+                throw "no data";
             }
         }
         catch(ex)
         {
             console.error(`[ef-regstats] failed to load ${url}, reason: ${ex}`);
-            return;
+            return data;
         }
 
         return data;

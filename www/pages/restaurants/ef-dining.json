@@ -1,5 +1,5 @@
 {
-  "geoJSON": "ef29-dining.geojson",
+  "geoJSON": "ef-dining.geojson",
   "options": {
       "style": 	"ef-map.json",
       "maxBounds": [9.7231695, 53.38005232, 10.3370589, 53.7492344],

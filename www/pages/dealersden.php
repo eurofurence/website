@@ -1,3 +1,10 @@
+<?php 
+	$con_day_1 = "Wednesday, August 19, 2026";
+	$con_day_2 = "Thursday, August 20, 2026";
+	$con_day_3 = "Friday, August 21, 2026";
+	$con_day_4 = "Saturday, August 22, 2026";
+?>
+
 <style>
 figure.table {
     width: 95%;
@@ -73,7 +80,7 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Wednesday, September 3rd, 2025. (Con-Day 1)</th>
+					<th colspan="2"><?= $con_day_1 ?>. (Con-Day 1)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -93,7 +100,7 @@ small {
 			
 			<thead>
 				<tr>
-					<th colspan="2">Thursday, September 4th, 2025. (Con-Day 2)</th>
+					<th colspan="2"><?= $con_day_2 ?>. (Con-Day 2)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -133,7 +140,7 @@ small {
 		<table class="uk-table">
 			<thead>
 				<tr>
-					<th colspan="2">Friday, September 5th, 2025. (Con-Day 3)</th>
+					<th colspan="2"><?= $con_day_3 ?>. (Con-Day 3)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -161,7 +168,7 @@ small {
 
 			<thead>
 				<tr>
-					<th colspan="2">Saturday, September 6th, 2025. (Con-Day 4)</th>
+					<th colspan="2"><?= $con_day_4 ?>. (Con-Day 4)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -598,6 +605,7 @@ small {
 	<ul>
 		<li>Issues about Dealers’ Den operations, arising prior to or after the convention, should be addressed with the <a href="mailto:dealers@eurofurence.org">Dealers’ Den Management via email</a>. </li>
 		<li>All decisions made by Dealers’ Den Management in regard to any issues concerning Dealers’ Den operations are final. When in doubt about any of the rules above, please don’t be afraid to ask - we will gladly answer all your questions. However, please understand that we will not debate these rules with you during the convention.</li>
+		<li>Please ensure that the information provided in your application is truthful and correct. If the Dealers’ Den Management determines that your information is wrong or misleading, appropriate action may be taken, up to or including the cancellation of your dealership.</li>
 		<li>The Dealers’ Den Management reserves the right to revoke dealer status, dealer assistant status, dealerships, access to the Dealers’ Den, or any other granted privileges at any time for any reason, without refund.</li>
 	</ul>
 	<p><strong>Any person requesting a dealership at Eurofurence is required to agree to and accept the “Dealers’ Den Rules” set in this document.</strong></p>
