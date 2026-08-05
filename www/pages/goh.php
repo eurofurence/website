@@ -22,6 +22,49 @@
 	</div>
 </section>
 
+<section>
+	<h2>Car Happening</h2>
+	<p>Details to be announced soon.</p>
+
+	<h3>Featured</h3>
+	<div class="uk-child-width-1-3 uk-grid-small uk-margin-top" uk-lightbox="animation: fade" uk-grid>
+		<?php foreach (getPics('img/pages/goh/car/featured') as $e) { ?>
+		<div>
+			<a href="img/pages/goh/car/featured/<?= $e['file'] ?>">
+				<div class="uk-inline">
+					<img src="img/pages/goh/car/featured/<?= $e['file'] ?>" alt="" />
+					<div class="uk-overlay uk-light uk-position-bottom">
+						<?= $e['cap'] ?>
+					</div>
+				</div>
+			</a>
+		</div>
+		<?php } ?>
+	</div>
+
+	<hr />
+
+	<h3>Updates</h3>
+	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; ratio: 16:9">
+		<div class="uk-slideshow-items uk-text-center">
+			<?php foreach (getPics('img/pages/goh/car') as $e) { ?>
+			<div>
+				<img class="uk-height-1-1" src="img/pages/goh/car/<?= $e['file'] ?>" alt="">
+			</div>
+			<?php } ?>
+		</div>
+		<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+		<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+		<div>
+			<ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-margin-top uk-grid-small uk-child-width-1-6" uk-grid>
+				<?php $i = 0; foreach (getPics('img/pages/goh/car') as $e) { ?>
+				<li uk-slideshow-item="<?= $i++ ?>"><a href="#"><img src="img/pages/goh/car/<?= $e['file'] ?>" alt=""></a></li>
+				<?php } ?>
+			</ul>
+		</div>
+	</div>
+</section>
+
 <div id="kenket" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
         <h3 class="uk-modal-title">Kenket</h3>
@@ -63,3 +106,17 @@
 		<p>Check out my <a href="https://soundcloud.com/wopbol" target="_blank">🎧 Soundcloud</a>.</p>
     </div>
 </div>
+
+<?php
+
+function getPics($path) {
+	$ret = [];
+	foreach (scandir($path, SCANDIR_SORT_DESCENDING) as $filename) {
+		if (preg_match('/^(\d{2,4}-\d{2}-\d{2}-?\d*)\s+(.*)\.\w+$/', $filename, $m)) {
+			$timestamp = $m[1]; // format: YYYY-MM-DD-NNN
+			$caption   = $m[2];
+			$ret[$timestamp] = ['cap' => $caption, 'file' => $filename];
+		}
+	}
+	return $ret;
+}
