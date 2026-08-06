@@ -22,6 +22,33 @@
 <section>
 	<h1>Featured Artist: Darbaras</h1>
 
+	<div class="uk-clearfix">
+		<img src="img/pages/website/darbaras/darbaras.jpg" alt="" class="uk-margin-top uk-float-right uk-visible@s" style="border-radius: 100%" />
+		<p>Thank you for visiting my page! I'm Elise, artist from Hungary, living in France. I used to work as a 2D digital animator for a decade, though I enjoy digital art more as my creative expression.</p>
+		<p>I enjoy drawing retro futuristic or medieval settings, with a hint of sugarcoated doom and gloom. I enjoy subtle worldbuilding, environmental storytelling, through simple details and rough lines.</p>
+		<p>You can see more of my works on:</p>
+		<ul>
+			<li><a href="https://linktr.ee/eliseheider" target="_blank">Linktree</a></li>
+			<li><a href="https://x.com/EliseHeider" target="_blank">X / Twitter</a></li>
+			<li><a href="https://www.furaffinity.net/user/darbaras/" target="_blank">FurAffinity</a></li>
+			<li><a href="https://www.patreon.com/c/darbaras" target="_blank">Patreon</a></li>
+		</ul>
+		<p>While I have never attended a con myself, I visited FurEast 2026 for a day. It was fascinating to see the creativity and stellar craftsmanship of the attendees, and I do wish to make my own partial suit or be a vendor at a con one day.</p>
+		<p>I am really flattered for the invitation to contribute art for such event!</p>
+	</div>
+
+	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
+		<div class="uk-slideshow-items uk-text-center">
+			<div><img class="uk-height-1-1" src="img/pages/website/darbaras/" alt=""></div>
+		</div>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+		<div>
+			<ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-margin-top uk-grid-small" uk-grid>
+				<li uk-slideshow-item="0"><a href="#"><img src="img/pages/website/darbaras/" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
 </section>
 
 <section>
