@@ -111,7 +111,7 @@
 			<ul>
 				<li><a href="files/Art_Show_Guide_to_Decoration_and_Lighting_Options_(V1.0-20.08.2024).pdf" target="_blank" title="Guide to Decoration and Lighting Options (V1.0-20.08.2024)">[PDF] &nbsp; Guide to Decoration and Lighting Options (V1.0-20.08.2024)</a></li>
 				
-				<li><a href="files/Art_Show_Digital_Showroom_Infoflyer_(Version 1.1-19.08.2024).pdf" target="_blank" title="Digital Showroom Infoflyer (Version 1.1 - 19.08.2024)">[PDF] &nbsp; Digital Showroom Infoflyer (Version 1.1 - 19.08.2024)</a></li>
+				<li><a href="files/Art_Show_Digital_Showroom_Infoflyer_(Version_1.2-2026-08-02).pdf" target="_blank" title="Digital Showroom Infoflyer (Version 1.2 - 02.08.2026)">[PDF] &nbsp; Digital Showroom Infoflyer (Version 1.2 - 02.08.2026)</a></li>
 			</ul>
 		</p>
 	</div>
