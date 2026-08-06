@@ -26,9 +26,14 @@ const StatusFilter = Object.freeze({
     UNKNOWN: Status.UNKNOWN,
 });
 
+const YearFilter = Object.freeze({
+    ALL: "all",
+});
+
 const LFPageData = Object.freeze({
     PAGE_SIZE_KEY: "eflf.pageSize",
     DEFAULT_PAGE_SIZE: 36,
+    SEARCH_DEBOUNCE_MS: 256,
     VALID_PAGE_SIZES: [12, 24, 36, 48, 60, 120],
     MAX_PAGES_TO_SHOW: 5,
 
@@ -71,6 +76,7 @@ class LostAndFound {
     #filteredItems = [];
     #currentPage = 1;
     #pageSize = LFPageData.loadPageSize();
+    #searchDebounceTimer = null;
     #selectedItemId = "";
     #eventsBound = false;
 
@@ -121,8 +127,6 @@ class LostAndFound {
                 return right.numericId - left.numericId;
             });
 
-        this.#populateYearFilter();
-        this.#populateStatusFilter();
         this.#syncPageSizeSelect();
         this.#bindEvents();
         this.#bindModalEvents();
@@ -135,25 +139,45 @@ class LostAndFound {
             return;
         }
 
+        const clearSearchDebounce = () => {
+            if (this.#searchDebounceTimer !== null) {
+                clearTimeout(this.#searchDebounceTimer);
+                this.#searchDebounceTimer = null;
+            }
+        };
+
         const resetAndFilter = () => {
             this.#currentPage = 1;
             this.#applyFilters();
         };
 
         if (this.#searchInput) {
-            this.#searchInput.addEventListener("input", resetAndFilter);
+            this.#searchInput.addEventListener("input", () => {
+                clearSearchDebounce();
+                this.#searchDebounceTimer = setTimeout(() => {
+                    this.#searchDebounceTimer = null;
+                    resetAndFilter();
+                }, LFPageData.SEARCH_DEBOUNCE_MS);
+            });
         }
 
         if (this.#statusFilter) {
-            this.#statusFilter.addEventListener("change", resetAndFilter);
+            this.#statusFilter.addEventListener("change", () => {
+                clearSearchDebounce();
+                resetAndFilter();
+            });
         }
 
         if (this.#yearFilter) {
-            this.#yearFilter.addEventListener("change", resetAndFilter);
+            this.#yearFilter.addEventListener("change", () => {
+                clearSearchDebounce();
+                resetAndFilter();
+            });
         }
 
         if (this.#pageSizeSelect) {
             this.#pageSizeSelect.addEventListener("change", () => {
+                clearSearchDebounce();
                 this.#pageSize = parseInt(this.#pageSizeSelect.value, 10);
                 LFPageData.savePageSize(this.#pageSize);
                 resetAndFilter();
@@ -168,12 +192,18 @@ class LostAndFound {
         const status = this.#statusFilter ? this.#statusFilter.value : StatusFilter.ALL;
         const year = this.#yearFilter ? this.#yearFilter.value : "all";
 
-        this.#filteredItems = this.#items.filter((item) => {
-            const statusMatches = status === StatusFilter.ALL || item.status === status;
-            const queryMatches = !query || item.searchBlob.includes(query);
-            const yearMatches = year === "all" || item.years.has(year);
-            return statusMatches && queryMatches && yearMatches;
-        });
+        const syncedFilters = this.#syncFilterOptions(query, status, year);
+        const activeStatus = syncedFilters.status;
+        const activeYear = syncedFilters.year;
+
+        if (this.#statusFilter && this.#statusFilter.value !== activeStatus) {
+            this.#statusFilter.value = activeStatus;
+        }
+        if (this.#yearFilter && this.#yearFilter.value !== activeYear) {
+            this.#yearFilter.value = activeYear;
+        }
+
+        this.#filteredItems = this.#filterItems(query, activeStatus, activeYear);
 
         this.#renderItems();
         this.#renderPagination();
@@ -186,6 +216,117 @@ class LostAndFound {
         }
 
         this.#renderState(null, null);
+    }
+
+    #filterItems(query, status, year) {
+        return this.#items.filter((item) => {
+            const statusMatches = status === StatusFilter.ALL || item.status === status;
+            const queryMatches = !query || item.searchBlob.includes(query);
+            const yearMatches = year === "all" || item.years.has(year);
+            return statusMatches && queryMatches && yearMatches;
+        });
+    }
+
+    #syncFilterOptions(query, status, year) {
+        const statusFacetItems = this.#filterItems(query, StatusFilter.ALL, year);
+        const yearFacetItems = this.#filterItems(query, status, YearFilter.ALL);
+        this.#renderStatusFilterOptions(this.#countStatuses(statusFacetItems), status);
+        this.#renderYearFilterOptions(this.#countYears(yearFacetItems), year);
+
+        return { status, year };
+    }
+
+    #countStatuses(items) {
+        const counts = new Map([
+            [Status.LOST, 0],
+            [Status.FOUND, 0],
+            [Status.UNKNOWN, 0],
+        ]);
+
+        items.forEach((item) => {
+            counts.set(item.status, (counts.get(item.status) ?? 0) + 1);
+        });
+
+        return counts;
+    }
+
+    #countYears(items) {
+        const counts = new Map();
+        items.forEach((item) => {
+            item.years.forEach((itemYear) => {
+                counts.set(itemYear, (counts.get(itemYear) ?? 0) + 1);
+            });
+        });
+
+        return counts;
+    }
+
+    #allYearsSorted() {
+        const years = new Set();
+        this.#items.forEach((item) => {
+            item.years.forEach((itemYear) => {
+                years.add(itemYear);
+            });
+        });
+
+        return [...years].sort((left, right) => right.localeCompare(left));
+    }
+
+    #renderStatusFilterOptions(counts, selectedStatus) {
+        if (!this.#statusFilter) {
+            return;
+        }
+
+        const previous = selectedStatus || this.#statusFilter.value || StatusFilter.ALL;
+        const hasUnknownInDataset = this.#items.some((item) => item.status === Status.UNKNOWN);
+        this.#statusFilter.replaceChildren();
+
+        const allOption = document.createElement("option");
+        allOption.value = StatusFilter.ALL;
+        allOption.textContent = `All statuses`;
+        this.#statusFilter.appendChild(allOption);
+
+        [Status.LOST, Status.FOUND, Status.UNKNOWN].forEach((filterStatus) => {
+            const count = counts.get(filterStatus) ?? 0;
+            if (filterStatus === Status.UNKNOWN && !hasUnknownInDataset) {
+                return;
+            }
+
+            const option = document.createElement("option");
+            option.value = filterStatus;
+            option.textContent = `${StatusMeta[filterStatus].label} (${count})`;
+            option.disabled = count === 0 && filterStatus !== previous;
+            this.#statusFilter.appendChild(option);
+        });
+
+        const hasPrevious = [...this.#statusFilter.options].some((option) => option.value === previous);
+        this.#statusFilter.value = hasPrevious ? previous : StatusFilter.ALL;
+    }
+
+    #renderYearFilterOptions(counts, selectedYear) {
+        if (!this.#yearFilter) {
+            return;
+        }
+
+        const previous = selectedYear || this.#yearFilter.value || "all";
+        this.#yearFilter.replaceChildren();
+
+        const allOption = document.createElement("option");
+        allOption.value = "all";
+        allOption.textContent = `All years`;
+        this.#yearFilter.appendChild(allOption);
+
+        this.#allYearsSorted().forEach((yearOption) => {
+            const count = counts.get(yearOption) ?? 0;
+            const option = document.createElement("option");
+            option.value = yearOption;
+            option.textContent = `${yearOption} (${count})`;
+            option.disabled = count === 0 && yearOption !== previous;
+            this.#yearFilter.appendChild(option);
+        });
+
+        const hasPrevious = [...this.#yearFilter.options].some((option) => option.value === previous);
+        this.#yearFilter.value = hasPrevious ? previous : "all";
     }
 
     #renderItems() {
@@ -384,56 +525,6 @@ class LostAndFound {
             image.src = this.#config.noImageUrl;
         };
         return image;
-    }
-
-    #populateYearFilter() {
-        if (!this.#yearFilter) return;
-
-        const counts = new Map();
-        this.#items.forEach((item) => {
-            item.years.forEach((year) => {
-                counts.set(year, (counts.get(year) ?? 0) + 1);
-            });
-        });
-
-        const sorted = [...counts.entries()].sort((a, b) => b[0].localeCompare(a[0]));
-        sorted.forEach(([year, count]) => {
-            const option = document.createElement("option");
-            option.value = year;
-            option.textContent = `${year} (${count})`;
-            this.#yearFilter.appendChild(option);
-        });
-    }
-
-    #populateStatusFilter() {
-        if (!this.#statusFilter) return;
-
-        const counts = new Map([
-            [Status.LOST, 0],
-            [Status.FOUND, 0],
-            [Status.UNKNOWN, 0],
-        ]);
-
-        this.#items.forEach((item) => {
-            counts.set(item.status, (counts.get(item.status) ?? 0) + 1);
-        });
-
-        [...this.#statusFilter.options].forEach((option) => {
-            if (option.value !== StatusFilter.ALL) {
-                const count = counts.get(option.value) ?? 0;
-                const meta = StatusMeta[option.value];
-                const label = meta ? meta.label : option.textContent;
-
-                // Show "Unknown" option only if there are items with unknown status
-                if (option.value === StatusFilter.UNKNOWN && count === 0) {
-                    option.remove();
-                    return;
-                }
-
-                option.textContent = `${label} (${count})`;
-                option.disabled = count === 0;
-            }
-        });
     }
 
     #syncPageSizeSelect() {

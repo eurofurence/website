@@ -27,6 +27,7 @@
     .lf-topbar-pagination {
         position: absolute;
         inset: 0;
+        margin: 0 25%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,7 +49,7 @@
         transition: transform 256ms ease;
     }
     .lf-card:hover .lf-image {
-        transform: scale(1.04);
+        transform: scale(1.02);
     }
 
     .lf-title {
@@ -213,6 +214,14 @@
     }
 
     @media (max-width: 639px) {
+        .lf-toolbar-card {
+            font-size: 0.8rem;
+            padding: 20px;
+        }
+        .lf-toolbar-card input {
+            padding-right: 8px !important;
+        }
+
         .lf-topbar {
             position: static;
             min-height: 0;
@@ -224,6 +233,7 @@
         .lf-topbar-pagination {
             position: static;
             inset: auto;
+            margin: 0;
             pointer-events: auto;
         }
 
