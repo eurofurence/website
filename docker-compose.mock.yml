@@ -1,11 +1,11 @@
 services:
-  www:
+  www-mock:
     build: .
     ports:
       - "80:80"
     volumes:
       - ./www:/var/www/html/
     environment:
-      - USE_MOCK_DATA=false
+      - USE_MOCK_DATA=true
     networks:
       - default

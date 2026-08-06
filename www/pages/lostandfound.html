@@ -1,11 +1,366 @@
+<style>
+    .lf-card {
+        transition: transform 128ms ease;
+        cursor: pointer;
+    }
+    .lf-card:hover {
+        transform: translateY(-2px);
+    }
 
-<!-- temporary fix until someone (ehem) redesigns this page, it needs some more love -->
-<style>.uk-height-max-medium {max-height: 150px}</style>
+    .lf-card-body {
+        justify-content: space-between;
+        padding-top: 24px;
+    }
 
-<section>
+    .lf-media {
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        display: block;
+        border-radius: var(--ef-border-radius) var(--ef-border-radius) 0 0;
+    }
+
+    .lf-topbar {
+        position: relative;
+        min-height: 40px;
+    }
+
+    .lf-topbar-pagination {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lf-topbar-meta {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50%; /* for bigger screens topbar pagination is absolute so we need to leave space in the middle */
+        flex-wrap: nowrap;
+    }
+
+    .lf-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 256ms ease;
+    }
+    .lf-card:hover .lf-image {
+        transform: scale(1.04);
+    }
+
+    .lf-title {
+        margin: 0;
+    }
+
+    .lf-item-description {
+        margin-bottom: 12px;
+        line-clamp: 4;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .lf-card:hover .lf-item-description {
+        line-clamp: unset;
+        -webkit-line-clamp: unset;
+    }
+
+    .lf-item-id {
+        margin: 0;
+    }
+
+    .lf-meta-list {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .lf-meta-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        padding-top: 8px;
+        margin-top: 8px;
+    }
+    .lf-meta-list li:first-of-type {
+        border-top: 1px solid #EEEEEE;
+    }
+
+    .lf-meta-label {
+        font-weight: 500;
+    }
+
+    .lf-label {
+        border-radius: 999px;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 2px 8px;
+        pointer-events: none;
+        width: fit-content;
+    }
+    .lf-label--lost {
+        background: #AF1632;
+    }
+    .lf-label--found {
+        background: #13A35B;
+    }
+    .lf-label--returned {
+        background: #1277DB;
+    }
+    .lf-label--unknown {
+        background: #888888;
+    }
+
+    option:disabled {
+        color: #BEBEBE !important;
+    }
+
+    .uk-alert-primary {
+        color: #FFFFFF;
+    }
+    .uk-alert-primary:hover {
+        background-color: var(--ef-green) !important;
+    }
+
+    .uk-pagination li a {
+        text-decoration: none;
+    }
+    .uk-pagination li.uk-disabled {
+        opacity: 0.32;
+    }
+
+    .lf-pagesize-wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .lf-item-modal {
+        overflow: hidden;
+    }
+
+    .lf-item-modal-dialog {
+        background: var(--ef-palette-2);
+    }
+
+    .lf-item-modal-layout {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .lf-item-modal-media {
+        background: var(--ef-green);
+    }
+
+    .lf-item-modal-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 100vh;
+    }
+
+    .lf-item-modal-info {
+        padding: 32px 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+    .lf-item-modal-info > .lf-label {
+        margin: 0 24px;
+    }
+    .lf-item-modal-info > *:not(.lf-label) {
+        padding: 0 24px;
+    }
+
+    .lf-item-modal-title {
+        margin: 16px 0 0;
+        line-height: 1.5;
+    }
+
+    .lf-item-modal-id {
+        margin: 4px 0 16px;
+    }
+
+    .lf-modal-description {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .uk-lightbox-items > * > img {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        object-fit: contain;
+    }
+
+    .uk-modal-close-full {
+        padding: 15px;
+        background: var(--ef-green);
+        transition: background 128ms ease;
+    }
+    .uk-modal-close-full svg {
+        height: 24px;
+        color: var(--ef-palette-2);
+    }
+    .uk-modal-close-full:hover {
+        background: var(--ef-green-light);
+    }
+
+    @media (max-width: 639px) {
+        .lf-topbar {
+            position: static;
+            min-height: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 8px;
+        }
+
+        .lf-topbar-pagination {
+            position: static;
+            inset: auto;
+            pointer-events: auto;
+        }
+
+        .lf-topbar-meta {
+            gap: 8px;
+        }
+
+        .lf-pagesize-wrap label {
+            display: none;
+        }
+    }
+
+    @media (min-width: 960px) {
+        .lf-item-modal-layout {
+            grid-template-columns: 3fr 1fr;
+        }
+
+        .lf-item-modal-info {
+            padding: 16px 0;
+        }
+        .lf-item-modal-info > .lf-label {
+            margin: 0 36px;
+        }
+        .lf-item-modal-info > *:not(.lf-label) {
+            padding: 0 36px;
+        }
+
+        .uk-modal-close-full {
+            background: var(--ef-palette-2);
+        }
+        .uk-modal-close-full svg {
+            color: inherit;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        .lf-toolbar-card {
+            padding: 32px;
+        }
+
+        .lf-card-body {
+            padding: 16px 24px;
+        }
+    }
+</style>
+
+<section id="ef-lostandfound">
     <h1>Lost and Found</h1>
+    <p>
+        All Items found at the convention are stored and can be redeemed only at the Security FrontDesk at next Eurofurence in Hamburg.
+    </p>
 
-    <p>All Items found at the convention are stored and can be redeemed only at the Security FrontDesk at next Eurofurence in Hamburg.</p>
+    <div class="uk-card uk-card-default uk-card-body uk-margin-bottom lf-toolbar-card">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-expand@m">
+                <label for="ef-lostandfound-search" class="uk-form-label">Search Items</label>
+                <div class="uk-inline uk-width-1-1">
+                    <span class="uk-form-icon" uk-icon="icon: search"></span>
+                    <input
+                        id="ef-lostandfound-search"
+                        type="search"
+                        class="uk-input"
+                        list="ef-lostandfound-suggestions"
+                        placeholder="Search by title, description, or item ID"
+                    />
+                    <datalist id="ef-lostandfound-suggestions"></datalist>
+                </div>
+            </div>
 
-    <div id="ef-lostandfound" class="uk-grid-small uk-grid-match uk-child-width-1-2@l uk-child-width-1-4@xl uk-margin-bottom" uk-grid></div>
+            <div class="uk-width-1-4@m uk-width-1-2@s">
+                <label for="ef-lostandfound-status" class="uk-form-label">Status</label>
+                <select id="ef-lostandfound-status" class="uk-select">
+                    <option value="all">All statuses</option>
+                    <option value="L">Lost</option>
+                    <option value="F">Found</option>
+                    <option value="U">Unknown</option>
+                </select>
+            </div>
+
+            <div class="uk-width-1-4@m uk-width-1-2@s">
+                <label for="ef-lostandfound-year" class="uk-form-label">Year</label>
+                <select id="ef-lostandfound-year" class="uk-select">
+                    <option value="all">All years</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="ef-lostandfound-state" class="uk-margin-bottom" aria-live="polite"></div>
+
+    <div class="uk-margin-bottom lf-topbar" id="ef-lostandfound-bar-top">
+        <div class="lf-topbar-meta">
+            <span id="ef-lostandfound-summary" class="uk-text-meta"></span>
+            <div class="lf-pagesize-wrap">
+                <label for="ef-lostandfound-pagesize" class="uk-text-meta uk-text-nowrap">Per page:</label>
+                <select id="ef-lostandfound-pagesize" class="uk-select uk-form">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36" selected>36</option>
+                    <option value="48">48</option>
+                    <option value="60">60</option>
+                    <option value="120">120</option>
+                </select>
+            </div>
+        </div>
+        <div class="lf-topbar-pagination">
+            <ul id="ef-lostandfound-pagination-top" class="uk-pagination uk-margin-remove" uk-margin></ul>
+        </div>
+    </div>
+
+    <div
+        id="ef-lostandfound-items"
+        class="uk-grid-small uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@l uk-child-width-1-4@xl uk-margin-bottom"
+        uk-grid
+    ></div>
+
+    <ul id="ef-lostandfound-pagination-bottom" class="uk-pagination uk-flex-center uk-margin-remove"></ul>
+
+    <div id="ef-lostandfound-modal" class="uk-modal-full lf-item-modal" uk-modal>
+        <div class="uk-modal-dialog lf-item-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="lf-item-modal-layout">
+                <div class="lf-item-modal-media" uk-lightbox="animation: fade">
+                    <a id="ef-lostandfound-modal-image-link" class="lf-item-modal-image-link" href="#">
+                        <img id="ef-lostandfound-modal-image" class="lf-item-modal-image" src="" alt="" />
+                    </a>
+                </div>
+                <div class="lf-item-modal-info">
+                    <span id="ef-lostandfound-modal-status" class="uk-label lf-label"></span>
+                    <h2 id="ef-lostandfound-modal-title" class="uk-card-title lf-item-modal-title"></h2>
+                    <p id="ef-lostandfound-modal-id" class="uk-text-meta lf-item-modal-id"></p>
+                    <p id="ef-lostandfound-modal-description" class="uk-text-muted uk-overflow-auto lf-modal-description"></p>
+                    <ul id="ef-lostandfound-modal-timeline" class="uk-list uk-list-collapse lf-meta-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<script src="js/lostandfound.js"></script>
