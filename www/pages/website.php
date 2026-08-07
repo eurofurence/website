@@ -20,7 +20,7 @@
 </style>
 
 <section>
-	<h1>Featured Artist: Darbaras</h1>
+	<h1>Featured Artist: Darbaras / EliseHeider</h1>
 
 	<div class="uk-clearfix">
 		<img src="img/pages/website/darbaras/darbaras.jpg" alt="" class="uk-margin-top uk-float-right uk-visible@s" style="border-radius: 100%" />
@@ -39,13 +39,17 @@
 
 	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
 		<div class="uk-slideshow-items uk-text-center">
-			<div><img class="uk-height-1-1" src="img/pages/website/darbaras/" alt=""></div>
+			<?php for ($i=0; $i < 12; $i++) { ?>
+			<div><img class="uk-height-1-1" src="img/pages/website/darbaras/artworks/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""></div>
+			<?php } ?>
 		</div>
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
 		<div>
 			<ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-margin-top uk-grid-small" uk-grid>
-				<li uk-slideshow-item="0"><a href="#"><img src="img/pages/website/darbaras/" alt=""></a></li>
+				<?php for ($i=0; $i < 12; $i++) { ?>
+				<li uk-slideshow-item="<?= $i ?>"><a href="#"><img src="img/pages/website/darbaras/artworks/s/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""></a></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
