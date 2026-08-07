@@ -15,6 +15,18 @@ either
 
 > To run mock enviroment use `docker compose -f docker-compose.mock.yml up` instead of `docker compose up`
 
+## SCSS Support
+
+Docker starts an additional `scss-watch` service that compiles SCSS changes automatically.
+The watcher uses standard file change events and rebuilds on SCSS add/change/remove (fallbacks to polling mode for local docker container).
+
+* Place SCSS sources anywhere in `www/`.
+* Files ending in `.scss` are treated as entry files, except files prefixed with `_`.
+* Output CSS behavior:
+  * All compiled files are saved in `www/css/`.
+  * Files in `www/scss/` compile to `www/css/` directly.
+  * Files elsewhere in `www/` compile to mirrored subpaths in `www/css/`.
+
 ## Continuous Deployment
 
 GitHub Workflows described in `.github/workflows/` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:

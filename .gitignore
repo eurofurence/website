@@ -12,3 +12,6 @@ www/modified.json
 
 # error and page rating reporting via telegram, contains api keys
 www/telegram.config.php
+
+# local npm dependencies
+node_modules/

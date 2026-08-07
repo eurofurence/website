@@ -9,3 +9,13 @@ services:
       - USE_MOCK_DATA=true
     networks:
       - default
+
+  scss-watch:
+    image: node:20-alpine
+    working_dir: /workspace
+    command: sh -c "npm install --no-audit --no-fund && npm run scss:watch"
+    restart: unless-stopped
+    volumes:
+      - ./:/workspace
+    networks:
+      - default

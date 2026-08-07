@@ -1,0 +1,14 @@
+{
+    "name": "ef-website",
+    "private": true,
+    "version": "1.0.0",
+    "description": "EF-website",
+    "scripts": {
+        "scss:build": "node scripts/build-scss.mjs",
+        "scss:watch": "node scripts/watch-scss.mjs"
+    },
+    "devDependencies": {
+        "chokidar": "^4.0.3",
+        "sass": "^1.93.2"
+    }
+}

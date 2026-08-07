@@ -14,6 +14,29 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Detect SCSS entry files
+        id: scss
+        run: |
+          if find www -type f -name "*.scss" ! -name "_*" | grep -q .; then
+            echo "has_entries=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_entries=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node.js
+        if: steps.scss.outputs.has_entries == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install SCSS tooling
+        if: steps.scss.outputs.has_entries == 'true'
+        run: npm ci --no-audit --no-fund
+
+      - name: Build SCSS assets
+        if: steps.scss.outputs.has_entries == 'true'
+        run: npm run scss:build
+
       - name: Configure SSH
         run: |
           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
