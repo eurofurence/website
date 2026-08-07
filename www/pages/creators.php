@@ -123,7 +123,7 @@
             ]
         ],
 		[
-            'title' => 'Hakog',
+            'title' => 'Hako',
             'image' => 'Hakogori.jpg',
             'links' => [
                 [
@@ -768,6 +768,193 @@
                     'name' => 'Twitch',
                     'icon' => 'twitch',
                     'link' => 'https://www.twitch.tv/kurtdevos'
+                ]
+            ]
+        ],
+		[
+            'title' => 'SE21',
+            'image' => 'SE21.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@SE21_Official'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Lexie Furry Wolf',
+            'image' => 'LexieFurryWolf.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@LexieFurryWolf'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Kyrox',
+            'image' => 'Kyrox.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@kyrox.vrc'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Sylkar Truecoat',
+            'image' => 'xeyla_lioness.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/sylkar_truecoat'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Xeyla',
+            'image' => 'sylkar_truecoat.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/xeyla.lioness'
+                ]
+            ]
+        ],
+		[
+            'title' => 'TenzotheTiger',
+            'image' => 'TenzotheTiger.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@TenzotheTiger'
+                ]
+            ]
+        ],
+		[
+            'title' => 'miks',
+            'image' => 'miks.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@miki4321'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Bardic RJ',
+            'image' => 'BardicRJ.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@BardicRJ'
+                ]
+            ]
+        ],
+		[
+            'title' => 'JasonWoof',
+            'image' => 'JasonWoof.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@jasonwoof1'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Keno',
+            'image' => 'kenodeer.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/kenodeer'
+                ]
+            ]
+        ],
+		[
+            'title' => 'BitHusky',
+            'image' => 'BitHusky.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@bithusky'
+                ]
+            ]
+        ],
+		[
+            'title' => 'TheNiceWolf',
+            'image' => 'TheNiceWolf.jpg',
+            'links' => [
+                [
+                    'name' => 'Twitch',
+                    'icon' => 'twitch',
+                    'link' => 'https://www.twitch.tv/thenicewolf'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Kokou',
+            'image' => 'Kokou.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@KokouUwU'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Karri / Karrigallu',
+            'image' => 'karri_fluff.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/karri_fluff'
+                ]
+            ]
+        ],
+		[
+            'title' => 'LolaPawCreations',
+            'image' => 'lolathebunny.jpg',
+            'links' => [
+                [
+                    'name' => 'Instagram',
+                    'icon' => 'instagram',
+                    'link' => 'https://www.instagram.com/official_lolathebunny'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Furry Camera',
+            'image' => 'FurryCamera.jpg',
+            'links' => [
+                [
+                    'name' => 'Youtube',
+                    'icon' => 'youtube',
+                    'link' => 'https://www.youtube.com/@FurryCamera'
+                ]
+            ]
+        ],
+		[
+            'title' => 'Taka Chaos',
+            'image' => 'Taka_Chaos.jpg',
+            'links' => [
+                [
+                    'name' => 'TikTok',
+                    'icon' => 'tiktok',
+                    'link' => 'https://www.tiktok.com/@taka.chaos'
                 ]
             ]
         ]
