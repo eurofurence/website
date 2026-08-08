@@ -5,7 +5,10 @@
     "description": "EF-website",
     "scripts": {
         "scss:build": "node scripts/build-scss.mjs",
-        "scss:watch": "node scripts/watch-scss.mjs"
+        "scss:watch": "node scripts/watch-scss.mjs",
+        "style:check": "node scripts/style-reference-check.mjs",
+        "style:fix": "node scripts/style-reference-fix.mjs",
+        "style:ensure": "node scripts/style-reference-ensure.mjs"
     },
     "devDependencies": {
         "chokidar": "^4.0.3",

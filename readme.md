@@ -21,11 +21,14 @@ Docker starts an additional `scss-watch` service that compiles SCSS changes auto
 The watcher uses standard file change events and rebuilds on SCSS add/change/remove (fallbacks to polling mode for local docker container).
 
 * Place SCSS sources anywhere in `www/`.
-* Files ending in `.scss` are treated as entry files, except files prefixed with `_`.
 * Output CSS behavior:
   * All compiled files are saved in `www/css/`.
   * Files in `www/scss/` compile to `www/css/` directly.
   * Files elsewhere in `www/` compile to mirrored subpaths in `www/css/`.
+* [package.json](package.json) contains some helper scripts to make sure there are no `.scss` references:
+  * `npm run style:check` fails if a runtime file still points at `.scss`.
+  * `npm run style:fix` rewrites obvious `.scss` references to `.css` in runtime files.
+  * `npm run style:ensure` checks, tries to fix, and then re-checks (useful for continuous deploy)
 
 ## Continuous Deployment
 

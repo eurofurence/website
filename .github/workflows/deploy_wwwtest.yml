@@ -37,6 +37,9 @@ jobs:
         if: steps.scss.outputs.has_entries == 'true'
         run: npm run scss:build
 
+      - name: Ensure style references
+        run: npm run style:ensure
+
       - name: Configure SSH
         run: |
           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
