@@ -25,6 +25,7 @@ The watcher uses standard file change events and rebuilds on SCSS add/change/rem
   * All compiled files are saved in `www/css/`.
   * Files in `www/scss/` compile to `www/css/` directly.
   * Files elsewhere in `www/` compile to mirrored subpaths in `www/css/`.
+* [UIkit Sass integration](www/scss/uikit.scss) follows the official docs https://getuikit.com/docs/sass
 * [package.json](package.json) contains some helper scripts to make sure there are no `.scss` references:
   * `npm run style:check` fails if a runtime file still points at `.scss`.
   * `npm run style:fix` rewrites obvious `.scss` references to `.css` in runtime files.

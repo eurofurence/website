@@ -88,7 +88,7 @@ export async function buildAllScss() {
         const result = compile(scssFile, {
             style: "expanded",
             sourceMap: false,
-            loadPaths: [path.dirname(scssFile), scssSourceRoot, wwwRoot],
+            loadPaths: [path.dirname(scssFile), scssSourceRoot, wwwRoot, path.join(projectRoot, "node_modules")],
         });
 
         await mkdir(path.dirname(outFile), { recursive: true });
