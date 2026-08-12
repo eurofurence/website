@@ -214,23 +214,21 @@ class Daily {
                 ? groups.find((group) => group && group.year === yearToShowAsCurrentInt) || null
                 : null;
         const additionalGroupsToShow = this.#toIntegerOrNull(DailyPageConfig.previousEditionsToShow) || 0;
-        const visible = currentEditionGroup ? [currentEditionGroup] : [];
 
-        if (additionalGroupsToShow > 0) {
-            for (const group of groups) {
-                if (currentEditionGroup && group.key === currentEditionGroup.key) {
-                    continue;
-                }
-
-                visible.push(group);
-
-                if (visible.length >= additionalGroupsToShow) {
-                    break;
-                }
+        if (currentEditionGroup) {
+            const visible = [currentEditionGroup];
+            if (additionalGroupsToShow > 0) {
+                // Filter groups older than current edition year
+                const olderGroups = groups.filter((group) => group.year < currentEditionGroup.year);
+                olderGroups.sort((left, right) => right.year - left.year);
+                visible.push(...olderGroups.slice(0, additionalGroupsToShow));
             }
+            return visible;
+        } else if (additionalGroupsToShow > 0) {
+            const sorted = [...groups].sort((left, right) => right.year - left.year);
+            return sorted.slice(0, additionalGroupsToShow);
         }
-
-        return visible;
+        return [];
     }
 
     #createIssueCard(issue) {
