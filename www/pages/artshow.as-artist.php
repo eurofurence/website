@@ -6,8 +6,8 @@
 	$con_day_3 = "Friday, August 21, 2026";
 	$con_day_4 = "Saturday, August 22, 2026";
 	// $seating_plan_thumb = "www/img/pages/artshow/XXX.jpg";
-	$seating_plan_version = "Version 1 as of July 15, 2026";
-	$seating_plan_file = "files/Art_Show_Panel_Assignment_Online_Version_V1_5_1_B3R9_15_07_2026.pdf";
+	$seating_plan_version = "Version 1.9 as of August 12, 2026.";
+	$seating_plan_file = "files/Art_Show_Panel_Assignment_Online_Version_V1_9_1_V3R9_12_08_2026.pdf";
 ?>
 
 <section class="uk-column-1-2@l">
