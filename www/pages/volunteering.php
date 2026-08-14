@@ -106,14 +106,14 @@
       ],
       [
         'name' => 'Noohm',
-        'image' => 'eflogo.png',
+        'image' => 'IMG_0079.PNG',
         'description' => 'Corgi artist since 2017, i have a dark and slaying style 🖤✨',
         'link' => 'https://linktr.ee/Noohm',
         'linktype' => 'Linktree'
       ],
       [
-        'name' => 'Anupap Kasoo',
-        'image' => 'eflogo.png',
+        'name' => 'Anupap Kasook',
+        'image' => 'Icon_AnupapKasook_2.jpg',
         'description' => 'Thai-German furry comic artist and illustrator from Germany',
         'link' => 'https://www.furaffinity.net/user/anupap/',
         'linktype' => 'Gallery'
@@ -144,7 +144,7 @@
 <section> 
 	<div> 
 		<h2>How to Sign Up</h2>
-			<p><strong>Becoming a Critter is easy!</strong> Simply visit <a href="https://critter.eurofurence.org" target="_blank"> critter.eurofurence.org</a> nd log in with your Eurofurence Identity credentials. Once logged in, complete the onboarding process to become a Critter. During onboarding, you’ll need to provide at least one valid contact point so we can reach you if needed.</p> 
+			<p><strong>Becoming a Critter is easy!</strong> Simply visit <a href="https://critter.eurofurence.org" target="_blank"> critter.eurofurence.org</a> and log in with your Eurofurence Identity credentials. Once logged in, complete the onboarding process to become a Critter. During onboarding, you’ll need to provide at least one valid contact point so we can reach you if needed.</p> 
       <p>After completing your onboarding, check out our new <strong>Critter Telegram Bot</strong> to stay connected and receive important updates and information throughout the event.</p>
 				
 			<div uk-lightbox>

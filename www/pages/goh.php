@@ -12,7 +12,7 @@
 	</script>
 
 	<div class="uk-column-1-2@l uk-clearfix" uk-lightbox>
-		<p>ƒ<a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
+		<p><a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
 
 		<p>Their creations include colorful murals, stickers, illustrations, and mixed-media works featuring expressive characters such as bats, hyenas, coyotes, dogs, and many other creatures. Their name is a playful reference to the rebellious spirit traditionally associated with street art, reflected in their motto: <span class="uk-text-italic">"So many walls, so little time..."</span></p>
 
