@@ -12,6 +12,16 @@
 
 <section class="uk-column-1-2@l">
 	<h1 class="uk-column-span">Art Show - Guide for Artists</h1>
+	<div id="location-art-show-artist"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-art-show-artist', {
+				title: 'Art Show',
+				subtitle: 'CCH: Level 0, Hall H, Sections 5-6',
+				slug: 'art-show'
+			}, { tooltip: 'Art Show location on map' });
+		});
+	</script>
 	<div>
 		<caption><h3 class="reset-font">Getting Started</h3></caption>
 		<p>

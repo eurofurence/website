@@ -1,5 +1,15 @@
 <section>
     <h1>Play with the TAIKO BASTARDS!</h1>
+    <div id="location-arena-taiko"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createEFnavTrigger('location-arena-taiko', {
+				title: 'Taiko Workshop and Concert (Arena Stage)',
+				subtitle: 'CCH: Level 0, Hall H, Sections 1-2 (Arena Stage)',
+				slug: 'arena-stage'
+            }, { tooltip: 'Arena Stage location on map' });
+        });
+    </script>
 
     <div class="uk-column-1-2@l">
         <p>Big drums go boom! TAIKO BASTARDS are an international group of artists mostly local from Hamburg with an original take on traditional Taiko drumming. Their energetic stage performance will have you on the edge of your seat.</p>

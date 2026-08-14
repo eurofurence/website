@@ -5,6 +5,16 @@
 
 <section>
 	<h1>Fursuit Support</h1>
+    <div id="location-fursuit-lounge"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-fursuit-lounge', {
+				title: 'Fursuit Lounge',
+				subtitle: 'CCH: Level 0, Hall H, Sections 3-4',
+				slug: 'fursuit-lounge'
+			}, { tooltip: 'Fursuit Lounge location on map' });
+		});
+	</script>
 	<div class="uk-column-1-2@l">
 		<p>With over 40% of all attendees being fursuiters, Eurofurence ranks among the major furry conventions with the highest costumer quotas. It is incredibly nice to see so many furry critters around all the time and we would like to thank you all for returning again and making everyone's experience so special.</p>
 		<p>To help you finding your way around the convention, following you can find some information and useful tips for fursuiters at Eurofurence.</p>

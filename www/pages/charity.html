@@ -1,5 +1,24 @@
 <section>
     <h1>Seehundstation Friedrichskoog</h1>
+    <div id="location-charity"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createEFnavTrigger('location-charity', [
+                {
+                    id: 'charity-booth-location',
+                    title: 'Charity Booth',
+                    subtitle: 'CCH: Level 0, Foyer 3 + H',
+                    slug: 'charity-booth'
+                },
+                {
+                    id: 'doodles-charity-location',
+                    title: 'Doodles for Charity',
+                    subtitle: 'CCH: Level 0, Foyer 4 (Artists\' Lounge)',
+                    slug: 'charity-doodles'
+                },
+            ], { tooltip: 'Charity locations on map' });
+        });
+    </script>
     <div class="uk-column-1-2@l">
         <div>
             <p>
