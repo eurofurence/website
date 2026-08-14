@@ -1,5 +1,15 @@
 <section>
 	<h1>Animal Art Crimes</h1>
+	<div id="location-goh"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-goh', {
+				title: 'Guest of Honor',
+				subtitle: 'CCH: Level 0, Foyer 4 (next to Artists\' Lounge)',
+				slug: 'goh'
+			}, { tooltip: 'Guest of Honor location on map' });
+		});
+	</script>
 
 	<div class="uk-column-1-2@l uk-clearfix" uk-lightbox>
 		<p><a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>

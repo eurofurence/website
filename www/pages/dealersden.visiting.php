@@ -1,4 +1,4 @@
-<?php 
+<?php
 	// $con_day_1 = "Wednesday, August 19, 2026";
 	$con_day_2 = "Thursday, August 20, 2026";
 	$con_day_3 = "Friday, August 21, 2026";
@@ -9,6 +9,16 @@
 
 <section>
 	<h1>Visiting the Dealers’ Den</h1>
+    <div id="location-dealers-visiting"></div>
+    <script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-dealers-visiting', {
+				title: 'Dealers\' Den',
+				subtitle: 'CCH: Level 0, Hall H, Sections 7-8',
+				slug: 'dealers-den'
+			}, { tooltip: 'Dealers\' Den location on map' });
+		});
+	</script>
 	<div class="uk-column-1-2@l">
 		<p>Welcome to the Eurofurence Dealers' Den! This is your ultimate guide to dive into this creative realm, where imagination knows no bounds. Here, talented artists, creators, and vendors come together to create a vibrant experience of creativity and passion. Whether you're looking for custom art, merchandise, or something else entirely, you'll find it here!</p>
 

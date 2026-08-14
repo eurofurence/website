@@ -6,6 +6,16 @@
 
 <section>
 		<h1 id="start">Art Show - Guide for Bidders</h1>
+		<div id="location-art-show-visitor"></div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				createEFnavTrigger('location-art-show-visitor', {
+                    title: 'Art Show',
+                    subtitle: 'CCH: Level 0, Hall H, Sections 5-6',
+                    slug: 'art-show'
+				}, { tooltip: 'Art Show location on map' });
+			});
+		</script>
 		<p class="uk-text-center"><a href="artshow#bidnumber" title="How to register as a bidder">Register for a Bidder Number</strong></a> | <a href="artshow#howtobid" title="How bidding works">How to bid</strong></a> |	<a href="artshow#closing" title="How the closing works">Closing and final Auction</strong></a> | <a href="artshow#pickup" title="How to collect your artwork">Sales and Artwork Pickup</strong></a> | <a href="artshow#tips" title="Tip on how to bid">Tips on bidding</strong></a></p>
 
 		<p>This section will inform you in advance about the bidding process. You don't actually have to take any action before the convention itself; there is no bidder pre-registration.</p>
