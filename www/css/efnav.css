@@ -68,6 +68,8 @@
     padding: 0;
     border: 0;
     cursor: pointer;
+    background: none;
+    background-color: transparent;
 }
 
 .efnav-launcher > .efnav-icon {
