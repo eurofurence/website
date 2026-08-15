@@ -1,5 +1,20 @@
 <section>
 	<h1>Accessibility</h1>
+
+    <div id="location-info-desk"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createEFnavTrigger('location-info-desk', [
+                {
+                    id: 'info-desk-location',
+                    title: 'Info Desk',
+                    subtitle: 'CCH: Level 1, Foyer X',
+                    slug: 'info'
+                }
+            ], { tooltip: 'Info Desk location on map' });
+        });
+    </script>
+
 	<p>Everyone deserves the right to participate fully in Eurofurence and our community - regardless of needs or disabilities. Below, attendees can find details on the steps we’re taking to ensure our convention is as accessible and inclusive as possible. This information can change before the convention begins, we recommend to visit this page again shortly before you start your journey.</p>
 	<h2 class="uk-margin-remove-top">Content</h2>
 	<p>
