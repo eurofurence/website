@@ -1,14 +1,8 @@
 <?php
     $frontmatter["department"] = "Art Show";
-    $frontmatter["title"] = "General Staff/Builder";
+    $frontmatter["title"] = "Signage & Decoration";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
-
-<p><strong>Make Eurofurence happen and be a part of Eurofurence.</strong></p>
-
-<p>We’re always excited to welcome multi-talented people to our team, but we also make sure everyone can shine in their individual field of expertise. Our Art Show team works in smaller sub-groups, where each member takes on the tasks they love and contributes in the way that suits them best.</p>
-<p>We will provide mentoring and guidance for processes and programs.</p>
-<p>General staff is the gateway to grow into specialized positions.</p>
 
 <h3>Who are we?</h3>
 
@@ -16,13 +10,9 @@
 <p>We connect customers with artists and handle sales. We also offer a platform for fresh ideas and support the exchange of knowledge. Our goal is make browsing art an inspiring and enchanting experience, hosting events that allow guests to encounter art from new perspectives</p>
 <p>Our team is made up of creative, project-driven people who love turning ideas into reality. Mutual support and openness to new ideas are at the heart of what we do. By joining the Art Show team, you can discover a unique and immersive side of Eurofurence — helping to bring the convention to life while becoming an essential part of it.</p>
 
-<h3>Your Job (General Staff)</h3>
+<h3>Your Job</h3>
 
-<p>Our general staff handle a wide range of tasks, both behind the scenes and on the ground. Some are more conceptual—like planning and making sure each event has everything it needs—while others are hands-on, such as setting up the Art Show or preparing equipment. On top of that, the team is always there for artists and guests, ready to help out with questions or any problems that come up.</p>
-
-<h3>Your Job (Builder)</h3>
-
-<p>We fulfill artists’ special requests. We create installations. We build themed decorations. We design lighting setups. There’s always something to create, solve, or bring to life. You build equipment and installations according to documentation and/or use you creativity and come up with a concept for a given problem/requirement.</p>
+<p>Guidance is key. We have a dedicated team creating visitor information and signage. Whether analog or digital, you can help everyone find their way to and around the Art Show. From LED displays, informational videos, banners, and signposts to crowd management and maps, there’s always something to improve. Bring your skills in electronics, embedded software, video editing, graphic design, or good old-fashioned tinkering. Use your talent to make the Art Show more intuitive and accessible for attendees and artists alike.</p>
 
 
 <h3>Your profile</h3>
