@@ -25,5 +25,5 @@ jobs:
           --exclude 'modified.json' \
           --exclude 'telegram.config.php' \
           --exclude 'schedule' \
-          --exclude 'img/pages/car' \
+          --exclude 'img/pages/goh/car' \
           www/ ef-web@wwwtest.eurofurence.org:${{ vars.STAGE_PATH }}
