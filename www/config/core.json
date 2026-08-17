@@ -537,11 +537,11 @@
 			"uri": "conbook.php"
 		},
 		"glympse": {
-			"owner": "@draconigen",
-			"accessible": false,
+			"owner": "@Syntaxfur",
+			"accessible": true,
 			"category": "Participate",
 			"description": "Follow the surge of furries towards Hamburg and back live on Glympse.",
-			"inMenu": false,
+			"inMenu": true,
 			"keywords": "Glympse, Live, Travel, Map",
 			"menuText": "Glympse Map",
 			"ogpImage": "",
