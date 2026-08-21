@@ -404,7 +404,19 @@
 			"title": "Poker Tournament",
 			"uri": "poker-tournament.html"
 		},
-		
+		"stream": {
+			"owner": "@Thiritin",
+			"accessible": true,
+			"category": "Program",
+			"description": "",
+			"inMenu": true,
+			"keywords": "",
+			"menuText": "Live Streams",
+			"ogpImage": "",
+			"robots": "",
+			"title": "",
+			"uri": "https://stream.eurofurence.org/"
+		},
 		
         "prices": {
 			"owner": "@RakanHowls",
