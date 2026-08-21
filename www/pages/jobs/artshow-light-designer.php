@@ -1,29 +1,17 @@
 <?php
     $frontmatter["department"] = "Art Show";
-    $frontmatter["title"] = "General Staff/Builder";
+    $frontmatter["title"] = "Light Designer";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
-
-<p><strong>Make Eurofurence happen and be a part of Eurofurence.</strong></p>
-
-<p>We’re always excited to welcome multi-talented people to our team, but we also make sure everyone can shine in their individual field of expertise. Our Art Show team works in smaller sub-groups, where each member takes on the tasks they love and contributes in the way that suits them best.</p>
-<p>We will provide mentoring and guidance for processes and programs.</p>
-<p>General staff is the gateway to grow into specialized positions.</p>
-
 <h3>Who are we?</h3>
 
 <p>We are the Eurofurence Art Show — the largest Art Show at Furry conventions in the world and the most innovative one as well. We provide a space for the artistic community of the Furry fandom to showcase their craftsmanship and talent, whether through traditional analog media or new frontiers in the digital realm.</p>
 <p>We connect customers with artists and handle sales. We also offer a platform for fresh ideas and support the exchange of knowledge. Our goal is make browsing art an inspiring and enchanting experience, hosting events that allow guests to encounter art from new perspectives</p>
 <p>Our team is made up of creative, project-driven people who love turning ideas into reality. Mutual support and openness to new ideas are at the heart of what we do. By joining the Art Show team, you can discover a unique and immersive side of Eurofurence — helping to bring the convention to life while becoming an essential part of it.</p>
 
-<h3>Your Job (General Staff)</h3>
+<h3>Your Job</h3>
 
-<p>Our general staff handle a wide range of tasks, both behind the scenes and on the ground. Some are more conceptual—like planning and making sure each event has everything it needs—while others are hands-on, such as setting up the Art Show or preparing equipment. On top of that, the team is always there for artists and guests, ready to help out with questions or any problems that come up.</p>
-
-<h3>Your Job (Builder)</h3>
-
-<p>We fulfill artists’ special requests. We create installations. We build themed decorations. We design lighting setups. There’s always something to create, solve, or bring to life. You build equipment and installations according to documentation and/or use you creativity and come up with a concept for a given problem/requirement.</p>
-
+<p>No artwork is like the other. We aim to place every exhibit in the spotlight it deserves. As our Light Designer, you’ll be the master of light and in charge of our grand lighting setup. You’ll envision the lighting concept based on the Art Show layout, then plan, document, program, and coordinate the setup with stage tech.</p>
 
 <h3>Your profile</h3>
 <ul>
