@@ -45,6 +45,7 @@ on:
 ## Archival
 
 * Create a new branch on [GitHub](https://github.com/eurofurence/website/branches), name it `archive/efxx`.
+* In *www/pages/restaurants/ef-map.json*, change `sprite` and `glyphs` from `www.eurofurence.org` to `archive.eurofurence.org` (this change can be discarded later).
 * In *config/core.json*, enable `staticOut.enabled` (this change can be discarded later).
 * Run the local development environment: 
   ```
