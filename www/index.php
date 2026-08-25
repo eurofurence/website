@@ -274,7 +274,12 @@
 						</label>
 					</div>
 
-					<button type="submit" class="uk-button uk-button-primary">Submit</button>
+					<?php 
+					if ($core->config->ratings->enabled)
+						echo '<button type="submit" class="uk-button uk-button-primary">Submit</button>';
+					else
+						echo '<button class="uk-button uk-text-muted uk-text-strikethrough" disabled uk-tooltip="This website is archived!">Submit</button>'
+					?>
 				</form>
 			</div>
 		</div>

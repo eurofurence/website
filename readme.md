@@ -42,8 +42,26 @@ on:
 
 > `on push branches` is triggered on pushes to the listed branch(es), while `workflow_dispatch` allows manual running of the workflow.
 
-## Static Site Generation
+## Archival
 
-* To use the static site generation feature, toggle the `staticOut.enabled` option in core.config.json.
-* To automate an export of all pages, call any page with [?export](http://localhost/?export) attached to the url.
-* The static html output will be saved to the path configured under `staticOut.path`.
+* Create a new branch on [GitHub](https://github.com/eurofurence/website/branches), name it `archive/efxx`.
+* In *config/core.json*, enable `staticOut.enabled` (this change can be discarded later).
+* Run the local development environment: 
+  ```
+  docker compose up
+  ```
+* Open [localhost/?export](http://localhost/?export) in a browser and wait for the script to populate *www/_archive*.
+* create an additional pages folder:
+  ```
+  mkdir www/_archive/pages
+  ```
+* copy all directories with special embeds into the pages folder:
+  ```
+  cp -r www/pages/home/ www/_archive/pages/home &&  cp -r www/pages/hotels/ www/_archive/pages/hotels &&  cp -r www/pages/restaurants/ www/_archive/pages/restaurants &&  cp -r www/pages/glympse/ www/_archive/pages/glympse
+  ```
+* Copy archive to EF Archive server:
+  ```
+  scp -r www/_archive ef:/home/ef-web/archive/EFxx
+  ```
+
+> TODO: The last few tasks covering pages with embeds *could* be automated with PHP.
