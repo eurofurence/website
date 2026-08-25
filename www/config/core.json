@@ -50,6 +50,9 @@
 		"path": "_archive/",
 		"targetBase": "https://archive.eurofurence.org/EF{number}"
 	},
+"ratings": {
+		"enabled": true
+	},
 	"pages": {
 		"404": {
 			"owner": "@draconigen",
