@@ -37,19 +37,6 @@
 		<p>I am really flattered for the invitation to contribute art for such event!</p>
 	</div>
 
-	<div class="uk-child-width-1-3 uk-grid-small uk-margin-top" uk-lightbox="animation: fade" uk-grid>
-		<div><a href="img/pages/website/jukajo/fff-homepage-artwork-x1500_orig.jpg">		 <img src="img/pages/website/jukajo/thumb-0.jpg" alt="Art © by Jukajo" /></a></div>
-		<div><a href="img/pages/website/jukajo/fff-homepage-artwork-x1500-detail-1_orig.jpg"><img src="img/pages/website/jukajo/thumb-1.jpg" alt="Art © by Jukajo" /></a></div>
-		<div><a href="img/pages/website/jukajo/fff-homepage-artwork-x1500-detail-2_orig.jpg"><img src="img/pages/website/jukajo/thumb-2.jpg" alt="Art © by Jukajo" /></a></div>
-	</div>
-
-	<p>I've attended all EFs since 2019 and over the course of those years the convention and its visitors have brought me so much joy, the possibility of spending more time on artwork thanks to the Dealers' Den and Art Show as well as the chance to get to know many wonderful people in a community where I feel inspired, valued, safe and happy. For this I am immensely grateful. None of this would be possible without the tireless effort of many volunteers, so when I was asked to draw the homepage artwork for the 30th anniversary it was a perfect chance to give back and add a small part to the making of the convention.</p>
-	<p>
-		Obviously I could only capture a tiny part of our wonderful community's vast diversity in my drawing, but I hope I managed to convey some of the feelings of joy, fun and connection the visitors can experience at this fantastic event.<br />
-		Thanks to all of you guys the real event is even more colorful. Let's all keep being fun, loving and a little weird. Keep supporting authenticity in all areas of life. And as a personal ask, keep supporting real artists who pour their heart, soul and tears into making authentic, personal, imperfect - <span class="uk-text-italic">real</span> - art.
-	</p>
-	<p>See you around at Eurofurence 30!</p>
-
 	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
 		<div class="uk-slideshow-items uk-text-center">
 			<?php for ($i=0; $i < 12; $i++) { ?>
@@ -144,11 +131,9 @@
 			['Flam', 'Director &amp; Main Website', 'flam.png', 'https://draconigen.dogpixels.net/'],
 			['fafnyr', 'Vice Director &amp; System Administration', 'fafnyr.png', 'https://www.furaffinity.net/user/fafnyr/'],
 			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
-			//['Fenrikur', 'Nosecount Intro', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
 			['Fleeks', 'Logo Design', 'fleeks.png', 'https://fleeks.art/'],
 			['Lio', 'Writing', 'lio.png', 'https://lio.to/'],
 			['OxySynth', 'Fursuit Photoshoot Gallery', 'oxy.png', 'https://bsky.app/profile/oxysynth.bsky.social'],
-			//['Sebin', 'Accessibility', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
 			['Vinaru', 'Banner Exchange', 'vinaru.png', 'https://www.furaffinity.net/user/vinaru'],
 			['Xenor', 'Survey', 'xenor.png', 'https://bsky.app/profile/xenor.bsky.social'],
 		];
