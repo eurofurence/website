@@ -436,7 +436,7 @@
         },
         "volunteering": {
 			"owner": "@Pattarchus",
-            "accessible": true,
+            "accessible": false,
             "category": "Participate",
             "description": "You want to volunteer on-site at Eurofurence at Europe's biggest furry convention? Here is how you do it!'",
             "inMenu": true,
@@ -540,7 +540,7 @@
 		},
 		"glympse": {
 			"owner": "@Syntaxfur",
-			"accessible": true,
+			"accessible": false,
 			"category": "Participate",
 			"description": "Follow the surge of furries towards Hamburg and back live on Glympse.",
 			"inMenu": true,
