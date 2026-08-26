@@ -20,20 +20,21 @@
 </style>
 
 <section>
-	<h1>Featured Artist: Jukajo</h1>
+	<h1>Featured Artist: Darbaras / EliseHeider</h1>
 
 	<div class="uk-clearfix">
-		<img src="img/pages/website/jukajo/sunflower-round-x500.png" alt="Jukajo, art © by Jukajo" class="uk-margin-top uk-float-right uk-visible@s" />
-		<p>Hello there!</p>
-		<p>Thank you for checking out this page. ​​I'm Jukajo, artist from Germany with a love for drawing expressive animal characters, and I drew the website artwork for Eurofurence 30.</p>
-		<p>
-			You can find more of my work and all kinds of info about it on my social media pages:<br />
-			<a href="https://linktr.ee/jukajo" target="_blank">linktr.ee</a>
-			<a href="https://bsky.app/profile/jukajo.art" target="_blank">Bluesky</a>
-			<a href="https://www.furaffinity.net/user/jukajo" target="_blank">Furaffinity</a>
-			<a href="https://artbyjukajo.weebly.com/" target="_blank">Homepage</a>
-		</p>
-		<p>If you are interested in a bit of an artist's comment and some more of my artwork, read on :)</p>
+		<img src="img/pages/website/darbaras/darbaras.jpg" alt="" class="uk-margin-top uk-float-right uk-visible@s" style="border-radius: 100%" />
+		<p>Thank you for visiting my page! I'm Elise, artist from Hungary, living in France. I used to work as a 2D digital animator for a decade, though I enjoy digital art more as my creative expression.</p>
+		<p>I enjoy drawing retro futuristic or medieval settings, with a hint of sugarcoated doom and gloom. I enjoy subtle worldbuilding, environmental storytelling, through simple details and rough lines.</p>
+		<p>You can see more of my works on:</p>
+		<ul>
+			<li><a href="https://linktr.ee/eliseheider" target="_blank">Linktree</a></li>
+			<li><a href="https://x.com/EliseHeider" target="_blank">X / Twitter</a></li>
+			<li><a href="https://www.furaffinity.net/user/darbaras/" target="_blank">FurAffinity</a></li>
+			<li><a href="https://www.patreon.com/c/darbaras" target="_blank">Patreon</a></li>
+		</ul>
+		<p>While I have never attended a con myself, I visited FurEast 2026 for a day. It was fascinating to see the creativity and stellar craftsmanship of the attendees, and I do wish to make my own partial suit or be a vendor at a con one day.</p>
+		<p>I am really flattered for the invitation to contribute art for such event!</p>
 	</div>
 
 	<div class="uk-child-width-1-3 uk-grid-small uk-margin-top" uk-lightbox="animation: fade" uk-grid>
@@ -51,27 +52,17 @@
 
 	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
 		<div class="uk-slideshow-items uk-text-center">
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/waloyo-yamoni-reupload-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/sunflower-new-wide-reupload-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/black-magic-small-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/fox-fa-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/tails-wolffinal-small-watermark-orig-orig_orig.jpg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/1756581799-jukajo-flower-upload_orig.jpg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/f1vsfwyxwacjxun-orig_orig.jpeg" alt="Art © by Jukajo"></div>
-			<div><img class="uk-height-1-1" src="img/pages/website/jukajo/1756208585-jukajo-tails-eastern-dragon-upload_orig.jpg" alt="Art © by Jukajo"></div>
+			<?php for ($i=0; $i < 12; $i++) { ?>
+			<div><img class="uk-height-1-1" src="img/pages/website/darbaras/artworks/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""></div>
+			<?php } ?>
 		</div>
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
 		<div>
 			<ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-margin-top uk-grid-small" uk-grid>
-				<li uk-slideshow-item="0"><a href="#"><img src="img/pages/website/jukajo/thumbnav-0.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="1"><a href="#"><img src="img/pages/website/jukajo/thumbnav-1.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="2"><a href="#"><img src="img/pages/website/jukajo/thumbnav-2.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="3"><a href="#"><img src="img/pages/website/jukajo/thumbnav-3.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="4"><a href="#"><img src="img/pages/website/jukajo/thumbnav-4.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="5"><a href="#"><img src="img/pages/website/jukajo/thumbnav-5.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="6"><a href="#"><img src="img/pages/website/jukajo/thumbnav-6.gif" alt="Art © by Jukajo"></a></li>
-				<li uk-slideshow-item="7"><a href="#"><img src="img/pages/website/jukajo/thumbnav-7.gif" alt="Art © by Jukajo"></a></li>
+				<?php for ($i=0; $i < 12; $i++) { ?>
+				<li uk-slideshow-item="<?= $i ?>"><a href="#"><img src="img/pages/website/darbaras/artworks/s/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""></a></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>

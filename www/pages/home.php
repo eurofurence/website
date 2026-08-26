@@ -17,8 +17,8 @@ iframe {
 
 <div id="ef-home-banner">
     <div>
-        <!-- <h1>Eurofurence <?= $this->current->number ?></h1> -->
-        <h1>Eurofurence <img src="img/pages/home/ef30logo_50px.png" alt="30" /></h1>
+        <h1>Eurofurence <?= $this->current->number ?></h1>
+        <!-- <h1>Eurofurence <img src="img/pages/home/ef31logo_50px.png" alt="31" /></h1> -->
         <p class="ef-text-large-m">
             <?= $this->current->theme ?> <br />
             <?= $this->current->dates ?> <br />

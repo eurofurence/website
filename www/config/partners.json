@@ -11,7 +11,7 @@
                 "status": 200,
                 "hash": "6fece737e6cd5b276b11be3a16a27ff9"
             },
-            "file": "img\/cons\/bayern-furs.png"
+            "file": "..\/img\/cons\/bayern-furs.png"
         },
         "cesfur": {
             "enable": false,
@@ -34,7 +34,7 @@
                 "status": 200,
                 "hash": "8be5072d9187cbbabe380f390180cf10"
             },
-            "file": "img\/cons\/east.jpg"
+            "file": "..\/img\/cons\/east.jpg"
         },
         "fblacklight": {
             "enable": false,
@@ -43,8 +43,8 @@
             "country": "fr",
             "data": {
                 "timestamp": 1684878798,
-                "status": 200,
-                "hash": "82c337afbbad6c9c5627f901ecfdcac9"
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
             },
             "file": "img\/cons\/fblacklight.jpg"
         },
@@ -56,9 +56,9 @@
             "data": {
                 "timestamp": 1684878798,
                 "status": 200,
-                "hash": "5a441d112535b12224e49b11157be8e5"
+                "hash": "2f83b8e7ea42a55e3fc54cb6f2e39c98"
             },
-            "file": "img\/cons\/furrnion.gif"
+            "file": "..\/img\/cons\/furrnion.gif"
         },
         "gdakon": {
             "enable": false,
@@ -70,7 +70,7 @@
                 "status": 200,
                 "hash": "491e078415d50037552ad7e394bf8e8d"
             },
-            "file": "img\/cons\/gdakon.jpg"
+            "file": "..\/img\/cons\/gdakon.jpg"
         },
         "infurnity": {
             "enable": false,
@@ -138,9 +138,9 @@
             "data": {
                 "timestamp": 1752666760,
                 "status": 200,
-                "hash": "c304dc788c5c855e7c35fc06b1968241"
+                "hash": "65e907e94a27c19b644766eba11b637a"
             },
-            "file": "img\/cons\/slofluffcon.jpg"
+            "file": "..\/img\/cons\/slofluffcon.jpg"
         }
     }
 }

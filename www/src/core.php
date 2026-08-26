@@ -2,9 +2,9 @@
 /**
  * Eurofurence Website Core Component
  * Includes debug(), dirmtime(), dircopy() and is_external() as global functions
- * @author	draconigen@dogpixels.net
+ * @author	flam@dogpixels.net
  * @since 	11/2015
- * @version	4.5
+ * @version	4.6
  * @license	MIT
  */
 class EFWebCore
@@ -173,7 +173,7 @@ class EFWebCore
 		// sort pages into categories ($categorized_pages)
 		foreach ($this->config->pages as $key => $page)
 		{
-			if ($page->inMenu)
+			if ($page->inMenu && $page->accessible)
 			{
 				// if category is not listed in config.menu.categoryOrder, append to end
 				if (!array_key_exists($page->category, $categorized_pages))

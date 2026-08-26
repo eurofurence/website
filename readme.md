@@ -1,12 +1,12 @@
 # Eurofurence Website
 
-Version 4.2, last updated: 2024-02-21
+Version 4.3, last updated: 2026-08-01
 
 ## Requirements
 
 either
 * docker, or
-* Apache Web Server with PHP 7.4 + modrewrite
+* Apache Web Server with PHP 8.4 + modrewrite
 
 ## Setup
 
@@ -14,6 +14,30 @@ either
 * deploy all files from `www` to `/var/html` to be served through Apache Web Server.
 
 > To run mock enviroment use `docker compose -f docker-compose.mock.yml up` instead of `docker compose up`
+
+#### Telegram Configuration
+
+The *Page Rating* feature requires a Telegram bot to be configured. If, upon the attempt to use this feature, the file does not exist, you will run into an Exception saying "*Telegram config missing in FILE*", *FILE* usually being ´telegram.config.php´. The script will attempt to create the file for you, but this will most likely fail due to filesystem permissions within the container, so you will have to create the *FILE* yourself with the following contents:
+
+```php
+<?php
+define('TELEGRAM_BOT_API_TOKEN', ''); # insert your Telegram BOT API token here
+define('TELEGRAM_TARGET_USERID', ''); # insert the Telegram Chat ID the bot shall post updates to
+```
+
+> Read the [Telegram bot tutorial](https://core.telegram.org/bots/tutorial#obtain-your-bot-token) on how to create a bot and obtain its API token.
+
+> In order to obtain either your own Chat ID or that of a group your bot is part of, there are various 3rd party tutorials and clients that help you with that.
+
+#### Create modified.json
+
+If `StaticOut.lastModifiedEnabled` is set to `true`, the website will seek out a `modified.json` file to insert when page files have last been modified based on their reported filesystem modification timestamp. If the file is not present or cannot be written, a warning message will be displayed at the bottom of the page. To fix this, simply create the file:
+
+```bash
+echo "{}" > www/modified.json 
+```
+
+Don't forget to add writing permission for the user running the web server is being run as!
 
 ## Continuous Deployment
 

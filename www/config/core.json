@@ -1,17 +1,17 @@
 {
 	"convention": {
-		"charity": "Seehundstation Friedrichskoog",
-		"dates": "August 19th to 23rd, 2026",
-		"end": "2026-08-23",
-		"goh": "Animal Art Crimes",
+		"number": "31",
+		"ordinal": "31st",
+		"year": "2027",
+		"dates": "(Dates To Be Announced)",
+		"opening": "1990-12-31T17:00:00+02:00",
+		"start": "1990-12-31",
+		"end": "1990-12-31",
 		"location": "CCH Hamburg, Germany",
-		"number": "30",
-		"opening": "2026-08-19T17:00:00+02:00",
-		"ordinal": "30th",
-		"start": "2026-08-19",
-		"theme": "Fantastic Furry Festival",
-		"themeColor": "#005953",
-		"year": "2026"
+		"theme": "Midnight at the Lab",
+		"charity": "(TBA)",
+		"goh": "(TBA)",
+		"themeColor": "#005953"
 	},
 	"defaults": {
 		"externalEmbed": false,
@@ -136,7 +136,7 @@
 		},
 		"hotels": {
 			"owner": "@draconigen",
-			"accessible": true,
+			"accessible": false,
 			"category": "Location",
 			"description": "Get a room! Here are some official options for you.",
 			"inMenu": true,
@@ -149,7 +149,7 @@
 		},
         "restaurants": {
 			"owner": "@Sam_Mel",
-            "accessible": true,
+            "accessible": false,
             "category": "Location",
             "description": "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
             "inMenu": true,
@@ -162,7 +162,7 @@
         },
 		"artshow": {
 			"owner": "@riffuchs",
-			"accessible": true,
+			"accessible": false,
 			"category": "Location",
 			"description": "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
 			"inMenu": true,
@@ -175,7 +175,7 @@
 		},
 		"dealersden/visiting": {
 			"owner": "@Pattarchus",
-			"accessible": true,
+			"accessible": false,
 			"inMenu": true,
 			"menuText": "Dealers' Den (as Visitor)",
 			"category": "Location",
@@ -201,7 +201,7 @@
 		},
         "sponsors": {
 			"owner": "@tarianwolf",
-            "accessible": true,
+            "accessible": false,
             "category": "Location",
             "description": "A lists of companies supporting Eurofurence.",
             "inMenu": true,
@@ -214,7 +214,7 @@
         },
 		"charity": {
 			"owner": "@Sniffer_raccoon",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "This year all donations, collections and more will go to support {charity}.",
 			"inMenu": true,
@@ -240,7 +240,7 @@
 		},
 		"schedule": {
 			"owner": "@Akulatraxas",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "",
 			"inMenu": true,
@@ -266,7 +266,7 @@
         },
 		"goh": {
 			"owner": "@Nerventee",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
 			"inMenu": true,
@@ -292,7 +292,7 @@
 		},
         "fursuit/badges": {
 			"owner":"@takemurahusky",
-            "accessible": true,
+            "accessible": false,
             "inMenu": true,
             "category": "Program",
             "description": "",
@@ -318,7 +318,7 @@
 		},
 		"fursuits/photoshoot": {
 			"owner": "@Atkelar",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "",
 			"inMenu": true,
@@ -331,7 +331,7 @@
 		},
         "furauction": {
 			"owner": "@Hakogori",
-            "accessible": true,
+            "accessible": false,
             "category": "Program",
             "description": "At the Eurofurence Furauction, you get the chance to bid for a chance to spend quality time with your favourite fursuiter in a one-on-one setting, while also donate money to charity! From chats and hugs to photoshoots, everything is possible!",
             "inMenu": true,
@@ -344,7 +344,7 @@
         },
         "dances": {
 			"owner": "@Anheanger_der_Pestilenz",
-            "accessible": true,
+            "accessible": false,
             "category": "Program",
             "description": "We are calling all DJs, beat captains, and interstellar sound engineers: The Eurofurence Dance Stage is preparing for liftoff — we need you on board.",
             "inMenu": true,
@@ -357,7 +357,7 @@
         },
         "dancecontests": {
 			"owner": "@Px0ssum",
-            "accessible": true,
+            "accessible": false,
             "category": "Program",
             "description": "Infos on our popular dance competition shows: Paws on Fire and Enter The Arena.",
             "inMenu": true,
@@ -370,7 +370,7 @@
         },
 		"taiko-bastards": {
 			"owner": "@MafunDi",
-			"accessible": true,
+			"accessible": false,
 			"category": "Program",
 			"description": "Taiko Bastards Eurofurence Workshop explained.",
 			"inMenu": true,
@@ -407,23 +407,10 @@
 			"title": "Poker Tournament",
 			"uri": "poker-tournament.html"
 		},
-		"stream": {
-			"owner": "@Thiritin",
-			"accessible": true,
-			"category": "Program",
-			"description": "",
-			"inMenu": true,
-			"keywords": "",
-			"menuText": "Live Streams",
-			"ogpImage": "",
-			"robots": "",
-			"title": "",
-			"uri": "https://stream.eurofurence.org/"
-		},
 		
         "prices": {
 			"owner": "@RakanHowls",
-            "accessible": true,
+            "accessible": false,
             "category": "Participate",
 			"description": "Eurofurence {number} will take place from {dates} at the {location}. Eurofurence is Europe's largest annual gathering of the European furry community.",
             "inMenu": true,
@@ -462,7 +449,7 @@
         },
 		"artshow/as-artist": {
 			"owner": "@riffuchs",
-			"accessible": true,
+			"accessible": false,
 			"category": "Participate",
 			"description": "Want to exhibit your art at Eurofurence? Here is everything you need to know.",
 			"inMenu": true,
@@ -475,7 +462,7 @@
 		},
 		"dealersden": {
 			"owner": "@Pattarchus",
-			"accessible": true,
+			"accessible": false,
 			"category": "Participate",
 			"description": "The Dealers' Den is the place for all you merchants and artists for selling your fine products.",
 			"inMenu": true,
@@ -488,7 +475,7 @@
 		},
 		"dealersden/alley": {
 			"owner": "@Pattarchus",
-			"accessible": true,
+			"accessible": false,
 			"category": "Participate",
 			"description": "The Artist Alley is an open, first-come-first-serve alternative to the Dealers' Den.",
 			"inMenu": true,
@@ -501,7 +488,7 @@
 		},
         "creators": {
 			"owner": "@TheFruitFox",
-            "accessible": true,
+            "accessible": false,
             "category": "Participate",
             "description": "",
             "inMenu": true,
@@ -527,7 +514,7 @@
 		},
         "ledwall": {
 			"owner": "@Anheanger_der_Pestilenz",
-            "accessible": true,
+            "accessible": false,
             "category": "Participate",
             "description": "Your art on the really big screen. Find out everything you need to know to submit your animations for the Video Wall above the entrance, as well as some examples from the last year. Deadline August 10.",
             "inMenu": true,
@@ -540,7 +527,7 @@
         },
 		"conbook": {
 			"owner": "@vinaru",
-			"accessible": true,
+			"accessible": false,
 			"category": "Participate",
 			"description": "The Conbook is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
 			"inMenu": true,
@@ -579,7 +566,7 @@
 			"uri": "https://help.eurofurence.org/"
 		},
 		"lostandfound": {
-			"owner": "@draconigen",
+			"owner": "@FuviiPeshu",
 			"accessible": true,
 			"inMenu": true,
 			"category": "Services",
@@ -619,7 +606,7 @@
         },
 		"nosecount": {
 			"owner": "@draconigen",
-			"accessible": true,
+			"accessible": false,
 			"category": "Services",
 			"description": "Registration statistics visualized.",
 			"inMenu": true,
