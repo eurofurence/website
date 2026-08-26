@@ -116,6 +116,7 @@ const efnavModal = new EFnavModal();
  * @param {Object} [options] - Button options: icon and tooltip
  */
 function createEFnavTrigger(containerId, locations, options = {}) {
+    return null; // Fuvii: I'm sorry for this dirty, dirty hack until you implement a global config. Cheers, Flam <3
     const container = getEFnavContainer(containerId);
     const normalizedLocations = normalizeLocations(locations);
     if (!container || normalizedLocations.length === 0) {
