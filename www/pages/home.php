@@ -13,6 +13,13 @@ iframe {
     background-color: #181821;
     border-radius: var(--ef-border-radius);
 }
+.ef-photos-credits {
+    color: rgba(255,255,255,.7);
+    background: rgba(34,34,34,.75);
+    padding: 4px 10px;
+    font-size: .8rem;
+    border-radius: var(--ef-border-radius);
+}
 </style>
 
 <div id="ef-home-banner">
@@ -66,13 +73,11 @@ iframe {
     </div>
     <div id="ef-home-photos" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
         <div class="uk-slideshow-items">
-            <?php 
-            $dir = 'img/pages/home/photos/';
-            foreach (scandir($dir) as $file) {
-                if (in_array($file, ['.', '..']))
-                    continue;
-            ?>
-            <div><img src="<?= $dir . $file ?>" alt="" uk-cover /></div>
+            <?php foreach (get_photos('img/pages/home/photos/') as $photo) { ?>
+            <div>
+                <img src="<?= $photo['path'] ?>" alt="<?= $photo['cred'] ?>" uk-cover />
+                <div class="uk-position-bottom-left uk-position-small uk-overlay ef-photos-credits"><?= $photo['cred'] ?></div>
+            </div>
             <?php } ?>
         </div>
     </div>
@@ -108,3 +113,44 @@ iframe {
         </div>
     </div>
 </div>
+
+<?php
+function get_photos($dir) {
+    $ret = [];
+
+    foreach (scandir($dir) as $file) {
+        if (in_array($file, ['.', '..', '.DS_Store'])) {
+            continue;
+        }
+
+        // rm ext
+        $name = pathinfo($file, PATHINFO_FILENAME);
+
+        // split photographer & fursuiters
+        $parts = explode('_feat_', $name, 2);
+
+        // get photographer
+        $photographer = preg_replace('/^\d{4,}_by_/', '', $parts[0]);
+
+        // get fursuiters, if present
+        $featuring = [];
+
+        if (isset($parts[1])) {
+            $featuring = explode('_', $parts[1]);
+        }
+
+        $credits = 'Photo: ' . $photographer;
+
+        if (!empty($featuring)) {
+            $credits .= '. Featuring: ' . implode(', ', $featuring);
+        }
+
+        $ret[] = [
+            'file' => $file,
+            'path' => $dir . $file,
+            'cred' => $credits
+        ];
+    }
+
+    return $ret;
+}
