@@ -350,5 +350,3 @@
 	</script>
 </html>
 <?php $core->end(); ?>
-
-<!-- in loving memories of Dokken and Oskar -->
