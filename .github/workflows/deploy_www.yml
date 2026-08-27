@@ -25,5 +25,4 @@ jobs:
           --exclude 'modified.json' \
           --exclude 'telegram.config.php' \
           --exclude 'schedule' \
-          --exclude 'img/pages/goh/car' \
           www/ ef-web@www.eurofurence.org:${{ vars.PROD_PATH }}
