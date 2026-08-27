@@ -35,6 +35,7 @@ iframe {
 </div>
 
 <div id="ef-home-countdown" class="ef-background uk-margin uk-text-center">
+<!--    
     <h2>Starting in</h2>
     <div class="uk-grid-small uk-child-width-auto uk-flex-center uk-flex-middle" uk-grid uk-countdown="date: <?= $this->config->convention->opening ?>">
         <div>
@@ -57,6 +58,7 @@ iframe {
             <div class="uk-countdown-label uk-margin-small uk-text-center">Seconds</div>
         </div>
     </div>
+-->
 </div>
 
 <div class="uk-position-relative">
