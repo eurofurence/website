@@ -271,7 +271,8 @@ main > #content > section > #ef-home-banner h1 {
 }
 
 #ef-home-flavor-text {
-	overflow: scroll;
+	overflow-y: scroll;
+	scrollbar-width: none;
 	border-radius: var(--ef-border-radius);
 	background: rgba(255, 255, 255, .67);
 	color: #000;
