@@ -11,7 +11,7 @@
                 "status": 200,
                 "hash": "6fece737e6cd5b276b11be3a16a27ff9"
             },
-            "file": "..\/img\/cons\/bayern-furs.png"
+            "file": "img\/cons\/bayern-furs.png"
         },
         "cesfur": {
             "enable": false,
@@ -34,7 +34,7 @@
                 "status": 200,
                 "hash": "8be5072d9187cbbabe380f390180cf10"
             },
-            "file": "..\/img\/cons\/east.jpg"
+            "file": "img\/cons\/east.jpg"
         },
         "fblacklight": {
             "enable": false,
@@ -140,7 +140,7 @@
                 "status": 200,
                 "hash": "65e907e94a27c19b644766eba11b637a"
             },
-            "file": "..\/img\/cons\/slofluffcon.jpg"
+            "file": "img\/cons\/slofluffcon.jpg"
         }
     }
 }
