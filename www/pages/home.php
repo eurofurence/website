@@ -142,7 +142,7 @@ function get_photos($dir) {
         $credits = 'Photo: ' . $photographer;
 
         if (!empty($featuring)) {
-            $credits .= '. Featuring: ' . implode(', ', $featuring);
+            $credits .= '; Featuring: ' . implode(', ', $featuring);
         }
 
         $ret[] = [
