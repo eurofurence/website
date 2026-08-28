@@ -1295,7 +1295,7 @@ button.uk-icon:not(:disabled) {
 /* OnClick + Active */
 .uk-icon-link:active,
 .uk-active > .uk-icon-link {
-  color: rgb(35%, 35%, 35%);
+  color: rgb(89.25, 89.25, 89.25);
 }
 
 /*
@@ -1320,14 +1320,14 @@ button.uk-icon:not(:disabled) {
 
 /* Hover */
 .uk-icon-button:hover {
-  background-color: rgb(92.2549019608%, 92.2549019608%, 92.2549019608%);
+  background-color: rgb(235.25, 235.25, 235.25);
   color: #666;
 }
 
 /* OnClick + Active */
 .uk-icon-button:active,
 .uk-active > .uk-icon-button {
-  background-color: rgb(87.2549019608%, 87.2549019608%, 87.2549019608%);
+  background-color: rgb(222.5, 222.5, 222.5);
   color: #666;
 }
 
@@ -1402,24 +1402,24 @@ a:hover .uk-icon-overlay {
 /* Webkit */
 .uk-range::-webkit-slider-runnable-track {
   height: 3px;
-  background: rgb(92.2549019608%, 92.2549019608%, 92.2549019608%);
+  background: rgb(235.25, 235.25, 235.25);
   border-radius: 500px;
 }
 
 .uk-range:focus::-webkit-slider-runnable-track,
 .uk-range:active::-webkit-slider-runnable-track {
-  background: rgb(87.2549019608%, 87.2549019608%, 87.2549019608%);
+  background: rgb(222.5, 222.5, 222.5);
 }
 
 /* Firefox */
 .uk-range::-moz-range-track {
   height: 3px;
-  background: rgb(92.2549019608%, 92.2549019608%, 92.2549019608%);
+  background: rgb(235.25, 235.25, 235.25);
   border-radius: 500px;
 }
 
 .uk-range:focus::-moz-range-track {
-  background: rgb(87.2549019608%, 87.2549019608%, 87.2549019608%);
+  background: rgb(222.5, 222.5, 222.5);
 }
 
 /*
@@ -1437,7 +1437,7 @@ a:hover .uk-icon-overlay {
   width: 15px;
   border-radius: 500px;
   background: #fff;
-  border: 1px solid rgb(79.8039215686%, 79.8039215686%, 79.8039215686%);
+  border: 1px solid rgb(203.5, 203.5, 203.5);
 }
 
 /* Firefox */
@@ -1450,7 +1450,7 @@ a:hover .uk-icon-overlay {
   margin-top: -7px;
   border-radius: 500px;
   background: #fff;
-  border: 1px solid rgb(79.8039215686%, 79.8039215686%, 79.8039215686%);
+  border: 1px solid rgb(203.5, 203.5, 203.5);
 }
 
 /* ========================================================================
@@ -1639,7 +1639,8 @@ a:hover .uk-icon-overlay {
 .uk-select[multiple],
 .uk-select[size],
 .uk-textarea {
-  padding: 6px 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   vertical-align: top;
 }
 
@@ -1816,7 +1817,7 @@ select.uk-form-width-xsmall {
   background-color: transparent;
   /* 6 */
   background-size: cover;
-  border: 1px solid rgb(79.8039215686%, 79.8039215686%, 79.8039215686%);
+  border: 1px solid rgb(203.5, 203.5, 203.5);
   transition: 0.2s ease-in-out;
   transition-property: background-color, border;
 }
@@ -1847,7 +1848,7 @@ select.uk-form-width-xsmall {
 .uk-radio:checked:focus,
 .uk-checkbox:checked:focus,
 .uk-checkbox:indeterminate:focus {
-  background-color: rgb(0%, 14.9019607843%, 13.8973342146%);
+  background-color: rgb(0, 38, 35.4382022472);
 }
 
 /*
@@ -2208,7 +2209,7 @@ select.uk-form-width-xsmall {
 .uk-button-default.uk-active {
   background-color: transparent;
   color: #333;
-  border-color: rgb(59.8039215686%, 59.8039215686%, 59.8039215686%);
+  border-color: rgb(152.5, 152.5, 152.5);
 }
 
 /*
@@ -2222,14 +2223,14 @@ select.uk-form-width-xsmall {
 
 /* Hover */
 .uk-button-primary:hover {
-  background-color: rgb(0%, 24.9019607843%, 23.2231769112%);
+  background-color: rgb(0, 63.5, 59.2191011236);
   color: #fff;
 }
 
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: rgb(0%, 14.9019607843%, 13.8973342146%);
+  background-color: rgb(0, 38, 35.4382022472);
   color: #fff;
 }
 
@@ -2244,14 +2245,14 @@ select.uk-form-width-xsmall {
 
 /* Hover */
 .uk-button-secondary:hover {
-  background-color: rgb(15%, 15%, 15%);
+  background-color: rgb(38.25, 38.25, 38.25);
   color: #fff;
 }
 
 /* OnClick + Active */
 .uk-button-secondary:active,
 .uk-button-secondary.uk-active {
-  background-color: rgb(10%, 10%, 10%);
+  background-color: rgb(25.5, 25.5, 25.5);
   color: #fff;
 }
 
@@ -2266,14 +2267,14 @@ select.uk-form-width-xsmall {
 
 /* Hover */
 .uk-button-danger:hover {
-  background-color: rgb(93.3281733746%, 22.1620227038%, 35.5056759546%);
+  background-color: rgb(237.9868421053, 56.5131578947, 90.5394736842);
   color: #fff;
 }
 
 /* OnClick + Active */
 .uk-button-danger:active,
 .uk-button-danger.uk-active {
-  background-color: rgb(92.5386996904%, 12.951496388%, 27.8740970072%);
+  background-color: rgb(235.9736842105, 33.0263157895, 71.0789473684);
   color: #fff;
 }
 
@@ -3102,7 +3103,7 @@ select.uk-form-width-xsmall {
  */
 .uk-card-overlay {
   --uk-inverse: dark;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   color: #666;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
@@ -3112,7 +3113,7 @@ select.uk-form-width-xsmall {
 }
 
 .uk-card-overlay.uk-card-hover:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
 
@@ -3396,7 +3397,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-alert-primary {
-  background: rgb(64.2280285036%, 76.713147967%, 75.8714545201%);
+  background: rgb(163.7814726841, 195.6185273159, 193.4722090261);
   color: #005953;
 }
 
@@ -3404,7 +3405,7 @@ select.uk-form-width-xsmall {
  * Success
  */
 .uk-alert-success {
-  background: rgb(92.7647058824%, 98.4117647059%, 96.2941176471%);
+  background: rgb(236.55, 250.95, 245.55);
   color: #32d296;
 }
 
@@ -3412,7 +3413,7 @@ select.uk-form-width-xsmall {
  * Warning
  */
 .uk-alert-warning {
-  background: rgb(99.8039215686%, 96.2745098039%, 93.5294117647%);
+  background: rgb(254.5, 245.5, 238.5);
   color: #faa05a;
 }
 
@@ -3420,7 +3421,7 @@ select.uk-form-width-xsmall {
  * Danger
  */
 .uk-alert-danger {
-  background: rgb(99.6284829721%, 95.6656346749%, 96.4086687307%);
+  background: rgb(254.0526315789, 243.9473684211, 245.8421052632);
   color: #f0506e;
 }
 
@@ -3565,7 +3566,7 @@ select.uk-form-width-xsmall {
  */
 .uk-overlay-default {
   --uk-inverse: dark;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /*
@@ -3573,7 +3574,7 @@ select.uk-form-width-xsmall {
  */
 .uk-overlay-primary {
   --uk-inverse: light;
-  background: rgba(51, 51, 51, 0.9);
+  background: rgba(51, 51, 51, 0.8);
 }
 
 /* ========================================================================
@@ -4005,12 +4006,46 @@ select.uk-form-width-xsmall {
   list-style: none;
 }
 
-.uk-accordion-title {
-  display: block;
+/* Item
+ ========================================================================== */
+.uk-accordion > :nth-child(n+2) {
+  margin-top: 20px;
 }
 
+/* Title
+ ========================================================================== */
+.uk-accordion-title {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #333;
+  overflow: hidden;
+}
+.uk-accordion-title::before {
+  content: "";
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 10px;
+  float: right;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.uk-open > .uk-accordion-title::before {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+/* Hover */
+.uk-accordion-title:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Content
+ ========================================================================== */
 .uk-accordion-content {
   display: flow-root;
+  margin-top: 20px;
 }
 
 /*
@@ -4018,59 +4053,6 @@ select.uk-form-width-xsmall {
  */
 .uk-accordion-content > :last-child {
   margin-bottom: 0;
-}
-
-/* Default modifier
- ========================================================================== */
-/*
- * Item
- */
-.uk-accordion-default > :nth-child(n+2) {
-  margin-top: 20px;
-}
-
-/* Active */
-/*
- * Title
- */
-/*
-* 1. Center content vertically, e.g. an icon
-* 2. Imitate white space gap when using flexbox
-* 3. Reset link
- */
-.uk-accordion-default .uk-accordion-title {
-  /* 1 */
-  display: flex;
-  align-items: center;
-  /* 2 */
-  column-gap: 15px;
-  /* 3 */
-  font-size: 1.25rem;
-  line-height: 1.4;
-  color: #333;
-}
-
-/* Hover */
-.uk-accordion-default .uk-accordion-title:hover {
-  color: #666;
-  text-decoration: none;
-}
-
-/* Active */
-/*
- * Icon
- */
-.uk-accordion-default .uk-accordion-icon {
-  flex: none;
-  margin-left: auto;
-  color: #666;
-}
-
-/*
- * Content
- */
-.uk-accordion-default .uk-accordion-content {
-  margin-top: 20px;
 }
 
 /* ========================================================================
@@ -4509,13 +4491,6 @@ select.uk-form-width-xsmall {
   display: none;
 }
 
-/*
- * Reset animations on hidden slides so the Ken Burns effect restarts in Safari.
- */
-.uk-slideshow-items > :not(.uk-active) [class*=uk-animation-] {
-  animation-name: none;
-}
-
 /* ========================================================================
    Component: Slider
  ========================================================================== */
@@ -4530,26 +4505,22 @@ select.uk-form-width-xsmall {
 /* Container
  ========================================================================== */
 /*
- * 1. Fallback for Safari 15 and older
- * 2. Clip child elements
- *    `clip` prevents accidental scrolling through elements in slide getting focused
- *    `clip` also works in only one direction
+ * 1. Clip child elements
+ * 2. Prevent accidental scrolling through elements in slide getting focused
  */
 .uk-slider-container {
   /* 1 */
-  overflow-x: hidden;
+  overflow: hidden;
   /* 2 */
-  overflow-x: clip;
+  overflow: clip;
 }
 
 /*
  * Widen container to prevent box-shadows from clipping, `large-box-shadow`
  */
 .uk-slider-container-offset {
-  margin-left: -25px;
-  margin-right: -25px;
-  padding-left: 25px;
-  padding-right: 25px;
+  margin: -11px -25px -39px -25px;
+  padding: 11px 25px 39px 25px;
 }
 
 /* Items
@@ -5828,7 +5799,6 @@ ul.uk-nav-sub {
 /* Parent icon
  ========================================================================== */
 .uk-nav-parent-icon {
-  flex: none;
   margin-left: auto;
   transition: transform 0.3s ease-out;
 }
@@ -7395,7 +7365,8 @@ ul.uk-nav-sub {
 }
 
 .uk-lightbox-items-fit > * > :not(iframe) {
-  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 
 /* Zoom Cursor */
@@ -8435,10 +8406,6 @@ ul.uk-nav-sub {
 }
 /* Intrinsic Widths
  ========================================================================== */
-.uk-width-fit-content {
-  width: fit-content;
-}
-
 .uk-width-max-content {
   width: max-content;
 }
@@ -8644,7 +8611,7 @@ ul.uk-nav-sub {
   display: inline-block;
   /* 4 */
   background-color: #005953;
-  background-image: linear-gradient(90deg, #005953 0%, rgb(0%, 13.9869281046%, 34.9019607843%) 100%);
+  background-image: linear-gradient(90deg, #005953 0%, rgb(0, 35.6666666667, 89) 100%);
 }
 
 /* Alignment modifiers
@@ -9382,7 +9349,6 @@ iframe[data-uk-cover] {
  * Overflow fade
  * 1. Overflow
  * 2. Mask
- * 3. Hide scrollbar
  */
 @property --uk-overflow-fade-start-opacity {
   syntax: "<number>";
@@ -9411,13 +9377,16 @@ iframe[data-uk-cover] {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   /* 2 */
   mask-image: linear-gradient(to var(--uk-overflow-fade-direction), rgba(0, 0, 0, var(--uk-overflow-fade-start-opacity)), #000 100px, #000 calc(100% - 100px), rgba(0, 0, 0, var(--uk-overflow-fade-end-opacity)));
-  /* 3 */
-  scrollbar-width: none;
 }
 
 .uk-overflow-fade-horizontal > *,
 .uk-overflow-fade-vertical > * {
   min-width: max-content;
+}
+
+.uk-overflow-fade-horizontal::-webkit-scrollbar,
+.uk-overflow-fade-vertical::-webkit-scrollbar {
+  display: none;
 }
 
 /* Box Sizing
@@ -9499,7 +9468,6 @@ iframe[data-uk-cover] {
 .uk-preserve-width svg,
 .uk-preserve-width video {
   max-width: none;
-  object-fit: fill;
 }
 
 /*
@@ -11241,14 +11209,11 @@ iframe[data-uk-cover] {
  * `uk-light` is for light colors on dark backgrounds
  * `uk-dark` is or dark colors on light backgrounds
  */
-.uk-light .uk-accordion-default .uk-accordion-title, .uk-section-primary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title, .uk-section-secondary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title, .uk-tile-primary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title, .uk-tile-secondary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title, .uk-card-primary.uk-card-body .uk-accordion-default .uk-accordion-title, .uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-default .uk-accordion-title, .uk-card-secondary.uk-card-body .uk-accordion-default .uk-accordion-title, .uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-default .uk-accordion-title, .uk-overlay-primary .uk-accordion-default .uk-accordion-title, .uk-offcanvas-bar .uk-accordion-default .uk-accordion-title {
-  color: #fff;
+.uk-light .uk-accordion-title::before, .uk-section-primary:not(.uk-preserve-color) .uk-accordion-title::before, .uk-section-secondary:not(.uk-preserve-color) .uk-accordion-title::before, .uk-tile-primary:not(.uk-preserve-color) .uk-accordion-title::before, .uk-tile-secondary:not(.uk-preserve-color) .uk-accordion-title::before, .uk-card-primary.uk-card-body .uk-accordion-title::before, .uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-title::before, .uk-card-secondary.uk-card-body .uk-accordion-title::before, .uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title::before, .uk-overlay-primary .uk-accordion-title::before, .uk-offcanvas-bar .uk-accordion-title::before {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
-.uk-light .uk-accordion-default .uk-accordion-title:hover, .uk-section-primary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-title:hover, .uk-card-primary.uk-card-body .uk-accordion-default .uk-accordion-title:hover, .uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-default .uk-accordion-title:hover, .uk-card-secondary.uk-card-body .uk-accordion-default .uk-accordion-title:hover, .uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-default .uk-accordion-title:hover, .uk-overlay-primary .uk-accordion-default .uk-accordion-title:hover, .uk-offcanvas-bar .uk-accordion-default .uk-accordion-title:hover {
-  color: rgba(255, 255, 255, 0.7);
-}
-.uk-light .uk-accordion-default .uk-accordion-icon, .uk-section-primary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-icon, .uk-section-secondary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-icon, .uk-tile-primary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-icon, .uk-tile-secondary:not(.uk-preserve-color) .uk-accordion-default .uk-accordion-icon, .uk-card-primary.uk-card-body .uk-accordion-default .uk-accordion-icon, .uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-default .uk-accordion-icon, .uk-card-secondary.uk-card-body .uk-accordion-default .uk-accordion-icon, .uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-default .uk-accordion-icon, .uk-overlay-primary .uk-accordion-default .uk-accordion-icon, .uk-offcanvas-bar .uk-accordion-default .uk-accordion-icon {
-  color: rgba(255, 255, 255, 0.7);
+.uk-light .uk-open > .uk-accordion-title::before, .uk-section-primary:not(.uk-preserve-color) .uk-open > .uk-accordion-title::before, .uk-section-secondary:not(.uk-preserve-color) .uk-open > .uk-accordion-title::before, .uk-tile-primary:not(.uk-preserve-color) .uk-open > .uk-accordion-title::before, .uk-tile-secondary:not(.uk-preserve-color) .uk-open > .uk-accordion-title::before, .uk-card-primary.uk-card-body .uk-open > .uk-accordion-title::before, .uk-card-primary > :not([class*=uk-card-media]) .uk-open > .uk-accordion-title::before, .uk-card-secondary.uk-card-body .uk-open > .uk-accordion-title::before, .uk-card-secondary > :not([class*=uk-card-media]) .uk-open > .uk-accordion-title::before, .uk-overlay-primary .uk-open > .uk-accordion-title::before, .uk-offcanvas-bar .uk-open > .uk-accordion-title::before {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 .uk-light .uk-article-meta, .uk-section-primary:not(.uk-preserve-color) .uk-article-meta, .uk-section-secondary:not(.uk-preserve-color) .uk-article-meta, .uk-tile-primary:not(.uk-preserve-color) .uk-article-meta, .uk-tile-secondary:not(.uk-preserve-color) .uk-article-meta, .uk-card-primary.uk-card-body .uk-article-meta, .uk-card-primary > :not([class*=uk-card-media]) .uk-article-meta, .uk-card-secondary.uk-card-body .uk-article-meta, .uk-card-secondary > :not([class*=uk-card-media]) .uk-article-meta, .uk-overlay-primary .uk-article-meta, .uk-offcanvas-bar .uk-article-meta {
   color: rgba(255, 255, 255, 0.5);
@@ -11507,7 +11472,7 @@ iframe[data-uk-cover] {
   color: #666;
 }
 .uk-light .uk-button-primary:hover, .uk-section-primary:not(.uk-preserve-color) .uk-button-primary:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-button-primary:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-button-primary:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-primary:hover, .uk-card-primary.uk-card-body .uk-button-primary:hover, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary:hover, .uk-card-secondary.uk-card-body .uk-button-primary:hover, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary:hover, .uk-overlay-primary .uk-button-primary:hover, .uk-offcanvas-bar .uk-button-primary:hover {
-  background-color: rgb(95%, 95%, 95%);
+  background-color: rgb(242.25, 242.25, 242.25);
   color: #666;
 }
 .uk-light .uk-button-primary:active, .uk-section-primary:not(.uk-preserve-color) .uk-button-primary:active, .uk-section-secondary:not(.uk-preserve-color) .uk-button-primary:active, .uk-tile-primary:not(.uk-preserve-color) .uk-button-primary:active, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-primary:active, .uk-card-primary.uk-card-body .uk-button-primary:active, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary:active, .uk-card-secondary.uk-card-body .uk-button-primary:active, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary:active, .uk-overlay-primary .uk-button-primary:active, .uk-offcanvas-bar .uk-button-primary:active,
@@ -11522,7 +11487,7 @@ iframe[data-uk-cover] {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary.uk-active,
 .uk-overlay-primary .uk-button-primary.uk-active,
 .uk-offcanvas-bar .uk-button-primary.uk-active {
-  background-color: rgb(90%, 90%, 90%);
+  background-color: rgb(229.5, 229.5, 229.5);
   color: #666;
 }
 .uk-light .uk-button-secondary, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary, .uk-card-primary.uk-card-body .uk-button-secondary, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary, .uk-card-secondary.uk-card-body .uk-button-secondary, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary, .uk-overlay-primary .uk-button-secondary, .uk-offcanvas-bar .uk-button-secondary {
@@ -11530,7 +11495,7 @@ iframe[data-uk-cover] {
   color: #666;
 }
 .uk-light .uk-button-secondary:hover, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary:hover, .uk-card-primary.uk-card-body .uk-button-secondary:hover, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:hover, .uk-card-secondary.uk-card-body .uk-button-secondary:hover, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:hover, .uk-overlay-primary .uk-button-secondary:hover, .uk-offcanvas-bar .uk-button-secondary:hover {
-  background-color: rgb(95%, 95%, 95%);
+  background-color: rgb(242.25, 242.25, 242.25);
   color: #666;
 }
 .uk-light .uk-button-secondary:active, .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-tile-primary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-secondary:active, .uk-card-primary.uk-card-body .uk-button-secondary:active, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:active, .uk-card-secondary.uk-card-body .uk-button-secondary:active, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:active, .uk-overlay-primary .uk-button-secondary:active, .uk-offcanvas-bar .uk-button-secondary:active,
@@ -11545,7 +11510,7 @@ iframe[data-uk-cover] {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary.uk-active,
 .uk-overlay-primary .uk-button-secondary.uk-active,
 .uk-offcanvas-bar .uk-button-secondary.uk-active {
-  background-color: rgb(90%, 90%, 90%);
+  background-color: rgb(229.5, 229.5, 229.5);
   color: #666;
 }
 .uk-light .uk-button-text, .uk-section-primary:not(.uk-preserve-color) .uk-button-text, .uk-section-secondary:not(.uk-preserve-color) .uk-button-text, .uk-tile-primary:not(.uk-preserve-color) .uk-button-text, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-text, .uk-card-primary.uk-card-body .uk-button-text, .uk-card-primary > :not([class*=uk-card-media]) .uk-button-text, .uk-card-secondary.uk-card-body .uk-button-text, .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text, .uk-overlay-primary .uk-button-text, .uk-offcanvas-bar .uk-button-text {
@@ -11622,7 +11587,7 @@ iframe[data-uk-cover] {
   /* Webkit */
 }
 .uk-light .uk-range::-webkit-slider-runnable-track, .uk-section-primary:not(.uk-preserve-color) .uk-range::-webkit-slider-runnable-track, .uk-section-secondary:not(.uk-preserve-color) .uk-range::-webkit-slider-runnable-track, .uk-tile-primary:not(.uk-preserve-color) .uk-range::-webkit-slider-runnable-track, .uk-tile-secondary:not(.uk-preserve-color) .uk-range::-webkit-slider-runnable-track, .uk-card-primary.uk-card-body .uk-range::-webkit-slider-runnable-track, .uk-card-primary > :not([class*=uk-card-media]) .uk-range::-webkit-slider-runnable-track, .uk-card-secondary.uk-card-body .uk-range::-webkit-slider-runnable-track, .uk-card-secondary > :not([class*=uk-card-media]) .uk-range::-webkit-slider-runnable-track, .uk-overlay-primary .uk-range::-webkit-slider-runnable-track, .uk-offcanvas-bar .uk-range::-webkit-slider-runnable-track {
-  background: rgba(95%, 95%, 95%, 0.1);
+  background: rgba(242.25, 242.25, 242.25, 0.1);
 }
 .uk-light .uk-range:focus::-webkit-slider-runnable-track, .uk-section-primary:not(.uk-preserve-color) .uk-range:focus::-webkit-slider-runnable-track, .uk-section-secondary:not(.uk-preserve-color) .uk-range:focus::-webkit-slider-runnable-track, .uk-tile-primary:not(.uk-preserve-color) .uk-range:focus::-webkit-slider-runnable-track, .uk-tile-secondary:not(.uk-preserve-color) .uk-range:focus::-webkit-slider-runnable-track, .uk-card-primary.uk-card-body .uk-range:focus::-webkit-slider-runnable-track, .uk-card-primary > :not([class*=uk-card-media]) .uk-range:focus::-webkit-slider-runnable-track, .uk-card-secondary.uk-card-body .uk-range:focus::-webkit-slider-runnable-track, .uk-card-secondary > :not([class*=uk-card-media]) .uk-range:focus::-webkit-slider-runnable-track, .uk-overlay-primary .uk-range:focus::-webkit-slider-runnable-track, .uk-offcanvas-bar .uk-range:focus::-webkit-slider-runnable-track,
 .uk-light .uk-range:active::-webkit-slider-runnable-track,
@@ -11636,30 +11601,30 @@ iframe[data-uk-cover] {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-range:active::-webkit-slider-runnable-track,
 .uk-overlay-primary .uk-range:active::-webkit-slider-runnable-track,
 .uk-offcanvas-bar .uk-range:active::-webkit-slider-runnable-track {
-  background: rgba(95%, 95%, 95%, 0.15);
+  background: rgba(242.25, 242.25, 242.25, 0.15);
 }
 .uk-light, .uk-section-primary:not(.uk-preserve-color), .uk-section-secondary:not(.uk-preserve-color), .uk-tile-primary:not(.uk-preserve-color), .uk-tile-secondary:not(.uk-preserve-color), .uk-card-primary.uk-card-body, .uk-card-primary > :not([class*=uk-card-media]), .uk-card-secondary.uk-card-body, .uk-card-secondary > :not([class*=uk-card-media]), .uk-overlay-primary, .uk-offcanvas-bar {
   /* Firefox */
 }
 .uk-light .uk-range::-moz-range-track, .uk-section-primary:not(.uk-preserve-color) .uk-range::-moz-range-track, .uk-section-secondary:not(.uk-preserve-color) .uk-range::-moz-range-track, .uk-tile-primary:not(.uk-preserve-color) .uk-range::-moz-range-track, .uk-tile-secondary:not(.uk-preserve-color) .uk-range::-moz-range-track, .uk-card-primary.uk-card-body .uk-range::-moz-range-track, .uk-card-primary > :not([class*=uk-card-media]) .uk-range::-moz-range-track, .uk-card-secondary.uk-card-body .uk-range::-moz-range-track, .uk-card-secondary > :not([class*=uk-card-media]) .uk-range::-moz-range-track, .uk-overlay-primary .uk-range::-moz-range-track, .uk-offcanvas-bar .uk-range::-moz-range-track {
-  background: rgba(95%, 95%, 95%, 0.1);
+  background: rgba(242.25, 242.25, 242.25, 0.1);
 }
 .uk-light .uk-range:focus::-moz-range-track, .uk-section-primary:not(.uk-preserve-color) .uk-range:focus::-moz-range-track, .uk-section-secondary:not(.uk-preserve-color) .uk-range:focus::-moz-range-track, .uk-tile-primary:not(.uk-preserve-color) .uk-range:focus::-moz-range-track, .uk-tile-secondary:not(.uk-preserve-color) .uk-range:focus::-moz-range-track, .uk-card-primary.uk-card-body .uk-range:focus::-moz-range-track, .uk-card-primary > :not([class*=uk-card-media]) .uk-range:focus::-moz-range-track, .uk-card-secondary.uk-card-body .uk-range:focus::-moz-range-track, .uk-card-secondary > :not([class*=uk-card-media]) .uk-range:focus::-moz-range-track, .uk-overlay-primary .uk-range:focus::-moz-range-track, .uk-offcanvas-bar .uk-range:focus::-moz-range-track {
-  background: rgba(95%, 95%, 95%, 0.15);
+  background: rgba(242.25, 242.25, 242.25, 0.15);
 }
 .uk-light, .uk-section-primary:not(.uk-preserve-color), .uk-section-secondary:not(.uk-preserve-color), .uk-tile-primary:not(.uk-preserve-color), .uk-tile-secondary:not(.uk-preserve-color), .uk-card-primary.uk-card-body, .uk-card-primary > :not([class*=uk-card-media]), .uk-card-secondary.uk-card-body, .uk-card-secondary > :not([class*=uk-card-media]), .uk-overlay-primary, .uk-offcanvas-bar {
   /* Webkit */
 }
 .uk-light .uk-range::-webkit-slider-thumb, .uk-section-primary:not(.uk-preserve-color) .uk-range::-webkit-slider-thumb, .uk-section-secondary:not(.uk-preserve-color) .uk-range::-webkit-slider-thumb, .uk-tile-primary:not(.uk-preserve-color) .uk-range::-webkit-slider-thumb, .uk-tile-secondary:not(.uk-preserve-color) .uk-range::-webkit-slider-thumb, .uk-card-primary.uk-card-body .uk-range::-webkit-slider-thumb, .uk-card-primary > :not([class*=uk-card-media]) .uk-range::-webkit-slider-thumb, .uk-card-secondary.uk-card-body .uk-range::-webkit-slider-thumb, .uk-card-secondary > :not([class*=uk-card-media]) .uk-range::-webkit-slider-thumb, .uk-overlay-primary .uk-range::-webkit-slider-thumb, .uk-offcanvas-bar .uk-range::-webkit-slider-thumb {
-  background: rgb(50%, 50%, 50%);
-  border-color: rgb(90%, 90%, 90%);
+  background: rgb(127.5, 127.5, 127.5);
+  border-color: rgb(229.5, 229.5, 229.5);
 }
 .uk-light, .uk-section-primary:not(.uk-preserve-color), .uk-section-secondary:not(.uk-preserve-color), .uk-tile-primary:not(.uk-preserve-color), .uk-tile-secondary:not(.uk-preserve-color), .uk-card-primary.uk-card-body, .uk-card-primary > :not([class*=uk-card-media]), .uk-card-secondary.uk-card-body, .uk-card-secondary > :not([class*=uk-card-media]), .uk-overlay-primary, .uk-offcanvas-bar {
   /* Firefox */
 }
 .uk-light .uk-range::-moz-range-thumb, .uk-section-primary:not(.uk-preserve-color) .uk-range::-moz-range-thumb, .uk-section-secondary:not(.uk-preserve-color) .uk-range::-moz-range-thumb, .uk-tile-primary:not(.uk-preserve-color) .uk-range::-moz-range-thumb, .uk-tile-secondary:not(.uk-preserve-color) .uk-range::-moz-range-thumb, .uk-card-primary.uk-card-body .uk-range::-moz-range-thumb, .uk-card-primary > :not([class*=uk-card-media]) .uk-range::-moz-range-thumb, .uk-card-secondary.uk-card-body .uk-range::-moz-range-thumb, .uk-card-secondary > :not([class*=uk-card-media]) .uk-range::-moz-range-thumb, .uk-overlay-primary .uk-range::-moz-range-thumb, .uk-offcanvas-bar .uk-range::-moz-range-thumb {
-  background: rgb(50%, 50%, 50%);
-  border-color: rgb(90%, 90%, 90%);
+  background: rgb(127.5, 127.5, 127.5);
+  border-color: rgb(229.5, 229.5, 229.5);
 }
 .uk-light .uk-input, .uk-section-primary:not(.uk-preserve-color) .uk-input, .uk-section-secondary:not(.uk-preserve-color) .uk-input, .uk-tile-primary:not(.uk-preserve-color) .uk-input, .uk-tile-secondary:not(.uk-preserve-color) .uk-input, .uk-card-primary.uk-card-body .uk-input, .uk-card-primary > :not([class*=uk-card-media]) .uk-input, .uk-card-secondary.uk-card-body .uk-input, .uk-card-secondary > :not([class*=uk-card-media]) .uk-input, .uk-overlay-primary .uk-input, .uk-offcanvas-bar .uk-input,
 .uk-light .uk-select,
@@ -12306,7 +12271,7 @@ iframe[data-uk-cover] {
   border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 .uk-light .uk-text-lead, .uk-section-primary:not(.uk-preserve-color) .uk-text-lead, .uk-section-secondary:not(.uk-preserve-color) .uk-text-lead, .uk-tile-primary:not(.uk-preserve-color) .uk-text-lead, .uk-tile-secondary:not(.uk-preserve-color) .uk-text-lead, .uk-card-primary.uk-card-body .uk-text-lead, .uk-card-primary > :not([class*=uk-card-media]) .uk-text-lead, .uk-card-secondary.uk-card-body .uk-text-lead, .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-lead, .uk-overlay-primary .uk-text-lead, .uk-offcanvas-bar .uk-text-lead {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
 }
 .uk-light .uk-text-meta, .uk-section-primary:not(.uk-preserve-color) .uk-text-meta, .uk-section-secondary:not(.uk-preserve-color) .uk-text-meta, .uk-tile-primary:not(.uk-preserve-color) .uk-text-meta, .uk-tile-secondary:not(.uk-preserve-color) .uk-text-meta, .uk-card-primary.uk-card-body .uk-text-meta, .uk-card-primary > :not([class*=uk-card-media]) .uk-text-meta, .uk-card-secondary.uk-card-body .uk-text-meta, .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-meta, .uk-overlay-primary .uk-text-meta, .uk-offcanvas-bar .uk-text-meta {
   color: rgba(255, 255, 255, 0.5);
