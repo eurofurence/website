@@ -6,12 +6,22 @@
 	$con_day_3 = "Friday, August 21, 2026";
 	$con_day_4 = "Saturday, August 22, 2026";
 	// $seating_plan_thumb = "www/img/pages/artshow/XXX.jpg";
-	$seating_plan_version = "Version 1 as of July 15, 2026";
-	$seating_plan_file = "files/Art_Show_Panel_Assignment_Online_Version_V1_5_1_B3R9_15_07_2026.pdf";
+	$seating_plan_version = "Version 1.9 as of August 12, 2026";
+	$seating_plan_file = "files/Art_Show_Panel_Assignment_Online_Version_V1_9_1_V3R9_12_08_2026.pdf";
 ?>
 
 <section class="uk-column-1-2@l">
 	<h1 class="uk-column-span">Art Show - Guide for Artists</h1>
+	<div id="location-art-show-artist"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-art-show-artist', {
+				title: 'Art Show',
+				subtitle: 'CCH: Level 0, Hall H, Sections 5-6',
+				slug: 'art-show'
+			}, { tooltip: 'Art Show location on map' });
+		});
+	</script>
 	<div>
 		<caption><h3 class="reset-font">Getting Started</h3></caption>
 		<p>

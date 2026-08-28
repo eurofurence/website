@@ -200,16 +200,16 @@
         object-fit: contain;
     }
 
-    .uk-modal-close-full {
+    #ef-lostandfound-modal .uk-modal-close-full {
         padding: 15px;
         background: var(--ef-green);
         transition: background 128ms ease;
     }
-    .uk-modal-close-full svg {
+    #ef-lostandfound-modal .uk-modal-close-full svg {
         height: 24px;
         color: var(--ef-palette-2);
     }
-    .uk-modal-close-full:hover {
+    #ef-lostandfound-modal .uk-modal-close-full:hover {
         background: var(--ef-green-light);
     }
 
@@ -261,10 +261,10 @@
             padding: 0 36px;
         }
 
-        .uk-modal-close-full {
+        #ef-lostandfound-modal .uk-modal-close-full {
             background: var(--ef-palette-2);
         }
-        .uk-modal-close-full svg {
+        #ef-lostandfound-modal .uk-modal-close-full svg {
             color: inherit;
         }
     }
@@ -282,6 +282,16 @@
 
 <section id="ef-lostandfound">
     <h1>Lost and Found</h1>
+    <div id="location-lost-found"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createEFnavTrigger('location-lost-found', {
+                title: 'Lost and Found',
+                subtitle: 'CCH: Level 0, Entrance Hall, Security FrontDesk near entrance',
+                slug: 'security'
+            }, { tooltip: 'Lost and Found location on map' });
+        });
+    </script>
     <p>
         All Items found at the convention are stored and can be redeemed only at the Security FrontDesk at next Eurofurence in Hamburg.
     </p>

@@ -17,14 +17,14 @@ $formUrl = 'https://cloud.eurofurence.org/index.php/apps/forms/s/P2SG7WnzGizyP3e
         <ul uk-accordion="active: 0; collapsible: false">
             <?php foreach ($examples as $title => $file) { ?>
                 <li>
-                    <a class="uk-accordion-title" href="ledwall#"><?= $title ?></a>
+                    <a class="uk-accordion-title" href="ledwall/#"><?= $title ?></a>
                     <div class="uk-accordion-content">
                         <img src="img/pages/ledwall/<?= $file ?>" alt="<?= $title ?>" />
                     </div>
                 </li>
             <?php } ?>
             <li>
-                <a class="uk-accordion-title" href="ledwall#">Real Life Result</a>
+                <a class="uk-accordion-title" href="ledwall/#">Real Life Result</a>
                 <div class="uk-accordion-content">
                     <a href="img/pages/ledwall/IMG_0126.MOV" target="_blank"><span uk-icon="link-external"></span> Watch a video of the LED panel in action to get an impression of the final result</a>.<br />
                     File size warning: 21 MB

@@ -1,6 +1,6 @@
 <?php
     $frontmatter["department"] = "Art Show";
-    $frontmatter["title"] = "Software Engineer / Product Owner";
+    $frontmatter["title"] = "Software Engineer";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
 
@@ -25,6 +25,17 @@ payment system between customers and artists.</p>
 assist. We are looking for a product owner to coordinate the development of the new Art
 Show Management tool. Bringing your own programming team to collaborate is also an
 option.</p>
+
+
+<h3>What we work with</h3>
+<ul>
+    <li>Typescript</li>
+	<li>GoLang</li>
+	<li>Git</li>
+	<li>Docker</li>
+	<li>Kubernetes</li>
+	<li>PostgreSQL</li>
+</ul>
 
 <h3>Who are we?</h3>
 
