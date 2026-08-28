@@ -13,7 +13,7 @@ either
 * Navigate a cli to the root directory and run `docker compose up`, or
 * deploy all files from `www` to `/var/html` to be served through Apache Web Server.
 
-> To run mock enviroment use `docker compose -f docker-compose.mock.yml up` instead of `docker compose up`
+> To run mock environment, set `USE_MOCK_DATA=true` in [.env](.env.example) file and run `docker compose up`.
 
 ## SCSS Support
 
