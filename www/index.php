@@ -154,6 +154,7 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/responsive.css" />
 		<link rel="stylesheet" href="css/theme.css" />
+		<link rel="stylesheet" href="css/efnav.css" />
 	</head>
 
 	<body>
@@ -273,13 +274,36 @@
 						</label>
 					</div>
 
-					<button type="submit" class="uk-button uk-button-primary">Submit</button>
+					<?php 
+					if ($core->config->ratings->enabled)
+						echo '<button type="submit" class="uk-button uk-button-primary">Submit</button>';
+					else
+						echo '<button class="uk-button uk-text-muted uk-text-strikethrough" disabled uk-tooltip="This website is archived!">Submit</button>'
+					?>
 				</form>
+			</div>
+		</div>
+
+		<!-- EFnav modal dialog -->
+		<div id="efnav-modal" class="uk-modal uk-modal-full efnav-modal" uk-modal>
+			<div class="uk-modal-dialog uk-modal-body uk-flex uk-flex-column efnav-modal-dialog">
+				<button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+				<div class="efnav-modal-content uk-flex uk-flex-column uk-flex-1">
+					<h2 class="uk-modal-title efnav-modal-title"></h2>
+					<p class="uk-text-meta efnav-modal-subtitle"></p>
+					<div class="efnav-modal-tabs-wrap" hidden>
+						<ul class="uk-tab uk-tab-small efnav-modal-tabs"></ul>
+					</div>
+					<div class="efnav-modal-map">
+						<iframe class="efnav-modal-iframe" title="EFnav Map" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<script src="js/uikit.min.js"></script>
 		<script src="js/uikit-icons.min.js"></script>
+		<script src="js/efnav.js"></script>
 		<script src="js/partners.js"></script>
 		<script src="js/main.js"></script>
 
@@ -326,5 +350,3 @@
 	</script>
 </html>
 <?php $core->end(); ?>
-
-<!-- in loving memories of Dokken and Oskar -->

@@ -1,13 +1,20 @@
-<h1>Glympse Interactive Map</h1>
+
+
 <section>
-	<p>Watch other attendees travel towards Eurofurence (or back)!</p> All you'll need to participate is a smart phone and the <a href="http://glympse.com/get-glympse" target="_blank">Glympse app</a>.</p>
-	<p>Simply start the app and set it up to share you location using "!Eurofurence" as a tag.</p>
+	<h1>Glympse Interactive Map</h1>
+	<p>Watch other attendees travel towards Eurofurence (or back)!</p> All you'll need to participate is a smart phone and the <a href="https://app.glympse.com/" target="_blank">Glympse app</a>.</p>
+	<p>Simply start the app and set it up to share you location using "!eurofurence" as a tag.</p>
 
 	<br />
 
-	<iframe id="glympser" width="800" height="600" src="//glympse.com/ext/!eurofurence?twt=Eurofurence&hash=ef23" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<!--<button id="full-glympser" onclick="fullglympse()">Open Fullscreen View</button>-->
-	<br />
+	<div
+		class="consent-cover uk-width-1-1"
+		data-element-type="iframe"
+		data-src="pages/glympse/glympse.html"
+		data-class="uk-width-1-1"
+		data-title="Glympse"
+		data-uk-height-viewport="offset-bottom: 120px"
+	><h3>External Contents</h3><p>- click to accept -</p><p>subject to <br />legal.here.com/en/terms/serviceterms/us and <br />policies.google.com/privacy</p></div>
 
 	<h3>Some Advices</h3>
 	<ul>
@@ -18,16 +25,4 @@
 		<li>You should be able to watch the !Eurofurence tagged map in the Glympse app. However, this seems to bug out sometimes - in such case, just let the app share your location in the background and watch the map on this website.</p>
 		<li>In case of trouble, ... we cannot do anything for you. Sorry, but our entire staff is on their way to the con themselves! ;)</li>
 	</ul>
-	
-	<h3>Attribution</h3>
-	<ul>
-		<li>Thanks to Dibs Razell for having this idea!</li>
-	</ul>
-
 </section>
-
-<script>
-	function fullglympse() {
-		$("#glympser").addClass("fullscreen");
-	}
-</script>

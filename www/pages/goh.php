@@ -1,8 +1,22 @@
 <section>
 	<h1>Animal Art Crimes</h1>
+	<div id="location-goh"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-goh', {
+				title: 'Guest of Honor',
+				subtitle: 'CCH: Level 0, Foyer 4 (next to Artists\' Lounge)',
+				slug: 'goh'
+			}, { tooltip: 'Guest of Honor location on map' });
+		});
+	</script>
+
+	<div class="uk-text-center uk-margin-bottom">
+		<div><a href="goh/#updates" class="uk-button hide-ext uk-button-primary">GO TO BACKSTREET CAR UPDATES</a></div>
+	</div>
 
 	<div class="uk-column-1-2@l uk-clearfix" uk-lightbox>
-		<p>ƒ<a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
+		<p><a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
 
 		<p>Their creations include colorful murals, stickers, illustrations, and mixed-media works featuring expressive characters such as bats, hyenas, coyotes, dogs, and many other creatures. Their name is a playful reference to the rebellious spirit traditionally associated with street art, reflected in their motto: <span class="uk-text-italic">"So many walls, so little time..."</span></p>
 
@@ -19,6 +33,63 @@
 		<div><a href="img/pages/goh/artcrimes-0.jpg"><img src="img/pages/goh/s/artcrimes-0.jpg" alt="Various Work" /></a></div>
 		<div><a href="img/pages/goh/artcrimes-4.jpg"><img src="img/pages/goh/s/artcrimes-4.jpg" alt="Coyote on Posted Sign" /></a></div>
 		<div><a href="img/pages/goh/artcrimes-1.jpg"><img src="img/pages/goh/s/artcrimes-1.jpg" alt="Keep Colfax Weird" /></a></div>
+	</div>
+</section>
+
+<section>
+	<h2>Backstreet Car</h2>
+	<p>
+		From Wednesday to Friday, Animal Art Crimes, their friends and you(!) will paint a car;<br />
+		transforming a battered station wagon into one enormous collaborative artwork.<br />
+		Then, on Saturday (13:00), the car will be disassembled and it's pieces auctioned off for charity.
+	</p>
+	<p>
+		Join us on the CCH Roof Terrace as two fearless cutters take angle grinders to the car, spectacularly dismantling and turn it into unique pieces of Eurofurence history: <br />
+		live, loud and with plenty of sparks.
+	</p>
+	<p>
+		And because every good crime story needs a mastermind, the incredible Uncle Kage will auction the resulting artworks for charity. 
+	</p>
+	<p>
+		See here the progress of the car and the finished art pieces:
+	</p>
+
+	<h3 id="updates">Featured</h3>
+	<div class="uk-child-width-1-3 uk-grid-small uk-margin-top" uk-lightbox="animation: fade" uk-grid>
+		<?php foreach (getPics('img/pages/goh/car/featured') as $e) { ?>
+		<div>
+			<a href="img/pages/goh/car/featured/<?= $e['file'] ?>">
+				<div class="uk-inline">
+					<img src="img/pages/goh/car/featured/<?= $e['file'] ?>" alt="" />
+					<div class="uk-overlay uk-light uk-position-bottom">
+						<?= $e['cap'] ?>
+					</div>
+				</div>
+			</a>
+		</div>
+		<?php } ?>
+	</div>
+
+	<hr />
+
+	<h3>Updates</h3>
+	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; ratio: 16:9">
+		<div class="uk-slideshow-items uk-text-center">
+			<?php foreach (getPics('img/pages/goh/car') as $e) { ?>
+			<div>
+				<img class="uk-height-1-1" src="img/pages/goh/car/<?= $e['file'] ?>" alt="">
+			</div>
+			<?php } ?>
+		</div>
+		<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+		<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+		<div>
+			<ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-margin-top uk-grid-small uk-child-width-1-6" uk-grid>
+				<?php $i = 0; foreach (getPics('img/pages/goh/car') as $e) { ?>
+				<li uk-slideshow-item="<?= $i++ ?>"><a href="#"><img src="img/pages/goh/car/<?= $e['file'] ?>" alt=""></a></li>
+				<?php } ?>
+			</ul>
+		</div>
 	</div>
 </section>
 
@@ -63,3 +134,17 @@
 		<p>Check out my <a href="https://soundcloud.com/wopbol" target="_blank">🎧 Soundcloud</a>.</p>
     </div>
 </div>
+
+<?php
+function getPics($path) {
+	$ret = [];
+	foreach (scandir($path, SCANDIR_SORT_DESCENDING) as $filename) {
+		if (preg_match('/^(\d{2,4}-\d{2}-\d{2}-?\d*)\s+(.*)\.\w+$/', $filename, $m)) {
+			$timestamp = $m[1]; // format: YYYY-MM-DD-NNN
+			$caption   = $m[2];
+			$ret[$timestamp] = ['cap' => $caption, 'file' => $filename];
+		}
+	}
+	return $ret;
+}
+?>

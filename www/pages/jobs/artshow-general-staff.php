@@ -1,6 +1,6 @@
 <?php
     $frontmatter["department"] = "Art Show";
-    $frontmatter["title"] = "General Staff";
+    $frontmatter["title"] = "General Staff/Builder";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
 
@@ -16,9 +16,14 @@
 <p>We connect customers with artists and handle sales. We also offer a platform for fresh ideas and support the exchange of knowledge. Our goal is make browsing art an inspiring and enchanting experience, hosting events that allow guests to encounter art from new perspectives</p>
 <p>Our team is made up of creative, project-driven people who love turning ideas into reality. Mutual support and openness to new ideas are at the heart of what we do. By joining the Art Show team, you can discover a unique and immersive side of Eurofurence — helping to bring the convention to life while becoming an essential part of it.</p>
 
-<h3>Your Job</h3>
+<h3>Your Job (General Staff)</h3>
 
 <p>Our general staff handle a wide range of tasks, both behind the scenes and on the ground. Some are more conceptual—like planning and making sure each event has everything it needs—while others are hands-on, such as setting up the Art Show or preparing equipment. On top of that, the team is always there for artists and guests, ready to help out with questions or any problems that come up.</p>
+
+<h3>Your Job (Builder)</h3>
+
+<p>We fulfill artists’ special requests. We create installations. We build themed decorations. We design lighting setups. There’s always something to create, solve, or bring to life. You build equipment and installations according to documentation and/or use you creativity and come up with a concept for a given problem/requirement.</p>
+
 
 <h3>Your profile</h3>
 <ul>

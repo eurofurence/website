@@ -647,7 +647,7 @@ class LostAndFound {
         this.#selectedItemId = "";
         this.#clearModal();
         const modal = this.#getModalInstance();
-        if (modal && modal.isActive()) {
+        if (modal && typeof modal.hide === "function") {
             modal.hide();
         }
     }
