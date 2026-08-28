@@ -19,6 +19,7 @@ either
 
 Docker starts an additional `scss-watch` service that compiles SCSS changes automatically.
 The watcher uses standard file change events and rebuilds on SCSS add/change/remove (fallbacks to polling mode for local docker container).
+SCSS source maps are enabled only when `SCSS_DEVTOOLS` is set to `true` in a [.env](.env.example) file.
 
 * Place SCSS sources anywhere in `www/`.
 * Output CSS behavior:
