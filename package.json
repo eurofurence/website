@@ -4,6 +4,7 @@
     "version": "1.0.0",
     "description": "EF-website",
     "scripts": {
+        "hooks:setup": "git config core.hooksPath .githooks",
         "scss:build": "node scripts/build-scss.mjs",
         "scss:watch": "node scripts/watch-scss.mjs",
         "style:check": "node scripts/style-reference-check.mjs",

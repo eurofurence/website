@@ -1,0 +1,687 @@
+@use "sass:meta";
+
+@use "ef-variables" as *; // for direct access without namespace
+@use "ef-variables"; // for root variable mapping
+@use "ef-mixins" as *;
+
+:root {
+    @each $name, $value in meta.module-variables("ef-variables") {
+        --#{$name}: #{$value};
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: $ef-dark;
+    color: $ef-white;
+}
+
+.uk-modal {
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $ef-dark;
+    }
+}
+
+nav a[href^="http"]:not(.hide-ext, .uk-icon-button):after,
+main a[href^="http"]:not(.hide-ext, .uk-icon-button):after {
+    @include external-link-marker;
+}
+
+header,
+main,
+footer {
+    margin: 20px auto;
+    max-width: var(--uk-breakpoint-l, 1200px);
+}
+
+.ef-background {
+    background-color: $ef-green;
+}
+
+/* header */
+header {
+    z-index: 7;
+
+    h1 {
+        margin-top: 0;
+        font-size: 4em;
+        letter-spacing: 2px;
+        overflow: hidden;
+    }
+
+    @media (max-width: 640px) {
+        position: fixed;
+        top: calc($ef-nav-height * -1 + 38px);
+    }
+}
+
+.ef-menubutton {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 0.8em;
+    height: 0.8em;
+    margin: 0 8px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
+}
+
+/* navigation */
+nav {
+    @include rounded;
+    display: flex;
+    position: relative;
+    z-index: 8;
+    height: $ef-nav-height;
+    margin: 20px auto;
+    background: $ef-green;
+    /* background: linear-gradient(
+		69deg,
+		rgba(229, 0, 0, 0.4) 0%,
+		rgba(255, 141, 0, 0.4) 25%,
+		rgba(2, 129, 33, 0.4) 45%,
+		rgba(255, 238, 0, 0.4) 60%,
+		rgba(0, 76, 255, 0.4) 75%,
+		rgba(119, 0, 136, 0.4) 100%
+	); */
+
+    > div#ef-nav-home {
+        a {
+            display: block;
+            position: relative;
+            left: 10px;
+            width: $ef-nav-height;
+            height: $ef-nav-height;
+            background-image: url(../img/IMG_5904.PNG);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.66;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    > div:nth-of-type(2) {
+        flex: 1;
+    }
+
+    @media (max-width: 640px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding-top: $ef-nav-height;
+        overflow: hidden;
+        border-radius: 0;
+        max-width: 0;
+        transition: max-width 0.25s;
+
+        > div#ef-nav-home {
+            position: absolute;
+            width: 80px;
+            height: $ef-nav-height;
+            top: 0;
+            z-index: 1;
+            right: 0;
+        }
+
+        > div:nth-of-type(2) {
+            overflow-y: scroll;
+        }
+    }
+}
+
+#nav-toggle {
+    display: none;
+
+    @media (max-width: 640px) {
+        display: block;
+        position: relative;
+        z-index: 9;
+        margin: 0.5rem;
+        border: none;
+        border-radius: 9999px;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+        background: none;
+        transition: ease 0.1s;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $ef-white;
+        }
+    }
+}
+
+input[id="nav-ctl"],
+input[name="subnav-ctl"] {
+    position: fixed;
+    top: -100vh;
+    opacity: 0;
+}
+
+nav {
+    a {
+        color: $ef-white;
+        text-decoration: none;
+
+        &:hover {
+            color: $ef-white;
+            text-shadow: 0 0 2px white;
+            text-decoration: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    > div > ul {
+        display: flex;
+        text-align: center;
+
+        > li {
+            position: relative;
+            min-width: calc(100% / 5);
+            height: $ef-nav-height;
+
+            > a,
+            > label {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                padding-top: calc($ef-nav-height / 2 - 0.8rem);
+                cursor: pointer;
+            }
+            > label:after {
+                content: " ▼";
+                font-size: 0.67em;
+            }
+        }
+
+        ul {
+            position: absolute;
+            top: calc(100% - 4px);
+            width: 100%;
+            max-height: 0;
+            padding-top: 0;
+            overflow: hidden;
+            background-color: $ef-green;
+            border-radius: 0 0 $ef-border-radius $ef-border-radius;
+            transition:
+                max-height 0.25s,
+                padding-top 0.15s ease;
+
+            a {
+                display: inline-block;
+                width: 100%;
+                padding: 5px 10px;
+
+                &:after {
+                    background-color: $ef-white !important;
+                }
+                &:hover {
+                    background-color: $ef-white;
+                    color: $ef-green;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    > div > ul > li:hover > ul,
+    > div > ul > li:focus-within > ul,
+    > div > ul > li > ul:hover,
+    input[name="subnav-ctl"]:checked ~ ul {
+        max-height: 100vh;
+        padding-top: 4px;
+    }
+
+    a[href^="http"]:not(.hide-ext, .uk-icon-button):hover:after {
+        background-color: $ef-green !important;
+    }
+
+    @media (max-width: 640px) {
+        > div > ul {
+            display: block;
+            text-align: left;
+
+            > li {
+                height: unset;
+
+                > a {
+                    color: $ef-green;
+                    padding: 5px 10px;
+                    background-color: $ef-white;
+                    font-weight: 600;
+                }
+            }
+
+            ul {
+                position: relative;
+                top: auto;
+                max-height: unset;
+                backdrop-filter: none;
+                box-shadow: none;
+                background-color: transparent;
+                padding: 0 0.66em;
+
+                a {
+                    color: $ef-white;
+                }
+            }
+        }
+
+        > div ul label {
+            color: $ef-dark;
+        }
+    }
+}
+
+/* body area */
+main {
+    position: relative;
+
+    @media (max-width: 640px) {
+        margin-top: calc($ef-nav-height - 20px);
+    }
+}
+
+#content {
+    padding: 20px;
+    min-height: calc(100vh - 520px);
+}
+
+[class^="uk-card-media-"] a:hover img,
+[uk-lightbox] a:hover img,
+[uk-toggle]:hover {
+    filter: brightness(0.75);
+    cursor: pointer;
+}
+
+.ef-table-borders th,
+.ef-table-borders td {
+    border: 1px solid $ef-border-gray;
+}
+
+/* landing page */
+#ef-home-banner {
+    @include rounded;
+    position: relative;
+    height: 300px;
+    color: $ef-white;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    > div {
+        @include rounded;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        margin: 20px 25px;
+        padding: 20px;
+        width: min(50%, 480px, 100%);
+        font-weight: 600;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        @media (max-width: 960px) {
+            width: calc(100% - 90px);
+        }
+    }
+
+    main > #content > section > & h1 {
+        color: $ef-white;
+    }
+}
+
+#ef-home-countdown {
+    @include rounded;
+
+    h2 {
+        margin: 0;
+        padding-top: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+#ef-home-intro-text {
+    @include rounded;
+    padding: 20px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $ef-black;
+    text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        top: 40px;
+        right: 0;
+        top: 10px;
+        margin: 20px 30px;
+        width: min(50%, 480px, 100%);
+    }
+}
+
+#ef-home-photos {
+    @include rounded;
+    overflow: hidden;
+
+    @media (min-width: 1200px) {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+#ef-home-goh,
+#ef-home-charity {
+    @include rounded;
+    height: 200px;
+}
+
+#ef-home-flavor-text {
+    @include rounded;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background: rgba(255, 255, 255, 0.67);
+    color: $ef-black;
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    > p:first-child:first-letter {
+        font-weight: 600;
+        float: left;
+        font-size: 3.34rem;
+        line-height: 3.34rem;
+        padding-top: 0.34rem;
+        padding-right: 0.34rem;
+        padding-left: 0.34rem;
+    }
+}
+
+/* content */
+main #content > section {
+    @include rounded;
+    margin: 20px 0 0;
+    padding: 20px 20px;
+}
+
+/* consent cover */
+.consent-cover {
+    @include rounded;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $ef-black;
+    font-size: 1.33em;
+    line-height: 1.33em;
+    font-weight: 600;
+    text-align: center;
+    min-height: 800px;
+    padding-top: 150px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* video creators */
+.ef-people {
+    img {
+        display: inline;
+        float: left;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        margin-right: 12px;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/* footer */
+footer {
+    @include rounded;
+    padding: 20px;
+    background-color: $ef-green;
+
+    .uk-button-group {
+        display: inline-flex;
+        vertical-align: middle;
+        position: relative;
+
+        a ~ a {
+            margin-left: 3.5px;
+        }
+    }
+
+    #ef-footer-title {
+        position: relative;
+        background-image: url(../img/theme-logo-60w.png);
+        background-size: $ef-footer-title-height;
+        background-repeat: no-repeat;
+        min-height: $ef-footer-title-height;
+        padding-left: calc($ef-footer-title-height + 0.2em);
+    }
+
+    h2 {
+        img {
+            width: 1.2em;
+            height: 1.2em;
+        }
+
+        .uk-text-meta {
+            position: absolute;
+            top: 2.75em;
+            color: $ef-white;
+        }
+    }
+
+    @media (max-width: 640px) {
+        #ef-footer-title {
+            background-image: unset;
+            padding-left: unset;
+        }
+    }
+}
+
+.page-rating-stars {
+    display: inline-flex;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+
+    > *.glowing {
+        filter: unset;
+        color: gold;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.ef-page-rating {
+    border: none;
+    font-size: 1.5rem;
+    color: darkgray;
+    background: unset;
+    cursor: pointer;
+}
+
+/* uikit overrides */
+span.uk-icon {
+    margin-right: 0.25em;
+}
+span.ef-uk-icon-lift {
+    position: relative;
+    top: -2px;
+}
+[class*="uk-column-"] > * {
+    break-inside: avoid-column;
+}
+[class^="uk-"][class$="primary"] {
+    background-color: $ef-green;
+
+    &:hover {
+        background-color: $ef-green-light;
+    }
+}
+#ef-home-countdown {
+    .uk-countdown-number,
+    .uk-countdown-separator,
+    .uk-countdown-label {
+        color: $ef-white;
+        font-size: 3rem;
+
+        @media (max-width: 640px) {
+            font-size: 2rem;
+        }
+    }
+
+    .uk-countdown-label,
+    .uk-countdown-separator {
+        position: relative;
+        top: -1rem;
+        font-size: 1rem;
+    }
+
+    .uk-countdown-label,
+    .uk-countdown-separator {
+        font-size: 1rem;
+    }
+}
+.uk-modal-dialog,
+.uk-modal-header,
+.uk-modal-footer,
+.uk-input,
+.uk-textarea,
+.uk-button,
+.uk-card,
+.rounded,
+.uk-tooltip,
+.uk-notification-message,
+iframe {
+    @include rounded;
+}
+
+/* convention links */
+#links {
+    display: block;
+    width: 200px;
+    height: 80px;
+}
+
+/* apps */
+.ef-app-badge img {
+    height: 36px;
+}
+
+/* js-disabled */
+.js-disabled {
+    font-family: monospace;
+    padding: 3px 8px;
+    font-weight: 600;
+    background-color: $ef-black;
+    color: $ef-white;
+}
+
+/* ef-badger */
+.ef-new::after {
+    content: "new";
+    display: inline-block;
+    height: 0.9em;
+    line-height: 0.6em;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0 4px;
+    margin-left: 3px;
+    background-color: #f00;
+    color: $ef-white;
+    border-radius: 3px;
+}
+
+#ef-badger {
+    a[href^="https://chrome.google.com"]::before,
+    a[href^="https://addons.mozilla.org"]::before {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        content: " ";
+        width: 1em;
+        height: 1em;
+        background-size: contain;
+        margin: 0 3px;
+    }
+    a[href^="https://chrome.google.com"]::before {
+        background-image: url(../img/chrome.png);
+    }
+    a[href^="https://addons.mozilla.org"]::before {
+        background-image: url(../img/firefox.png);
+    }
+}
+
+/* administrative */
+.debug {
+    display: block;
+    position: relative;
+    padding: 8px;
+    font-family: monospace;
+    border: 1px solid orange;
+    color: $ef-white;
+    background: transparent;
+    font-size: 0.75em;
+    line-height: 1em;
+    overflow: visible;
+
+    > h3 {
+        font-size: 1em;
+        position: absolute;
+        right: 8px;
+        margin-top: 0;
+    }
+
+    &:before {
+        content: "debug";
+        color: $ef-black;
+        background: orange;
+        position: absolute;
+        top: -0.75em;
+        left: 6px;
+        padding: 1px 4px;
+        border-radius: 2px;
+    }
+}
+
+#EFWebCoreAutoExport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 10px;
+    background: $ef-black;
+    color: $ef-white;
+}

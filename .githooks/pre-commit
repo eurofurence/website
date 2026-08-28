@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+repository_root=$(git rev-parse --show-toplevel)
+cd "$repository_root"
+
+echo "Building production CSS before commit..."
+SCSS_DEVTOOLS=false node scripts/build-scss.mjs
+
+git add -A -- www/css
+echo "Production CSS rebuilt and staged."

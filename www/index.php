@@ -152,7 +152,6 @@
 
 		<link rel="stylesheet" href="css/uikit.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/responsive.css" />
 		<link rel="stylesheet" href="css/theme.css" />
 		<link rel="stylesheet" href="css/efnav.css" />
 	</head>

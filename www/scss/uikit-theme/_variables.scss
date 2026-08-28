@@ -1,7 +1,9 @@
-$global-primary-background: #005953;
-$global-secondary-background: #333333;
-$global-link-color: #1277db;
-$global-border-radius: 6px;
+@use "ef-variables" as *;
 
-$base-body-background: #333333;
-$base-body-color: #ffffff;
+$global-primary-background: $ef-green;
+$global-secondary-background: #222222;
+$global-link-color: $ef-blue-link;
+$global-border-radius: $ef-border-radius;
+
+$base-body-background: #222222;
+$base-body-color: $ef-white;

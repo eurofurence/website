@@ -13,24 +13,30 @@ either
 * Navigate a cli to the root directory and run `docker compose up`, or
 * deploy all files from `www` to `/var/html` to be served through Apache Web Server.
 
+Run `npm install` to fetch necessary packages and then enable the repository hooks with `npm run hooks:setup`.
+The pre-commit hook rebuilds SCSS with production settings and stages the generated CSS before allowing the commit to continue.
+
 > To run mock environment, set `USE_MOCK_DATA=true` in [.env](.env.example) file and run `docker compose up`.
 
 ## SCSS Support
 
 Docker starts an additional `scss-watch` service that compiles SCSS changes automatically.
 The watcher uses standard file change events and rebuilds on SCSS add/change/remove (fallbacks to polling mode for local docker container).
-SCSS source maps are enabled only when `SCSS_DEVTOOLS` is set to `true` in a [.env](.env.example) file.
+SCSS output defaults to compressed CSS for deployment. Set `SCSS_DEVTOOLS=true` for expanded CSS and source maps (for development and debug).
 
 * Place SCSS sources anywhere in `www/`.
 * Output CSS behavior:
   * All compiled files are saved in `www/css/`.
   * Files in `www/scss/` compile to `www/css/` directly.
   * Files elsewhere in `www/` compile to mirrored subpaths in `www/css/`.
+  * When `SCSS_DEVTOOLS` is disabled, generated CSS is compressed (optimised for production builds).
 * [UIkit Sass integration](www/scss/uikit.scss) follows the official docs https://getuikit.com/docs/sass
 * [package.json](package.json) contains some helper scripts to make sure there are no `.scss` references:
   * `npm run style:check` fails if a runtime file still points at `.scss`.
   * `npm run style:fix` rewrites obvious `.scss` references to `.css` in runtime files.
-  * `npm run style:ensure` checks, tries to fix, and then re-checks (useful for continuous deploy)
+  * `npm run style:ensure` checks, tries to fix, and then re-checks (useful for continuous deploy).
+* Shared variables, mixins are located in the [_ef-variables.scss](www/scss/_ef-variables.scss) and [_ef-mixins.scss](www/scss/_ef-mixins.scss).
+* [countries (generated flag data)](www/css/countries.css) and [mastodon-timeline](www/css/mastodon-timeline.min.css) stay as plain CSS.
 
 #### Telegram Configuration
 
