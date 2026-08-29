@@ -176,33 +176,47 @@
 		</main>
 
 		<footer>
-			<h2 id="ef-footer-title">
-				Eurofurence <?= $core->current->number ?></br />
-				<span class="uk-text-meta uk-text-italic"><?= $core->current->theme ?></span>
-			</h2>
-			<div class="uk-child-width-1-3@l" uk-grid>
-				<div>
-					<div class="uk-margin-medium-bottom">
-						<?= $core->current->location ?><br />
-						<?= $core->current->dates ?>
-					</div>
-					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">					
-						<a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a>
-						<a target="_blank" href="https://t.me/s/efnotifications" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Telegram" uk-icon="telegram"></a>
-						<a target="_blank" href="https://meow.social/@eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Mastodon" uk-icon="mastodon" rel="me"></a>
-						<a target="_blank" href="https://bsky.app/profile/eurofurence.org" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Bluesky" uk-icon="bluesky"></a>
-						<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Vimeo" uk-icon="vimeo"></a>
-						<a target="_blank" href="https://discord.com/invite/VMESBMM" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
-					</div>
+			<div class="ef-footer-brand">
+				<div class="ef-footer-identity">
+					<img class="ef-footer-logo" src="img/theme-logo-60w.png" alt="" aria-hidden="true" />
 					<div>
-						<a href="https://itunes.apple.com/us/app/eurofurence-convention/id1112547322" target="_blank" class="ef-hide-ext ef-app-badge"><img src="img/apple-appstore.svg" alt="iOS App" class=" uk-margin-small-bottom" /></a>
-						<a href="https://play.google.com/store/apps/details?id=org.eurofurence.connavigator" target="_blank" class="ef-hide-ext ef-app-badge"><img src="img/google-playstore.png" alt="Android App" class=" uk-margin-small-bottom" /></a>
+						<h2 id="ef-footer-title">Eurofurence <?= $core->current->number ?></h2>
+						<p class="ef-footer-tagline"><?= $core->current->theme ?></p>
 					</div>
 				</div>
 
-				<div>
-					<h3>Convention Network</h3>
-					<div id="links">
+                <div class="ef-footer-social">
+                    <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a>
+                    <a target="_blank" href="https://t.me/s/efnotifications" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Telegram" uk-icon="telegram"></a>
+                    <a target="_blank" href="https://meow.social/@eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Mastodon" uk-icon="mastodon" rel="me"></a>
+                    <a target="_blank" href="https://bsky.app/profile/eurofurence.org" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Bluesky" uk-icon="bluesky"></a>
+                    <a target="_blank" href="https://vimeo.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Vimeo" uk-icon="vimeo"></a>
+                    <a target="_blank" href="https://discord.com/invite/VMESBMM" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
+                </div>
+			</div>
+
+			<div class="ef-footer-columns">
+				<div class="ef-footer-col">
+					<ul class="ef-footer-facts">
+						<li><span uk-icon="icon: location" class="ef-uk-icon-lift"></span><?= $core->current->location ?></li>
+						<li><span uk-icon="icon: calendar" class="ef-uk-icon-lift"></span><?= $core->current->dates ?></li>
+					</ul>
+					<div>
+                        <h5>Eurofurence App</h5>
+                        <div class="ef-footer-apps">
+                            <a href="https://itunes.apple.com/us/app/eurofurence-convention/id1112547322" target="_blank" class="uk-box-shadow-hover-large ef-app-badge">
+                                <img src="img/apple-appstore.svg" alt="Eurofurence app for iOS" />
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=org.eurofurence.connavigator" target="_blank" class="uk-box-shadow-hover-large ef-app-badge">
+                                <img src="img/google-playstore.svg" alt="Eurofurence app for Android" />
+                            </a>
+                        </div>
+                    </div>
+				</div>
+
+				<div class="ef-footer-col">
+					<h5>Convention Network</h5>
+					<div id="links" class="uk-box-shadow-hover-large">
 						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
 							<div class="uk-slideshow-items js-disabled" id="partners">
 								<div>JavaScript required to view links to other conventions.</div>
@@ -211,24 +225,28 @@
 					</div>
 				</div>
 
-				<div>
-					<h3 class="uk-margin-remove-bottom">Rate this Page</h3>
-					<div class="page-rating-stars">
-						<button class="ef-page-rating 1" uk-toggle="target: #page-rating" data-rating="1">★</button>
-						<button class="ef-page-rating 2" uk-toggle="target: #page-rating" data-rating="2">★</button>
-						<button class="ef-page-rating 3" uk-toggle="target: #page-rating" data-rating="3">★</button>
-						<button class="ef-page-rating 4" uk-toggle="target: #page-rating" data-rating="4">★</button>
-						<button class="ef-page-rating 5" uk-toggle="target: #page-rating" data-rating="5">★</button>
+				<div class="ef-footer-col">
+					<div>
+						<h5>Help &amp; Legal</h5>
+						<ul class="ef-footer-links">
+							<li><a href="https://help.eurofurence.org/contact" target="_blank"><span uk-icon="icon:mail" class="ef-uk-icon-lift"></span>Contact Us</a></li>
+							<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Legal &amp; Privacy Statement</a></li>
+							<li><a href="website"><span uk-icon="icon:heart" class="ef-uk-icon-lift"></span>Site Attributions</a></li>
+							<li class="ef-footer-rate-row">
+								<span class="ef-footer-rate-label">
+                                    <span uk-icon="icon: star" class="ef-uk-icon-lift"></span>
+                                    Rate this page:
+                                </span>
+								<div class="page-rating-stars" uk-toggle="target: #page-rating">
+									<button class="ef-page-rating 1" data-rating="1" aria-label="Rate this page 1 out of 5">★</button>
+									<button class="ef-page-rating 2" data-rating="2" aria-label="Rate this page 2 out of 5">★</button>
+									<button class="ef-page-rating 3" data-rating="3" aria-label="Rate this page 3 out of 5">★</button>
+									<button class="ef-page-rating 4" data-rating="4" aria-label="Rate this page 4 out of 5">★</button>
+									<button class="ef-page-rating 5" data-rating="5" aria-label="Rate this page 5 out of 5">★</button>
+								</div>
+							</li>
+						</ul>
 					</div>
-					<h3>Help &amp; Legal</h3>
-					
-					<ul class="uk-list">
-						<li><a href="https://help.eurofurence.org/contact" target="_blank"><span uk-icon="icon:mail" class="ef-uk-icon-lift"></span>Contact Us</a></li>
-						<!-- <li><a href="https://help.eurofurence.org/faq" target="_blank"><span uk-icon="icon:question" class="ef-uk-icon-lift"></span>Frequently Asked Questions (FAQ)</a></li> -->
-						<!-- <li><a href="https://help.eurofurence.org/legal/imprint" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Imprint &amp; Legal Notice</a></li> -->
-						<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Legal &amp; Privacy Statement</a></li>
-						<li><a href="website"><span uk-icon="icon:heart" class="ef-uk-icon-lift"></span>Site Attributions</a></li>
-					</ul>
 				</div>
 			</div>
 		</footer>

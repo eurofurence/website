@@ -16,6 +16,7 @@
 		margin: 20px 30px; 
 		width: min(50%, 480px, 100%);		
 	}
+
 	#ef-home-photos {
 		position: relative;
 		z-index: 1;		
@@ -26,9 +27,64 @@
 	#ef-home-banner > div {
 		width: calc(100% - 90px);
 	}
+
+    footer {
+        position: relative;
+        padding-right: 80px;
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+	.ef-footer-brand {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.ef-footer-columns {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.ef-footer-col {
+		height: auto;
+	}
+
+    .ef-footer-social {
+        position: absolute;
+        top: 24px;
+        right: 32px;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 16px;
+    }
+
+	.ef-footer-rate-row {
+		align-self: stretch;
+		width: calc(100% + 80px + 32px);
+		margin-left: -32px;
+		margin-right: -80px;
+		padding: 16px 32px 0;
+		box-sizing: border-box;
+	}
 }
 
 @media (max-width: 640px) {
+    footer {
+        padding: 16px 64px 16px 16px;
+    }
+
+    .ef-footer-social {
+        right: 16px;
+    }
+
+    .ef-footer-rate-row {
+        width: calc(100% + 64px + 16px);
+        margin-left: -16px;
+        margin-right: -64px;
+        padding: 16px 16px 0;
+    }
+
 	nav > div:nth-of-type(2) {
 		overflow-y: scroll;
 	}
@@ -108,11 +164,6 @@
 	#nav-toggle:hover,
 	#nav-toggle:focus {
 		border: 2px solid #fff;
-	}
-
-	footer #ef-footer-title {
-		background-image: unset;
-		padding-left: unset;
 	}
 
 	.uk-countdown-number,

@@ -331,39 +331,166 @@ main #content > section {
 
 /* footer */
 footer {
-	padding: 20px;
+    position: relative;
+	padding: 20px 32px;
 	background-color: var(--ef-green);
 	border-radius: var(--ef-border-radius);
 }
-footer .uk-button-group {
-	display: inline-flex;
-	vertical-align: middle;
-	position: relative;
+
+footer h5 {
+	margin: 0 0 8px;
+	font-size: .8rem;
+	font-weight: 700;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .6);
 }
-footer .uk-button-group a ~ a {
-	margin-left: 3.5px; 
+
+.ef-footer-brand {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding-bottom: 20px;
 }
+
+.ef-footer-identity {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.ef-footer-logo {
+	width: var(--ef-footer-title-height);
+	height: var(--ef-footer-title-height);
+	object-fit: contain;
+	flex: none;
+}
+
 footer #ef-footer-title {
-	position: relative;
-	background-image: url(../img/theme-logo-60w.png);
-	background-size: var(--ef-footer-title-height);
-	background-repeat: no-repeat;
-	min-height: var(--ef-footer-title-height);
-	padding-left: calc(var(--ef-footer-title-height) + .2em);
+	margin: 0;
+    font-weight: 600;
 }
-footer h2 img {
-	width: 1.2em;
-	height: 1.2em;
+
+.ef-footer-tagline {
+	margin: 0;
+	font-style: italic;
+    font-weight: 500;
+	color: rgba(255, 255, 255, .7);
 }
-footer h2 .uk-text-meta {
-	position: absolute;
-	top: 2.75em;
+
+.ef-footer-social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.ef-footer-social .uk-icon-button {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	background-color: rgba(255, 255, 255, .1);
 	color: #fff;
+	transition: background-color .15s ease, color .15s ease, transform .15s ease;
 }
+.ef-footer-social .uk-icon-button:hover,
+.ef-footer-social .uk-icon-button:focus-visible {
+	background-color: #fff;
+	color: var(--ef-green);
+	transform: translateY(-2px);
+}
+
+.ef-footer-social .uk-icon-button > svg {
+    width: 24px;
+    height: 24px;
+}
+
+.ef-footer-columns {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	align-items: start;
+	gap: 32px 40px;
+	border-top: 1px solid rgba(255, 255, 255, .14);
+	border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+.ef-footer-columns:last-child {
+    border: none;
+}
+
+.ef-footer-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.ef-footer-col > *:last-child {
+	margin-bottom: 0;
+}
+
+.ef-footer-facts {
+	list-style: none;
+	margin: 0 0 18px;
+	padding: 0;
+}
+
+.ef-footer-facts li {
+	display: flex;
+	align-items: baseline;
+	gap: 4px;
+	padding: 4px 0;
+}
+
+.ef-footer-apps {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.ef-app-badge img {
+	height: 40px;
+}
+
+.ef-footer-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ef-footer-links li + li {
+	margin-top: 8px;
+}
+
+.ef-footer-links a {
+	display: inline-flex;
+	align-items: baseline;
+	text-decoration: none;
+    gap: 4px;
+	transition: transform .15s ease;
+}
+.ef-footer-links a:hover {
+	transform: translateX(2px);
+}
+
+.ef-footer-rate-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	padding-top: 8px;
+	border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+.ef-footer-rate-label {
+	display: inline-flex;
+	align-items: baseline;
+    gap: 4px;
+}
+
 .page-rating-stars {
 	display: inline-flex;
-	font-size: 1.5em;
-	letter-spacing: .1em;
 }
 .page-rating-stars > *.glowing {
 	filter: unset;
@@ -372,12 +499,19 @@ footer h2 .uk-text-meta {
 .page-rating-stars:hover {
 	text-decoration: none;
 }
+
 .ef-page-rating {
+    padding: 0 2px;
 	border: none;
 	font-size: 1.5rem;
+    line-height: 1;
 	color: darkgray;
 	background: unset;
 	cursor: pointer;
+	transition: color .15s ease, transform .15s ease;
+}
+.ef-page-rating:hover {
+	transform: scale(1.1);
 }
 
 /* uikit overrides */
@@ -426,13 +560,24 @@ iframe {
 /* convention links */
 #links {
 	display: block;
-	width: 200px;
-	height: 80px;
+	width: 100%;
+	max-width: 260px;
+    margin: auto 0;
+	border-radius: var(--ef-border-radius);
+	overflow: hidden;
+}
+/* normalise banners to fit the container */
+#links .uk-slideshow-items > * > a {
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
-/* apps */
-.ef-app-badge img {
-	height: 36px;
+#links .uk-slideshow-items img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 /* js-disabled */
