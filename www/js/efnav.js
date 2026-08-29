@@ -1,3 +1,5 @@
+let efnavModal = null;
+
 class EFnavModal {
     constructor() {
         this.element = document.getElementById("efnav-modal");
@@ -67,6 +69,10 @@ class EFnavModal {
     }
 }
 
+function isEFnavEnabled() {
+    return window.__EF_ENVIRONMENT__?.EFNAV_ENABLED === true;
+}
+
 function escapeHtml(text) {
     const div = document.createElement("div");
     div.textContent = text;
@@ -106,8 +112,6 @@ function prepareEFnavContainer(container) {
     }
 }
 
-const efnavModal = new EFnavModal();
-
 /**
  * Helper to render an icon button in provided container that opens up EFnav modal for provided location(s).
  *
@@ -116,7 +120,9 @@ const efnavModal = new EFnavModal();
  * @param {Object} [options] - Button options: icon and tooltip
  */
 function createEFnavTrigger(containerId, locations, options = {}) {
-    return null; // Fuvii: I'm sorry for this dirty, dirty hack until you implement a global config. Cheers, Flam <3
+    if (!isEFnavEnabled()) return null;
+
+    efnavModal ??= new EFnavModal();
     const container = getEFnavContainer(containerId);
     const normalizedLocations = normalizeLocations(locations);
     if (!container || normalizedLocations.length === 0) {
