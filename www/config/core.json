@@ -50,8 +50,16 @@
 		"path": "_archive/",
 		"targetBase": "https://archive.eurofurence.org/EF{number}"
 	},
-"ratings": {
+	"environment": {
+		"USE_MOCK_DATA": false,
+		"EFNAV_ENABLED": false,
+		"MOCK_LF_DATA": "__mocks__/lostandfound.mock.json"
+	},
+	"ratings": {
 		"enabled": true
+	},
+	"jobs": {
+		"newLabelDays": 14
 	},
 	"pages": {
 		"404": {
