@@ -1,8 +1,8 @@
 <?php
-	header("Content-Type: text/html; charset=UTF-8");
-	include("src/core.php");
-	include("src/telegram/telegram.php");
-	$core = new EFWebCore("config/core.json");
+    header("Content-Type: text/html; charset=UTF-8");
+    include("src/core.php");
+    include("src/telegram/telegram.php");
+    $core = new EFWebCore("config/core.json");
 ?>
 
 <!DOCTYPE html>

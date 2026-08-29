@@ -7,5 +7,6 @@ services:
       - ./www:/var/www/html/
     environment:
       - USE_MOCK_DATA=true
+      - EFNAV_ENABLED=true
     networks:
       - default
