@@ -1,5 +1,5 @@
 <?php
-    $frontmatter["department"] = "Dealers’ Den";
+    $frontmatter["department"] = "Dealers' Den";
     $frontmatter["title"] = "On-Site Assistant";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
@@ -7,7 +7,7 @@
 <p>Our team specializes in creating a welcoming atmosphere for all artists, dealers and their helpers. We enable dealers to focus on what is most important to them: fulfilling even the most unique requests and wide ranging needs of their clients.</p>
 <p>We are the ones 
     <ul>
-        <li>planning, building and preparing the Dealers’ Den, AD Dealers’ Den and the Artist Alley,</li>
+        <li>planning, building and preparing the Dealers' Den, AD Dealers' Den and the Artist Alley,</li>
         <li>providing services to artists, dealers and their helpers and</li>
         <li>responding to their requests within the facilities serviced by us,</li>
         <li>keeping all our serviced areas in a tidy, presentable condition at all times,</li>
@@ -23,4 +23,4 @@
 </p>
 <p>You may have to spend a few extra hours during the convention, as we need to fill all of our time slots with responsible people. We also need someone to help with setup on Wednesday and teardown on Sunday morning and would love to have you join us. It would be a great advantage - but not a requirement - if you booked early arrival (Tuesday) and late departure (Monday).</p>
 <p>Following your application, we will have a brief call with you to get to know you a little bit. A personal conversation between you and the team leader will help all sides to make sure we are on the same page with any questions you may have.</p>
-<p>Are you interested in joining the Dealer’s Den team and becoming an On-Site Assistant? Please contact <a href="https://t.me/pattarchus" target="_blank">@Pattarchus on Telegram</a> and he will get back to you shortly. Thank you for taking the time to read this. The Eurofurence team looks forward to hearing from you!</p>
+<p>Are you interested in joining the Dealers' Den team and becoming an On-Site Assistant? Please contact <a href="https://t.me/pattarchus" target="_blank">@Pattarchus on Telegram</a> and he will get back to you shortly. Thank you for taking the time to read this. The Eurofurence team looks forward to hearing from you!</p>
