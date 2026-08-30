@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Pattarchus",
+    "editor"      => "",
+    "title"       => "Dealers' Den",
+    "description" => "The Dealers' Den is the place for all you merchants and artists for selling your fine products.",
+    "keywords"    => "Dealers' Den, Selling, Merchants, Artist, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php
 	$con_day_1 = "Wednesday, August 19, 2026";
 	$con_day_2 = "Thursday, August 20, 2026";

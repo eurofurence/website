@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@TheFruitFox",
+    "editor"      => "@neeklass",
+    "title"       => "Video Creators",
+    "description" => "Officially accredited creators at Eurofurence.",
+    "keywords"    => "live, streamer, vtuber, content creator, twitch, instagram, tiktok, youtube, mastodon, social media",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php
     $deadline = 'July 31th, 2026';
     $creators = [

@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "@draconigen",
+    "title"       => "About the Website",
+    "description" => "The website credits - see who helped and contributed this year.",
+    "keywords"    => "Website, Credits, Featured Artist, Support, Webmaster, Design, Bug Report",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <style>
 .ef-people img {
 	display: inline;

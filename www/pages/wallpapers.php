@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@GermanCoyote, @Dingo",
+    "editor"      => "",
+    "title"       => "Wallpapers",
+    "description" => "Themed wallpapers for you!",
+    "keywords"    => "wallpapers, graphics",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <h2>Wallpapers</h2>
 
 <?php

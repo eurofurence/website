@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@riffuchs",
+    "editor"      => "",
+    "title"       => "Art Show - General Information",
+    "description" => "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
+    "keywords"    => "Art Show, Art, Display, Artwork, Prints, Originals, Bidding",
+	"ogpImage"    => "artshow.jpg",
+	"robots"      => ""
+]; ?>
+
 <?php 
 	// $seating_plan_thumb = "img/pages/artshow/XXX.jpg";
 	$seating_plan_version = "Version 1.9 as of August 12, 2026";

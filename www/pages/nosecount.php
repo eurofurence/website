@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "",
+    "editor"      => "@draconigen",
+    "title"       => "Statistics",
+    "description" => "Registration statistics visualized.",
+    "keywords"    => "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up, Diagram, Chart",
+    "ogpImage"    => "nosecount.png",
+    "robots"      => ""
+]; ?>
+
 <style>
 	@import url('css/countries.css');
 

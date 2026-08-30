@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@RefrTarks",
+    "editor"      => "",
+    "title"       => "Poker Tournament",
+    "description" => "The Poker Tournaments rules and framework.",
+    "keywords"    => "poker, Tournament, charity, rules, framework",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
     <h1>EF30 Charity Poker Tournament Rules & Regulations</h1>
 

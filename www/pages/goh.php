@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Nerventee",
+    "editor"      => "",
+    "title"       => "Guests of Honor",
+    "description" => "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
+    "keywords"    => "Special guests, GOH, Guests of Honor",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
 	<h1>Animal Art Crimes</h1>
 	<div id="location-goh"></div>

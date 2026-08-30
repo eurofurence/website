@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "@draconigen",
+    "title"       => "Website Art Details",
+    "description" => "Visual Guide for the Website Banner.",
+    "keywords"    => "",
+    "ogpImage"    => "",
+    "robots"      => "noindex, nofollow, noodp"
+]; ?>
+
 <section>
 	<h1>Eurofurence 30+ Website Banner Art Details</h1>
 

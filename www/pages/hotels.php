@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "",
+    "title"       => "Venue - Nearby Hotel Options",
+    "description" => "Get a room! Here are some official options for you.",
+    "keywords"    => "Hotel, Accommodation, Rooms",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
     <h1>Hotel Options</h1>
     <p>You can book a hotel room via our partner service:</p>

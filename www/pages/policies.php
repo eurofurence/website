@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Dingo",
+    "editor"      => "@draconigen",
+    "title"       => "Policies",
+    "description" => "The necessary rules and guidelines you need to know before attending Eurofurence.",
+    "keywords"    => "Policies, Rules, Conditions",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 
 <section>
 	<h1>Policies &ndash; Overview</h1>

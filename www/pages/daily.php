@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Draugvorn",
+    "editor"      => "@FuviiPeshu",
+    "title"       => "The Daily Eurofurence",
+    "description" => "The Daily Eurofurence is a printed daily newsletter that is distributed for free during Eurofurence.",
+    "keywords"    => "Daily, Daily Eurofurence, News, Newspaper, Printed news",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
 	<h1>The Daily Eurofurence</h1>
 	<div id="location-ef-daily"></div>

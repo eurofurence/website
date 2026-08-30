@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@tarianwolf",
+    "editor"      => "",
+    "title"       => "Sponsors",
+    "description" => "A lists of companies supporting Eurofurence.",
+    "keywords"    => "sponsors, supporters, infrastructure",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php $sponsors = [
 	[
 		'name' => 'Flexoptix',

@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@riffuchs",
+    "editor"      => "",
+    "title"       => "Art Show (as Artist)",
+    "description" => "Want to exhibit your art at Eurofurence? Here is everything you need to know.",
+    "keywords"    => "Art Show, Gallery, Guide, Rules, Exhibition, Application",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php 
 	$applications_start = "February 9, 2026";
 	$applications_end   = "March 22, 2026";

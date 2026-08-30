@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "@draconigen",
+    "title"       => "Page Ratings",
+    "description" => "Import feedback feed and visualize all given feedback through the EF Website Feedback Feature.",
+    "ogpImage"    => "",
+    "keywords"    => "",
+    "robots"      => ""
+]; ?>
+
 <style>
 	#file-input {
 		position: relative;
