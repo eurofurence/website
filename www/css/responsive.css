@@ -99,6 +99,7 @@
 	header {
 		position: fixed;
 		top: calc(var(--ef-nav-height) * -1 + 38px);
+        z-index: 1000;
 	}
 	#ef-nav-home {
 		position: absolute;
@@ -127,12 +128,30 @@
 	nav > div > ul > li {
 		height: unset;
 	}
-	nav > div > ul > li > a {
-		color: var(--ef-green);
-		padding: 5px 10px;
-		background-color: #fff;
-		font-weight: 600;
+
+    nav > div > ul ul li + li::before {
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, .64), rgba(255, 255, 255, .28), rgba(255, 255, 255, 0));
+    }
+    nav > div > ul ul a::before,
+    nav > div > ul > li::before,
+	nav > div > ul > li + li::before {
+        display: none;
 	}
+	nav > div > ul > li > a {
+		padding: 5px 10px;
+        color: var(--ef-green) !important;
+		background-color: #fff !important;
+		font-weight: 600;
+        pointer-events: none;
+	}
+
+	nav > div > ul > li > a::after,
+	nav > div > ul > li > label::after {
+		display: none;
+	}
+
 	nav > div > ul {
 		display: block;
 	}
@@ -143,13 +162,15 @@
 		backdrop-filter: none;
 		box-shadow: none;
 		background-color: transparent;
-		padding: 0 .66em;
+		padding: 0;
+        text-indent: .66em;
 	}
 	nav > div ul label {
 		color: #333;
 	}
 	nav > div > ul ul a {
 		color: #fff;
+        padding-left: 0;
 	}
 
 	/* Mobile nav toggle button */

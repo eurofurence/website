@@ -87,11 +87,18 @@ nav {
 		rgba(119, 0, 136, 0.4) 100%
 	); */
 	border-radius: var(--ef-border-radius);
+    transition: border-bottom-right-radius 1s ease-out;
+}
+
+nav:has(> div > ul > li:last-child:hover),
+nav:has(> div > ul > li:last-child:focus-within) {
+	border-bottom-right-radius: 0;
+    transition: border-bottom-right-radius .15s ease;
 }
 nav > div#ef-nav-home a {
 	display: block;
 	position: relative;
-	left: 10px;
+    margin: 0 10px;
 	width: var(--ef-nav-height);
 	height: var(--ef-nav-height);
 	background-image: url(../img/IMG_5904.PNG);
@@ -100,9 +107,11 @@ nav > div#ef-nav-home a {
 	background-repeat: no-repeat;
 	opacity: .66;
 	cursor: pointer;
+	transition: opacity .15s ease, transform .15s ease;
 }
 nav > div#ef-nav-home a:hover {
 	opacity: 1;
+	transform: scale(1.04);
 }
 nav > div:nth-of-type(2) {
 	flex: 1;
@@ -134,14 +143,73 @@ nav > div > ul > li {
 	min-width: calc(100% / 5);
 	height: var(--ef-nav-height);
 }
+
+nav > div > ul > li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+    right: 0;
+	width: 1px;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
+}
 nav > div > ul > li > a,
 nav > div > ul > li > label {
 	display: inline-block;
+	position: relative;
 	width: 100%;
 	height: 100%;
 	padding-top: calc(var(--ef-nav-height) / 2 - .8rem);
 	cursor: pointer;
+	font-weight: 500;
+	transition: background-color .15s ease, color .15s ease;
 }
+
+nav > div > ul > li > a::after,
+nav > div > ul > li > label::after {
+	content: "";
+	position: absolute;
+	left: 15%;
+	right: 15%;
+	bottom: 12px;
+	height: 2px;
+	border-radius: 999px;
+	background: #fff;
+	opacity: 0;
+	transform: scaleX(0);
+	transition: opacity .15s ease, transform .15s ease;
+}
+
+nav > div > ul > li:hover > a::after,
+nav > div > ul > li:focus-within > a::after,
+nav > div > ul > li:hover > label::after,
+nav > div > ul > li:focus-within > label::after,
+nav > div > ul > li > a.ef-active::after {
+	opacity: .9;
+	transform: scaleX(1);
+}
+
+nav > div > ul > li > a:hover,
+nav > div > ul > li > label:hover,
+nav > div > ul > li:hover > a,
+nav > div > ul > li:hover > label,
+nav > div > ul > li:focus-within > a,
+nav > div > ul > li:focus-within > label {
+	background: rgba(255, 255, 255, .08);
+}
+
+nav > div > ul > li > a.ef-active {
+	font-weight: 600;
+}
+
+nav > div > ul > li:last-child:hover > a,
+nav > div > ul > li:last-child:hover > label,
+nav > div > ul > li:last-child:focus-within > a,
+nav > div > ul > li:last-child:focus-within > label {
+	border-bottom-right-radius: 0;
+}
+
 /* nav > div > ul > li:first-child > a,
 nav > div > ul > li:first-child > label {
 	padding-left: 50px;
@@ -165,23 +233,39 @@ nav > div > ul > li:focus-within > ul,
 nav > div > ul > li > ul:hover,
 nav input[name="subnav-ctl"]:checked ~ ul {
 	max-height: 100vh;
-	padding-top: 4px;
 }
 nav > div > ul ul {
 	position: absolute;
-	top: calc(100% - 4px);
+	top: 100%;
 	width: 100%;
 	max-height: 0;
-	padding-top: 0;
 	overflow: hidden;
 	background-color: var(--ef-green);
 	border-radius: 0 0 var(--ef-border-radius) var(--ef-border-radius);
-	transition: max-height .25s, padding-top .15s ease;
+    opacity: .94;
+	transition: max-height .25s ease;
 }
+
+nav > div > ul ul li {
+	position: relative;
+}
+
+nav > div > ul ul li + li::before {
+	content: "";
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	top: 0;
+	height: 1px;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .28), rgba(255, 255, 255, 0));
+}
+
 nav > div > ul ul a {
 	display: inline-block;
+	position: relative;
 	width: 100%;
 	padding: 5px 10px;
+    transition: background-color .15s ease;
 }
 nav > div > ul ul a:after {
 	background-color: #fff !important;
@@ -189,7 +273,13 @@ nav > div > ul ul a:after {
 nav > div > ul ul a:hover {
 	background-color: #fff;
 	color: var(--ef-green);
+    font-weight: 500;
 	text-decoration: none;
+}
+
+nav > div > ul ul a:hover::before {
+	background: var(--ef-green);
+	transform: translateY(-50%) scale(1.1);
 }
 nav a[href^="http"]:not(.hide-ext, .uk-icon-button):hover:after {
 	background-color: var(--ef-green) !important;
