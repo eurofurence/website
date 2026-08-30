@@ -61,3 +61,47 @@ if (document.location.hash.substring(1) === 'rate-success') {
 if (document.location.hash.substring(1) === 'rate-failure') {
     UIkit.notification('Uhoh, something went wrong on our side. Please tell @draconigen on Telegram.', 'danger');
 }
+
+/* Back To Top (UIkit Totop) */
+const toTopButton = document.getElementById('ef-to-top');
+if (toTopButton) {
+    toTopButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const configuredThreshold = Number.parseInt(toTopButton.dataset.threshold || '100', 10);
+    const threshold = Number.isFinite(configuredThreshold) && configuredThreshold > 0 ? configuredThreshold : 100;
+    const fadeRange = 48;
+    let toTopTicking = false;
+
+    const updateToTopVisibility = () => {
+        toTopTicking = false;
+
+        const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        const fadeStart = Math.max(0, threshold - fadeRange);
+        const fadeEnd = threshold + fadeRange;
+        const raw = (scrollY - fadeStart) / (fadeEnd - fadeStart);
+        const opacity = Math.max(0, Math.min(1, raw));
+
+        toTopButton.style.opacity = String(opacity);
+        if (opacity > 0.01) {
+            toTopButton.classList.add('ef-visible');
+        } else {
+            toTopButton.classList.remove('ef-visible');
+        }
+    };
+
+    const scheduleToTopUpdate = () => {
+        if (toTopTicking) {
+            return;
+        }
+        toTopTicking = true;
+        window.requestAnimationFrame(updateToTopVisibility);
+    };
+
+    window.addEventListener('scroll', scheduleToTopUpdate, { passive: true });
+    window.addEventListener('resize', scheduleToTopUpdate);
+    scheduleToTopUpdate();
+}
+

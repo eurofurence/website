@@ -580,6 +580,114 @@ iframe {
 	object-fit: contain;
 }
 
+#links [uk-slideshow] {
+	position: relative;
+}
+
+#links .uk-dotnav {
+    --uk-position-margin-offset: 4px;
+	margin: 4px;
+	padding: 4px 8px;
+	color: rgba(255,255,255,.7);
+    background: rgba(34,34,34,.75);
+	border-radius: 999px;
+    pointer-events: none;
+}
+
+#links .uk-dotnav > li {
+    padding-left: 8px;
+    pointer-events: auto;
+}
+#links .uk-dotnav > li:first-of-type {
+    padding-left: 0;
+}
+
+#links .uk-dotnav > * > * {
+	border-color: rgba(255,255,255,.7);
+	background-color: rgba(255,255,255,.32);
+}
+
+#links .uk-dotnav > .uk-active > * {
+	background-color: var(--ef-palette-2);
+	border-color: var(--ef-palette-2);
+}
+
+#partners.js-disabled {
+	position: static;
+	margin: 0;
+	list-style: none;
+	border-radius: var(--ef-border-radius);
+	overflow: visible;
+}
+
+#partners.js-disabled > * {
+	display: block !important;
+	position: static;
+	height: auto;
+	padding: 0;
+}
+
+#partners.js-disabled + .uk-slideshow-nav {
+	display: none;
+}
+
+#ef-home-photos {
+	position: relative;
+}
+
+#ef-home-photos .uk-dotnav {
+    --uk-position-margin-offset: 6px;
+	margin: 6px;
+	padding: 6px 8px;
+    color: rgba(255,255,255,.7);
+    background: rgba(34,34,34,.75);
+	border-radius: 999px;
+    pointer-events: none;
+}
+
+#ef-home-photos .uk-dotnav > li {
+    padding-left: 8px;
+    pointer-events: auto;
+}
+#ef-home-photos .uk-dotnav > li:first-of-type {
+    padding-left: 0;
+}
+
+#ef-home-photos .uk-dotnav > * > * {
+	border-color: rgba(255,255,255,.7);
+	background-color: rgba(255,255,255,.32);
+}
+
+#ef-home-photos .uk-dotnav > .uk-active > * {
+	background-color: var(--ef-palette-2);
+	border-color: var(--ef-palette-2);
+}
+
+#ef-to-top {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	z-index: 20;
+	opacity: 0;
+	transform: translateY(8px);
+	pointer-events: none;
+	transition: opacity .3s ease, transform .3s ease, background-color .15s ease, color .15s ease;
+	background-color: rgba(255, 255, 255, .5);
+	color: var(--ef-green);
+}
+
+#ef-to-top.ef-visible {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+#ef-to-top:hover,
+#ef-to-top:focus-visible {
+	background-color: #fff;
+	color: var(--ef-green);
+}
+
 /* js-disabled */
 .js-disabled {
 	font-family: monospace;

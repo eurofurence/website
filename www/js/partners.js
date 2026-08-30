@@ -22,10 +22,19 @@ class Partners {
             if (!items[key].enable)
                 continue;
 
-            partners.innerHTML += `<div><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" /></a></div>`
+            partners.innerHTML += `<li><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" /></a></li>`
         }
 
-        partners.firstChild.classList.add('uk-slide-active', 'uk-active', 'uk-transition-active', 'uk-box-shadow-hover-large');
+        if (partners.firstElementChild) {
+            partners.firstElementChild.classList.add('uk-slide-active', 'uk-active', 'uk-transition-active', 'uk-box-shadow-hover-large');
+        }
+
+        if (typeof UIkit !== "undefined" && UIkit.update) {
+            const links = document.getElementById("links");
+            if (links) {
+                UIkit.update(links);
+            }
+        }
     }
 }
 
@@ -39,7 +48,7 @@ window.addEventListener("load", async () => {
 		const items = await Partners.fetch();
 		
 		// prepare partners div
-		if (!items.length !== 0)
+        if (items.length !== 0)
 			partners.innerText = "";
 		else
 			partners.innerText = "<error loading partners>";

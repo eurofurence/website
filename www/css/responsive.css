@@ -70,6 +70,11 @@
 }
 
 @media (max-width: 640px) {
+    #ef-to-top {
+        right: 16px;
+        bottom: 16px;
+    }
+
     footer {
         padding: 16px 64px 16px 16px;
     }
@@ -177,5 +182,19 @@
 		position: relative;
 		top: -1rem;
 		font-size: 1rem;
+	}
+
+    .ef-photos-credits {
+        margin-bottom: 20px;
+    }
+    
+	#ef-home-photos .uk-dotnav.uk-position-bottom-center,
+	#links .uk-dotnav.uk-position-bottom-center {
+        --uk-position-margin-offset: 2px;
+        margin: 2px;
+		left: auto;
+		right: 0;
+		bottom: 0;
+		transform: none;
 	}
 }

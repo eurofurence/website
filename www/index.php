@@ -169,6 +169,27 @@
 			</nav>
 		</header>
 
+		<?php
+			$toTopThreshold = 100;
+			if (
+				isset($core->config->ui)
+				&& isset($core->config->ui->toTopThreshold)
+				&& is_numeric($core->config->ui->toTopThreshold)
+				&& (int)$core->config->ui->toTopThreshold > 0
+			) {
+				$toTopThreshold = (int)$core->config->ui->toTopThreshold;
+			}
+		?>
+		<a
+			id="ef-to-top"
+			class="uk-icon-button"
+			href=""
+			uk-totop
+			uk-scroll
+			data-threshold="<?= $toTopThreshold ?>"
+			aria-label="Back to top"
+		></a>
+
 		<main <?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
 			<div id="content">
 				<?= $core->get_content() ?>
@@ -218,9 +239,10 @@
 					<h5>Convention Network</h5>
 					<div id="links" class="uk-box-shadow-hover-large">
 						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
-							<div class="uk-slideshow-items js-disabled" id="partners">
-								<div>JavaScript required to view links to other conventions.</div>
-							</div>
+							<ul class="uk-slideshow-items js-disabled" id="partners">
+								<li>JavaScript required to view links to other conventions.</li>
+							</ul>
+							<ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-position-bottom-center uk-position-small"></ul>
 						</div>
 					</div>
 				</div>
