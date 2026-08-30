@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "@draconigen",
+    "title"       => "Home",
+    "description" => "Eurofurence {number} will take place from {dates}. Eurofurence is Europe's largest and longest-running annual gathering, celebrating the furry community across the continent.",
+    "ogpImage"    => "",
+    "keywords"    => "",
+    "robots"      => ""
+]; ?>
+
 <style>
 @media (min-width: 640px) {
     .ef-text-large-m {
@@ -24,12 +34,12 @@ iframe {
 
 <div id="ef-home-banner">
     <div>
-        <h1>Eurofurence <?= $this->current->number ?></h1>
+        <h1>Eurofurence <?= $this->config->convention->number ?></h1>
         <!-- <h1>Eurofurence <img src="img/pages/home/ef31logo_50px.png" alt="31" /></h1> -->
         <p class="ef-text-large-m">
-            <?= $this->current->theme ?> <br />
-            <?= $this->current->dates ?> <br />
-            <?= $this->current->location ?>
+            <?= $this->config->convention->theme ?> <br />
+            <?= $this->config->convention->dates ?> <br />
+            <?= $this->config->convention->location ?>
         </p>
     </div>
 </div>
@@ -86,11 +96,11 @@ iframe {
 </div>
 
 <!-- <div id="ef-home-goh" class="ef-background uk-margin uk-text-center uk-padding">
-    <h2>Guest of Honor: <?= $this->current->goh ?></h2>
+    <h2>Guest of Honor: <?= $this->config->convention->goh ?></h2>
 </div> -->
 
 <!-- <div id="ef-home-charity" class="ef-background uk-margin uk-text-center uk-padding">
-    <h2>Charity: <?= $this->current->charity ?></h2>
+    <h2>Charity: <?= $this->config->convention->charity ?></h2>
 </div> -->
 
 <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-margin-top" uk-grid>

@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Sniffer_raccoon",
+    "editor"      => "",
+    "title"       => "Charity",
+    "description" => "This year all donations, collections and more will go to support {charity}.",
+    "keywords"    => "Donations, Good cause, Benefaction",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
     <h1>Seehundstation Friedrichskoog</h1>
     <div id="location-charity"></div>
