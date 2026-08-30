@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "",
+    "editor"      => "@draconigen",
+    "title"       => "Open Staff Positions",
+    "description" => "You want to help Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
+    "keywords"    => "Jobs, Volunteer, Staff, Crew, Help, Gopher, Angel",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 
 <section>
 	<h1>Open Staff Positions at Eurofurence</h1>

@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@MafunDi",
+    "editor"      => "",
+    "title"       => "Taiko Workshop",
+    "description" => "Taiko Bastards Eurofurence Workshop explained.",
+    "keywords"    => "taiko bastards workshop",
+    "ogpImage"    => "taiko-bastards.jpg",
+    "robots"      => ""
+]; ?>
+
 <section>
     <h1>Play with the TAIKO BASTARDS!</h1>
     <div id="location-arena-taiko"></div>

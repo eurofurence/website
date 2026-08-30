@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@ShortyDragon",
+    "editor"      => "",
+    "title"       => "Photography",
+    "description" => "The Eurofurence photography team takes care of the 'official photography stuff' that is happening at EF.",
+    "keywords"    => "Photography, Photo, Pictures",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
 	<h1>Photography</h1>
 	<p>The Eurofurence photography team takes care of the "official photography stuff" that is happening at EF. This includes for the most part the group pictures and the fursuit photoshoot.</p>

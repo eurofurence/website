@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Jake_R",
+    "editor"      => "",
+    "title"       => "Fursuit Lounge",
+    "description" => "The fursuit cooldown and supply area.",
+    "keywords"    => "Fursuit, Fursuits, Suiter, Fursuit Lounge, Lounge, Headless Lounge",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
 	<h1>Fursuit Lounge Rules</h1>
 	<div id="location-fursuit-lounge"></div>

@@ -1,4 +1,12 @@
-
+<?php $page = [
+    "owner"       => "",
+    "editor"      => "@Syntaxfur",
+    "title"       => "Glympse Map",
+    "description" => "Follow the surge of furries towards Hamburg and back live on Glympse.",
+    "keywords"    => "Glympse, Live, Travel, Map",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
 
 <section>
 	<h1>Glympse Interactive Map</h1>

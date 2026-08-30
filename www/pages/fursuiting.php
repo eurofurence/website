@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Jake_R",
+    "editor"      => "",
+    "title"       => "Fursuiting",
+    "description" => "All information for fursuiters: Everything about the Fursuit lounge, the parade and everything else.",
+    "keywords"    => "Fursuit Support, Suiter, Fursuit Lounge, Lounge, Headless Lounge",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php
 	$badgesRegistrationOpen = true;
 	$badgesRegistrationOpeningDate = 'August 1st, 2026';
