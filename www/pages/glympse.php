@@ -1,4 +1,12 @@
-
+<?php $page = [
+    "owner"       => "",
+    "editor"      => "@Syntaxfur",
+    "title"       => "Glympse Map",
+    "description" => "Follow the surge of furries towards Hamburg and back live on Glympse.",
+    "keywords"    => "Glympse, Live, Travel, Map",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
 
 <section>
 	<h1>Glympse Interactive Map</h1>
@@ -18,6 +26,7 @@
 
 	<h3>Some Advices</h3>
 	<ul>
+		<li>If you want your marker to disappear from the map, all you have to do is clear your location history in the app. </li>
 		<li>If you don't want to share your home address, you might want to enable location sharing a bit after getting on your way to the con.</li>
 		<li>Please mind battery load and the rather heavy energy consumption of GPS and Glympse. Make sure your battery is loaded, or others won't see you on the map!</li>
 		<li>Although Glympse has a navigation feature, we suggest sticking to the navigation app you've grown used to.</li>

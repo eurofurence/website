@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Dingo",
+    "editor"      => "@FuviiPeshu",
+    "title"       => "Lost and Found",
+    "description" => "Browse all items that were lost and found during the convention, and handed to Security for safekeeping.",
+    "keywords"    => "lost and found, loss, lost, missing, items",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <style>
     .lf-card {
         transition: transform 128ms ease;

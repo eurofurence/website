@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Sam_Mel",
+    "editor"      => "",
+    "title"       => "Venue - Nearby Dining Options",
+    "description" => "Due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.",
+    "keywords"    => "Hotel, Dining, Restaurants, Vegetarian, Vegan, Food, Eating",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
     <h1>Restaurant Options</h1>
     <p>Everyone deserves to enjoy good food during the con. However, due to allergies, intolerances, or ethical choices, some furries may have limited dining options. To support them, we've created a map highlighting restaurants that offer vegetarian, vegan, and gluten-free options.</p>

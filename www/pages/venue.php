@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "",
+    "title"       => "The CCH Hamburg (Venue)",
+    "description" => "This year's venue is the Congress Center Hamburg (CCH). Come in and find out about the enormous venue we're about to fill with animal noises and fur.",
+    "keywords"    => "Venue, CCH, Hamburg, Convention Center, Accommodation",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section class="uk-margin-bottom">
 	<h1>Our Venue &ndash; The Congress Center Hamburg</h1>
 	<div class="uk-column-1-2@l">

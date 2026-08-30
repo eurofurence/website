@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@Anheanger_der_Pestilenz",
+    "editor"      => "",
+    "title"       => "Dances",
+    "description" => "We are calling all DJs, beat captains, and interstellar sound engineers: The Eurofurence Dance Stage is preparing for liftoff — we need you on board.",
+    "keywords"    => "Dances, DJ, Application",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php
 $danceNights = [
     [
