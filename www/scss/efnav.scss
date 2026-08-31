@@ -1,0 +1,221 @@
+@use "ef-variables" as *;
+
+$icon-size: 2.23125rem;
+$icon-size-wide: 2.625rem;
+$button-background: #4e266e;
+$button-border: #b32499;
+$tab-background: #3d2962;
+$tab-foreground: #ffffff;
+
+@mixin tab-interactive-state {
+    background: $button-background;
+    border-color: $button-border;
+    color: $tab-foreground;
+}
+
+/* Sync location icon size with UIkit h1 title + fullscreen modal */
+:root {
+    --efnav-icon-size: #{$icon-size};
+
+    @media (min-width: 960px) {
+        --efnav-icon-size: #{$icon-size-wide};
+    }
+}
+
+#content section.efnav-section {
+    .efnav-container {
+        float: right;
+        padding: 0;
+        margin: 0 0 8px 8px;
+        line-height: 0;
+    }
+
+    &[class*="uk-column-"] {
+        position: relative;
+    }
+
+    &[class*="uk-column-"] .efnav-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        float: none;
+        margin: 0;
+        z-index: 1;
+    }
+
+    &[class*="uk-column-"] > h1:first-of-type,
+    &[class*="uk-column-"] > h2:first-of-type {
+        padding-right: 3.25rem;
+    }
+
+    > h1:first-of-type,
+    > h2:first-of-type {
+        margin-top: 0;
+    }
+
+    .efnav-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    > [class*="uk-column-"],
+    > [uk-grid],
+    > .uk-grid,
+    > hr {
+        clear: right;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.efnav-launcher {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0.1em;
+    font-size: var(--efnav-icon-size);
+    line-height: 1;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    background-color: transparent;
+
+    > .efnav-icon {
+        color: $ef-green;
+        transition:
+            transform 128ms ease,
+            color 128ms ease;
+    }
+
+    &:hover > .efnav-icon {
+        transform: translateY(-2px);
+        color: $ef-green-light;
+    }
+}
+
+.efnav-icon svg {
+    width: 1em;
+    height: 1em;
+}
+
+.efnav-modal.uk-modal-full,
+.efnav-modal.uk-modal-full .uk-modal-dialog {
+    height: 100vh;
+}
+
+.efnav-modal.uk-modal-full .uk-modal-dialog {
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.efnav-modal-content {
+    padding: 0;
+}
+
+.efnav-modal-title {
+    margin: 0;
+    padding: 0 20px;
+    display: block;
+    line-height: 1.8;
+
+    @media (max-width: 960px) {
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+}
+
+.efnav-modal-subtitle {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0 20px;
+
+    @media (max-width: 960px) {
+        margin-bottom: 8px;
+    }
+}
+
+.efnav-modal-tabs-wrap {
+    padding: 0;
+    margin: 0;
+}
+
+.efnav-modal-tabs {
+    margin: 0;
+    gap: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    > * {
+        padding-left: 0;
+        flex: 0 0 auto;
+
+        > a {
+            display: block;
+            margin: 0;
+            padding: 8px 16px;
+            max-width: 200px;
+            background: $tab-background;
+            color: $tab-foreground;
+            border-top: 2px solid $button-border;
+            border-bottom: 2px solid $button-border;
+            border-radius: 0;
+            text-transform: none;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover,
+            &:focus {
+                @include tab-interactive-state;
+            }
+        }
+    }
+
+    > .uk-active > a {
+        @include tab-interactive-state;
+        font-weight: 600;
+    }
+
+    > :not(:last-child) > a {
+        border-right: 1px solid $tab-foreground;
+    }
+    > :first-child > a {
+        border-left: 2px solid $button-border;
+    }
+    > :last-child > a {
+        border-right: 2px solid $button-border;
+    }
+}
+
+.efnav-modal-map {
+    display: flex;
+    flex: 1;
+}
+
+.efnav-modal-iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.efnav-modal button.uk-modal-close-full {
+    background: transparent;
+}

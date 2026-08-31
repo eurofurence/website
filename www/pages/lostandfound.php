@@ -154,7 +154,7 @@
     }
 
     .lf-item-modal-dialog {
-        background: var(--ef-palette-2);
+        background: var(--ef-white);
     }
 
     .lf-item-modal-layout {
@@ -217,7 +217,7 @@
     }
     #ef-lostandfound-modal .uk-modal-close-full svg {
         height: 24px;
-        color: var(--ef-palette-2);
+        color: var(--ef-white);
     }
     #ef-lostandfound-modal .uk-modal-close-full:hover {
         background: var(--ef-green-light);
@@ -272,7 +272,7 @@
         }
 
         #ef-lostandfound-modal .uk-modal-close-full {
-            background: var(--ef-palette-2);
+            background: var(--ef-white);
         }
         #ef-lostandfound-modal .uk-modal-close-full svg {
             color: inherit;

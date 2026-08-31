@@ -1,6 +1,9 @@
 # macOS system files
 .DS_Store
 
+# local environment variables
+.env
+
 # source files not meant for publishing (e.g. layered image sources; nosecounter dummy data)
 _workfiles/
 
@@ -12,3 +15,6 @@ www/modified.json
 
 # error and page rating reporting via telegram, contains api keys
 www/telegram.config.php
+
+# local npm dependencies
+node_modules/

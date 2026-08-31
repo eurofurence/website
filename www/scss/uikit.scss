@@ -1,0 +1,10 @@
+// Order follows UIKit documentation: https://getuikit.com/docs/sass
+// Custom and override variables
+@import "uikit-theme/variables";
+// Default variables and mixins
+@import "uikit/src/scss/variables-theme";
+@import "uikit/src/scss/mixins-theme";
+// Mixin overrides
+@import "uikit-theme/mixins";
+// Import UIKit
+@import "uikit/src/scss/uikit-theme";

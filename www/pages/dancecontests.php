@@ -9,11 +9,10 @@
 ]; ?>
 
 <style>
-
     .ef-reg-button {
         border-width: 3px;
-        background-color: var(--ef-palette-1);
-        color: var(--ef-palette-2);
+        background-color: var(--ef-green);
+        color: var(--ef-white);
     }
 
     .ef-reg-button::after {
@@ -21,7 +20,7 @@
     }
 
     .ef-reg-button:hover {
-        color: var(--ef-palette-2);
+        color: var(--ef-white);
         opacity: .8;
     }
 
@@ -31,7 +30,7 @@
     }
 
     .reg-closed-display {
-        color: var(--ef-palette-1);
+        color: var(--ef-green);
     }
 
 </style>
