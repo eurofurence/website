@@ -82,7 +82,7 @@ class Daily {
             this.#showAllPastButton.addEventListener("click", () => {
                 this.#showAllPastEditions = !this.#showAllPastEditions;
                 const visibleState = this.#getVisibleGroups(this.#allGroups);
-                this.#renderEditionGroups(visibleState.visibleGroups);
+                this.#renderPastEditionGroups(visibleState.pastGroups);
                 this.#syncPastToggle(visibleState.totalPastAvailable, visibleState.shownPastCount);
             });
         }
@@ -222,7 +222,8 @@ class Daily {
     #getVisibleGroups(groups) {
         if (!Array.isArray(groups) || groups.length === 0) {
             return {
-                visibleGroups: [],
+                currentGroup: null,
+                pastGroups: [],
                 totalPastAvailable: 0,
                 shownPastCount: 0,
             };
@@ -244,7 +245,8 @@ class Daily {
                 : olderGroups.slice(0, Math.max(0, additionalGroupsToShow));
 
             return {
-                visibleGroups: [currentEditionGroup, ...visiblePastGroups],
+                currentGroup: currentEditionGroup,
+                pastGroups: visiblePastGroups,
                 totalPastAvailable: olderGroups.length,
                 shownPastCount: visiblePastGroups.length,
             };
@@ -256,7 +258,8 @@ class Daily {
             : sorted.slice(0, Math.max(0, additionalGroupsToShow));
 
         return {
-            visibleGroups: visiblePastGroups,
+            currentGroup: null,
+            pastGroups: visiblePastGroups,
             totalPastAvailable: sorted.length,
             shownPastCount: visiblePastGroups.length,
         };
@@ -378,48 +381,63 @@ class Daily {
         this.#syncPastToggle(0, 0);
     }
 
-    #renderEditionGroups(groups) {
-        this.#currentEditionList.replaceChildren();
-        this.#pastEditionsList.replaceChildren();
+    #buildEditionSection(group, isCurrentEdition) {
+        const edition = document.createElement("section");
+        edition.className = "daily-edition";
 
-        if (!Array.isArray(groups) || groups.length === 0) {
+        const heading = document.createElement("h3");
+        const issueCountLabel = `${group.issues.length} ${group.issues.length === 1 ? "issue" : "issues"}`;
+        heading.classList.add("uk-margin-remove-bottom");
+        heading.textContent = group.year > 0
+            ? `${group.name} (${group.year} - ${issueCountLabel})`
+            : `${group.name} (${issueCountLabel})`;
+
+        const issueList = document.createElement("div");
+        issueList.className = "daily-issue-list";
+        if (!isCurrentEdition) {
+            issueList.classList.add("daily-issue-list-past");
+        }
+
+        group.issues.forEach((issue) => {
+            issueList.appendChild(this.#createIssueCard(issue, isCurrentEdition, !isCurrentEdition));
+        });
+
+        edition.appendChild(heading);
+        edition.appendChild(issueList);
+
+        return edition;
+    }
+
+    #renderCurrentEditionGroup(currentGroup) {
+        this.#currentEditionList.replaceChildren();
+        if (!currentGroup) {
+            return;
+        }
+
+        this.#currentEditionList.appendChild(this.#buildEditionSection(currentGroup, true));
+    }
+
+    #renderPastEditionGroups(pastGroups) {
+        this.#pastEditionsList.replaceChildren();
+        if (!Array.isArray(pastGroups) || pastGroups.length === 0) {
+            return;
+        }
+
+        pastGroups.forEach((group) => {
+            this.#pastEditionsList.appendChild(this.#buildEditionSection(group, false));
+        });
+    }
+
+    #renderEditionGroups(visibleState) {
+        if (!visibleState || (!visibleState.currentGroup && (!Array.isArray(visibleState.pastGroups) || visibleState.pastGroups.length === 0))) {
+            this.#currentEditionList.replaceChildren();
+            this.#pastEditionsList.replaceChildren();
             this.#renderState(DailyStateType.EMPTY, "No issues available at the moment.");
             return;
         }
 
-        const yearToShowAsCurrentInt = this.#toIntegerOrNull(DailyPageConfig.yearToShowAsCurrentEdition);
-        groups.forEach((group) => {
-            const isCurrentEdition = yearToShowAsCurrentInt !== null && group.year === yearToShowAsCurrentInt;
-
-            const edition = document.createElement("section");
-            edition.className = "daily-edition";
-
-            const heading = document.createElement("h3");
-            const issueCountLabel = `${group.issues.length} ${group.issues.length === 1 ? "issue" : "issues"}`;
-            heading.classList.add("uk-margin-remove-bottom");
-            heading.textContent = group.year > 0
-                ? `${group.name} (${group.year} - ${issueCountLabel})`
-                : `${group.name} (${issueCountLabel})`;
-
-            const issueList = document.createElement("div");
-            issueList.className = "daily-issue-list";
-            if (!isCurrentEdition) {
-                issueList.classList.add("daily-issue-list-past");
-            }
-
-            group.issues.forEach((issue) => {
-                issueList.appendChild(this.#createIssueCard(issue, isCurrentEdition, !isCurrentEdition));
-            });
-
-            edition.appendChild(heading);
-            edition.appendChild(issueList);
-
-            if (isCurrentEdition) {
-                this.#currentEditionList.appendChild(edition);
-            } else {
-                this.#pastEditionsList.appendChild(edition);
-            }
-        });
+        this.#renderCurrentEditionGroup(visibleState.currentGroup);
+        this.#renderPastEditionGroups(visibleState.pastGroups);
     }
 
     async #loadArchiveOptions() {
@@ -444,7 +462,7 @@ class Daily {
             this.#showAllPastEditions = false;
 
             const visibleState = this.#getVisibleGroups(groups);
-            this.#renderEditionGroups(visibleState.visibleGroups);
+            this.#renderEditionGroups(visibleState);
             this.#syncPastToggle(visibleState.totalPastAvailable, visibleState.shownPastCount);
         } catch (error) {
             const message = error instanceof Error ? error.message : "Could not load Daily issues at the moment.";
