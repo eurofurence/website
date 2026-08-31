@@ -24,6 +24,9 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 8px;
 	}
+    .daily-archive-section .daily-issue-list {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
 
 	.daily-issue-card {
 		display: flex;
@@ -39,12 +42,29 @@
 		overflow: hidden;
 		transition: transform 128ms ease;
 	}
-
 	.daily-issue-card:hover,
 	.daily-issue-card:focus-visible,
 	.daily-issue-card.is-selected {
 		transform: translateY(-2px);
 		outline: none;
+	}
+
+    .daily-issue-card-past {
+		background-image: url("img/pages/daily/DailyEF_logo.webp");
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		background-size: 58px 58px;
+		min-height: 84px;
+	}
+
+	.daily-issue-card-content {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+	}
+    .daily-issue-card-past .daily-issue-card-content {
+		padding: 8px;
+		justify-content: center;
 	}
 
 	.daily-issue-mini-preview {
@@ -68,6 +88,15 @@
 		transform-origin: top center;
 		pointer-events: none;
 	}
+	.daily-issue-mini-placeholder {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 8px;
+		object-fit: contain;
+		background: #ffffff;
+		pointer-events: none;
+	}
 
 	.daily-issue-card-title {
 		display: block;
@@ -75,10 +104,19 @@
         font-size: 1.2rem;
 		line-height: 1.5;
 	}
+    .daily-archive-section .daily-issue-card-title {
+		font-size: 1rem;
+		line-height: 1.4;
+		margin: 0;
+	}
 
 	.daily-issue-card-subtitle {
 		display: block;
 		margin: 2px 8px 8px;
+	}
+	.daily-archive-section .daily-issue-card-subtitle {
+		font-size: 0.8rem;
+		margin: 0;
 	}
 
 	#daily-pdf-modal .daily-pdf-modal-dialog {
@@ -111,24 +149,49 @@
 		background: #ffffff;
 	}
 
+    @media (max-width: 1200px) {
+        .daily-archive-section .daily-issue-list {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
 	@media (max-width: 960px) {
         .daily-issue-card-title {
             font-size: 1.1rem;
         }
 
-        .daily-issue-list {
+        .daily-issue-list,
+        .daily-archive-section .daily-issue-list {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.daily-archive-section .daily-issue-card-past {
+			background-position: right 8px center;
+			background-size: 52px 52px;
+			min-height: 78px;
 		}
 	}
 
 	@media (max-width: 640px) {
+        .daily-archive-section .daily-issue-card-past {
+			background-size: 44px 44px;
+			background-position: right 8px center;
+			min-height: 72px;
+		}
+
         .daily-issue-card-title {
             font-size: 0.9rem;
         }
+        .daily-archive-section .daily-issue-card-title {
+			font-size: 0.85rem;
+		}
 
         .daily-issue-card-subtitle {
             font-size: 0.8rem;
         }
+        .daily-archive-section .daily-issue-card-subtitle {
+			font-size: 0.75rem;
+		}
 
         #daily-pdf-modal {
             padding: 0;
@@ -179,24 +242,45 @@
 			], { tooltip: 'EF Daily locations on map' });
 		});
 	</script>
-	<p>The Daily Eurofurence is a printed daily newsletter that is distributed for free at Eurofurence. Introduced at Eurofurence 15, it quickly found a broad readership among the attendees.</p>
-	<p>The Daily features articles, reviews and interviews on various topics concerning Eurofurence and the Furry Fandom in general. It also includes stories, cartoons, announcements and the latest timetable information.</p>
-
+	<p>
+        The&nbsp;Daily&nbsp;Eurofurence is your four-page newspaper crafted by a&nbsp;team of avid photographers, writers, and typesetters, freshly printed each day of&nbsp;the&nbsp;con!
+        Look&nbsp;out for the&nbsp;standees scattered across the&nbsp;con site to grab the&nbsp;latest issue.
+    </p>
+	<p>
+        Unlike all those dry-nose newspapers, the&nbsp;Daily&nbsp;Eurofurence is jam-packed with essential information about the&nbsp;con and the&nbsp;myriad&nbsp;of exciting events happening each and every&nbsp;day.
+        Our dedicated team aims to provide you&nbsp;with exclusive behind-the-scenes glimpses&nbsp;of&nbsp;Eurofurence, alert you to upcoming events you don't want to miss, and share captivating snapshots of&nbsp;the&nbsp;con's most thrilling moments.
+        Collect each issue throughout the&nbsp;convention and cherish a&nbsp;delightful stack&nbsp;of unforgettable memories!
+    </p>
+    <p>
+        So whether you prefer the&nbsp;tangible joy of flipping through pages of paper or the&nbsp;ease&nbsp;of browsing online, the&nbsp;Daily&nbsp;Eurofurence has something for&nbsp;everyone!
+        Stay informed, entertained, and connected throughout&nbsp;the&nbsp;con with your daily dose of Eurofurence&nbsp;awesomeness.
+    </p>
 	<div id="daily-current-list" class="daily-editions-list uk-margin-top"></div>
 </section>
 
 <section>
 	<h2>Contact</h2>
-	<p>Do you have an idea for an article? Or do you want to share some feedback? Write to the <a href="https://help.eurofurence.org/contact/daily">Daily Eurofurence Team</a>.</p>
+	<p>
+        Do you have an&nbsp;idea for an&nbsp;article?
+        Or do you want&nbsp;to share some feedback?
+        <br/>
+        Write to the&nbsp;<a href="https://help.eurofurence.org/contact/daily">Daily&nbsp;Eurofurence&nbsp;Team</a>.
+    </p>
 </section>
 
-<section>
+<section class="daily-archive-section">
 	<h2>PDF-Archive</h2>
     <p>
-        Feeling nostalgic? Lost your copies? All issues of the "Daily" are now available for download or home-printing!<br />
-        Visit our <a href="https://archive.eurofurence.org" target="_blank">Archive Website</a> to browse the history of both Eurofurence and The Daily.
+        For those who prefer digital convenience, fear not!
+        All editions of the&nbsp;Daily&nbsp;Eurofurence can be found online at <a href="https://archive.eurofurence.org" target="_blank">Archive&nbsp;Website</a>.
+        There, you'll discover a&nbsp;treasure trove of past&nbsp;Eurofurence newspapers, allowing you to take a&nbsp;nostalgic trip down memory&nbsp;lane.
+        Who knows, you might stumble upon a&nbsp;picture of that furry friend you know, frozen in time from a&nbsp;decade ago!
+        Feel free to take a&nbsp;peek and relive the&nbsp;magic of&nbsp;the&nbsp;past.
     </p>
-    <div id="daily-archive-list" class="daily-editions-list uk-margin-top"></div>
+	<div id="daily-archive-list" class="daily-editions-list uk-margin-top"></div>
+	<div class="uk-margin-top uk-flex uk-flex-center">
+		<button id="daily-show-all-past-btn" class="uk-button uk-button-default" type="button" hidden>Show all past editions</button>
+	</div>
 </section>
 
 <div id="daily-pdf-modal" uk-modal>

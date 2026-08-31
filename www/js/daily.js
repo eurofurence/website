@@ -19,9 +19,12 @@ class Daily {
     #modalRoot = null;
     #modalTitle = null;
     #modalFrame = null;
+    #showAllPastButton = null;
     #miniPreviewObserver = null;
     #modalHiddenHookBound = false;
     #eventsBound = false;
+    #allGroups = [];
+    #showAllPastEditions = false;
 
     constructor(options) {
         this.#currentEditionList = options.currentEditionList;
@@ -29,6 +32,7 @@ class Daily {
         this.#modalRoot = options.modalRoot;
         this.#modalTitle = options.modalTitle;
         this.#modalFrame = options.modalFrame;
+        this.#showAllPastButton = options.showAllPastButton || null;
     }
 
     async build() {
@@ -73,6 +77,15 @@ class Daily {
 
         this.#currentEditionList.addEventListener("click", handleCardClick);
         this.#pastEditionsList.addEventListener("click", handleCardClick);
+
+        if (this.#showAllPastButton) {
+            this.#showAllPastButton.addEventListener("click", () => {
+                this.#showAllPastEditions = !this.#showAllPastEditions;
+                const visibleState = this.#getVisibleGroups(this.#allGroups);
+                this.#renderEditionGroups(visibleState.visibleGroups);
+                this.#syncPastToggle(visibleState.totalPastAvailable, visibleState.shownPastCount);
+            });
+        }
 
         this.#eventsBound = true;
     }
@@ -157,9 +170,11 @@ class Daily {
             }
 
             const groupKeyRaw = typeof item.edition === "string" ? item.edition.trim() : "";
-            const groupKey = groupKeyRaw || "Archive";
+            const groupName = groupKeyRaw || "Archive";
             const issue = this.#toIntegerOrNull(item.issue);
             const year = this.#toIntegerOrNull(item.year);
+            const groupYear = year || 0;
+            const groupKey = `${groupName}_${groupYear}`;
             const sortDate = this.#toIntegerOrNull(item.sortDate) || 0;
             const date = typeof item.date === "string" ? item.date : "";
             const displayDate = typeof item.displayDate === "string" ? item.displayDate : "";
@@ -168,8 +183,9 @@ class Daily {
             if (!groupsMap.has(groupKey)) {
                 groupsMap.set(groupKey, {
                     key: groupKey,
+                    name: groupName,
                     issues: [],
-                    year: year || 0,
+                    year: groupYear,
                     latestSortDate: 0,
                 });
             }
@@ -205,7 +221,11 @@ class Daily {
 
     #getVisibleGroups(groups) {
         if (!Array.isArray(groups) || groups.length === 0) {
-            return [];
+            return {
+                visibleGroups: [],
+                totalPastAvailable: 0,
+                shownPastCount: 0,
+            };
         }
 
         const yearToShowAsCurrentInt = this.#toIntegerOrNull(DailyPageConfig.yearToShowAsCurrentEdition);
@@ -216,30 +236,81 @@ class Daily {
         const additionalGroupsToShow = this.#toIntegerOrNull(DailyPageConfig.previousEditionsToShow) || 0;
 
         if (currentEditionGroup) {
-            const visible = [currentEditionGroup];
-            if (additionalGroupsToShow > 0) {
-                // Filter groups older than current edition year
-                const olderGroups = groups.filter((group) => group.year < currentEditionGroup.year);
-                olderGroups.sort((left, right) => right.year - left.year);
-                visible.push(...olderGroups.slice(0, additionalGroupsToShow));
-            }
-            return visible;
-        } else if (additionalGroupsToShow > 0) {
-            const sorted = [...groups].sort((left, right) => right.year - left.year);
-            return sorted.slice(0, additionalGroupsToShow);
+            const olderGroups = groups.filter((group) => group.year < currentEditionGroup.year);
+            olderGroups.sort((left, right) => right.year - left.year);
+
+            const visiblePastGroups = this.#showAllPastEditions
+                ? olderGroups
+                : olderGroups.slice(0, Math.max(0, additionalGroupsToShow));
+
+            return {
+                visibleGroups: [currentEditionGroup, ...visiblePastGroups],
+                totalPastAvailable: olderGroups.length,
+                shownPastCount: visiblePastGroups.length,
+            };
         }
-        return [];
+
+        const sorted = [...groups].sort((left, right) => right.year - left.year);
+        const visiblePastGroups = this.#showAllPastEditions
+            ? sorted
+            : sorted.slice(0, Math.max(0, additionalGroupsToShow));
+
+        return {
+            visibleGroups: visiblePastGroups,
+            totalPastAvailable: sorted.length,
+            shownPastCount: visiblePastGroups.length,
+        };
     }
 
-    #createIssueCard(issue) {
+    #syncPastToggle(totalPastAvailable, shownPastCount) {
+        if (!this.#showAllPastButton) {
+            return;
+        }
+
+        const shouldShow = (totalPastAvailable > shownPastCount) || (this.#showAllPastEditions && totalPastAvailable > 0);
+        this.#showAllPastButton.hidden = !shouldShow;
+        this.#showAllPastButton.textContent = this.#showAllPastEditions
+            ? "Show fewer past editions"
+            : `Show all past editions (${totalPastAvailable})`;
+    }
+
+    #createIssueCard(issue, useLivePreview, isPastEdition) {
         const card = document.createElement("button");
-        card.className = "daily-issue-card uk-card uk-card-default";
+        card.className = "uk-card uk-card-default daily-issue-card";
+        if (isPastEdition) {
+            card.classList.add("daily-issue-card-past");
+        }
         card.dataset.url = issue.url;
         card.dataset.label = issue.label;
 
-        const miniPreview = document.createElement("span");
-        miniPreview.className = "daily-issue-mini-preview";
+        const title = document.createElement("h3");
+        const formattedDate = issue.displayDate || issue.date;
+        title.className = "uk-card-title daily-issue-card-title";
+        title.textContent =
+            issue.day && formattedDate ? `${issue.day}, ${formattedDate}` : issue.day || formattedDate || issue.label;
 
+        const subtitle = document.createElement("span");
+        subtitle.className = "uk-text-meta daily-issue-card-subtitle";
+        subtitle.textContent = Number.isFinite(issue.issue) ? `Issue ${issue.issue}` : "";
+
+        const content = document.createElement("span");
+        content.className = "daily-issue-card-content";
+        content.appendChild(title);
+        content.appendChild(subtitle);
+
+        if (useLivePreview) {
+            const miniPreview = document.createElement("span");
+            miniPreview.className = "daily-issue-mini-preview";
+            miniPreview.appendChild(this.#createLivePreview(issue));
+            card.appendChild(miniPreview);
+        }
+
+        card.appendChild(content);
+
+        return card;
+    }
+
+    #createLivePreview(issue) {
         const miniFrame = document.createElement("iframe");
         miniFrame.setAttribute("title", `Preview ${issue.label}`);
         miniFrame.setAttribute("loading", "lazy");
@@ -253,31 +324,16 @@ class Daily {
             miniFrame.setAttribute("src", miniFrame.dataset.src);
         }
 
-        miniPreview.appendChild(miniFrame);
-
-        const title = document.createElement("h3");
-        const formattedDate = issue.displayDate || issue.date;
-        title.className = "uk-card-title daily-issue-card-title";
-        title.textContent =
-            issue.day && formattedDate ? `${issue.day}, ${formattedDate}` : issue.day || formattedDate || issue.label;
-
-        const subtitle = document.createElement("span");
-        subtitle.className = "daily-issue-card-subtitle uk-text-meta";
-        subtitle.textContent = Number.isFinite(issue.issue) ? `Issue ${issue.issue}` : "";
-
-        card.appendChild(miniPreview);
-        card.appendChild(title);
-        card.appendChild(subtitle);
-
-        return card;
+        return miniFrame;
     }
 
     #renderLoadingState() {
         this.#currentEditionList.replaceChildren();
         this.#pastEditionsList.replaceChildren();
+        this.#syncPastToggle(0, 0);
 
         const alert = document.createElement("div");
-        alert.classList.add("uk-alert", "uk-flex", "daily-state", "uk-alert-primary");
+        alert.classList.add("uk-alert", "uk-flex", "uk-alert-primary", "daily-state");
 
         const spinner = document.createElement("span");
         spinner.setAttribute("uk-spinner", "ratio: 0.8");
@@ -300,6 +356,7 @@ class Daily {
         if (type === DailyStateType.EMPTY) {
             this.#currentEditionList.replaceChildren();
             this.#pastEditionsList.replaceChildren();
+            this.#syncPastToggle(0, 0);
             return;
         }
 
@@ -318,6 +375,7 @@ class Daily {
 
         this.#currentEditionList.replaceChildren(alert.cloneNode(true));
         this.#pastEditionsList.replaceChildren(alert.cloneNode(true));
+        this.#syncPastToggle(0, 0);
     }
 
     #renderEditionGroups(groups) {
@@ -331,25 +389,32 @@ class Daily {
 
         const yearToShowAsCurrentInt = this.#toIntegerOrNull(DailyPageConfig.yearToShowAsCurrentEdition);
         groups.forEach((group) => {
+            const isCurrentEdition = yearToShowAsCurrentInt !== null && group.year === yearToShowAsCurrentInt;
+
             const edition = document.createElement("section");
             edition.className = "daily-edition";
 
             const heading = document.createElement("h3");
             const issueCountLabel = `${group.issues.length} ${group.issues.length === 1 ? "issue" : "issues"}`;
             heading.classList.add("uk-margin-remove-bottom");
-            heading.textContent = `${group.key} (${group.year} - ${issueCountLabel})`;
+            heading.textContent = group.year > 0
+                ? `${group.name} (${group.year} - ${issueCountLabel})`
+                : `${group.name} (${issueCountLabel})`;
 
             const issueList = document.createElement("div");
             issueList.className = "daily-issue-list";
+            if (!isCurrentEdition) {
+                issueList.classList.add("daily-issue-list-past");
+            }
 
             group.issues.forEach((issue) => {
-                issueList.appendChild(this.#createIssueCard(issue));
+                issueList.appendChild(this.#createIssueCard(issue, isCurrentEdition, !isCurrentEdition));
             });
 
             edition.appendChild(heading);
             edition.appendChild(issueList);
 
-            if (yearToShowAsCurrentInt !== null && group.year === yearToShowAsCurrentInt) {
+            if (isCurrentEdition) {
                 this.#currentEditionList.appendChild(edition);
             } else {
                 this.#pastEditionsList.appendChild(edition);
@@ -375,8 +440,12 @@ class Daily {
             }
 
             const groups = this.#groupItemsByEdition(payload.items);
-            const visibleGroups = this.#getVisibleGroups(groups);
-            this.#renderEditionGroups(visibleGroups);
+            this.#allGroups = groups;
+            this.#showAllPastEditions = false;
+
+            const visibleState = this.#getVisibleGroups(groups);
+            this.#renderEditionGroups(visibleState.visibleGroups);
+            this.#syncPastToggle(visibleState.totalPastAvailable, visibleState.shownPastCount);
         } catch (error) {
             const message = error instanceof Error ? error.message : "Could not load Daily issues at the moment.";
             this.#renderState(DailyStateType.ERROR, message);
@@ -387,6 +456,7 @@ class Daily {
 const daily = new Daily({
     currentEditionList: document.getElementById("daily-current-list"),
     pastEditionsList: document.getElementById("daily-archive-list"),
+    showAllPastButton: document.getElementById("daily-show-all-past-btn"),
     modalRoot: document.getElementById("daily-pdf-modal"),
     modalTitle: document.getElementById("daily-pdf-modal-title"),
     modalFrame: document.getElementById("daily-pdf-modal-frame"),
