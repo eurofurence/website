@@ -28,6 +28,14 @@
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 
+	.daily-edition-heading {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		flex-wrap: wrap;
+        line-height: 1.6;
+	}
+
 	.daily-issue-card {
 		display: flex;
 		flex-direction: column;
@@ -49,23 +57,72 @@
 		outline: none;
 	}
 
-    .daily-issue-card-past {
+	.daily-archive-section .daily-issue-card-past {
+		position: relative;
+		min-height: 84px;
+		--daily-logo-right: 10px;
+		--daily-logo-size: 58px;
+		--daily-ring-size: 37px;
+		--daily-ring-inset-right: 1px;
+		--daily-ring-inset-top: 10px;
+	}
+	.daily-archive-section .daily-issue-card-past::before {
+		content: "";
+		position: absolute;
+		right: calc(var(--daily-logo-right) + var(--daily-ring-inset-right));
+		top: calc(50% - (var(--daily-logo-size) / 2) + var(--daily-ring-inset-top));
+		width: var(--daily-ring-size);
+		height: var(--daily-ring-size);
+		border-radius: 50%;
+		border: 4px solid var(--daily-ring-color, #eea938);
+		pointer-events: none;
+		z-index: 0;
+	}
+	.daily-archive-section .daily-issue-card-past::after {
+		content: "";
+		position: absolute;
+		right: var(--daily-logo-right);
+		top: calc(50% - (var(--daily-logo-size) / 2));
+		width: var(--daily-logo-size);
+		height: var(--daily-logo-size);
 		background-image: url("img/pages/daily/DailyEF_logo.webp");
 		background-repeat: no-repeat;
-		background-position: right 10px center;
-		background-size: 58px 58px;
-		min-height: 84px;
+		background-position: center;
+		background-size: contain;
+		pointer-events: none;
+		z-index: 1;
 	}
 
 	.daily-issue-card-content {
 		display: flex;
 		flex-direction: column;
 		min-width: 0;
+        padding: 8px;
 	}
-    .daily-issue-card-past .daily-issue-card-content {
+	.daily-archive-section .daily-issue-card-past .daily-issue-card-content {
+		position: relative;
+		z-index: 2;
 		padding: 8px;
 		justify-content: center;
 	}
+
+	.daily-edition-year-2009, .daily-issue-list-year-2009, .daily-issue-card-year-2009 { --daily-ring-color: #646464; }
+	.daily-edition-year-2010, .daily-issue-list-year-2010, .daily-issue-card-year-2010 { --daily-ring-color: #746A51; }
+	.daily-edition-year-2011, .daily-issue-list-year-2011, .daily-issue-card-year-2011 { --daily-ring-color: #9C885C; }
+	.daily-edition-year-2012, .daily-issue-list-year-2012, .daily-issue-card-year-2012 { --daily-ring-color: #B49552; }
+	.daily-edition-year-2013, .daily-issue-list-year-2013, .daily-issue-card-year-2013 { --daily-ring-color: #e0b14e; }
+	.daily-edition-year-2014, .daily-issue-list-year-2014, .daily-issue-card-year-2014 { --daily-ring-color: #f2aa31; }
+	.daily-edition-year-2015, .daily-issue-list-year-2015, .daily-issue-card-year-2015 { --daily-ring-color: #c2fb42; }
+	.daily-edition-year-2016, .daily-issue-list-year-2016, .daily-issue-card-year-2016 { --daily-ring-color: #b76da6; }
+	.daily-edition-year-2017, .daily-issue-list-year-2017, .daily-issue-card-year-2017 { --daily-ring-color: #3d88bd; }
+	.daily-edition-year-2018, .daily-issue-list-year-2018, .daily-issue-card-year-2018 { --daily-ring-color: #b13736; }
+	.daily-edition-year-2019, .daily-issue-list-year-2019, .daily-issue-card-year-2019 { --daily-ring-color: #252478; }
+	.daily-edition-year-2020, .daily-issue-list-year-2020, .daily-issue-card-year-2020 { --daily-ring-color: #c73883; }
+	.daily-edition-year-2021, .daily-issue-list-year-2021, .daily-issue-card-year-2021 { --daily-ring-color: #b8d7f1; }
+	.daily-edition-year-2022, .daily-issue-list-year-2022, .daily-issue-card-year-2022 { --daily-ring-color: #f5e4bf; }
+	.daily-edition-year-2023, .daily-issue-list-year-2023, .daily-issue-card-year-2023 { --daily-ring-color: #7ebeaa; }
+	.daily-edition-year-2024, .daily-issue-list-year-2024, .daily-issue-card-year-2024 { --daily-ring-color: #b76da6; }
+	.daily-edition-year-2025, .daily-issue-list-year-2025, .daily-issue-card-year-2025 { --daily-ring-color: #565472; }
 
 	.daily-issue-mini-preview {
         position: relative;
@@ -86,8 +143,9 @@
 		border: 0;
 		transform: translateX(-50%) scale(1.28);
 		transform-origin: top center;
-		pointer-events: none;
-	}
+        pointer-events: none;
+    }
+
 	.daily-issue-mini-placeholder {
 		display: block;
 		width: 100%;
@@ -98,25 +156,21 @@
 		pointer-events: none;
 	}
 
-	.daily-issue-card-title {
-		display: block;
-		margin: 4px 8px 0;
-        font-size: 1.2rem;
-		line-height: 1.5;
-	}
+    .daily-issue-card-title {
+        margin: 0;
+    }
     .daily-archive-section .daily-issue-card-title {
 		font-size: 1rem;
 		line-height: 1.4;
-		margin: 0;
 	}
 
 	.daily-issue-card-subtitle {
 		display: block;
-		margin: 2px 8px 8px;
+		margin: 2px 8px 8px 0;
 	}
 	.daily-archive-section .daily-issue-card-subtitle {
 		font-size: 0.8rem;
-		margin: 0;
+		margin: 2px 0 0;
 	}
 
 	#daily-pdf-modal .daily-pdf-modal-dialog {
@@ -166,17 +220,23 @@
 		}
 
 		.daily-archive-section .daily-issue-card-past {
-			background-position: right 8px center;
-			background-size: 52px 52px;
 			min-height: 78px;
+			--daily-logo-right: 8px;
+			--daily-logo-size: 52px;
+			--daily-ring-size: 33px;
+			--daily-ring-inset-right: 0px;
+			--daily-ring-inset-top: 9px;
 		}
 	}
 
 	@media (max-width: 640px) {
-        .daily-archive-section .daily-issue-card-past {
-			background-size: 44px 44px;
-			background-position: right 8px center;
+		.daily-archive-section .daily-issue-card-past {
 			min-height: 72px;
+			--daily-logo-right: 8px;
+			--daily-logo-size: 44px;
+			--daily-ring-size: 27px;
+			--daily-ring-inset-right: 1px;
+			--daily-ring-inset-top: 7px;
 		}
 
         .daily-issue-card-title {
