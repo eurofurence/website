@@ -157,13 +157,14 @@ class EFWebCore {
 
 		// sort pages into categories ($categorized_pages)
 		foreach ($this->config->pages as $key => $page) {
-			if ($page->nav && $page->accessible) {
-				// if category is not listed in config.menu.categoryOrder, append to end
-				if (!array_key_exists($page->cat, $categorized_pages)) {
-					$categorized_pages[$page->cat] = [];
-				}
+			$category = $page->cat ?? "";
 
-				$categorized_pages[$page->cat][$key] = $page;
+			if ($page->nav && $page->accessible && $category !== "") {
+				// if category is not listed in config.menu.categoryOrder, append to end
+				if (!array_key_exists($category, $categorized_pages)) {
+					$categorized_pages[$category] = [];
+				}
+				$categorized_pages[$category][$key] = $page;
 			}
 		}
 

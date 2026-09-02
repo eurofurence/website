@@ -82,7 +82,7 @@
 			"uri": "venue.php"
 		},
 		"hotels": {
-			"accessible": false,
+			"accessible": true,
 			"cat": "Location",
 			"nav": "Hotel Options",
 			"uri": "hotels.php"
