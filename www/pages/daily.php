@@ -9,6 +9,23 @@
 ]; ?>
 
 <style>
+    .daily-with-background {
+        position: relative;
+    }
+    .daily-with-background::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/pages/daily/DailyEF.webp");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        opacity: 0.08;
+    }
+
 	.daily-editions-list {
 		display: grid;
 		gap: 16px;
@@ -210,6 +227,10 @@
     }
 
 	@media (max-width: 960px) {
+        .daily-with-background::before {
+            height: 50%;
+        }
+
         .daily-issue-card-title {
             font-size: 1.1rem;
         }
@@ -230,6 +251,11 @@
 	}
 
 	@media (max-width: 640px) {
+        .daily-with-background::before {
+            background-image: none;
+            display: none;
+        }
+
 		.daily-archive-section .daily-issue-card-past {
 			min-height: 72px;
 			--daily-logo-right: 8px;
@@ -276,45 +302,47 @@
 </style>
 
 <section>
-	<h1>The Daily Eurofurence</h1>
-	<div id="location-ef-daily"></div>
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			createEFnavTrigger('location-ef-daily', [
-				{
-					id: 'ef-daily-entrance-location',
-					title: 'EF Daily (Entrance)',
-					subtitle: 'CCH: Level 0, Entrance Hall, Area near the main entrance',
-					slug: 'ef-daily-point-entrance',
-				},
-				{
-					id: 'ef-daily-level1-location',
-					title: 'EF Daily (Level 1)',
-					subtitle: 'CCH: Level 1, Foyer X, Area near stairs and infodesk',
-					slug: 'ef-daily-point-level-1',
-				},
-				{
-					id: 'ef-daily-level2-location',
-					title: 'EF Daily (Level 2)',
-					subtitle: 'CCH: Level 2, Foyer Y, Area near stairs',
-					slug: 'ef-daily-point-level-2',
-				}
-			], { tooltip: 'EF Daily locations on map' });
-		});
-	</script>
-	<p>
-        The&nbsp;Daily&nbsp;Eurofurence is your four-page newspaper crafted by a&nbsp;team of avid photographers, writers, and typesetters, freshly printed each day of&nbsp;the&nbsp;con!
-        Look&nbsp;out for the&nbsp;standees scattered across the&nbsp;con site to grab the&nbsp;latest issue.
-    </p>
-	<p>
-        Unlike all those dry-nose newspapers, the&nbsp;Daily&nbsp;Eurofurence is jam-packed with essential information about the&nbsp;con and the&nbsp;myriad&nbsp;of exciting events happening each and every&nbsp;day.
-        Our dedicated team aims to provide you&nbsp;with exclusive behind-the-scenes glimpses&nbsp;of&nbsp;Eurofurence, alert you to upcoming events you don't want to miss, and share captivating snapshots of&nbsp;the&nbsp;con's most thrilling moments.
-        Collect each issue throughout the&nbsp;convention and cherish a&nbsp;delightful stack&nbsp;of unforgettable memories!
-    </p>
-    <p>
-        So whether you prefer the&nbsp;tangible joy of flipping through pages of paper or the&nbsp;ease&nbsp;of browsing online, the&nbsp;Daily&nbsp;Eurofurence has something for&nbsp;everyone!
-        Stay informed, entertained, and connected throughout&nbsp;the&nbsp;con with your daily dose of Eurofurence&nbsp;awesomeness.
-    </p>
+    <div class="daily-with-background">
+        <h1>The Daily Eurofurence</h1>
+        <div id="location-ef-daily"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                createEFnavTrigger('location-ef-daily', [
+                    {
+                        id: 'ef-daily-entrance-location',
+                        title: 'EF Daily (Entrance)',
+                        subtitle: 'CCH: Level 0, Entrance Hall, Area near the main entrance',
+                        slug: 'ef-daily-point-entrance',
+                    },
+                    {
+                        id: 'ef-daily-level1-location',
+                        title: 'EF Daily (Level 1)',
+                        subtitle: 'CCH: Level 1, Foyer X, Area near stairs and infodesk',
+                        slug: 'ef-daily-point-level-1',
+                    },
+                    {
+                        id: 'ef-daily-level2-location',
+                        title: 'EF Daily (Level 2)',
+                        subtitle: 'CCH: Level 2, Foyer Y, Area near stairs',
+                        slug: 'ef-daily-point-level-2',
+                    }
+                ], { tooltip: 'EF Daily locations on map' });
+            });
+        </script>
+        <p>
+            The&nbsp;Daily&nbsp;Eurofurence is your four-page newspaper crafted by a&nbsp;team of avid photographers, writers, and typesetters, freshly printed each day of&nbsp;the&nbsp;con!
+            Look&nbsp;out for the&nbsp;standees scattered across the&nbsp;con site to grab the&nbsp;latest issue.
+        </p>
+        <p>
+            Unlike all those dry-nose newspapers, the&nbsp;Daily&nbsp;Eurofurence is jam-packed with essential information about the&nbsp;con and the&nbsp;myriad&nbsp;of exciting events happening each and every&nbsp;day.
+            Our dedicated team aims to provide you&nbsp;with exclusive behind-the-scenes glimpses&nbsp;of&nbsp;Eurofurence, alert you to upcoming events you don't want to miss, and share captivating snapshots of&nbsp;the&nbsp;con's most thrilling moments.
+            Collect each issue throughout the&nbsp;convention and cherish a&nbsp;delightful stack&nbsp;of unforgettable memories!
+        </p>
+        <p>
+            So whether you prefer the&nbsp;tangible joy of flipping through pages of paper or the&nbsp;ease&nbsp;of browsing online, the&nbsp;Daily&nbsp;Eurofurence has something for&nbsp;everyone!
+            Stay informed, entertained, and connected throughout&nbsp;the&nbsp;con with your daily dose of Eurofurence&nbsp;awesomeness.
+        </p>
+    </div>
 	<div id="daily-current-list" class="daily-editions-list uk-margin-top"></div>
 </section>
 
@@ -357,5 +385,13 @@
 		</div>
 	</div>
 </div>
+
+<script>
+window.__EF_DAILY_CONFIG__ = {
+	currentEditionYear: <?= isset($this->config->convention->year) ? (int) $this->config->convention->year : 'null' ?>,
+    showPreviousEditions: <?= isset($this->config->dailyEF->showPreviousEditions) ? ($this->config->dailyEF->showPreviousEditions ? 'true' : 'false') : 'null' ?>,
+	prevEditionsToShowWhenCollapsed: <?= isset($this->config->dailyEF->prevEditionsToShowWhenCollapsed) ? (int) $this->config->dailyEF->prevEditionsToShowWhenCollapsed : 'null' ?>,
+};
+</script>
 
 <script src="js/daily.js"></script>

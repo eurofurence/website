@@ -1,8 +1,3 @@
-const DailyPageConfig = Object.freeze({
-    yearToShowAsCurrentEdition: 2026,
-    previousEditionsToShow: 1,
-});
-
 const DailyStateType = Object.freeze({
     LOADING: "loading",
     ERROR: "error",
@@ -25,6 +20,11 @@ class Daily {
     #eventsBound = false;
     #allGroups = [];
     #showAllPastEditions = false;
+    #settings = {
+        currentEditionYear: null,
+        showPreviousEditions: null,
+        prevEditionsToShowWhenCollapsed: null,
+    };
 
     constructor(options) {
         this.#currentEditionList = options.currentEditionList;
@@ -46,6 +46,7 @@ class Daily {
             return;
         }
 
+        this.#loadSettingsFromPageConfig();
         this.#renderLoadingState();
 
         this.#miniPreviewObserver = this.#createMiniPreviewObserver();
@@ -160,6 +161,21 @@ class Daily {
         return Number.isFinite(parsed) ? parsed : null;
     }
 
+    #loadSettingsFromPageConfig() {
+        const pageConfig = window.__EF_DAILY_CONFIG__ || {};
+        const currentEditionYear = this.#toIntegerOrNull(pageConfig.currentEditionYear);
+        const prevEditionsToShowWhenCollapsedRaw = this.#toIntegerOrNull(pageConfig.prevEditionsToShowWhenCollapsed);
+        const showPreviousEditions =
+            typeof pageConfig.showPreviousEditions === "boolean" ? pageConfig.showPreviousEditions : null;
+
+        this.#settings = {
+            currentEditionYear,
+            showPreviousEditions,
+            prevEditionsToShowWhenCollapsed:
+                prevEditionsToShowWhenCollapsedRaw !== null ? Math.max(0, prevEditionsToShowWhenCollapsedRaw) : null,
+        };
+    }
+
     #groupItemsByEdition(items) {
         const groupsMap = new Map();
 
@@ -229,20 +245,30 @@ class Daily {
             };
         }
 
-        const yearToShowAsCurrentInt = this.#toIntegerOrNull(DailyPageConfig.yearToShowAsCurrentEdition);
+        const yearToShowAsCurrentInt = this.#settings.currentEditionYear;
         const currentEditionGroup =
             yearToShowAsCurrentInt !== null
                 ? groups.find((group) => group && group.year === yearToShowAsCurrentInt) || null
                 : null;
-        const additionalGroupsToShow = this.#toIntegerOrNull(DailyPageConfig.previousEditionsToShow) || 0;
+        const additionalGroupsToShow = this.#settings.prevEditionsToShowWhenCollapsed;
+
+        if (this.#settings.showPreviousEditions === false) {
+            return {
+                currentGroup: currentEditionGroup,
+                pastGroups: [],
+                totalPastAvailable: 0,
+                shownPastCount: 0,
+            };
+        }
 
         if (currentEditionGroup) {
             const olderGroups = groups.filter((group) => group.year < currentEditionGroup.year);
             olderGroups.sort((left, right) => right.year - left.year);
 
-            const visiblePastGroups = this.#showAllPastEditions
-                ? olderGroups
-                : olderGroups.slice(0, Math.max(0, additionalGroupsToShow));
+            const visiblePastGroups =
+                additionalGroupsToShow === null || this.#showAllPastEditions
+                    ? olderGroups
+                    : olderGroups.slice(0, Math.max(0, additionalGroupsToShow));
 
             return {
                 currentGroup: currentEditionGroup,
@@ -253,9 +279,10 @@ class Daily {
         }
 
         const sorted = [...groups].sort((left, right) => right.year - left.year);
-        const visiblePastGroups = this.#showAllPastEditions
-            ? sorted
-            : sorted.slice(0, Math.max(0, additionalGroupsToShow));
+        const visiblePastGroups =
+            additionalGroupsToShow === null || this.#showAllPastEditions
+                ? sorted
+                : sorted.slice(0, Math.max(0, additionalGroupsToShow));
 
         return {
             currentGroup: null,
@@ -270,7 +297,12 @@ class Daily {
             return;
         }
 
-        const shouldShow = (totalPastAvailable > shownPastCount) || (this.#showAllPastEditions && totalPastAvailable > 0);
+        if (this.#settings.showPreviousEditions === false || this.#settings.prevEditionsToShowWhenCollapsed === null) {
+            this.#showAllPastButton.hidden = true;
+            return;
+        }
+
+        const shouldShow = totalPastAvailable > shownPastCount || (this.#showAllPastEditions && totalPastAvailable > 0);
         this.#showAllPastButton.hidden = !shouldShow;
         this.#showAllPastButton.textContent = this.#showAllPastEditions
             ? "Show fewer past editions"
@@ -352,8 +384,7 @@ class Daily {
 
         this.#currentEditionList.appendChild(alert.cloneNode(true));
 
-        const additionalGroupsToShow = this.#toIntegerOrNull(DailyPageConfig.previousEditionsToShow) || 0;
-        if (additionalGroupsToShow > 0) {
+        if (this.#settings.showPreviousEditions !== false) {
             this.#pastEditionsList.appendChild(alert.cloneNode(true));
         }
     }
@@ -400,9 +431,7 @@ class Daily {
 
         const headingMeta = document.createElement("span");
         headingMeta.className = "uk-text-meta uk-text-default";
-        headingMeta.textContent = group.year > 0
-            ? `(${group.year} - ${issueCountLabel})`
-            : `(${issueCountLabel})`;
+        headingMeta.textContent = group.year > 0 ? `(${group.year} - ${issueCountLabel})` : `(${issueCountLabel})`;
 
         heading.appendChild(headingTitle);
         heading.appendChild(headingMeta);
@@ -447,7 +476,10 @@ class Daily {
     }
 
     #renderEditionGroups(visibleState) {
-        if (!visibleState || (!visibleState.currentGroup && (!Array.isArray(visibleState.pastGroups) || visibleState.pastGroups.length === 0))) {
+        if (
+            !visibleState ||
+            (!visibleState.currentGroup && (!Array.isArray(visibleState.pastGroups) || visibleState.pastGroups.length === 0))
+        ) {
             this.#currentEditionList.replaceChildren();
             this.#pastEditionsList.replaceChildren();
             this.#renderState(DailyStateType.EMPTY, "No issues available at the moment.");

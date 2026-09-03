@@ -49,6 +49,10 @@
 	"ratings": {
 		"enabled": true
 	},
+	"dailyEF": {
+        "showPreviousEditions": true,
+		"prevEditionsToShowWhenCollapsed": 1
+	},
 	"pages": {
 		"404": {
 			"accessible": true,
