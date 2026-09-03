@@ -84,13 +84,13 @@ class EFWebCore {
 		));
 
 		// construct OGP image
-		$this->page->ogpImage =
-			$this->config->base . 
+		$ogpImagePath =
 			$this->config->defaults->ogpImagePrefix .
 			(empty($this->page->ogpImage) ? $this->config->defaults->ogpImage : $this->page->ogpImage);
+		$this->page->ogpImage = $this->config->base . $ogpImagePath;
 		
 		// determine OGP image size
-		$ogpImageSize = getimagesize($this->page->ogpImage);
+		$ogpImageSize = getimagesize(dirname(__DIR__) . "/" . $ogpImagePath);
 		$this->page->ogpImageWidth = $ogpImageSize[0];
 		$this->page->ogpImageHeight = $ogpImageSize[1];
 
