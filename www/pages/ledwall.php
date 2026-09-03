@@ -29,7 +29,7 @@ $formUrl = 'https://cloud.eurofurence.org/index.php/apps/forms/s/P2SG7WnzGizyP3e
                 <li>
                     <a class="uk-accordion-title" href="ledwall/#"><?= $title ?></a>
                     <div class="uk-accordion-content">
-                        <img src="img/pages/ledwall/<?= $file ?>" alt="<?= $title ?>" />
+                        <img src="img/pages/ledwall/<?= $file ?>" alt="<?= $title ?>"<?= $title === array_key_first($examples) ? '' : ' loading="lazy"' ?> />
                     </div>
                 </li>
             <?php } ?>

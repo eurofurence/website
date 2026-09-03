@@ -22,7 +22,7 @@ class Partners {
             if (!items[key].enable)
                 continue;
 
-            partners.innerHTML += `<div><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" /></a></div>`
+            partners.innerHTML += `<div><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" loading="lazy" /></a></div>`
         }
 
         partners.firstChild.classList.add('uk-slide-active', 'uk-active', 'uk-transition-active');
