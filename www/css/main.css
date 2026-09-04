@@ -295,6 +295,9 @@ main>#content>section>#ef-home-banner h1 {
 	color: #fff;
 	text-transform: uppercase;
 }
+#ef-home-intro-text a:focus {
+	outline: 3px solid #e6aa1e;
+}
 
 #ef-home-photos {
 	border-radius: var(--ef-border-radius);
