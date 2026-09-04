@@ -78,12 +78,12 @@ iframe {
         <p>Your friends will be here and so should you!</p>
         
         <div class="uk-grid-small" uk-grid>
-            <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-secondary" target="_blank" uk-tooltip="Registration begins early 2027!"><button>LOGIN</button></a></div>
+            <div><a role="button" href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-secondary" target="_blank" uk-tooltip="Registration begins early 2027!">LOGIN</a></div>
             <!-- <div><a href="https://identity.eurofurence.org/" class="uk-button hide-ext uk-button-primary" target="_blank">REGISTER NOW</a></div> -->
             <!-- <div><a href="about" class="uk-button uk-button-primary" target="_blank">LEARN MORE</a></div> -->
         </div>
     </div>
-    <div id="ef-home-photos" tabindex="-1" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
+    <div id="ef-home-photos" tabindex="0" uk-slideshow="ratio: 1280:400; autoplay: true; autoplay-interval: 5000">
         <div class="uk-slideshow-items">
             <?php foreach (get_photos('img/pages/home/photos/') as $photo) { ?>
             <div>
