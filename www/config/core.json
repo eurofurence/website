@@ -42,7 +42,7 @@
 		}
 	},
 	"staticOut": {
-		"enabled": true,
+		"enabled": false,
 		"path": "_archive/",
 		"targetBase": "https://archive.eurofurence.org/EF{number}"
 	},
