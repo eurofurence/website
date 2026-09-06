@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@gingerwolf",
-    "editor"      => "",
+    "editor"      => "@mondanzo",
     "title"       => "LED Wall",
     "description" => "Your art on the really big screen. Find out everything you need to know to submit your animations for the Video Wall above the entrance, as well as some examples from the last year. Deadline August 10.",
     "keywords"    => "Venue, Video, LED, Wall, Entrance, Big, Large, Screen, Animation",

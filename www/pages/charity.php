@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Sniffer_raccoon",
-    "editor"      => "",
+    "editor"      => "@mondanzo",
     "title"       => "Charity",
     "description" => "This year all donations, collections and more will go to support {charity}.",
     "keywords"    => "Donations, Good cause, Benefaction",

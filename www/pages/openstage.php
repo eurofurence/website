@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Anheanger_der_Pestilenz",
-    "editor"      => "",
+    "editor"      => "@draconigen",
     "title"       => "Open Stage Lineup",
     "description" => "Eurofurence Open stage is here as always. Come in and join us for various smaller artists and events.",
     "keywords"    => "Open Stage, Stage, Freestyle, Music, Performance, Fureoke, Karaoke, Open Mic, Musicians, Bands, Independant",

@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Px0ssum",
-    "editor"      => "",
+    "editor"      => "FuviiPeshu",
     "title"       => "Enter the Arena & Paws on Fire",
     "description" => "Infos on our popular dance competition shows: Paws on Fire and Enter The Arena.",
     "keywords"    => "dance, dancing, arena, competition, contest, paws on fire, enter the arena",

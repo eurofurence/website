@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@MafunDi",
-    "editor"      => "",
+    "editor"      => "@draconigen",
     "title"       => "Taiko Workshop",
     "description" => "Taiko Bastards Eurofurence Workshop explained.",
     "keywords"    => "taiko bastards workshop",

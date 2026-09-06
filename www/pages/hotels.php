@@ -1,6 +1,6 @@
 <?php $page = [
-    "owner"       => "@draconigen",
-    "editor"      => "",
+    "owner"       => "",
+    "editor"      => "@draconigen",
     "title"       => "Venue - Nearby Hotel Options",
     "description" => "Get a room! Here are some official options for you.",
     "keywords"    => "Hotel, Accommodation, Rooms",

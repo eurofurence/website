@@ -1,6 +1,6 @@
 <?php $page = [
-    "owner"       => "@draconigen",
-    "editor"      => "",
+    "owner"       => "",
+    "editor"      => "@mondanzo",
     "title"       => "The CCH Hamburg (Venue)",
     "description" => "This year's venue is the Congress Center Hamburg (CCH). Come in and find out about the enormous venue we're about to fill with animal noises and fur.",
     "keywords"    => "Venue, CCH, Hamburg, Convention Center, Accommodation",

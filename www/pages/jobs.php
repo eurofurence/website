@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "",
-    "editor"      => "@draconigen",
+    "editor"      => "@Syntaxfur",
     "title"       => "Open Staff Positions",
     "description" => "You want to help Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
     "keywords"    => "Jobs, Volunteer, Staff, Crew, Help, Gopher, Angel",

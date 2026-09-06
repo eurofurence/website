@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@riffuchs",
-    "editor"      => "",
+    "editor"      => "@Arzolath",
     "title"       => "Art Show - General Information",
     "description" => "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
     "keywords"    => "Art Show, Art, Display, Artwork, Prints, Originals, Bidding",

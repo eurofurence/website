@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Nerventee",
-    "editor"      => "",
+    "editor"      => "@draconigen",
     "title"       => "Guests of Honor",
     "description" => "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
     "keywords"    => "Special guests, GOH, Guests of Honor",

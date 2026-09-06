@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Hakogori",
-    "editor"      => "",
+    "editor"      => "@Arzolath",
     "title"       => "Furauction",
     "description" => "At the Eurofurence Furauction, you get the chance to bid for a chance to spend quality time with your favourite fursuiter in a one-on-one setting, while also donate money to charity! From chats and hugs to photoshoots, everything is possible!",
     "keywords"    => "charity, furauction, fursuiterauction, fursuiter auction",

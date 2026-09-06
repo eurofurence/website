@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Pattarchus",
-    "editor"      => "",
+    "editor"      => "@Zaqurio",
     "title"       => "Dealers' Den",
     "description" => "The Dealers' Den is the place for you to browse and buy all kinds of arts and fine products for your favorite merchants and artists.",
     "keywords"    => "Dealers' Den, Buying, Merchants, Artists, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
