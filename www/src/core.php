@@ -84,13 +84,13 @@ class EFWebCore {
 		));
 
 		// construct OGP image
-		$this->page->ogpImage =
-			$this->config->base . 
+		$ogpImagePath =
 			$this->config->defaults->ogpImagePrefix .
 			(empty($this->page->ogpImage) ? $this->config->defaults->ogpImage : $this->page->ogpImage);
+		$this->page->ogpImage = $this->config->base . $ogpImagePath;
 		
 		// determine OGP image size
-		$ogpImageSize = getimagesize($this->page->ogpImage);
+		$ogpImageSize = getimagesize(dirname(__DIR__) . "/" . $ogpImagePath);
 		$this->page->ogpImageWidth = $ogpImageSize[0];
 		$this->page->ogpImageHeight = $ogpImageSize[1];
 
@@ -157,13 +157,14 @@ class EFWebCore {
 
 		// sort pages into categories ($categorized_pages)
 		foreach ($this->config->pages as $key => $page) {
-			if ($page->nav && $page->accessible) {
-				// if category is not listed in config.menu.categoryOrder, append to end
-				if (!array_key_exists($page->cat, $categorized_pages)) {
-					$categorized_pages[$page->cat] = [];
-				}
+			$category = $page->cat ?? "";
 
-				$categorized_pages[$page->cat][$key] = $page;
+			if ($page->nav && $page->accessible && $category !== "") {
+				// if category is not listed in config.menu.categoryOrder, append to end
+				if (!array_key_exists($category, $categorized_pages)) {
+					$categorized_pages[$category] = [];
+				}
+				$categorized_pages[$category][$key] = $page;
 			}
 		}
 

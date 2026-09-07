@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Pattarchus",
-    "editor"      => "",
+    "editor"      => "@Zaqurio",
     "title"       => "Artist Alley",
     "description" => "he Artist Alley is an open, first-come-first-serve alternative to the Dealers' Den.",
     "keywords"    => "Artist, Alley, Dealers' Den, Selling, Merchants, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",

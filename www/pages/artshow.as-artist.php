@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@riffuchs",
-    "editor"      => "",
+    "editor"      => "@Arzolath",
     "title"       => "Art Show (as Artist)",
     "description" => "Want to exhibit your art at Eurofurence? Here is everything you need to know.",
     "keywords"    => "Art Show, Gallery, Guide, Rules, Exhibition, Application",

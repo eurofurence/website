@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Jake_R",
-    "editor"      => "",
+    "editor"      => "@Zaqurio",
     "title"       => "Fursuit Lounge",
     "description" => "The fursuit cooldown and supply area.",
     "keywords"    => "Fursuit, Fursuits, Suiter, Fursuit Lounge, Lounge, Headless Lounge",

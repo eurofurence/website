@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Jake_R",
-    "editor"      => "",
+    "editor"      => "@Zaqurio",
     "title"       => "Fursuiting",
     "description" => "All information for fursuiters: Everything about the Fursuit lounge, the parade and everything else.",
     "keywords"    => "Fursuit Support, Suiter, Fursuit Lounge, Lounge, Headless Lounge",

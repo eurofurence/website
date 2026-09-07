@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Sam_Mel",
-    "editor"      => "",
+    "editor"      => "@mondanzo",
     "title"       => "Accessibility",
     "description" => "People have the right to participate in public life and society. Here we provide information on how we make our convention more accessible.",
     "keywords"    => "Accessibility, Accessible, Help, Disability, Disadvantage, Impairment",

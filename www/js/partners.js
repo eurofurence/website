@@ -22,7 +22,7 @@ class Partners {
             if (!items[key].enable)
                 continue;
 
-            partners.innerHTML += `<li><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" /></a></li>`
+            partners.innerHTML += `<li><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" loading="lazy" /></a></li>`
         }
 
         if (partners.firstElementChild) {

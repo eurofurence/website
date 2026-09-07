@@ -46,6 +46,9 @@
 		border: 2px solid #fff;
 		border-radius: 6px;
 		background-color: #ddd;
+		/* Thank you Konsti <3 */
+		display: grid;
+		grid-template-columns: 1.66em 1.66em auto min-content;
 	}
 	#ef-rs-country-list > article > div {
 		display: inline-block;

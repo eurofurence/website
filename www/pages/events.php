@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Akulatraxas",
-    "editor"      => "",
+    "editor"      => "@FuviiPeshu",
     "title"       => "Events",
     "description" => "General information for those interested in organizing a panel or event at Eurofurence. The schedule will be posted here shortly before the convention.",
     "keywords"    => "Events, Time Table, Schedule, Program",

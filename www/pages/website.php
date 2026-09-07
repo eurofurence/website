@@ -50,7 +50,7 @@
 	<div class="uk-position-relative" uk-slideshow="autoplay: true; autoplay-interval: 3500; animation: fade; ratio: 6:4">
 		<div class="uk-slideshow-items uk-text-center">
 			<?php for ($i=0; $i < 12; $i++) { ?>
-			<div><img class="uk-height-1-1" src="img/pages/website/darbaras/artworks/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""></div>
+			<div><img class="uk-height-1-1" src="img/pages/website/darbaras/artworks/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""<?= $i === 0 ? '' : ' loading="lazy"' ?>></div>
 			<?php } ?>
 		</div>
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -58,7 +58,7 @@
 		<div>
 			<ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-margin-top uk-grid-small" uk-grid>
 				<?php for ($i=0; $i < 12; $i++) { ?>
-				<li uk-slideshow-item="<?= $i ?>"><a href="#"><img src="img/pages/website/darbaras/artworks/s/art_of_darbaras_<?= $i+1 ?>.jpeg" alt=""></a></li>
+				<li uk-slideshow-item="<?= $i ?>"><a href="#"><img src="img/pages/website/darbaras/artworks/s/art_of_darbaras_<?= $i+1 ?>.jpeg" alt="" loading="lazy"></a></li>
 				<?php } ?>
 			</ul>
 		</div>
@@ -74,7 +74,7 @@
 				<div uk-grid>
 					<div>
 						<a href="https://getuikit.com" target="_blank" class="hide-ext">
-							<img src="img/pages/website/uikit.jpg" alt="UIkit Logo" class="rounded attributions-icon" />
+							<img src="img/pages/website/uikit.jpg" alt="UIkit Logo" class="rounded attributions-icon" loading="lazy" />
 						</a>
 					</div>
 					<div>
@@ -90,7 +90,7 @@
 				<div uk-grid>
 					<div>
 						<a href="https://getuikit.com" target="_blank" class="hide-ext">
-							<img src="img/pages/website/chartjs.svg" alt="Chart.js Logo" class="rounded attributions-icon" />
+							<img src="img/pages/website/chartjs.svg" alt="Chart.js Logo" class="rounded attributions-icon" loading="lazy" />
 						</a>
 					</div>
 					<div>
@@ -106,7 +106,7 @@
 				<div uk-grid>
 					<div>
 						<a href="https://gitlab.com/idotj/mastodon-embed-timeline/" target="_blank" class="hide-ext">
-							<img src="img/pages/website/mastodon.svg" alt="Mastodon Logo" class="rounded attributions-icon" />
+							<img src="img/pages/website/mastodon.svg" alt="Mastodon Logo" class="rounded attributions-icon" loading="lazy" />
 						</a>
 					</div>
 					<div>
@@ -151,7 +151,7 @@
 		foreach ($members as $m) { ?>
 			<a href="<?= $m[3] ?>" target="_blank" class="hide-ext uk-width-medium"<?= empty($m[3])? 'onclick="return false;"' : '' ?>>
 				<div>
-					<img src="img/pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" />
+					<img src="img/pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" loading="lazy" />
 					<h3><?= $m[0] ?></h3>
 					<span><?= $m[1] ?></span>
 				</div>
@@ -176,5 +176,5 @@
 	</ol>
 
 	<br/>And this is how our current banner looks like: <br/><br/>
-	<img class="framedimage" src="https://www.eurofurence.org/ef_banner.gif" alt="Eurofurence Banner" /><br/><br/>
+	<img class="framedimage" src="https://www.eurofurence.org/ef_banner.gif" alt="Eurofurence Banner" loading="lazy" /><br/><br/>
 </section>
