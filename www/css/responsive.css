@@ -70,6 +70,12 @@
 }
 
 @media (max-width: 640px) {
+    html.mobile-nav-open,
+	body.mobile-nav-open {
+		overflow: hidden;
+		overscroll-behavior: none;
+	}
+
     #ef-to-top {
         right: 16px;
         bottom: 16px;

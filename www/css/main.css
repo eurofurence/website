@@ -98,7 +98,7 @@ nav {
 nav:has(> div > ul > li:last-child:hover),
 nav:has(> div > ul > li:last-child:focus-within) {
 	border-bottom-right-radius: 0;
-    transition: border-bottom-right-radius .15s ease;
+    transition: border-bottom-right-radius .1s ease;
 }
 
 nav>div#ef-nav-home a {

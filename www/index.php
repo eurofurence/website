@@ -164,11 +164,7 @@
 			</button>
 
 			<nav>
-				<div id="ef-nav-home">
-					<a href="home">
-						<span>Home</span>
-					</a>
-				</div>
+				<div id="ef-nav-home"><a href="home" uk-tooltip="pos:bottom" title="Home"></a></div>
 				<div id="ef-nav-menu"><?= $web->get_menu() ?></div>
 			</nav>
 		</header>
@@ -375,22 +371,50 @@
 	</body>
 
 	<script defer>
-		// Accessible navbar toggle mechanism
-		const navButton = document.querySelector("#nav-toggle")
+		const navButton = document.querySelector("#nav-toggle");
+		const navigation = document.querySelector("#nav-toggle ~ nav");
+		const navigationHeader = navButton.closest("header");
+		const pageContent = Array.from(document.body.children).filter(element => element !== navigationHeader);
 
+        // Accessible mobile navbar toggle mechanism
 		navButton.addEventListener("click", e => {
-			let navExpanded = navButton.getAttribute("aria-expanded")
+            const isGettingExpanded = navButton.getAttribute("aria-expanded") === "false";
 
-			if(navExpanded === "false") {
-				navButton.setAttribute("aria-expanded", "true")
-				document.querySelector("#nav-toggle ~ nav").style.maxWidth = "100vw"
-				return
-			}
+            navButton.setAttribute("aria-expanded", isGettingExpanded ? "true" : "false");
+			navigation.style.maxWidth = isGettingExpanded ? "100vw" : "0";
+			document.documentElement.classList.toggle("mobile-nav-open", isGettingExpanded);
+			document.body.classList.toggle("mobile-nav-open", isGettingExpanded);
+			pageContent.forEach(element => element.inert = isGettingExpanded); // inert elements cannot be interacted with
+		});
 
-			navButton.setAttribute("aria-expanded", "false")
-			document.querySelector("#nav-toggle ~ nav").style.maxWidth = "0"
-			return
-		})
+        // Desktop dropdown menu accessibility + disable clicking on parent menu items
+		document.querySelectorAll("#ef-nav-menu > ul > li > a.has-submenu").forEach(category => {
+			const categoryItem = category.parentElement
+
+			category.addEventListener("mouseenter", () => {
+				category.setAttribute("aria-expanded", "true");
+			})
+			category.addEventListener("focus", () => {
+				category.setAttribute("aria-expanded", "true");
+			})
+
+			categoryItem.addEventListener("mouseleave", () => {
+				if (!categoryItem.contains(document.activeElement)) {
+					category.setAttribute("aria-expanded", "false");
+				}
+			})
+			categoryItem.addEventListener("focusout", event => {
+				if (!categoryItem.contains(event.relatedTarget)) {
+					category.setAttribute("aria-expanded", "false");
+				}
+			})
+
+			category.addEventListener("click", event => {
+				if (event.detail > 0) {
+					category.blur();
+				}
+			})
+		});
 	</script>
 </html>
 <?php $web->end(); ?>
