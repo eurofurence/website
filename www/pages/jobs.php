@@ -225,21 +225,7 @@
 
 <section>
     <?php
-    $newLabelDays = 14;
-    $coreConfigPath = "config/core.json";
-    $coreConfigRaw = @file_get_contents($coreConfigPath);
-    if ($coreConfigRaw !== false) {
-        $coreConfig = json_decode($coreConfigRaw, true);
-        if (
-            is_array($coreConfig)
-            && isset($coreConfig["jobs"]["newLabelDays"])
-            && is_numeric($coreConfig["jobs"]["newLabelDays"])
-            && (int) $coreConfig["jobs"]["newLabelDays"] > 0
-        ) {
-            $newLabelDays = (int) $coreConfig["jobs"]["newLabelDays"];
-        }
-    }
-
+    $newLabelDays = $this->config->jobs->newLabelDays ?? 14;
     $newLabelMaxAgeSeconds = $newLabelDays * 24 * 60 * 60;
     $nowTimestamp = time();
 
