@@ -112,7 +112,7 @@
 			"uri": "about.php"
 		},
         "sponsors": {
-            "accessible": false,
+            "accessible": true,
             "cat": "Location",
             "nav": "Sponsors",
             "uri": "sponsors.php"
