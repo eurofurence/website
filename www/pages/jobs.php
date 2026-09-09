@@ -218,185 +218,179 @@
 </style>
 
 <section>
-	<h1>Open Staff Positions at Eurofurence</h1>
-	<p>A convention as big as Eurofurence can't simply grow without people committing some of their time and skills to it - people like you. Every now and then we are looking for creative people willing to volunteer, to help us with making Eurofurence the best possible experience for everyone! In case you find yourself addressed by one of the following job-offers, feel free to drop us a line. We will gladly have you aboard.<br/><br/>We can't offer any form of payment, but we're sure that seeing all those happy attendees will be reward enough.</p>
-	<p>If you don't find a job offer that suits you or peaks your interest, or you have any questions regarding staffing, please reach out to <a href="mailto:recruitment@eurofurence.org">recruitment@eurofurence.org</a>.</p>
+    <h1>Open Staff Positions at Eurofurence</h1>
+    <p>A convention as big as Eurofurence can't simply grow without people committing some of their time and skills to it - people like you. Every now and then we are looking for creative people willing to volunteer, to help us with making Eurofurence the best possible experience for everyone! In case you find yourself addressed by one of the following job-offers, feel free to drop us a line. We will gladly have you aboard.<br/><br/>We can't offer any form of payment, but we're sure that seeing all those happy attendees will be reward enough.</p>
+    <p>If you don't find a job offer that suits you or peaks your interest, or you have any questions regarding staffing, please reach out to <a href="mailto:recruitment@eurofurence.org">recruitment@eurofurence.org</a>.</p>
 </section>
 
 <section>
-	<?php
-		$newLabelDays = 14;
-		$coreConfigPath = "config/core.json";
-		$coreConfigRaw = @file_get_contents($coreConfigPath);
-		if ($coreConfigRaw !== false) {
-			$coreConfig = json_decode($coreConfigRaw, true);
-			if (
-				is_array($coreConfig)
-				&& isset($coreConfig["jobs"]["newLabelDays"])
-				&& is_numeric($coreConfig["jobs"]["newLabelDays"])
-				&& (int)$coreConfig["jobs"]["newLabelDays"] > 0
-			) {
-				$newLabelDays = (int)$coreConfig["jobs"]["newLabelDays"];
-			}
-		}
+    <?php
+    $newLabelDays = 14;
+    $coreConfigPath = "config/core.json";
+    $coreConfigRaw = @file_get_contents($coreConfigPath);
+    if ($coreConfigRaw !== false) {
+        $coreConfig = json_decode($coreConfigRaw, true);
+        if (
+            is_array($coreConfig)
+            && isset($coreConfig["jobs"]["newLabelDays"])
+            && is_numeric($coreConfig["jobs"]["newLabelDays"])
+            && (int) $coreConfig["jobs"]["newLabelDays"] > 0
+        ) {
+            $newLabelDays = (int) $coreConfig["jobs"]["newLabelDays"];
+        }
+    }
 
-		$newLabelMaxAgeSeconds = $newLabelDays * 24 * 60 * 60;
-		$nowTimestamp = time();
+    $newLabelMaxAgeSeconds = $newLabelDays * 24 * 60 * 60;
+    $nowTimestamp = time();
 
-		$path = "pages/jobs/";
-		$files = array_values(array_filter(scandir($path), static function ($file) use ($path) {
-			$fullPath = $path . $file;
-			return is_file($fullPath) && strtolower(pathinfo($fullPath, PATHINFO_EXTENSION)) === "php";
-		}));
-		$jobs = [];
-		$jobsByDepartment = [];
+    $path = "pages/jobs/";
+    $files = array_values(array_filter(scandir($path), static function ($file) use ($path) {
+        $fullPath = $path . $file;
+        return is_file($fullPath) && strtolower(pathinfo($fullPath, PATHINFO_EXTENSION)) === "php";
+    }));
+    $jobs = [];
+    $jobsByDepartment = [];
 
-		foreach ($files as $file) {
-			$frontmatter = ["id" => pathinfo($file, PATHINFO_FILENAME)];
-			$fullPath = $path . $file;
-			$modifiedTimestamp = @filemtime($fullPath);
-			$modifiedLabel = "";
-			$isNew = false;
-			if ($modifiedTimestamp !== false) {
-				$modifiedLabel = date("M j, Y", $modifiedTimestamp);
-				$isNew = ($nowTimestamp - $modifiedTimestamp) <= $newLabelMaxAgeSeconds;
-			}
+    foreach ($files as $file) {
+        $frontmatter = ["id" => pathinfo($file, PATHINFO_FILENAME)];
+        $fullPath = $path . $file;
+        $modifiedTimestamp = @filemtime($fullPath);
+        $modifiedLabel = "";
+        $isNew = false;
+        if ($modifiedTimestamp !== false) {
+            $modifiedLabel = date("M j, Y", $modifiedTimestamp);
+            $isNew = ($nowTimestamp - $modifiedTimestamp) <= $newLabelMaxAgeSeconds;
+        }
 
-			ob_start();
-			include($fullPath);
-			$contentHtml = ob_get_clean();
-			$searchBlob = strtolower(trim(preg_replace('/\s+/', ' ', implode(' ', [
-				$frontmatter["id"],
-				$frontmatter["title"] ?? "",
-				$frontmatter["department"] ?? "General",
-				strip_tags($contentHtml),
-			]))));
+        ob_start();
+        include($fullPath);
+        $contentHtml = ob_get_clean();
+        $searchBlob = strtolower(trim(preg_replace('/\s+/', ' ', implode(' ', [
+            $frontmatter["id"],
+            $frontmatter["title"] ?? "",
+            $frontmatter["department"] ?? "General",
+            strip_tags($contentHtml),
+        ]))));
 
-			$job = [
-				"id" => $frontmatter["id"],
-				"title" => $frontmatter["title"] ?? "",
-				"department" => $frontmatter["department"] ?? "General",
-				"modified" => $modifiedLabel,
-				"isNew" => $isNew,
-				"search" => $searchBlob,
-				"content" => $contentHtml,
-			];
+        $job = [
+            "id" => $frontmatter["id"],
+            "title" => $frontmatter["title"] ?? "",
+            "department" => $frontmatter["department"] ?? "General",
+            "modified" => $modifiedLabel,
+            "isNew" => $isNew,
+            "search" => $searchBlob,
+            "content" => $contentHtml,
+        ];
 
-			$jobs[] = $job;
+        $jobs[] = $job;
 
-			$department = $job["department"] ?: "General";
-			if (!array_key_exists($department, $jobsByDepartment)) {
-				$jobsByDepartment[$department] = [];
-			}
-			$jobsByDepartment[$department][] = $job;
-		}
+        $department = $job["department"] ?: "General";
+        if (!array_key_exists($department, $jobsByDepartment)) {
+            $jobsByDepartment[$department] = [];
+        }
+        $jobsByDepartment[$department][] = $job;
+    }
 
-		$totalOpenPositions = count($jobs);
-	?>
+    $totalOpenPositions = count($jobs);
+    ?>
 
-	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom ef-jobs-toolbar-card">
-		<div class="uk-grid-small uk-flex-middle" uk-grid>
-			<div class="uk-width-expand@m">
-				<div class="ef-jobs-search">
-					<label id="ef-jobs-search-label" for="ef-jobs-search" class="uk-form-label">Search Positions</label>
-					<div class="uk-inline uk-width-1-1">
-						<span class="uk-form-icon" uk-icon="icon: search"></span>
-						<input
-							id="ef-jobs-search"
-							type="search"
-							class="uk-input"
-							placeholder="Search by title, description, or department"
-						/>
-					</div>
-				</div>
-			</div>
-			<div class="uk-width-auto@m">
-				<div class="ef-jobs-controls">
-					<p id="ef-jobs-found-count" class="uk-text-meta ef-jobs-found-count">
-						<?= $totalOpenPositions ?> found
-					</p>
-					<div class="ef-jobs-actions" role="group" aria-label="Job section controls">
-						<button id="ef-jobs-expand-all" type="button" class="uk-button uk-button-default ef-jobs-button">Expand All</button>
-						<button id="ef-jobs-collapse-all" type="button" class="uk-button uk-button-default ef-jobs-button">Collapse All</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="uk-card uk-card-default uk-card-body uk-margin-bottom ef-jobs-toolbar-card">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-expand@m">
+                <div class="ef-jobs-search">
+                    <label id="ef-jobs-search-label" for="ef-jobs-search" class="uk-form-label">Search Positions</label>
+                    <div class="uk-inline uk-width-1-1">
+                        <span class="uk-form-icon" uk-icon="icon: search"></span>
+                        <input id="ef-jobs-search" type="search" class="uk-input"
+                            placeholder="Search by title, description, or department" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-auto@m">
+                <div class="ef-jobs-controls">
+                    <p id="ef-jobs-found-count" class="uk-text-meta ef-jobs-found-count">
+                        <?= $totalOpenPositions ?> found
+                    </p>
+                    <div class="ef-jobs-actions" role="group" aria-label="Job section controls">
+                        <button id="ef-jobs-expand-all" type="button"
+                            class="uk-button uk-button-default ef-jobs-button">Expand All</button>
+                        <button id="ef-jobs-collapse-all" type="button"
+                            class="uk-button uk-button-default ef-jobs-button">Collapse All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<ul class="uk-accordion ef-jobs-accordion" uk-accordion="multiple: true">
-		<?php foreach ($jobsByDepartment as $department => $departmentJobs) {
-			$departmentHasNew = false;
-			$departmentNewCount = 0;
-			$departmentPositionCount = count($departmentJobs);
-			foreach ($departmentJobs as $departmentJob) {
-				if ($departmentJob["isNew"]) {
-					$departmentHasNew = true;
-					$departmentNewCount += 1;
-				}
-			}
-		?>
-			<li<?= $departmentHasNew ? " class=\"uk-open\"" : "" ?>>
-				<a class="uk-accordion-title" href="#">
-					<?= htmlspecialchars($department, ENT_QUOTES) ?>
-					<span class="uk-text-meta ef-job-count">
-						<?= $departmentPositionCount ?> position<?= $departmentPositionCount === 1 ? "" : "s" ?><?= $departmentNewCount > 0 ? " ({$departmentNewCount} new)" : "" ?>
-					</span>
-				</a>
-				<div class="uk-accordion-content">
-					<div class="ef-job-grid">
-						<?php foreach ($departmentJobs as $job) { ?>
-							<div class="ef-job-tile">
-								<article
-									class="uk-card uk-card-small uk-card-default uk-flex uk-flex-column ef-job-card"
-									data-job-id="<?= htmlspecialchars($job["id"], ENT_QUOTES) ?>"
-									data-job-modified="<?= htmlspecialchars($job["modified"], ENT_QUOTES) ?>"
-									data-job-search="<?= htmlspecialchars($job["search"], ENT_QUOTES) ?>"
-									data-job-new="<?= $job["isNew"] ? "1" : "0" ?>"
-									title="View details"
-									role="button"
-									tabindex="0"
-									aria-label="Open details for <?= htmlspecialchars($job["title"], ENT_QUOTES) ?> in <?= htmlspecialchars($department, ENT_QUOTES) ?>"
-								>
-									<div class="uk-card-body uk-flex uk-flex-column uk-flex-1">
-										<div class="uk-flex uk-flex-row">
-											<h4 class="ef-job-title"><?= htmlspecialchars($job["title"], ENT_QUOTES) ?></h4>
-											<?php if ($job["isNew"]) { ?>
-												<span class="ef-job-new">New</span>
-											<?php } ?>
-										</div>
-										<?php if (!empty($job["modified"])) { ?>
-											<span class="uk-text-meta ef-job-date">Last updated: <?= htmlspecialchars($job["modified"], ENT_QUOTES) ?></span>
-										<?php } ?>
-									</div>
-								</article>
-							</div>
-						<?php } ?>
-					</div>
-				</div>
-			</li>
-		<?php } ?>
-	</ul>
+    <ul class="uk-accordion ef-jobs-accordion" uk-accordion="multiple: true">
+        <?php foreach ($jobsByDepartment as $department => $departmentJobs) {
+            $departmentHasNew = false;
+            $departmentPositionCount = count($departmentJobs);
+            foreach ($departmentJobs as $departmentJob) {
+                if ($departmentJob["isNew"]) {
+                    $departmentHasNew = true;
+                }
+            }
+            ?>
+            <li<?= $departmentHasNew ? " class=\"uk-open\"" : "" ?>>
+                <a class="uk-accordion-title" href="#">
+                    <?= htmlspecialchars($department, ENT_QUOTES) ?>
+                    <span class="uk-text-meta ef-job-count">
+                        <?= $departmentPositionCount ?>
+                        position<?= $departmentPositionCount === 1 ? "" : "s" ?>
+                    </span>
+                </a>
+                <div class="uk-accordion-content">
+                    <div class="ef-job-grid">
+                        <?php foreach ($departmentJobs as $job) { ?>
+                            <div class="ef-job-tile">
+                                <article class="uk-card uk-card-small uk-card-default uk-flex uk-flex-column ef-job-card"
+                                    data-job-id="<?= htmlspecialchars($job["id"], ENT_QUOTES) ?>"
+                                    data-job-modified="<?= htmlspecialchars($job["modified"], ENT_QUOTES) ?>"
+                                    data-job-search="<?= htmlspecialchars($job["search"], ENT_QUOTES) ?>"
+                                    data-job-new="<?= $job["isNew"] ? "1" : "0" ?>" title="View details" role="button"
+                                    tabindex="0"
+                                    aria-label="Open details for <?= htmlspecialchars($job["title"], ENT_QUOTES) ?> in <?= htmlspecialchars($department, ENT_QUOTES) ?>">
+                                    <div class="uk-card-body uk-flex uk-flex-column uk-flex-1">
+                                        <div class="uk-flex uk-flex-row">
+                                            <h4 class="ef-job-title"><?= htmlspecialchars($job["title"], ENT_QUOTES) ?></h4>
+                                            <?php if ($job["isNew"]) { ?>
+                                                <span class="ef-job-new">New</span>
+                                            <?php } ?>
+                                        </div>
+                                        <?php if (!empty($job["modified"])) { ?>
+                                            <span class="uk-text-meta ef-job-date">Last updated:
+                                                <?= htmlspecialchars($job["modified"], ENT_QUOTES) ?></span>
+                                        <?php } ?>
+                                    </div>
+                                </article>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </li>
+        <?php } ?>
+    </ul>
 
-	<div id="ef-jobs-empty" class="uk-text-meta ef-jobs-empty" hidden>No positions match your search.</div>
+    <div id="ef-jobs-empty" class="uk-text-meta ef-jobs-empty" hidden>No positions match your search.</div>
 
-	<div id="ef-job-modal" class="uk-modal uk-modal-container" uk-modal="container: body">
-		<div class="uk-modal-dialog uk-modal-body">
-			<button class="uk-modal-close-default" type="button" uk-close></button>
-			<div id="ef-job-modal-content"></div>
-			<div id="ef-job-modal-meta" class="uk-text-meta ef-job-modal-meta"></div>
-		</div>
-	</div>
+    <div id="ef-job-modal" class="uk-modal uk-modal-container" uk-modal="container: body">
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div id="ef-job-modal-content"></div>
+            <div id="ef-job-modal-meta" class="uk-text-meta ef-job-modal-meta"></div>
+        </div>
+    </div>
 
-	<?php foreach ($jobs as $job) { ?>
-		<template id="ef-job-content-<?= htmlspecialchars($job["id"], ENT_QUOTES) ?>">
-			<?= $job["content"] ?>
-		</template>
-	<?php } ?>
+    <?php foreach ($jobs as $job) { ?>
+        <template id="ef-job-content-<?= htmlspecialchars($job["id"], ENT_QUOTES) ?>">
+            <?= $job["content"] ?>
+        </template>
+    <?php } ?>
 </section>
 
 <section>
-	<p>These positions are subject to constant change throughout the year. If you're interested in helping us out, make sure to check this page periodically so that you don't miss your favorite job!</p>
+    <p>These positions are subject to constant change throughout the year. If you're interested in helping us out, make sure to check this page periodically so that you don't miss your favorite job!</p>
 </section>
 
 <script src="js/jobs.js"></script>

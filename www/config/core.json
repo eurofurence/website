@@ -58,7 +58,7 @@
 		"newLabelDays": 14
 	},
 	"ui": {
-		"toTopThreshold": 100
+		"scrollToTopThreshold": 100
 	},
 	"pages": {
 		"404": {

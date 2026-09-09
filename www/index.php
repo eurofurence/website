@@ -170,14 +170,14 @@
 		</header>
 
 		<?php
-			$toTopThreshold = 100;
+			$scrollToTopThreshold = 100;
 			if (
 				isset($web->config->ui)
-				&& isset($web->config->ui->toTopThreshold)
-				&& is_numeric($web->config->ui->toTopThreshold)
-				&& (int)$web->config->ui->toTopThreshold > 0
+				&& isset($web->config->ui->scrollToTopThreshold)
+				&& is_numeric($web->config->ui->scrollToTopThreshold)
+				&& (int)$web->config->ui->scrollToTopThreshold > 0
 			) {
-				$toTopThreshold = (int)$web->config->ui->toTopThreshold;
+				$scrollToTopThreshold = (int)$web->config->ui->scrollToTopThreshold;
 			}
 		?>
 		<a
@@ -186,7 +186,7 @@
 			href=""
 			uk-totop
 			uk-scroll
-			data-threshold="<?= $toTopThreshold ?>"
+			data-threshold="<?= $scrollToTopThreshold ?>"
 			aria-label="Back to top"
 		></a>
 
