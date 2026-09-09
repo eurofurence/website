@@ -1,5 +1,5 @@
 <?php $page = [
-    "owner"       => "@Anheanger_der_Pestilenz",
+    "owner"       => "@e_i_s_f_u_c_h_s",
     "editor"      => "@draconigen",
     "title"       => "Open Stage Lineup",
     "description" => "Eurofurence Open stage is here as always. Come in and join us for various smaller artists and events.",

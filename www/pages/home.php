@@ -111,7 +111,7 @@ iframe {
             data-element-type="iframe"
             data-src="pages/home/mastodon-timeline.html"
             data-class="uk-width-1-1"
-            data-title="Eurofurence Hotels"
+            data-title="Mastodon Timeline"
             data-uk-height-viewport="offset-bottom: 120px"
         ><h3>External Contents</h3><p>- click to accept -</p><p>subject to meow.social/privacy-policy</p></div>
     </div>
