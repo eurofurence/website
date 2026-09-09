@@ -92,6 +92,7 @@ iframe {
             </div>
             <?php } ?>
         </div>
+        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-position-bottom-center uk-position-small"></ul>
     </div>
 </div>
 

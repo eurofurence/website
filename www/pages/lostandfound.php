@@ -9,6 +9,10 @@
 ]; ?>
 
 <style>
+    .lf-toolbar-card {
+        padding: 32px;
+    }
+
     .lf-card {
         transition: transform 128ms ease;
         cursor: pointer;
@@ -149,6 +153,18 @@
         gap: 4px;
     }
 
+    .lf-status-help {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 2px;
+        cursor: help;
+    }
+
+    .lf-label-help {
+        pointer-events: auto;
+        cursor: help;
+    }
+
     .lf-item-modal {
         overflow: hidden;
     }
@@ -280,10 +296,6 @@
     }
 
     @media (min-width: 1600px) {
-        .lf-toolbar-card {
-            padding: 32px;
-        }
-
         .lf-card-body {
             padding: 16px 24px;
         }
@@ -324,7 +336,16 @@
             </div>
 
             <div class="uk-width-1-4@m uk-width-1-2@s">
-                <label for="ef-lostandfound-status" class="uk-form-label">Status</label>
+                <label for="ef-lostandfound-status" class="uk-form-label">
+                    Status
+                    <span
+                        class="lf-status-help"
+                        uk-icon="icon: info; ratio: 0.69"
+                        uk-tooltip="pos: top"
+                        title="Lost: item is reported missing.<br/>Found: item has been found and given to SecOps (can be collected)."
+                        aria-label="Status help"
+                    ></span>
+                </label>
                 <select id="ef-lostandfound-status" class="uk-select">
                     <option value="all">All statuses</option>
                     <option value="L">Lost</option>
