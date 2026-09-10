@@ -240,7 +240,12 @@
     foreach ($files as $file) {
         $frontmatter = ["id" => pathinfo($file, PATHINFO_FILENAME)];
         $fullPath = $path . $file;
-        $modifiedTimestamp = @filemtime($fullPath);
+
+        ob_start();
+        include($fullPath);
+        $contentHtml = ob_get_clean();
+
+        $modifiedTimestamp = !empty($frontmatter["modified"]) ? strtotime($frontmatter["modified"]) : false;
         $modifiedLabel = "";
         $isNew = false;
         if ($modifiedTimestamp !== false) {
@@ -248,9 +253,6 @@
             $isNew = ($nowTimestamp - $modifiedTimestamp) <= $newLabelMaxAgeSeconds;
         }
 
-        ob_start();
-        include($fullPath);
-        $contentHtml = ob_get_clean();
         $searchBlob = strtolower(trim(preg_replace('/\s+/', ' ', implode(' ', [
             $frontmatter["id"],
             $frontmatter["title"] ?? "",
