@@ -693,16 +693,19 @@ iframe {
 	border-radius: var(--ef-border-radius);
 }
 
-/* convention links */
+/* partner banners links */
 #links {
 	display: block;
 	width: 100%;
 	max-width: 260px;
     margin: auto 0;
+}
+
+#links .ef-partners-slides {
 	border-radius: var(--ef-border-radius);
 	overflow: hidden;
 }
-/* normalise banners to fit the container */
+
 #links .uk-slideshow-items > * > a {
 	display: block;
 	width: 100%;
@@ -748,6 +751,18 @@ iframe {
 	border-color: var(--ef-palette-2);
 }
 
+#links .uk-slideshow-nav.ef-slideshow-nav-below {
+	position: static;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	transform: none;
+	width: fit-content;
+	max-width: 100%;
+	margin: 8px auto 0;
+}
+
 #partners.js-disabled {
 	position: static;
 	margin: 0;
@@ -763,7 +778,7 @@ iframe {
 	padding: 0;
 }
 
-#partners.js-disabled + .uk-slideshow-nav {
+#links .ef-partners-slides:has(#partners.js-disabled) + .uk-slideshow-nav {
 	display: none;
 }
 

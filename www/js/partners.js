@@ -26,7 +26,7 @@ class Partners {
         }
 
         if (partners.firstElementChild) {
-            partners.firstElementChild.classList.add('uk-slide-active', 'uk-active', 'uk-transition-active', 'uk-box-shadow-hover-large');
+            partners.firstElementChild.classList.add('uk-slide-active', 'uk-active', 'uk-transition-active');
         }
 
         if (typeof UIkit !== "undefined" && UIkit.update) {
