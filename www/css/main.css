@@ -347,12 +347,12 @@ main>#content>section>#ef-home-banner h1 {
 
 #ef-home-banner>div {
 	position: absolute;
-	right: 20px;
 	top: 10px;
-	margin: 20px 25px;
+    right: 0;
+	margin: 20px;
 	border-radius: var(--ef-border-radius);
 	padding: 20px;
-	width: min(50%, 480px, 100%);
+	width: min(70%, 480px, 100%);
 	font-weight: 600;
 	background-color: rgba(0, 0, 0, 0.6);
 }
