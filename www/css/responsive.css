@@ -6,13 +6,15 @@
 */
 
 @media (min-width: 1200px) {
+    #ef-home-banner > div {
+        margin: 20px 30px;
+    }
+
 	#ef-home-intro-text {
 		position: absolute;
 		z-index: 2;
-		right: 20px;
-		top: 40px;
+        top: 10px;
 		right: 0;
-		top: 10px;
 		margin: 20px 30px; 
 		width: min(50%, 480px, 100%);		
 	}
@@ -24,10 +26,6 @@
 }
 
 @media (max-width: 960px) {
-	#ef-home-banner > div {
-		width: calc(100% - 90px);
-	}
-
     footer {
         position: relative;
         padding-right: 80px;
@@ -80,6 +78,12 @@
         right: 16px;
         bottom: 16px;
     }
+
+	#ef-home-banner > div {
+		width: calc(100% - 40px);
+        margin: 20px;
+        text-align: left;
+	}
 
     footer {
         padding: 16px 64px 16px 16px;

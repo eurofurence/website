@@ -237,12 +237,14 @@
 
 				<div class="ef-footer-col">
 					<h5>Convention Network</h5>
-					<div id="links" class="uk-box-shadow-hover-large">
+					<div id="links">
 						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
-							<ul class="uk-slideshow-items js-disabled" id="partners">
-								<li>JavaScript required to view links to other conventions.</li>
-							</ul>
-							<ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-position-bottom-center uk-position-small"></ul>
+							<div class="ef-partners-slides uk-box-shadow-hover-large">
+								<ul class="uk-slideshow-items js-disabled" id="partners">
+									<li>JavaScript required to view links to other conventions.</li>
+								</ul>
+							</div>
+							<ul class="uk-slideshow-nav uk-dotnav uk-flex-center ef-slideshow-nav-below"></ul>
 						</div>
 					</div>
 				</div>
