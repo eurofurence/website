@@ -7,9 +7,9 @@
     "ogpImage"    => "",
     "robots"      => ""
 ]; ?>
-
 <section class="uk-margin-bottom">
-	<h1>Our Venue &ndash; The Congress Center Hamburg</h1>
+    <h1>Our Venue &ndash; The Congress Center Hamburg</h1>
+
 	<div class="uk-column-1-2@l">
 		<p>In the center of Hamburg, Germany, amidst  lots of green and between Alster lake and a beatiful park to your leisure, lies the Congress Center Hamburg (CCH).</p>
 		<p>The Dammtor mainline train station and several other public transportation connections within walking distance allow for an easy travel.</p>
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 </section>
-<!--
+<?php /*
 <section>
 	<h1>Map & Navigation (EFnav)</h1>
 	<div id="location-ef-venue"></div>
@@ -68,11 +68,11 @@
         <a href="https://nav.eurofurence.org/" target="_blank">nav.eurofurence.org</a>
     </p>
 </section>
--->
+*/ ?>
 <section>
 	<h2>Planten un Blomen, Gardens and Parks</h2>
 
-	<p>Curled around the CCH is <a href="https://plantenunblomen.hamburg.de/planten-un-blomen-parkplan-parkteile/" target="_blank">a cluster of parks</a> operated by the City of Hamburg, connecting the CCH all the way south to the <span class="uk-text-italic">Landungsbr&uuml;cken</span> docks with a 2.5 km walk in the greens.</p>
+	<p>Curled around the CCH is <a href="https://plantenunblomen.hamburg.de/parkplan/planten-un-blomen-parkplan-parkteile-622450" target="_blank">a cluster of parks</a> operated by the City of Hamburg, connecting the CCH all the way south to the <span class="uk-text-italic">Landungsbr&uuml;cken</span> docks with a 2.5 km walk in the greens.</p>
 	<p>There are several noteworthy points to mention:</p>
 	<ul>
 		<li>Entrance is free.</li>
