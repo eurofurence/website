@@ -3,6 +3,32 @@
 	include("src/core.php");
 	include("src/telegram/telegram.php");
 	$web = new EFWebCore("config/core.json");
+	header("Vary: X-EF-Fragment");
+
+	if (($_SERVER['HTTP_X_EF_FRAGMENT'] ?? '') === 'content') {
+		header("Content-Type: application/json; charset=UTF-8");
+
+		$fragment = [
+			"key" => $web->page->key,
+			"title" => $web->page->title,
+			"description" => $web->page->description,
+			"keywords" => $web->page->keywords,
+			"robots" => $web->page->robots,
+			"canonical" => $web->get_full_url(),
+			"ogpImage" => $web->page->ogpImage,
+			"ogpImageWidth" => $web->page->ogpImageWidth,
+			"ogpImageHeight" => $web->page->ogpImageHeight,
+			"previous" => isset($web->page->previous) ? $web->config->base . $web->page->previous : null,
+			"next" => isset($web->page->next) ? $web->config->base . $web->page->next : null,
+			"menu" => $web->get_menu(),
+			"mainClass" => $web->page->key === 'home' ? 'ef-landingpage' : '',
+			"content" => $web->page->content
+		];
+
+		echo json_encode($fragment, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+		ob_end_flush();
+		exit;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -149,6 +175,7 @@
 		</script>
 
         <script src="src/env-config.php"></script>
+		<script>window.EFPageLifecycle = new EventTarget();</script>
 
 		<link rel="stylesheet" href="css/uikit.min.css" />
 		<link rel="stylesheet" href="css/main.css" />

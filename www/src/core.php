@@ -201,11 +201,11 @@ class EFWebCore {
 				// insert hrefSuffix
 				$item = mb_ereg_replace("\{hrefSuffix\}", $this->config->menu->hrefSuffix, $item);
 
-				// insert ActiveClass, if current == page active
+				// insert ActiveClass, if page key is the current active page key
 				$item = mb_ereg_replace
 				(
 					"\{ifActiveClass\}",
-					($this->page !== $page? "" : $this->config->menu->ifActiveClass),
+					($this->page->key === $key ? $this->config->menu->ifActiveClass : ""),
 					$item
 				);
 
