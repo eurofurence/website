@@ -12,13 +12,13 @@
 	<h1>Animal Art Crimes</h1>
 	<div id="location-goh"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-goh', {
 				title: 'Guest of Honor',
 				subtitle: 'CCH: Level 0, Foyer 4 (next to Artists\' Lounge)',
 				slug: 'goh'
 			}, { tooltip: 'Guest of Honor location on map' });
-		});
+		}, { once: true });
 	</script>
 
 	<div class="uk-text-center uk-margin-bottom">

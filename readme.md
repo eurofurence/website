@@ -39,6 +39,44 @@ echo "{}" > www/modified.json
 
 Don't forget to add writing permission for the user running the web server is being run as!
 
+## Client-side navigation
+
+Same-origin page links use client-side navigation (when JavaScript is available) to avoid rebuilding shared elements and requests for every page change. Normal browser navigation is available as fallback.
+
+### How it works
+
+* Request receives the complete document from [index.php](www/index.php).
+* Request with the `X-EF-Fragment: content` header receives a JSON response containing the page content, metadata, menu HTML, canonical URL, and page-specific main classes.
+* [js/main.js](www/js/main.js) intercepts same-origin links, fetches the fragment, replaces `#content`, updates metadata and browser history and initializes new page scripts.
+* External links, files, non-typical interactions (like shift + click) still use standard browser navigation.
+* If fetching or page initialization fails, the browser should fall back to a normal navigation.
+
+Shared CSS, JS, image, font assets are cached by Apache for one hour. The cache is configured in [.htaccess](www/.htaccess) and requires the Apache `headers` module (which is enabled by [dockerfile](dockerfile)).
+
+### Page script lifecycle
+
+Use `EFPageLifecycle` for page scripts:
+
+```javascript
+const pageLifecycle = window.EFPageLifecycle || window;
+pageLifecycle.addEventListener("load", () => { ... }, { once: true });
+pageLifecycle.addEventListener("unload", () => { ... }, { once: true });
+```
+
+`EFPageLifecycle` is created before page scripts run during a normal request. Use it for page-specific behavior because its event target is replaced for every page and helps with the cleanup (the old lifecycle receives `unload`, then a new lifecycle is created for incoming page which receives `load` after its scripts have been inserted).
+
+The global `ef:page-load` event (basically the same as `load` from `window.EFPageLifecycle`) is also dispatched on `document` and `window`.
+
+> Remember to avoid `DOMContentLoaded`, window `load` and `unload` events and use the `EFPageLifecycle` instead!
+
+When adding async page behavior, remember to clean it up on `unload`:
+* Abort `fetch` requests with an `AbortController`.
+* Clear `setTimeout` and `setInterval` handles.
+* Remove listeners attached to `window`, `document`, or other persistent objects.
+* Destroy map, chart, modal etc. when necessary.
+
+*examples: [js/lostandfound.js](www/js/lostandfound.js), [js/jobs.js](www/js/jobs.js), [js/regstats-page.js](www/js/regstats-page.js)*
+
 ## Continuous Deployment
 
 GitHub Workflows described in `.github/workflows/` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:

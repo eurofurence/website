@@ -53,13 +53,13 @@
 	<h1>Map & Navigation (EFnav)</h1>
 	<div id="location-ef-venue"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-ef-venue', {
 				title: 'Map & Navigation',
 				slug: 'cch-main',
                 icon: 'expand',
 			}, { tooltip: 'Fullscreen map', icon: 'expand' });
-		});
+		}, { once: true });
 	</script>
 
     <iframe src="https://nav.eurofurence.org/embed/" title="EFnav" width="100%" height="621"></iframe>

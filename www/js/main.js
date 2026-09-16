@@ -196,13 +196,6 @@ const efNavigation = (() => {
         replaceRelLink('next', page.next);
     }
 
-    function rewritePageLifecycle(scriptText) {
-        return scriptText.replace(
-            /(document|window)\.addEventListener\s*\(\s*(['"])DOMContentLoaded\2/g,
-            "window.EFPageLifecycle.addEventListener('load'"
-        );
-    }
-
     async function loadExternalScriptSource(scriptUrl, requestController) {
         const response = await window.fetch(scriptUrl.href, {
             credentials: 'same-origin',
@@ -217,7 +210,7 @@ const efNavigation = (() => {
     }
 
     function wrapPageScript(scriptText, scriptUrl) {
-        return `(function () {\n${rewritePageLifecycle(scriptText)}\n}).call(window);\n//# sourceURL=${scriptUrl.href}`;
+        return `(function () {\n${scriptText}\n}).call(window);\n//# sourceURL=${scriptUrl.href}`;
     }
 
     function createAbortError() {
@@ -307,7 +300,7 @@ const efNavigation = (() => {
                     }
                 }
             } else {
-                const scriptText = rewritePageLifecycle(script.textContent || '');
+                const scriptText = script.textContent || '';
                 if ((script.type || '').toLowerCase() === 'module') {
                     replacement.type = 'module';
                     replacement.textContent = scriptText;

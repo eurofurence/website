@@ -12,7 +12,7 @@
 	<h1>The Daily Eurofurence</h1>
 	<div id="location-ef-daily"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-ef-daily', [
 				{
 					id: 'ef-daily-entrance-location',
@@ -33,7 +33,7 @@
 					slug: 'ef-daily-point-level-2',
 				}
 			], { tooltip: 'EF Daily locations on map' });
-		});
+		}, { once: true });
 	</script>
 	<p>The Daily Eurofurence is a printed daily newsletter that is distributed for free at Eurofurence. Introduced at Eurofurence 15, it quickly found a broad readership among the attendees.</p>
 	<p>The Daily features articles, reviews and interviews on various topics concerning Eurofurence and the Furry Fandom in general. It also includes stories, cartoons, announcements and the latest timetable information.</p>
