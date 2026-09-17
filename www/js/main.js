@@ -29,6 +29,90 @@ function initializeConsentCovers() {
 initializeConsentCovers();
 document.addEventListener("ef:page-load", initializeConsentCovers);
 
+function setNavigationExpanded(isExpanded) {
+    const navButton = document.querySelector("#nav-toggle");
+    const navigation = document.querySelector("#nav-toggle ~ nav");
+    const navigationHeader = navButton?.closest("header");
+
+    if (!navButton || !navigation || !navigationHeader) {
+        return;
+    }
+
+    navButton.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    navigation.style.maxWidth = isExpanded ? "100vw" : "0";
+    document.documentElement.classList.toggle("mobile-nav-open", isExpanded);
+    document.body.classList.toggle("mobile-nav-open", isExpanded);
+
+    Array.from(document.body.children)
+        .filter((element) => element !== navigationHeader)
+        .forEach((element) => {
+            element.inert = isExpanded;
+        });
+}
+
+function closeNavigationAccessibility() {
+    const navButton = document.querySelector("#nav-toggle");
+    if (navButton?.getAttribute("aria-expanded") === "true") {
+        setNavigationExpanded(false);
+    }
+}
+
+function initializeNavigationAccessibility() {
+    const navButton = document.querySelector("#nav-toggle");
+    const navigation = document.querySelector("#nav-toggle ~ nav");
+    const navigationHeader = navButton?.closest("header");
+
+    if (!navButton || !navigation || !navigationHeader) {
+        return;
+    }
+
+    if (!navButton.__efNavigationInitialized) {
+        navButton.addEventListener("click", () => {
+            const isGettingExpanded = navButton.getAttribute("aria-expanded") === "false";
+            setNavigationExpanded(isGettingExpanded);
+        });
+
+        navButton.__efNavigationInitialized = true;
+    }
+
+    document.querySelectorAll("#ef-nav-menu > ul > li > a.has-submenu").forEach((category) => {
+        if (category.__efNavigationInitialized) {
+            return;
+        }
+
+        const categoryItem = category.parentElement;
+
+        category.addEventListener("mouseenter", () => {
+            category.setAttribute("aria-expanded", "true");
+        });
+        category.addEventListener("focus", () => {
+            category.setAttribute("aria-expanded", "true");
+        });
+
+        categoryItem.addEventListener("mouseleave", () => {
+            if (!categoryItem.contains(document.activeElement)) {
+                category.setAttribute("aria-expanded", "false");
+            }
+        });
+        categoryItem.addEventListener("focusout", (event) => {
+            if (!categoryItem.contains(event.relatedTarget)) {
+                category.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        category.addEventListener("click", (event) => {
+            if (event.detail > 0) {
+                category.blur();
+            }
+        });
+
+        category.__efNavigationInitialized = true;
+    });
+}
+
+initializeNavigationAccessibility();
+document.addEventListener("ef:page-load", initializeNavigationAccessibility);
+
 /* Page Rating */
 const rating = document.getElementById('rating-rating');
 const stars = document.querySelectorAll('.page-rating-stars > *');
@@ -194,6 +278,68 @@ const efNavigation = (() => {
         setLinkHref('link[rel="canonical"]', page.canonical);
         replaceRelLink('prev', page.previous);
         replaceRelLink('next', page.next);
+        updateBreadcrumbStructuredData(page);
+    }
+
+    function updatePageRating(page) {
+        if (!page || !page.key || !page.title) {
+            return;
+        }
+
+        const pageInput = document.querySelector('#page-rating input[name="page"]');
+        const pageTitle = document.querySelector('#page-rating .uk-text-bold');
+
+        if (pageInput) {
+            pageInput.value = page.key;
+        }
+        if (pageTitle) {
+            pageTitle.textContent = page.title;
+        }
+
+        if (rating) {
+            rating.value = '';
+        }
+        stars.forEach((star) => star.classList.remove('glowing'));
+    }
+
+    function updateBreadcrumbStructuredData(page) {
+        if (!page || !Array.isArray(page.breadcrumbs)) {
+            return;
+        }
+
+        const breadcrumbScript = [...document.querySelectorAll('script[type="application/ld+json"]')].find((script) => {
+            try {
+                return JSON.parse(script.textContent || '')['@type'] === 'BreadcrumbList';
+            } catch {
+                return false;
+            }
+        });
+
+        if (!breadcrumbScript) {
+            return;
+        }
+
+        let structuredData;
+        try {
+            structuredData = JSON.parse(breadcrumbScript.textContent || '');
+        } catch {
+            return;
+        }
+
+        const rootItem = structuredData.itemListElement?.[0];
+        const pageItems = page.breadcrumbs
+            .filter((breadcrumb) => breadcrumb?.name && breadcrumb?.url)
+            .map((breadcrumb, index) => ({
+                '@type': 'ListItem',
+                position: index + 2,
+                item: {
+                    '@id': breadcrumb.url,
+                    name: breadcrumb.name,
+                },
+            }));
+
+        structuredData.itemListElement = rootItem ? [{ ...rootItem, position: 1 }, ...pageItems] : pageItems;
+        breadcrumbScript.textContent = JSON.stringify(structuredData);
     }
 
     async function loadExternalScriptSource(scriptUrl, requestController) {
@@ -342,6 +488,8 @@ const efNavigation = (() => {
             return;
         }
 
+        closeNavigationAccessibility();
+
         if (navigationController) {
             navigationController.abort();
         }
@@ -378,6 +526,7 @@ const efNavigation = (() => {
             window.EFPageLifecycle.dispatchEvent(new CustomEvent('unload', { detail: page }));
             window.EFPageLifecycle = new EventTarget();
             updatePageMetadata(page);
+            updatePageRating(page);
             document.getElementById('ef-nav-menu').innerHTML = page.menu;
             main.className = page.mainClass || '';
             content.innerHTML = page.content;

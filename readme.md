@@ -77,6 +77,11 @@ When adding async page behavior, remember to clean it up on `unload`:
 
 *examples: [js/lostandfound.js](www/js/lostandfound.js), [js/jobs.js](www/js/jobs.js), [js/regstats-page.js](www/js/regstats-page.js)*
 
+### Shared elements
+
+Persistent shared elements, such as page rating modal, are outside `#content` and are being initialized once. On navigation, synchronize page-specific fields and reset stale state without binding duplicate listeners.
+Page-specific modals belong inside that page and must initialize on lifecycle `load` and close and clean up on lifecycle `unload`.
+
 ## Continuous Deployment
 
 GitHub Workflows described in `.github/workflows/` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:
