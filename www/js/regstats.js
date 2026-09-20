@@ -685,7 +685,7 @@ class RegStats
         for (const i in this.data.country) { // iso3166 alpha-2 country code
             const n = this.countryCodes[i.toUpperCase()]; // full name
             const c = this.data.country[i]; // attendee count
-            parent.innerHTML += `<article data-iso="${i}" data-name="${n}" data-count="${c}"><div class="${i.toUpperCase()}"></div><h4>${i.toUpperCase()}</h4> ${n}<span>${c}</span></article>`
+            parent.innerHTML += `<article data-iso="${i}" data-name="${n}" data-count="${c}"><div class="${i.toUpperCase()}"></div><strong>${i.toUpperCase()}</strong> ${n}<span>${c}</span></article>`
         }
 
         this.updateCountryListSort();
