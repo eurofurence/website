@@ -64,13 +64,13 @@ small {
 	<h1 id="ddstart">Dealers’ Den Rules &amp; Information</h1>
     <div id="location-dealers-main"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-dealers-main', {
 				title: 'Dealers\' Den',
 				subtitle: 'CCH: Level 0, Hall H, Sections 7-8',
 				slug: 'dealers-den'
 			}, { tooltip: 'Dealers\' Den location on map' });
-		});
+		}, { once: true });
 	</script>
 	<p style="text-align:center;"><a href="dealersden#ddhours">Dealers' Den Hours</strong></a> | <a href="dealersden#ddobtainingdealership">Obtainting a Dealership</a> | <a href="dealersden#beforeddopens">Before the Dealers' Den Opens</a> | <a href="dealersden#ddsetup">Dealers' Den Setup</a> | <a href="dealersden#ddopen">The Dealers’ Den is Open!</a> | <a href="dealersden#ddteardown">Dealers' Den Teardown</a></p>
 </section>

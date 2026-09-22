@@ -3,6 +3,33 @@
 	include("src/core.php");
 	include("src/telegram/telegram.php");
 	$web = new EFWebCore("config/core.json");
+	header("Vary: X-EF-Fragment");
+
+	if (($_SERVER['HTTP_X_EF_FRAGMENT'] ?? '') === 'content') {
+		header("Content-Type: application/json; charset=UTF-8");
+
+		$fragment = [
+			"key" => $web->page->key,
+			"title" => $web->page->title,
+			"description" => $web->page->description,
+			"keywords" => $web->page->keywords,
+			"robots" => $web->page->robots,
+			"canonical" => $web->get_full_url(),
+			"ogpImage" => $web->page->ogpImage,
+			"ogpImageWidth" => $web->page->ogpImageWidth,
+			"ogpImageHeight" => $web->page->ogpImageHeight,
+			"previous" => isset($web->page->previous) ? $web->config->base . $web->page->previous : null,
+			"next" => isset($web->page->next) ? $web->config->base . $web->page->next : null,
+			"breadcrumbs" => $web->get_breadcrumb_data(),
+			"menu" => $web->get_menu(),
+			"mainClass" => $web->page->key === 'home' ? 'ef-landingpage' : '',
+			"content" => $web->page->content
+		];
+
+		echo json_encode($fragment, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+		ob_end_flush();
+		exit;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +43,7 @@
 		<meta name="HandheldFriendly" content="true" /> 
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="description" content="<?= $web->page->description ?>" />
-		<meta name="keywords" content="<?= $web->page->keywords ?>" />		
+		<meta name="keywords" content="<?= $web->page->keywords ?>" />
 		<meta name="robots" content="<?= $web->page->robots ?>" />
 		<meta name="author" content="web@eurofurence.org" />
 		<meta name="rating" content="general" />
@@ -148,7 +175,8 @@
 		}
 		</script>
 
-        <script src="src/env-config.php"></script>
+		<script src="src/env-config.php"></script>
+		<script>window.EFPageLifecycle = new EventTarget();</script>
 
 		<link rel="stylesheet" href="css/uikit.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
@@ -371,52 +399,5 @@
 		}
 		?>
 	</body>
-
-	<script defer>
-		const navButton = document.querySelector("#nav-toggle");
-		const navigation = document.querySelector("#nav-toggle ~ nav");
-		const navigationHeader = navButton.closest("header");
-		const pageContent = Array.from(document.body.children).filter(element => element !== navigationHeader);
-
-        // Accessible mobile navbar toggle mechanism
-		navButton.addEventListener("click", e => {
-            const isGettingExpanded = navButton.getAttribute("aria-expanded") === "false";
-
-            navButton.setAttribute("aria-expanded", isGettingExpanded ? "true" : "false");
-			navigation.style.maxWidth = isGettingExpanded ? "100vw" : "0";
-			document.documentElement.classList.toggle("mobile-nav-open", isGettingExpanded);
-			document.body.classList.toggle("mobile-nav-open", isGettingExpanded);
-			pageContent.forEach(element => element.inert = isGettingExpanded); // inert elements cannot be interacted with
-		});
-
-        // Desktop dropdown menu accessibility + disable clicking on parent menu items
-		document.querySelectorAll("#ef-nav-menu > ul > li > a.has-submenu").forEach(category => {
-			const categoryItem = category.parentElement
-
-			category.addEventListener("mouseenter", () => {
-				category.setAttribute("aria-expanded", "true");
-			})
-			category.addEventListener("focus", () => {
-				category.setAttribute("aria-expanded", "true");
-			})
-
-			categoryItem.addEventListener("mouseleave", () => {
-				if (!categoryItem.contains(document.activeElement)) {
-					category.setAttribute("aria-expanded", "false");
-				}
-			})
-			categoryItem.addEventListener("focusout", event => {
-				if (!categoryItem.contains(event.relatedTarget)) {
-					category.setAttribute("aria-expanded", "false");
-				}
-			})
-
-			category.addEventListener("click", event => {
-				if (event.detail > 0) {
-					category.blur();
-				}
-			})
-		});
-	</script>
 </html>
 <?php $web->end(); ?>

@@ -18,6 +18,7 @@ class JobsPage {
     #searchDebounceTimer = null;
     #cardDataById = new Map();
     #eventsBound = false;
+    #popstateHandler = null;
 
     constructor(options) {
         this.#modalRoot = options.modalRoot;
@@ -31,7 +32,7 @@ class JobsPage {
         this.#collapseAllButton = options.collapseAllButton;
     }
 
-    build() {
+    initialize() {
         if (!this.#requiredElementsPresent()) {
             return;
         }
@@ -46,6 +47,18 @@ class JobsPage {
         this.#bindEvents();
         this.#applySearchFilter();
         this.#syncModalWithHash();
+    }
+
+    cleanup() {
+        if (this.#searchDebounceTimer !== null) {
+            clearTimeout(this.#searchDebounceTimer);
+            this.#searchDebounceTimer = null;
+        }
+
+        if (this.#popstateHandler) {
+            window.removeEventListener("popstate", this.#popstateHandler);
+            this.#popstateHandler = null;
+        }
     }
 
     #requiredElementsPresent() {
@@ -335,7 +348,8 @@ class JobsPage {
             }
         });
 
-        window.addEventListener("popstate", () => this.#syncModalWithHash());
+        this.#popstateHandler = () => this.#syncModalWithHash();
+        window.addEventListener("popstate", this.#popstateHandler);
 
         this.#eventsBound = true;
     }
@@ -353,4 +367,6 @@ const jobsPage = new JobsPage({
     collapseAllButton: document.getElementById("ef-jobs-collapse-all"),
 });
 
-window.addEventListener("load", () => jobsPage.build(), { once: true });
+const pageLifecycle = window.EFPageLifecycle || window;
+pageLifecycle.addEventListener("load", () => jobsPage.initialize(), { once: true });
+pageLifecycle.addEventListener("unload", () => jobsPage.cleanup(), { once: true });

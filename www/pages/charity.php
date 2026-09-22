@@ -12,7 +12,7 @@
     <h1>Seehundstation Friedrichskoog</h1>
     <div id="location-charity"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        window.EFPageLifecycle.addEventListener("load", () => {
             createEFnavTrigger('location-charity', [
                 {
                     id: 'charity-booth-location',
@@ -27,7 +27,7 @@
                     slug: 'charity-doodles'
                 },
             ], { tooltip: 'Charity locations on map' });
-        });
+        }, { once: true });
     </script>
     <div class="uk-column-1-2@l">
         <div>

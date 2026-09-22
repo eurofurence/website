@@ -289,4 +289,4 @@
 </div>
 
 <script src="js/chart.js"></script>
-<script src="js/regstats.min.js"></script>
+<script src="js/regstats-page.js"></script>

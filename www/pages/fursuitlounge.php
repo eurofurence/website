@@ -12,13 +12,13 @@
 	<h1>Fursuit Lounge Rules</h1>
 	<div id="location-fursuit-lounge"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-fursuit-lounge', {
 				title: 'Fursuit Lounge',
 				subtitle: 'CCH: Level 0, Hall H, Sections 3-4',
 				slug: 'fursuit-lounge'
 			}, { tooltip: 'Fursuit Lounge location on map' });
-		});
+		}, { once: true });
 	</script>
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@m uk-margin-bottom" uk-grid>
 		<div>
