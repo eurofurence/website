@@ -5,15 +5,19 @@
 
 /* Consent Required - Click to Allow External Contents */
 document.querySelectorAll('.consent-cover').forEach(container => {
-    container.addEventListener('click', () => {
-        const elem = document.createElement(container.dataset.elementType);
-        for (attr in container.dataset) {
-            if (attr === 'elementType')
-                continue;
-            // console.info(`[consent cover] attr: setting ${attr.replace(/[A-Z]/g, m => "-" + m.toLowerCase())}="${container.dataset[attr]}"`);
-            elem.setAttribute(attr.replace(/[A-Z]/g, m => "-" + m.toLowerCase()), container.dataset[attr]);
-        };
-        container.replaceWith(elem);
+    function showConsentBannerContent() {
+        const element = document.createElement(container.dataset.elementType);
+        Object.entries(container.dataset)
+            .filter(([attr]) => attr !== 'elementType')
+            .forEach(([attr, value]) => element.setAttribute(
+                attr.replace(/[A-Z]/g, m => '-' + m.toLowerCase()), value
+            ));
+        container.replaceWith(element);
+    }
+
+    container.addEventListener('click', showConsentBannerContent);
+    container.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') showConsentBannerContent()
     });
 });
 
