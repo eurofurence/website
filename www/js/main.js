@@ -17,7 +17,10 @@ document.querySelectorAll('.consent-cover').forEach(container => {
 
     container.addEventListener('click', showConsentBannerContent);
     container.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') showConsentBannerContent()
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            showConsentBannerContent();
+        };
     });
 });
 
