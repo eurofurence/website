@@ -107,6 +107,7 @@ iframe {
 <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-margin-top" uk-grid>
     <div>
         <div
+            tabindex="0"
             class="consent-cover uk-width-1-1"
             data-element-type="iframe"
             data-src="pages/home/mastodon-timeline.html"

@@ -109,6 +109,7 @@
     <p>More options provided by our partner, Kuoni:</p>
 	<!-- by the order of Cheetah, we are to allow all external domains; implemented by disabling CSP headers completely on vserver level -->
     <div
+        tabindex="0"
         class="consent-cover uk-width-1-1"
         data-element-type="iframe"
         data-src="pages/hotels/kuoni.html"

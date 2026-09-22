@@ -16,6 +16,7 @@
 	<br />
 
 	<div
+		tabindex="0"
 		class="consent-cover uk-width-1-1"
 		data-element-type="iframe"
 		data-src="pages/glympse/glympse.html"
