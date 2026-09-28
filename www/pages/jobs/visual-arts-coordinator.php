@@ -11,6 +11,12 @@
     To this end, we are looking for another lighting technician to join our existing team and help us create an unforgettable experience for our attendees. As part of our team, you will primarily work alongside our current technician to plan, set up, program, and dismantle the lighting design.
 </p>
 
+<h3>About the role</h3>
+<ul>
+	<li>Are you experienced in graphic design and print production? We are looking for a Visual Arts Coordinator to manage our design pipeline and shape the visual look of Eurofurence.</li>
+	<li>This is mostly a coordination and project management role. You will lead our volunteer graphic design team, work closely with artists, and handle print production with vendors based in Germany to bring our convention space to life.</li>
+</ul>
+
 <h3>What you will do</h3>
 <ul>
     <li>Coordinate our team of graphic designers, assign tasks, and set internal deadlines with proper buffers.</li>
