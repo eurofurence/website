@@ -8,7 +8,6 @@
 <p>
     The Eurofurence Theming and Experience Team designs one of Europe’s largest furry conventions. The team consists of dedicated volunteers who perform a wide range of tasks. Among other things, their responsibilities include developing the theming guidelines, designing the public convention space, setting up AV equipment for decorative purposes, furnishing the public convention space, and developing the wayfinding system in collaboration with other departments. <br />
     We aim to create a pleasant and theme-specific atmosphere for our guests.<br />
-    To this end, we are looking for another lighting technician to join our existing team and help us create an unforgettable experience for our attendees. As part of our team, you will primarily work alongside our current technician to plan, set up, program, and dismantle the lighting design.
 </p>
 
 <h3>About the role</h3>
