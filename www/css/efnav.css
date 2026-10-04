@@ -1,0 +1,201 @@
+/* Sync location icon size with UIkit h1 title + fullscreen modal */
+:root {
+    --efnav-icon-size: 2.23125rem;
+    --efnav-button-background: #4E266E;
+    --efnav-button-border: #B32499;
+}
+@media (min-width: 960px) {
+    :root {
+        --efnav-icon-size: 2.625rem;
+    }
+}
+
+#content section.efnav-section .efnav-container {
+    float: right;
+    padding: 0;
+    margin: 0 0 8px 8px;
+    line-height: 0;
+}
+#content section.efnav-section[class*="uk-column-"] {
+    position: relative;
+}
+#content section.efnav-section[class*="uk-column-"] .efnav-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    float: none;
+    margin: 0;
+    z-index: 1;
+}
+
+#content section.efnav-section[class*="uk-column-"] > h1:first-of-type,
+#content section.efnav-section[class*="uk-column-"] > h2:first-of-type {
+    padding-right: 3.25rem;
+}
+#content section.efnav-section > h1:first-of-type,
+#content section.efnav-section > h2:first-of-type {
+    margin-top: 0;
+}
+
+#content section.efnav-section .efnav-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+#content section.efnav-section > [class*="uk-column-"],
+#content section.efnav-section > [uk-grid],
+#content section.efnav-section > .uk-grid,
+#content section.efnav-section > hr {
+    clear: right;
+}
+
+#content section.efnav-section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.efnav-launcher {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0.1em;
+    font-size: var(--efnav-icon-size);
+    line-height: 1;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    background-color: transparent;
+}
+
+.efnav-launcher > .efnav-icon {
+    color: var(--ef-green);
+    transition: transform 128ms ease, color 128ms ease;
+}
+.efnav-launcher:hover > .efnav-icon {
+    transform: translateY(-2px);
+    color: var(--ef-green-light);
+}
+
+.efnav-icon svg {
+    width: 1em;
+    height: 1em;
+}
+
+.efnav-modal.uk-modal-full,
+.efnav-modal.uk-modal-full .uk-modal-dialog {
+    height: 100vh;
+}
+
+.efnav-modal.uk-modal-full .uk-modal-dialog {
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.efnav-modal-content {
+    padding: 0;
+}
+
+.efnav-modal-title {
+    margin: 0;
+    padding: 0 20px;
+    display: block;
+    line-height: 1.8;
+}
+
+.efnav-modal-subtitle {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0 20px;
+}
+
+.efnav-modal-tabs-wrap {
+    padding: 0;
+    margin: 0;
+}
+
+.efnav-modal-tabs {
+    margin: 0;
+    gap: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.efnav-modal-tabs > * {
+    padding-left: 0;
+    flex: 0 0 auto;
+}
+
+.efnav-modal-tabs > * > a {
+    display: block;
+    margin: 0;
+    padding: 8px 16px;
+    max-width: 200px;
+    background: #3D2962;
+    color: #FFFFFF;
+    border-top: 2px solid var(--efnav-button-border);
+    border-bottom: 2px solid var(--efnav-button-border);
+    border-radius: 0;
+    text-transform: none;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.efnav-modal-tabs > * > a:hover,
+.efnav-modal-tabs > * > a:focus,
+.efnav-modal-tabs > .uk-active > a {
+    background: var(--efnav-button-background);
+    border-color: var(--efnav-button-border);
+    color: #FFFFFF;
+}
+.efnav-modal-tabs > .uk-active > a {
+    font-weight: 600;
+}
+.efnav-modal-tabs > :not(:last-child) > a {
+    border-right: 1px solid #FFFFFF;
+}
+.efnav-modal-tabs > :first-child > a {
+    border-left: 2px solid var(--efnav-button-border);
+}
+.efnav-modal-tabs > :last-child > a {
+    border-right: 2px solid var(--efnav-button-border);
+}
+
+.efnav-modal-map {
+    display: flex;
+    flex: 1;
+}
+
+.efnav-modal-iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.efnav-modal button.uk-modal-close-full {
+    background: transparent;
+}
+@media (max-width: 960px) {
+    .efnav-modal-title {
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+
+    .efnav-modal-subtitle {
+        margin-bottom: 8px;
+    }
+}

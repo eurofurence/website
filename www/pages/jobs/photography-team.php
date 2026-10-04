@@ -1,6 +1,7 @@
 <?php
     $frontmatter["department"] = "Photography";
     $frontmatter["title"] = "Team Members";
+    $frontmatter["modified"] = "2026-07-26";
     echo '<h2>' . $frontmatter["department"] . ' &ndash; ' . $frontmatter["title"] . '</h2>';
 ?>
 

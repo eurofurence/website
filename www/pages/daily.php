@@ -1,0 +1,50 @@
+<?php $page = [
+    "owner"       => "@Draugvorn",
+    "editor"      => "@FuviiPeshu",
+    "title"       => "The Daily Eurofurence",
+    "description" => "The Daily Eurofurence is a printed daily newsletter that is distributed for free during Eurofurence.",
+    "keywords"    => "Daily, Daily Eurofurence, News, Newspaper, Printed news",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
+<section>
+	<h1>The Daily Eurofurence</h1>
+	<div id="location-ef-daily"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-ef-daily', [
+				{
+					id: 'ef-daily-entrance-location',
+					title: 'EF Daily (Entrance)',
+					subtitle: 'CCH: Level 0, Entrance Hall, Area near the main entrance',
+					slug: 'ef-daily-point-entrance',
+				},
+				{
+					id: 'ef-daily-level1-location',
+					title: 'EF Daily (Level 1)',
+					subtitle: 'CCH: Level 1, Foyer X, Area near stairs and infodesk',
+					slug: 'ef-daily-point-level-1',
+				},
+				{
+					id: 'ef-daily-level2-location',
+					title: 'EF Daily (Level 2)',
+					subtitle: 'CCH: Level 2, Foyer Y, Area near stairs',
+					slug: 'ef-daily-point-level-2',
+				}
+			], { tooltip: 'EF Daily locations on map' });
+		});
+	</script>
+	<p>The Daily Eurofurence is a printed daily newsletter that is distributed for free at Eurofurence. Introduced at Eurofurence 15, it quickly found a broad readership among the attendees.</p>
+	<p>The Daily features articles, reviews and interviews on various topics concerning Eurofurence and the Furry Fandom in general. It also includes stories, cartoons, announcements and the latest timetable information.</p>
+</section>
+
+<section>
+	<h2>Contact</h2>
+	<p>Do you have an idea for an article? Or do you want to share some feedback? Write to the <a href="https://help.eurofurence.org/contact/daily">Daily Eurofurence Team</a>.</p>
+</section>
+
+<section>
+	<h2>PDF-Archive</h2>
+	<p>Feeling nostalgic? Lost your copies? All issues of the "Daily" are now available for download or home-printing! Visit our <a href="https://archive.eurofurence.org" target="_blank">Archive Website</a> to browse the history of both Eurofurence and The Daily.</p>
+</section>

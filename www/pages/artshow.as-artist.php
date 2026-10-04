@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@riffuchs",
+    "editor"      => "@Arzolath",
+    "title"       => "Art Show (as Artist)",
+    "description" => "Want to exhibit your art at Eurofurence? Here is everything you need to know.",
+    "keywords"    => "Art Show, Gallery, Guide, Rules, Exhibition, Application",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <?php 
 	$applications_start = "February 9, 2026";
 	$applications_end   = "March 22, 2026";
@@ -12,6 +22,16 @@
 
 <section class="uk-column-1-2@l">
 	<h1 class="uk-column-span">Art Show - Guide for Artists</h1>
+	<div id="location-art-show-artist"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-art-show-artist', {
+				title: 'Art Show',
+				subtitle: 'CCH: Level 0, Hall H, Sections 5-6',
+				slug: 'art-show'
+			}, { tooltip: 'Art Show location on map' });
+		});
+	</script>
 	<div>
 		<caption><h3 class="reset-font">Getting Started</h3></caption>
 		<p>
@@ -111,7 +131,7 @@
 			<ul>
 				<li><a href="files/Art_Show_Guide_to_Decoration_and_Lighting_Options_(V1.0-20.08.2024).pdf" target="_blank" title="Guide to Decoration and Lighting Options (V1.0-20.08.2024)">[PDF] &nbsp; Guide to Decoration and Lighting Options (V1.0-20.08.2024)</a></li>
 				
-				<li><a href="files/Art_Show_Digital_Showroom_Infoflyer_(Version 1.1-19.08.2024).pdf" target="_blank" title="Digital Showroom Infoflyer (Version 1.1 - 19.08.2024)">[PDF] &nbsp; Digital Showroom Infoflyer (Version 1.1 - 19.08.2024)</a></li>
+				<li><a href="files/Art_Show_Digital_Showroom_Infoflyer_(Version_1.2-2026-08-02).pdf" target="_blank" title="Digital Showroom Infoflyer (Version 1.2 - 02.08.2026)">[PDF] &nbsp; Digital Showroom Infoflyer (Version 1.2 - 02.08.2026)</a></li>
 			</ul>
 		</p>
 	</div>

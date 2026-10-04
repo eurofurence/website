@@ -1,8 +1,32 @@
+<?php $page = [
+    "owner"       => "@Nerventee",
+    "editor"      => "@draconigen",
+    "title"       => "Guests of Honor",
+    "description" => "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
+    "keywords"    => "Special guests, GOH, Guests of Honor",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
 <section>
 	<h1>Animal Art Crimes</h1>
+	<div id="location-goh"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			createEFnavTrigger('location-goh', {
+				title: 'Guest of Honor',
+				subtitle: 'CCH: Level 0, Foyer 4 (next to Artists\' Lounge)',
+				slug: 'goh'
+			}, { tooltip: 'Guest of Honor location on map' });
+		});
+	</script>
+
+	<div class="uk-text-center uk-margin-bottom">
+		<div><a href="goh/#updates" class="uk-button hide-ext uk-button-primary">GO TO BACKSTREET CAR UPDATES</a></div>
+	</div>
 
 	<div class="uk-column-1-2@l uk-clearfix" uk-lightbox>
-		<p>ƒ<a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
+		<p><a href="img/pages/goh/artcrimes-5.jpg" class="uk-float-left uk-margin-right"><img src="img/pages/goh/s/artcrimes-5.jpg" alt="Coyote on a Stop Sign" /></a> Founded around 2020 in Denver, Colorado, <span class="uk-text-bold">Animal Art Crimes</span> is a collaborative street art collective celebrating its sixth anniversary this year. Bringing together artists with backgrounds in graffiti, illustration, and the furry fandom, the collective has built a distinctive identity through vibrant animal-themed artwork inspired by both urban street culture and anthropomorphic art.</p>
 
 		<p>Their creations include colorful murals, stickers, illustrations, and mixed-media works featuring expressive characters such as bats, hyenas, coyotes, dogs, and many other creatures. Their name is a playful reference to the rebellious spirit traditionally associated with street art, reflected in their motto: <span class="uk-text-italic">"So many walls, so little time..."</span></p>
 
@@ -23,10 +47,24 @@
 </section>
 
 <section>
-	<h2>Car Happening</h2>
-	<p>Details to be announced soon.</p>
+	<h2>Backstreet Car</h2>
+	<p>
+		From Wednesday to Friday, Animal Art Crimes, their friends and you(!) will paint a car;<br />
+		transforming a battered station wagon into one enormous collaborative artwork.<br />
+		Then, on Saturday (13:00), the car will be disassembled and it's pieces auctioned off for charity.
+	</p>
+	<p>
+		Join us on the CCH Roof Terrace as two fearless cutters take angle grinders to the car, spectacularly dismantling and turn it into unique pieces of Eurofurence history: <br />
+		live, loud and with plenty of sparks.
+	</p>
+	<p>
+		And because every good crime story needs a mastermind, the incredible Uncle Kage will auction the resulting artworks for charity. 
+	</p>
+	<p>
+		See here the progress of the car and the finished art pieces:
+	</p>
 
-	<h3>Featured</h3>
+	<h3 id="updates">Featured</h3>
 	<div class="uk-child-width-1-3 uk-grid-small uk-margin-top" uk-lightbox="animation: fade" uk-grid>
 		<?php foreach (getPics('img/pages/goh/car/featured') as $e) { ?>
 		<div>
@@ -108,7 +146,6 @@
 </div>
 
 <?php
-
 function getPics($path) {
 	$ret = [];
 	foreach (scandir($path, SCANDIR_SORT_DESCENDING) as $filename) {
@@ -120,3 +157,4 @@ function getPics($path) {
 	}
 	return $ret;
 }
+?>

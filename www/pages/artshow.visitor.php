@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@riffuchs",
+    "editor"      => "@Arzolath",
+    "title"       => "Art Show - General Information",
+    "description" => "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
+    "keywords"    => "Art Show, Art, Display, Artwork, Prints, Originals, Bidding",
+	"ogpImage"    => "artshow.jpg",
+	"robots"      => ""
+]; ?>
+
 <?php 
 	// $seating_plan_thumb = "img/pages/artshow/XXX.jpg";
 	$seating_plan_version = "Version 1.9 as of August 12, 2026";
@@ -6,6 +16,16 @@
 
 <section>
 		<h1 id="start">Art Show - Guide for Bidders</h1>
+		<div id="location-art-show-visitor"></div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				createEFnavTrigger('location-art-show-visitor', {
+                    title: 'Art Show',
+                    subtitle: 'CCH: Level 0, Hall H, Sections 5-6',
+                    slug: 'art-show'
+				}, { tooltip: 'Art Show location on map' });
+			});
+		</script>
 		<p class="uk-text-center"><a href="artshow#bidnumber" title="How to register as a bidder">Register for a Bidder Number</strong></a> | <a href="artshow#howtobid" title="How bidding works">How to bid</strong></a> |	<a href="artshow#closing" title="How the closing works">Closing and final Auction</strong></a> | <a href="artshow#pickup" title="How to collect your artwork">Sales and Artwork Pickup</strong></a> | <a href="artshow#tips" title="Tip on how to bid">Tips on bidding</strong></a></p>
 
 		<p>This section will inform you in advance about the bidding process. You don't actually have to take any action before the convention itself; there is no bidder pre-registration.</p>

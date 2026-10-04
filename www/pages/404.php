@@ -1,0 +1,14 @@
+<?php $page = [
+    "owner"       => "@draconigen",
+    "editor"      => "@draconigen",
+    "title"       => "",
+    "description" => "",
+    "keywords"    => "",
+    "ogpImage"    => "",
+    "robots"      => "noindex, nofollow, noodp"
+]; ?>
+
+<section>
+	<h1>404 &ndash; Page Not Found</h1>
+	<p>The page or resource could not be found; Please try again in a few minutes or report to us if the issue persists.</p>
+</section>

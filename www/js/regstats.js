@@ -321,6 +321,15 @@ class RegStats
             // "countryChart": this.initCountryChart(),
             "size": this.initSize()
         }
+
+        // Listen to country table sorter, so the accessible table can be
+        // updated at the same time.
+        document
+            .querySelectorAll("[uk-filter-control] a")
+            .forEach((element, index) => {
+                element.addEventListener("click", () => this.updateCountryListSort());
+                element.addEventListener("keyup", () => this.updateCountryListSort());
+            });
         
         this.timestampContainer = document.getElementById('ef-rs-timestamp');
         this.rawContainer = document.getElementById('ef-rs-data-raw');
@@ -376,7 +385,7 @@ class RegStats
 
     initStatus()
     {
-        return new Chart(document.getElementById('ef-rs-reg-status'),
+        const chart = new Chart(document.getElementById('ef-rs-reg-status'),
         {
             type: 'doughnut',
             data: {
@@ -419,6 +428,16 @@ class RegStats
             },
             plugins: [htmlLegendPlugin]
         });
+
+        const statusTbody = document.querySelector("#ef-rs-reg-status-table tbody");
+        chart.data.labels.forEach((label, index) => {
+            const slug = label.toLowerCase().replaceAll(/[^a-z]/g, '-');
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${label}</td><td id="ef-rs-reg-status-table-${slug}">${chart.data.datasets[0].data[index]}</td>`
+            statusTbody.appendChild(row);
+        });
+
+        return chart;
     }
 
     updateStatus()
@@ -448,11 +467,20 @@ class RegStats
             document.getElementById('ef-rs-intro-paid').innerText = (this.data.status['partially paid'] || 0) + (this.data.status.paid || 0);
         if (document.getElementById('ef-rs-intro-checked-in'))
             document.getElementById('ef-rs-intro-checked-in').innerText = this.data.status['checked in'] || 0;
+
+        this.charts.status.data.labels.forEach((label, index) => {
+            const slug = label.toLowerCase().replaceAll(/[^a-z]/g, "-");
+            const element = document.getElementById(`ef-rs-reg-status-table-${slug}`)
+            const latest = values[index].toString();
+            if (element.innerText !== latest) {
+                element.innerText = latest;
+            }
+        })
     }
 
     initTypes()
     {
-        return new Chart(document.getElementById('ef-rs-reg-types'),
+        const chart = new Chart(document.getElementById('ef-rs-reg-types'),
         {
             type: 'doughnut',
             data: {
@@ -488,6 +516,16 @@ class RegStats
             },
             plugins: [htmlLegendPlugin]
         });
+
+        const statusTbody = document.querySelector("#ef-rs-reg-types-table tbody");
+        chart.data.labels.forEach((label, index) => {
+            const slug = label.toLowerCase().replaceAll(/[^a-z]/g, "-");
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${label}</td><td id="ef-rs-reg-types-table-${slug}">${chart.data.datasets[0].data[index]}</td>`;
+            statusTbody.appendChild(row);
+        });
+
+        return chart;
     }
 
     updateTypes()
@@ -503,6 +541,16 @@ class RegStats
         this.charts.types.options.plugins.htmlLegend.values = values;
 
         this.charts.types.update();
+
+        this.charts.types.data.labels.forEach((label, index) => {
+            const slug = label.toLowerCase().replaceAll(/[^a-z]/g, "-");
+            const element = document.getElementById(
+                `ef-rs-reg-types-table-${slug}`,
+            );
+            if (element.innerText !== values[index].toString()) {
+                element.innerText = values[index].toString();
+            }
+        });
     }
 
     updateInterests()
@@ -560,6 +608,26 @@ class RegStats
         const avg = Math.round(wsum / this.data.totalcount);
 
         document.getElementById('ef-rs-age-avg').innerText = avg;     
+
+        const ages = Object.entries(this.data.age).sort((a, b) => parseInt(a[0], 10) - parseInt(b[0], 10));
+        const ageTbody = document.querySelector("#ef-rs-age-table tbody");
+        const ageRows = ageTbody.querySelectorAll("tr");
+        ages.forEach(([age, count], index) => {
+            let tr = ageRows[index];
+            if (!tr) {
+                tr = document.createElement('tr');
+                tr.innerHTML = '<td></td><td></td>';
+                ageTbody.appendChild(tr);
+            }
+            const cells = tr.querySelectorAll('td');
+            cells[0].innerText = age;
+            cells[1].innerText = count;
+        });
+        // Should probably never happen? But if data is rolled back, remove
+        // excess rows from the end of the table.
+        if (ageRows.length > ages.length) {
+            Array.from(ageRows).slice(ages.length).forEach(row => row.remove());
+        }
     }
 
     initCountryChart()
@@ -617,13 +685,61 @@ class RegStats
         for (const i in this.data.country) { // iso3166 alpha-2 country code
             const n = this.countryCodes[i.toUpperCase()]; // full name
             const c = this.data.country[i]; // attendee count
-            parent.innerHTML += `<article data-iso="${i}" data-name="${n}" data-count="${c}"><div class="${i.toUpperCase()}"></div><h4>${i.toUpperCase()}</h4> ${n}<span>${c}</span></article>`
+            parent.innerHTML += `<article data-iso="${i}" data-name="${n}" data-count="${c}"><div class="${i.toUpperCase()}"></div><strong>${i.toUpperCase()}</strong> ${n}<span>${c}</span></article>`
+        }
+
+        this.updateCountryListSort();
+    }
+
+    updateCountryListSort() {
+        const selectedCountrySortElement = document.querySelector(
+            '[uk-filter="#ef-rs-country-list"] [uk-filter-control].uk-active',
+        );
+        // expected sort values: 'iso', 'name', 'count'
+        const sortOption = selectedCountrySortElement
+            ? selectedCountrySortElement
+                  .getAttribute("uk-filter-control")
+                  .slice(11)
+                  .split(";")[0]
+            : "iso";
+        const sorters = {
+            iso: (a, b) => (a[0] > b[0] ? 1 : -1),
+            name: (a, b) =>
+                this.countryCodes[a[0].toUpperCase()] >
+                this.countryCodes[b[0].toUpperCase()]
+                    ? 1
+                    : -1,
+            count: (a, b) => parseInt(b[1], 10) - parseInt(a[1], 10),
+        };
+        const countryTbody = document.querySelector(
+            "#ef-rs-country-list-table tbody",
+        );
+        const countryRows = countryTbody.querySelectorAll("tr");
+        const countries = Object.entries(this.data.country);
+        countries
+            .sort(sorters[sortOption] || sorters["iso"])
+            .forEach(([isoCode, count], index) => {
+                let tr = countryRows[index];
+                if (!tr) {
+                    tr = document.createElement("tr");
+                    tr.innerHTML = "<td></td><td></td><td></td>";
+                    countryTbody.appendChild(tr);
+                }
+                const cells = tr.querySelectorAll("td");
+                cells[0].innerText = isoCode.toUpperCase();
+                cells[1].innerText = this.countryCodes[isoCode.toUpperCase()];
+                cells[2].innerText = count;
+            });
+        // Should probably never happen? But if data is rolled back, remove
+        // excess rows from the end of the table.
+        if (countryRows.length > countries.length) {
+            countryRows.slice(countries.length).forEach((row) => row.remove());
         }
     }
     
     initSize()
     {
-        return new Chart(document.getElementById('ef-rs-reg-size'),
+        const chart = new Chart(document.getElementById('ef-rs-reg-size'),
         {
             type: 'doughnut',
             data: {
@@ -658,6 +774,18 @@ class RegStats
             },
             plugins: [htmlLegendPlugin]
         });
+
+        const sizeTbody = document.querySelector(
+            "#ef-rs-reg-size-table tbody",
+        );
+        chart.data.labels.forEach((label, index) => {
+            const slug = label.toLowerCase().replaceAll(/[^a-z]/g, "-");
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${label}</td><td id="ef-rs-reg-size-table-${slug}">${chart.data.datasets[0].data[index]}</td>`;
+            sizeTbody.appendChild(row);
+        });
+
+        return chart;
     }
 
     updateSize()
@@ -672,6 +800,16 @@ class RegStats
         this.charts.size.options.plugins.htmlLegend.values = values;
 
         this.charts.size.update();
+
+        this.charts.size.data.labels.forEach((label, index) => {
+            const slug = label.toLowerCase().replaceAll(/[^a-z]/g, "-");
+            const element = document.getElementById(
+                `ef-rs-reg-size-table-${slug}`,
+            );
+            if (element.innerText !== values[index].toString()) {
+                element.innerText = values[index].toString();
+            }
+        });
     }
 
     async fetch(year)

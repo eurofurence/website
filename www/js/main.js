@@ -3,34 +3,24 @@
 //     document.getElementsByTagName("body")[0].style = "overflow: " + (this.checked? "hidden" : "auto") + ";"
 // })
 
-// job deeplinking
-document.querySelectorAll('[id^=ef-job-]').forEach(element => {
-    // attach hash on open
-    UIkit.util.on(element, 'beforeshow', () => {
-        window.location.hash = element.id.substring(7);
-    });
-    // remove hash on close
-    UIkit.util.on(element, 'beforehide', () => {
-        window.location.hash = '';
-    });
-});
-// open job on page load
-const job = document.getElementById(`ef-job-${window.location.hash.substring(1)}`);
-if (window.location.hash && job) {
-    UIkit.modal(job).show();
-}
-
 /* Consent Required - Click to Allow External Contents */
 document.querySelectorAll('.consent-cover').forEach(container => {
-    container.addEventListener('click', () => {
-        const elem = document.createElement(container.dataset.elementType);
-        for (attr in container.dataset) {
-            if (attr === 'elementType')
-                continue;
-            // console.info(`[consent cover] attr: setting ${attr.replace(/[A-Z]/g, m => "-" + m.toLowerCase())}="${container.dataset[attr]}"`);
-            elem.setAttribute(attr.replace(/[A-Z]/g, m => "-" + m.toLowerCase()), container.dataset[attr]);
+    function showConsentBannerContent() {
+        const element = document.createElement(container.dataset.elementType);
+        Object.entries(container.dataset)
+            .filter(([attr]) => attr !== 'elementType')
+            .forEach(([attr, value]) => element.setAttribute(
+                attr.replace(/[A-Z]/g, m => '-' + m.toLowerCase()), value
+            ));
+        container.replaceWith(element);
+    }
+
+    container.addEventListener('click', showConsentBannerContent);
+    container.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            showConsentBannerContent();
         };
-        container.replaceWith(elem);
     });
 });
 
@@ -61,3 +51,47 @@ if (document.location.hash.substring(1) === 'rate-success') {
 if (document.location.hash.substring(1) === 'rate-failure') {
     UIkit.notification('Uhoh, something went wrong on our side. Please tell @draconigen on Telegram.', 'danger');
 }
+
+/* Back To Top (UIkit Totop) */
+const toTopButton = document.getElementById('ef-to-top');
+if (toTopButton) {
+    toTopButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const configuredThreshold = Number.parseInt(toTopButton.dataset.threshold || '100', 10);
+    const threshold = Number.isFinite(configuredThreshold) && configuredThreshold > 0 ? configuredThreshold : 100;
+    const fadeRange = 48;
+    let toTopTicking = false;
+
+    const updateToTopVisibility = () => {
+        toTopTicking = false;
+
+        const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        const fadeStart = Math.max(0, threshold - fadeRange);
+        const fadeEnd = threshold + fadeRange;
+        const raw = (scrollY - fadeStart) / (fadeEnd - fadeStart);
+        const opacity = Math.max(0, Math.min(1, raw));
+
+        toTopButton.style.opacity = String(opacity);
+        if (opacity > 0.01) {
+            toTopButton.classList.add('ef-visible');
+        } else {
+            toTopButton.classList.remove('ef-visible');
+        }
+    };
+
+    const scheduleToTopUpdate = () => {
+        if (toTopTicking) {
+            return;
+        }
+        toTopTicking = true;
+        window.requestAnimationFrame(updateToTopVisibility);
+    };
+
+    window.addEventListener('scroll', scheduleToTopUpdate, { passive: true });
+    window.addEventListener('resize', scheduleToTopUpdate);
+    scheduleToTopUpdate();
+}
+

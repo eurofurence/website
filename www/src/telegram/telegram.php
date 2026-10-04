@@ -17,13 +17,13 @@ if (!file_exists(TELEGRAM_CONFIG_PATH)) {
 # load config file
 include_once(TELEGRAM_CONFIG_PATH);
 
-# check config file contents and raise exception if empty
-if (empty(TELEGRAM_BOT_API_TOKEN) || empty(TELEGRAM_TARGET_USERID)) {
-    throw new Exception("Telegram config missing in " . TELEGRAM_CONFIG_PATH);
-}
-
 class Telegram {
     public static function report(string $message, array $inlineKeyBoardButtons = []) {
+    # check config file contents and raise exception if empty
+        if (empty(TELEGRAM_BOT_API_TOKEN) || empty(TELEGRAM_TARGET_USERID)) {
+            throw new Exception("Telegram config missing in " . TELEGRAM_CONFIG_PATH);
+        }
+        
         # prepare telegram api payload
         $payload = [
             'chat_id' => TELEGRAM_TARGET_USERID,

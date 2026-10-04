@@ -1,3 +1,13 @@
+<?php $page = [
+    "owner"       => "@vinaru",
+    "editor"      => "@draconigen",
+    "title"       => "Conbook",
+    "description" => "The Conbook is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
+    "keywords"    => "Conbook, Guide",
+    "ogpImage"    => "conbook.jpg",
+    "robots"      => ""
+]; ?>
+
 <?php $images_deadline = 'June 19th'; ?>
 <?php $stories_deadline = 'June 19th, 2026'; ?>
 

@@ -1,0 +1,38 @@
+<?php $page = [
+    "owner"       => "",
+    "editor"      => "@Syntaxfur",
+    "title"       => "Glympse Map",
+    "description" => "Follow the surge of furries towards Hamburg and back live on Glympse.",
+    "keywords"    => "Glympse, Live, Travel, Map",
+    "ogpImage"    => "",
+    "robots"      => ""
+]; ?>
+
+<section>
+	<h1>Glympse Interactive Map</h1>
+	<p>Watch other attendees travel towards Eurofurence (or back)!</p> All you'll need to participate is a smart phone and the <a href="https://app.glympse.com/" target="_blank">Glympse app</a>.</p>
+	<p>Simply start the app and set it up to share you location using "!eurofurence" as a tag.</p>
+
+	<br />
+
+	<div
+		tabindex="0"
+		class="consent-cover uk-width-1-1"
+		data-element-type="iframe"
+		data-src="pages/glympse/glympse.html"
+		data-class="uk-width-1-1"
+		data-title="Glympse"
+		data-uk-height-viewport="offset-bottom: 120px"
+	><h3>External Contents</h3><p>- click to accept -</p><p>subject to <br />legal.here.com/en/terms/serviceterms/us and <br />policies.google.com/privacy</p></div>
+
+	<h3>Some Advices</h3>
+	<ul>
+		<li>If you want your marker to disappear from the map, all you have to do is clear your location history in the app. </li>
+		<li>If you don't want to share your home address, you might want to enable location sharing a bit after getting on your way to the con.</li>
+		<li>Please mind battery load and the rather heavy energy consumption of GPS and Glympse. Make sure your battery is loaded, or others won't see you on the map!</li>
+		<li>Although Glympse has a navigation feature, we suggest sticking to the navigation app you've grown used to.</li>
+		<li>Please be aware that Glympse is a free third-party service on their own. You agree to their terms and conditions when sharing your location.</li>
+		<li>You should be able to watch the !Eurofurence tagged map in the Glympse app. However, this seems to bug out sometimes - in such case, just let the app share your location in the background and watch the map on this website.</p>
+		<li>In case of trouble, ... we cannot do anything for you. Sorry, but our entire staff is on their way to the con themselves! ;)</li>
+	</ul>
+</section>
