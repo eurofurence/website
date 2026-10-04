@@ -438,6 +438,11 @@ main #content>section {
 	background-color: rgba(0, 0, 0, .2);
 }
 
+.consent-cover:focus-visible {
+	background-color: rgba(0, 0, 0, .2);
+	outline: rgba(255, 255, 255, .67) solid;
+}
+
 /* video creators */
 .ef-people img {
 	display: inline;

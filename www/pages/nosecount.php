@@ -24,9 +24,11 @@
 	#ef-regstats h3 {
 		margin-bottom: 0;
 	}
-	#ef-regstats h2 {
+	#ef-regstats h2,
+	#ef-regstats #ef-rs-reg-total {
 		margin-top: 0;
 		margin-bottom: 0;
+		color: #000;
 	}
 	div.ef-rs-barchart ~ button {
 		position: absolute;
@@ -59,13 +61,13 @@
 		background-position: center left;
 		background-repeat: no-repeat;
 	}
-	#ef-rs-country-list > article > h4 {
+	#ef-rs-country-list > article > strong {
 		display: inline;
 		margin: 0;
 		font-size: 1em;
 		font-family: monospace;
 		font-weight: bold;
-		color: #999;
+		color: #000;
 	}
 	#ef-rs-country-list > article > span {
 		float: right;
@@ -134,7 +136,7 @@
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Total Registrations</h3>
-				<h2 class="uk-heading-large" id="ef-rs-reg-total"></h2>
+				<div class="uk-heading-large" id="ef-rs-reg-total"></div>
 				<span id="ef-rs-reg-opening-indicator" aria-hidden="true" role="presentation">&#9679;</span>
 				<span id="ef-rs-reg-opening"></span>
 			</div>
