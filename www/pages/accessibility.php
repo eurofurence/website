@@ -13,7 +13,7 @@
 
     <div id="location-info-desk"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        window.EFPageLifecycle.addEventListener("load", () => {
             createEFnavTrigger('location-info-desk', [
                 {
                     id: 'info-desk-location',
@@ -22,7 +22,7 @@
                     slug: 'info'
                 }
             ], { tooltip: 'Info Desk location on map' });
-        });
+        }, { once: true });
     </script>
 
 	<p>Everyone deserves the right to participate fully in Eurofurence and our community - regardless of needs or disabilities. Below, attendees can find details on the steps we’re taking to ensure our convention is as accessible and inclusive as possible. This information can change before the convention begins, we recommend to visit this page again shortly before you start your journey.</p>

@@ -24,13 +24,13 @@
 	<h1 class="uk-column-span">Art Show - Guide for Artists</h1>
 	<div id="location-art-show-artist"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-art-show-artist', {
 				title: 'Art Show',
 				subtitle: 'CCH: Level 0, Hall H, Sections 5-6',
 				slug: 'art-show'
 			}, { tooltip: 'Art Show location on map' });
-		});
+		}, { once: true });
 	</script>
 	<div>
 		<caption><h3 class="reset-font">Getting Started</h3></caption>

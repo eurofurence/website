@@ -12,13 +12,13 @@
     <h1>Play with the TAIKO BASTARDS!</h1>
     <div id="location-arena-taiko"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        window.EFPageLifecycle.addEventListener("load", () => {
             createEFnavTrigger('location-arena-taiko', {
 				title: 'Taiko Workshop and Concert (Arena Stage)',
 				subtitle: 'CCH: Level 0, Hall H, Sections 1-2 (Arena Stage)',
 				slug: 'arena-stage'
             }, { tooltip: 'Arena Stage location on map' });
-        });
+        }, { once: true });
     </script>
 
     <div class="uk-column-1-2@l">

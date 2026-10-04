@@ -118,32 +118,32 @@ class EFWebCore {
 	 * @return array of objects containing page data
 	 */
 	public function get_breadcrumb_data() {
-		$results = [];
+		$ret = [];
 
 		// return empty in case of root page
 		if ($this->page->key === $this->config->defaults->rootPage) {
-			return $results;
+			return $ret;
 		}
 
-		$path = "";
-		foreach (explode("/", $this->page->key) as $key) {
-			// construct key path
-			$path .= $key . "/";
+		$path = '';
+		$crumbs = explode('/', trim($this->page->key, '/'));
+		foreach ($crumbs as $crumb) {
+			$path .= ($path ? '/' : '') . $crumb;
 
-			if (!property_exists($this->config->pages, trim($path, "/"))) {
-				$path = $this->config->defaults->notFoundPage;
-			}
-			
-			// append desired data from page object
-			$ret = new stdClass();
-			$ret->name = $this->get_page($path)->nav;
-			$ret->url = trim($this->config->base . $path, "/");
+			$page = $this->get_page($path);
 
-			// appends to results
-			$results[] = $ret;
+			// skip if page is inaccessible
+			if (!$page || !$page->accessible)
+				continue;
+
+			// append page details to return array
+			$ret[] = (object) [
+				'name' => !empty($page->nav) ? $page->nav : $crumb,
+				'url' => $this->config->base . $path
+			];
 		}
-
-		return $results;
+		
+		return $ret;
 	}
 
 	/**
@@ -201,11 +201,11 @@ class EFWebCore {
 				// insert hrefSuffix
 				$item = mb_ereg_replace("\{hrefSuffix\}", $this->config->menu->hrefSuffix, $item);
 
-				// insert ActiveClass, if current == page active
+				// insert ActiveClass, if page key is the current active page key
 				$item = mb_ereg_replace
 				(
 					"\{ifActiveClass\}",
-					($this->page !== $page? "" : $this->config->menu->ifActiveClass),
+					($this->page->key === $key ? $this->config->menu->ifActiveClass : ""),
 					$item
 				);
 
@@ -317,6 +317,9 @@ class EFWebCore {
 		// construct target path
 		$path = 
 		$this->config->staticOut->path . $this->page->key . "/";
+
+		// resolve {number} in targetBase
+		$this->config->staticOut->targetBase = substitute($this->config->staticOut->targetBase, $this->config->convention);
 
 		// ensure target path exists
 		if (!file_exists($path)) {
