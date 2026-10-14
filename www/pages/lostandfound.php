@@ -306,13 +306,13 @@
     <h1>Lost and Found</h1>
     <div id="location-lost-found"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        window.EFPageLifecycle.addEventListener("load", () => {
             createEFnavTrigger('location-lost-found', {
                 title: 'Lost and Found',
                 subtitle: 'CCH: Level 0, Entrance Hall, Security FrontDesk near entrance',
                 slug: 'security'
             }, { tooltip: 'Lost and Found location on map' });
-        });
+        }, { once: true });
     </script>
     <p>
         All Items found at the convention are stored and can be redeemed only at the Security FrontDesk at next Eurofurence in Hamburg.

@@ -12,13 +12,13 @@
 	<h1>Artist Alley</h1>
 	<div id="location-artist-alley"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-artist-alley', {
 				title: 'Artist Alley',
 				subtitle: 'CCH: Level 3, Hall Z Foyer',
 				slug: 'artist-alley'
 			}, { tooltip: 'Artist Alley location on map' });
-		});
+		}, { once: true });
 	</script>
 	<div class="uk-column-1-2@l">
 		<div>

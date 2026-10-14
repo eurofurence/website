@@ -1,3 +1,5 @@
+const partners = document.getElementById("partners");
+
 class Partners {
     static async fetch() {
         var partners_data = null;

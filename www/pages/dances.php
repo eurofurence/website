@@ -206,13 +206,13 @@ function efFormatSetRange(string $startIso, string $endIso): string {
     <h1>Dances at Eurofurence</h1>
     <div id="location-arena-stage"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-arena-stage', {
 				title: 'Dances (Arena Stage)',
 				subtitle: 'CCH: Level 0, Hall H, Sections 1-2 (Arena Stage)',
 				slug: 'arena-stage'
 			}, { tooltip: 'Arena Stage location on map' });
-		});
+		}, { once: true });
 	</script>
     <p>All listed times are in CEST. Hover over a time to view your local time.</p>
 </section>

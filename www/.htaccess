@@ -1,6 +1,12 @@
 DirectoryIndex index.php index.html
 RewriteEngine On
 
+<IfModule mod_headers.c>
+	<FilesMatch "\.(?:css|js|png|jpe?g|gif|svg|ico|webp|woff2?|ttf)$">
+		Header set Cache-Control "public, max-age=3600, must-revalidate"
+	</FilesMatch>
+</IfModule>
+
 FallbackResource /index.php
 
 RewriteCond %{REQUEST_URI} !^/index\.php

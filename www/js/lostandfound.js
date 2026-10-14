@@ -95,6 +95,10 @@ class LostAndFound {
     #searchDebounceTimer = null;
     #selectedItemId = "";
     #eventsBound = false;
+    #abortController = null;
+    #modalHiddenHandler = null;
+    #popstateHandler = null;
+    #destroyed = false;
 
     constructor(options) {
         this.#container = options.container;
@@ -118,15 +122,41 @@ class LostAndFound {
         this.#modalTimeline = options.modalTimeline;
     }
 
-    async build() {
+    cleanup() {
+        this.#destroyed = true;
+        this.#abortController?.abort();
+
+        if (this.#searchDebounceTimer !== null) {
+            clearTimeout(this.#searchDebounceTimer);
+            this.#searchDebounceTimer = null;
+        }
+
+        if (this.#modalRoot && this.#modalHiddenHandler) {
+            this.#modalRoot.removeEventListener("hidden", this.#modalHiddenHandler);
+            this.#modalHiddenHandler = null;
+        }
+
+        if (this.#popstateHandler) {
+            window.removeEventListener("popstate", this.#popstateHandler);
+            this.#popstateHandler = null;
+        }
+    }
+
+    async initialize() {
         if (!this.#itemsContainer) {
             console.error("[eflf] Items target container not found.");
             return;
         }
 
+        this.#destroyed = false;
+        this.#abortController = new AbortController();
         this.#renderState(StateType.LOADING, "Loading lost and found items...");
 
         const payload = await this.#fetch(`${this.#config.baseUrl}/data.json`);
+        if (this.#destroyed || !this.#itemsContainer.isConnected) {
+            return;
+        }
+
         if (!payload || !Array.isArray(payload.data)) {
             this.#itemsContainer.replaceChildren();
             this.#renderState(StateType.ERROR, "Could not load lost and found items. Please try again later.");
@@ -594,13 +624,11 @@ class LostAndFound {
             return;
         }
 
-        this.#modalRoot.addEventListener("hidden", () => {
-            this.#closeModal(true);
-        });
+        this.#modalHiddenHandler = () => this.#closeModal(true);
+        this.#modalRoot.addEventListener("hidden", this.#modalHiddenHandler);
 
-        window.addEventListener("popstate", () => {
-            this.#openModalFromUrl();
-        });
+        this.#popstateHandler = () => this.#openModalFromUrl();
+        window.addEventListener("popstate", this.#popstateHandler);
     }
 
     #getModalInstance() {
@@ -914,7 +942,10 @@ class LostAndFound {
         const requestUrl = `${fetchUrl}?${Date.now()}`;
 
         try {
-            const response = await fetch(requestUrl, { cache: "no-store" });
+            const response = await fetch(requestUrl, {
+                cache: "no-store",
+                signal: this.#abortController?.signal,
+            });
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
             }
@@ -926,6 +957,10 @@ class LostAndFound {
 
             return data;
         } catch (ex) {
+            if (ex.name === "AbortError") {
+                return null;
+            }
+
             console.error(`[eflf] failed to load ${requestUrl}, reason:`, ex);
             return null;
         }
@@ -954,4 +989,6 @@ const lostandfound = new LostAndFound({
     modalTimeline: document.getElementById("ef-lostandfound-modal-timeline"),
 });
 
-lostandfound.build();
+const pageLifecycle = window.EFPageLifecycle || window;
+pageLifecycle.addEventListener("load", () => lostandfound.initialize(), { once: true });
+pageLifecycle.addEventListener("unload", () => lostandfound.cleanup(), { once: true });
