@@ -102,6 +102,7 @@
 
 	nav > div:nth-of-type(2) {
 		overflow-y: scroll;
+		padding-bottom: env(safe-area-inset-bottom, 0px);
 	}
 	main {
 		margin-top: calc(var(--ef-nav-height) - 20px);
@@ -124,7 +125,7 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 100dvh;
 		margin: 0;
 		padding-top: var(--ef-nav-height);
 		overflow: hidden;
