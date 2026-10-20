@@ -145,11 +145,11 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, .64), rgba(255, 255, 255, .28), rgba(255, 255, 255, 0));
     }
-    nav > div > ul ul a::before,
     nav > div > ul > li::before,
 	nav > div > ul > li + li::before {
         display: none;
 	}
+    
 	nav > div > ul > li > a {
 		padding: 5px 10px;
         color: var(--ef-green) !important;
@@ -193,6 +193,13 @@
 		color: var(--ef-green);
 		font-weight: 500;
 	}
+
+    nav > div > ul ul a.ef-active > span::before {
+        left: -2px;
+    }
+    nav > div > ul ul a.ef-active > span::after {
+        display: none;
+    }
 
 	/* Mobile nav toggle button */
 	#nav-toggle {

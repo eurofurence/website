@@ -37,7 +37,7 @@
 		"ifActiveClass": "ef-active",
 		"templates": {
 			"category": "<li><a class=\"has-submenu\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">{title}</a><ul>{items}</ul>",
-			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}>{menuText}</a></li>",
+			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}><span>{menuText}</span></a></li>",
 			"nav": "<ul>{categories}</ul>"
 		}
 	},
