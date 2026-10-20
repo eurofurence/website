@@ -204,7 +204,8 @@ nav > div > ul > li:hover > a::after,
 nav > div > ul > li:focus-within > a::after,
 nav > div > ul > li:hover > label::after,
 nav > div > ul > li:focus-within > label::after,
-nav > div > ul > li > a.ef-active::after {
+nav > div > ul > li > a.ef-active::after,
+nav > div > ul > li:has(> ul a.ef-active) > a.has-submenu::after {
 	opacity: .9;
 	transform: scaleX(1);
 }
@@ -256,6 +257,13 @@ nav input[name="subnav-ctl"]:checked~ul {
 	max-height: 100vh;
 }
 
+nav>div>ul>li.ef-collapse>ul,
+nav>div>ul>li.ef-collapse:hover>ul,
+nav>div>ul>li.ef-collapse:focus-within>ul,
+nav>div>ul>li.ef-collapse>ul:hover {
+	max-height: 0;
+}
+
 nav>div>ul ul {
 	position: absolute;
 	top: 100%;
@@ -301,12 +309,25 @@ nav>div>ul ul a:hover {
 	text-decoration: none;
 }
 
-nav > div > ul ul a:hover::before {
-	background: var(--ef-green);
-	transform: translateY(-50%) scale(1.1);
-}
 nav a[href^="http"]:not(.hide-ext, .uk-icon-button):hover:after {
 	background-color: var(--ef-green) !important;
+}
+
+nav > div > ul ul a.ef-active {
+    padding-left: 24px;
+}
+nav > div > ul ul a.ef-active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: translateY(-50%) rotate(-45deg);
 }
 
 /* body area */
