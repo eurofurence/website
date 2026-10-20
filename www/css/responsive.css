@@ -173,15 +173,25 @@
 		backdrop-filter: none;
 		box-shadow: none;
 		background-color: transparent;
+		border-radius: 0;
 		padding: 0;
-        text-indent: .66em;
+		text-indent: 0;
 	}
 	nav > div ul label {
 		color: #333;
 	}
 	nav > div > ul ul a {
+		display: block;
+		width: 100%;
 		color: #fff;
-        padding-left: 0;
+		padding-left: .66em;
+	}
+	nav > div > ul ul a:hover,
+	nav > div > ul ul a:focus-visible,
+	nav > div > ul ul a:active {
+		background-color: rgba(255, 255, 255, .9);
+		color: var(--ef-green);
+		font-weight: 500;
 	}
 
 	/* Mobile nav toggle button */
