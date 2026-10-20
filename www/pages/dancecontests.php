@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Px0ssum",
-    "editor"      => "",
+    "editor"      => "@FuviiPeshu",
     "title"       => "Enter the Arena & Paws on Fire",
     "description" => "Infos on our popular dance competition shows: Paws on Fire and Enter The Arena.",
     "keywords"    => "dance, dancing, arena, competition, contest, paws on fire, enter the arena",
@@ -38,13 +38,13 @@
     <h1>Dance Contests</h1>
     <div id="location-arena-contests"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        window.EFPageLifecycle.addEventListener("load", () => {
             createEFnavTrigger('location-arena-contests', {
                 title: 'Dance Contests (Arena Stage)',
                 subtitle: 'CCH: Level 0, Hall H, Sections 1-2 (Arena Stage)',
                 slug: 'arena-stage'
             }, { tooltip: 'Arena Stage location on map' });
-        });
+        }, { once: true });
     </script>
     <div class="uk-column-1-2@l competition-page">
         <div>

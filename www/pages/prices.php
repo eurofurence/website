@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@RakanHowls",
-    "editor"      => "",
+    "editor"      => "@Syntaxfur",
     "title"       => "Convention Fees &amp; Prices",
     "description" => "Eurofurence {number} will take place from {dates} at the {location}. Eurofurence is Europe's largest annual gathering of the European furry community.",
     "keywords"    => "Price, Ticket, Booking, Registration, Reg, Sign Up, How Much, Costs",

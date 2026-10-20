@@ -306,7 +306,7 @@
         <h1>The Daily Eurofurence</h1>
         <div id="location-ef-daily"></div>
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
+            window.EFPageLifecycle.addEventListener("load", () => {
                 createEFnavTrigger('location-ef-daily', [
                     {
                         id: 'ef-daily-entrance-location',
@@ -327,7 +327,7 @@
                         slug: 'ef-daily-point-level-2',
                     }
                 ], { tooltip: 'EF Daily locations on map' });
-            });
+            }, { once: true });
         </script>
         <p>
             The&nbsp;Daily&nbsp;Eurofurence is your four-page newspaper crafted by a&nbsp;team of avid photographers, writers, and typesetters, freshly printed each day of&nbsp;the&nbsp;con!

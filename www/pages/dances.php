@@ -1,6 +1,6 @@
 <?php $page = [
-    "owner"       => "@Anheanger_der_Pestilenz",
-    "editor"      => "",
+    "owner"       => "@tigreCa",
+    "editor"      => "@FuviiPeshu",
     "title"       => "Dances",
     "description" => "We are calling all DJs, beat captains, and interstellar sound engineers: The Eurofurence Dance Stage is preparing for liftoff — we need you on board.",
     "keywords"    => "Dances, DJ, Application",
@@ -206,13 +206,13 @@ function efFormatSetRange(string $startIso, string $endIso): string {
     <h1>Dances at Eurofurence</h1>
     <div id="location-arena-stage"></div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
+		window.EFPageLifecycle.addEventListener("load", () => {
 			createEFnavTrigger('location-arena-stage', {
 				title: 'Dances (Arena Stage)',
 				subtitle: 'CCH: Level 0, Hall H, Sections 1-2 (Arena Stage)',
 				slug: 'arena-stage'
 			}, { tooltip: 'Arena Stage location on map' });
-		});
+		}, { once: true });
 	</script>
     <p>All listed times are in CEST. Hover over a time to view your local time.</p>
 </section>

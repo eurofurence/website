@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@ShortyDragon",
-    "editor"      => "",
+    "editor"      => "@Arzolath",
     "title"       => "Photography",
     "description" => "The Eurofurence photography team takes care of the 'official photography stuff' that is happening at EF.",
     "keywords"    => "Photography, Photo, Pictures",

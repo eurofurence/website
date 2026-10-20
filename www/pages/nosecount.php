@@ -24,9 +24,11 @@
 	#ef-regstats h3 {
 		margin-bottom: 0;
 	}
-	#ef-regstats h2 {
+	#ef-regstats h2,
+	#ef-regstats #ef-rs-reg-total {
 		margin-top: 0;
 		margin-bottom: 0;
+		color: #000;
 	}
 	div.ef-rs-barchart ~ button {
 		position: absolute;
@@ -46,6 +48,9 @@
 		border: 2px solid #fff;
 		border-radius: 6px;
 		background-color: #ddd;
+		/* Thank you Konsti <3 */
+		display: grid;
+		grid-template-columns: 1.66em 1.66em auto min-content;
 	}
 	#ef-rs-country-list > article > div {
 		display: inline-block;
@@ -56,13 +61,13 @@
 		background-position: center left;
 		background-repeat: no-repeat;
 	}
-	#ef-rs-country-list > article > h4 {
+	#ef-rs-country-list > article > strong {
 		display: inline;
 		margin: 0;
 		font-size: 1em;
 		font-family: monospace;
 		font-weight: bold;
-		color: #999;
+		color: #000;
 	}
 	#ef-rs-country-list > article > span {
 		float: right;
@@ -112,6 +117,17 @@
 	#ef-rs-age-avg-container {
 		margin-top: calc(30px + .33em);
 	}
+
+	.sr-only {
+		block-size: 1px;
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		inline-size: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+	}
 </style>
 
 <section id="ef-regstats">
@@ -120,8 +136,8 @@
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Total Registrations</h3>
-				<h2 class="uk-heading-large" id="ef-rs-reg-total"></h2>
-				<span id="ef-rs-reg-opening-indicator">&#9679;</span>
+				<div class="uk-heading-large" id="ef-rs-reg-total"></div>
+				<span id="ef-rs-reg-opening-indicator" aria-hidden="true" role="presentation">&#9679;</span>
 				<span id="ef-rs-reg-opening"></span>
 			</div>
 		</div>
@@ -129,20 +145,40 @@
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Registration State</h3>
-				<div class="ef-rs-legend uk-flex">
+				<div class="ef-rs-legend uk-flex" aria-hidden="true" role="presentation">
 					<div class="ef-rs-piechart"><canvas id="ef-rs-reg-status"></canvas></div>
 					<div id="ef-rs-reg-status-legend"></div>
 				</div>
+
+				<table id="ef-rs-reg-status-table" class="sr-only">
+					<thead>
+						<th>Registration State</th>
+						<th>Count</th>
+					</thead>
+					<tbody>
+						<!-- populated by js -->
+					</tbody>
+				</table>
 			</div>
 		</div>
 
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Ticket Types</h3>
-				<div class="ef-rs-legend uk-flex">
+				<div class="ef-rs-legend uk-flex" aria-hidden="true" role="presentation">
 					<div class="ef-rs-piechart"><canvas id="ef-rs-reg-types"></canvas></div>
 					<div id="ef-rs-reg-types-legend"></div>
 				</div>
+				<!-- simplified table view for screen readers -->
+				<table id="ef-rs-reg-types-table" class="sr-only">
+					<thead>
+						<th>Ticket type</th>
+						<th>Count</th>
+					</thead>
+					<tbody>
+						<!-- populated by js -->
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -154,7 +190,17 @@
 			<span class="uk-hidden@s">avg:</span>
 			<span id="ef-rs-age-avg" class="uk-text-bold"></span>
 		</div>
-		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
+		<div class="ef-rs-barchart" aria-hidden="true" role="presentation"><canvas id="ef-rs-age"></canvas></div>
+		<!-- simplified table view for screen readers -->
+		<table id="ef-rs-age-table" class="sr-only">
+			<thead>
+				<th>Age</th>
+				<th>Count</th>
+			</thead>
+			<tbody>
+				<!-- populated by js -->
+			</tbody>
+		</table>
 	</div>
 
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom" uk-filter="#ef-rs-country-list">
@@ -164,17 +210,38 @@
 			<span uk-filter-control="sort: data-name"><a href="#">country name</a></span> |
 			<span uk-filter-control="sort: data-count; order: desc"><a href="#">attendee count</a></span>
 		</p>
-		<div id="ef-rs-country-list" class="uk-column-1-4@l uk-columns-1-3@m uk-column-1-2@s"></div>
+		<div id="ef-rs-country-list" class="uk-column-1-4@l uk-columns-1-3@m uk-column-1-2@s" aria-hidden="true" role="presentation"></div>
+		<!-- simplified table view for screen readers -->
+		<table id="ef-rs-country-list-table" class="sr-only">
+			<thead>
+				<th>Code</th>
+				<th>Name</th>
+				<th>Count</th>
+			</thead>
+			<tbody>
+				<!-- populated by js -->
+			</tbody>
+		</table>
 	</div>
 
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div class="uk-width-2-3@m">
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Shirt Preorders</h3>
-				<div class="ef-rs-legend uk-flex">
+				<div class="ef-rs-legend uk-flex" aria-hidden="true" role="presentation">
 					<div class="ef-rs-piechart"><canvas id="ef-rs-reg-size"></canvas></div>
 					<div id="ef-rs-reg-size-legend"></div>
 				</div>
+				<!-- simplified table view for screen readers -->
+				<table id="ef-rs-reg-size-table" class="sr-only">
+					<thead>
+						<th>Size</th>
+						<th>Count</th>
+					</thead>
+					<tbody>
+						<!-- populated by js -->
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<div class="uk-width-1-3@m">
@@ -222,4 +289,4 @@
 </div>
 
 <script src="js/chart.js"></script>
-<script src="js/regstats.min.js"></script>
+<script src="js/regstats-page.js"></script>

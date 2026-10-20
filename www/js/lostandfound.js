@@ -6,10 +6,26 @@ const Status = Object.freeze({
 });
 
 const StatusMeta = Object.freeze({
-    [Status.LOST]: { label: "Lost", cssClass: "lf-label--lost" },
-    [Status.FOUND]: { label: "Found", cssClass: "lf-label--found" },
-    [Status.RETURNED]: { label: "Returned", cssClass: "lf-label--returned" },
-    [Status.UNKNOWN]: { label: "Unknown", cssClass: "lf-label--unknown" },
+    [Status.LOST]: {
+        label: "Lost",
+        cssClass: "lf-label--lost",
+        description: "Item is reported missing.",
+    },
+    [Status.FOUND]: {
+        label: "Found",
+        cssClass: "lf-label--found",
+        description: "Item has been found and given to SecOps (can be collected).",
+    },
+    [Status.RETURNED]: {
+        label: "Returned",
+        cssClass: "lf-label--returned",
+        description: "Item has been returned to its owner.",
+    },
+    [Status.UNKNOWN]: {
+        label: "Unknown",
+        cssClass: "lf-label--unknown",
+        description: "Status is not yet classified.",
+    },
 });
 
 const StateType = Object.freeze({
@@ -79,6 +95,10 @@ class LostAndFound {
     #searchDebounceTimer = null;
     #selectedItemId = "";
     #eventsBound = false;
+    #abortController = null;
+    #modalHiddenHandler = null;
+    #popstateHandler = null;
+    #destroyed = false;
 
     constructor(options) {
         this.#container = options.container;
@@ -102,15 +122,41 @@ class LostAndFound {
         this.#modalTimeline = options.modalTimeline;
     }
 
-    async build() {
+    cleanup() {
+        this.#destroyed = true;
+        this.#abortController?.abort();
+
+        if (this.#searchDebounceTimer !== null) {
+            clearTimeout(this.#searchDebounceTimer);
+            this.#searchDebounceTimer = null;
+        }
+
+        if (this.#modalRoot && this.#modalHiddenHandler) {
+            this.#modalRoot.removeEventListener("hidden", this.#modalHiddenHandler);
+            this.#modalHiddenHandler = null;
+        }
+
+        if (this.#popstateHandler) {
+            window.removeEventListener("popstate", this.#popstateHandler);
+            this.#popstateHandler = null;
+        }
+    }
+
+    async initialize() {
         if (!this.#itemsContainer) {
             console.error("[eflf] Items target container not found.");
             return;
         }
 
+        this.#destroyed = false;
+        this.#abortController = new AbortController();
         this.#renderState(StateType.LOADING, "Loading lost and found items...");
 
         const payload = await this.#fetch(`${this.#config.baseUrl}/data.json`);
+        if (this.#destroyed || !this.#itemsContainer.isConnected) {
+            return;
+        }
+
         if (!payload || !Array.isArray(payload.data)) {
             this.#itemsContainer.replaceChildren();
             this.#renderState(StateType.ERROR, "Could not load lost and found items. Please try again later.");
@@ -458,8 +504,9 @@ class LostAndFound {
 
         const { label, cssClass } = StatusMeta[item.status] ?? StatusMeta[Status.UNKNOWN];
         const badge = document.createElement("span");
-        badge.classList.add("uk-card-badge", "uk-label", "lf-label", cssClass);
+        badge.classList.add("uk-card-badge", "uk-label", "lf-label", "lf-label-help", cssClass);
         badge.textContent = label;
+        this.#applyStatusTooltip(badge, item.status);
         body.appendChild(badge);
 
         const bodyHeader = document.createElement("div");
@@ -577,13 +624,11 @@ class LostAndFound {
             return;
         }
 
-        this.#modalRoot.addEventListener("hidden", () => {
-            this.#closeModal(true);
-        });
+        this.#modalHiddenHandler = () => this.#closeModal(true);
+        this.#modalRoot.addEventListener("hidden", this.#modalHiddenHandler);
 
-        window.addEventListener("popstate", () => {
-            this.#openModalFromUrl();
-        });
+        this.#popstateHandler = () => this.#openModalFromUrl();
+        window.addEventListener("popstate", this.#popstateHandler);
     }
 
     #getModalInstance() {
@@ -676,6 +721,10 @@ class LostAndFound {
         this.#modalImageLink.setAttribute("aria-disabled", "true");
         this.#modalStatus.className = "uk-label lf-label";
         this.#modalStatus.textContent = "";
+        this.#modalStatus.removeAttribute("title");
+        this.#modalStatus.removeAttribute("aria-label");
+        this.#modalStatus.removeAttribute("uk-tooltip");
+        this.#destroyStatusTooltip(this.#modalStatus);
         this.#modalTitle.textContent = "";
         this.#modalId.textContent = "";
         this.#modalDescription.textContent = "";
@@ -709,8 +758,9 @@ class LostAndFound {
         }
 
         this.#modalStatus.className = "uk-label lf-label";
-        this.#modalStatus.classList.add(cssClass);
+        this.#modalStatus.classList.add(cssClass, "lf-label-help");
         this.#modalStatus.textContent = label;
+        this.#applyStatusTooltip(this.#modalStatus, item.status);
         this.#modalTitle.textContent = item.title;
         this.#modalId.textContent = `Item ID: ${item.id}`;
         this.#modalDescription.textContent = item.description;
@@ -721,6 +771,38 @@ class LostAndFound {
 
         if (this.#modalTimeline.childElementCount === 0) {
             this.#appendTimelineRow(this.#modalTimeline, "Timeline", "Not available yet");
+        }
+    }
+
+    #applyStatusTooltip(target, status) {
+        if (!target) {
+            return;
+        }
+
+        const meta = StatusMeta[status] ?? StatusMeta[Status.UNKNOWN];
+        target.setAttribute("title", meta.description);
+        target.setAttribute("aria-label", meta.description);
+        target.setAttribute("uk-tooltip", "pos: top");
+        this.#initStatusTooltip(target);
+    }
+
+    #initStatusTooltip(target) {
+        if (typeof UIkit === "undefined" || !UIkit.tooltip || !target) {
+            return;
+        }
+
+        this.#destroyStatusTooltip(target);
+        UIkit.tooltip(target);
+    }
+
+    #destroyStatusTooltip(target) {
+        if (typeof UIkit === "undefined" || !UIkit.getComponent || !target) {
+            return;
+        }
+
+        const tooltip = UIkit.getComponent(target, "tooltip");
+        if (tooltip && typeof tooltip.$destroy === "function") {
+            tooltip.$destroy(false);
         }
     }
 
@@ -860,7 +942,10 @@ class LostAndFound {
         const requestUrl = `${fetchUrl}?${Date.now()}`;
 
         try {
-            const response = await fetch(requestUrl, { cache: "no-store" });
+            const response = await fetch(requestUrl, {
+                cache: "no-store",
+                signal: this.#abortController?.signal,
+            });
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
             }
@@ -872,6 +957,10 @@ class LostAndFound {
 
             return data;
         } catch (ex) {
+            if (ex.name === "AbortError") {
+                return null;
+            }
+
             console.error(`[eflf] failed to load ${requestUrl}, reason:`, ex);
             return null;
         }
@@ -900,4 +989,6 @@ const lostandfound = new LostAndFound({
     modalTimeline: document.getElementById("ef-lostandfound-modal-timeline"),
 });
 
-lostandfound.build();
+const pageLifecycle = window.EFPageLifecycle || window;
+pageLifecycle.addEventListener("load", () => lostandfound.initialize(), { once: true });
+pageLifecycle.addEventListener("unload", () => lostandfound.cleanup(), { once: true });

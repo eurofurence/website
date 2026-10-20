@@ -42,16 +42,27 @@
 		}
 	},
 	"staticOut": {
-		"enabled": true,
+		"enabled": false,
 		"path": "_archive/",
 		"targetBase": "https://archive.eurofurence.org/EF{number}"
 	},
-	"ratings": {
+	"environment": {
+		"USE_MOCK_DATA": false,
+		"EFNAV_ENABLED": false,
+		"MOCK_LF_DATA": "__mocks__/lostandfound.mock.json"
+	},
+    "ratings": {
 		"enabled": true
 	},
-	"dailyEF": {
-        "showPreviousEditions": true,
+	"jobs": {
+		"newLabelDays": 14
+	},
+    "dailyEF": {
+		"showPreviousEditions": true,
 		"prevEditionsToShowWhenCollapsed": 1
+	},
+	"ui": {
+		"scrollToTopThreshold": 100
 	},
 	"pages": {
 		"404": {
@@ -116,7 +127,7 @@
 			"uri": "about.php"
 		},
         "sponsors": {
-            "accessible": false,
+            "accessible": true,
             "cat": "Location",
             "nav": "Sponsors",
             "uri": "sponsors.php"

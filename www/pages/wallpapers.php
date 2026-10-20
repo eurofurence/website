@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@GermanCoyote, @Dingo",
-    "editor"      => "",
+    "editor"      => "@mondanzo",
     "title"       => "Wallpapers",
     "description" => "Themed wallpapers for you!",
     "keywords"    => "wallpapers, graphics",

@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@Pattarchus",
-    "editor"      => "",
+    "editor"      => "@Syntaxfur",
     "title"       => "Becoming an Eurofurence Critter: On-Site Volunteering",
     "description" => "You want to volunteer on-site at Eurofurence at Europe's biggest furry convention? Here is how you do it!'",
     "keywords"    => "Jobs, Volunteer, Crew, Help, Gopher, Critter, Volunteering",

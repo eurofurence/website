@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@tarianwolf",
-    "editor"      => "",
+    "editor"      => "@Syntaxfur",
     "title"       => "Sponsors",
     "description" => "A lists of companies supporting Eurofurence.",
     "keywords"    => "sponsors, supporters, infrastructure",

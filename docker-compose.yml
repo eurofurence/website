@@ -5,8 +5,5 @@ services:
       - "80:80"
     volumes:
       - ./www:/var/www/html/
-    environment:
-      - USE_MOCK_DATA=false
-      - EFNAV_ENABLED=false
     networks:
       - default

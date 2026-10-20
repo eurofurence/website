@@ -1,6 +1,6 @@
 <?php $page = [
     "owner"       => "@RefrTarks",
-    "editor"      => "",
+    "editor"      => "@Zaqurio",
     "title"       => "Poker Tournament",
     "description" => "The Poker Tournaments rules and framework.",
     "keywords"    => "poker, Tournament, charity, rules, framework",
