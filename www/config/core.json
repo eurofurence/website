@@ -59,7 +59,8 @@
 	},
     "dailyEF": {
 		"showPreviousEditions": true,
-		"prevEditionsToShowWhenCollapsed": 1
+		"prevEditionsToShowWhenCollapsed": 3,
+		"prevEditionsToShowWhenExpanded": 3
 	},
 	"ui": {
 		"scrollToTopThreshold": 100

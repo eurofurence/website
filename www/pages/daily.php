@@ -42,7 +42,7 @@
 		gap: 8px;
 	}
     .daily-archive-section .daily-issue-list {
-		grid-template-columns: repeat(5, minmax(0, 1fr));
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 
 	.daily-edition-heading {
@@ -220,12 +220,6 @@
 		background: #ffffff;
 	}
 
-    @media (max-width: 1200px) {
-        .daily-archive-section .daily-issue-list {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-    }
-
 	@media (max-width: 960px) {
         .daily-with-background::before {
             height: 50%;
@@ -369,6 +363,9 @@
 	<div class="uk-margin-top uk-flex uk-flex-center">
 		<button id="daily-show-all-past-btn" class="uk-button uk-button-default" type="button" hidden>Show all past editions</button>
 	</div>
+    <div id="daily-archive-more-link" class="uk-flex uk-flex-center">
+        <a href="https://archive.eurofurence.org" target="_blank">...and more at Archive&nbsp;Website</a>
+    </div>
 </section>
 
 <div id="daily-pdf-modal" uk-modal>
@@ -391,6 +388,7 @@ window.__EF_DAILY_CONFIG__ = {
 	currentEditionYear: <?= isset($this->config->convention->year) ? (int) $this->config->convention->year : 'null' ?>,
     showPreviousEditions: <?= isset($this->config->dailyEF->showPreviousEditions) ? ($this->config->dailyEF->showPreviousEditions ? 'true' : 'false') : 'null' ?>,
 	prevEditionsToShowWhenCollapsed: <?= isset($this->config->dailyEF->prevEditionsToShowWhenCollapsed) ? (int) $this->config->dailyEF->prevEditionsToShowWhenCollapsed : 'null' ?>,
+	prevEditionsToShowWhenExpanded: <?= isset($this->config->dailyEF->prevEditionsToShowWhenExpanded) ? (int) $this->config->dailyEF->prevEditionsToShowWhenExpanded : 'null' ?>,
 };
 </script>
 

@@ -15,6 +15,7 @@ class Daily {
     #modalTitle = null;
     #modalFrame = null;
     #showAllPastButton = null;
+    #archiveMoreLink = null;
     #miniPreviewObserver = null;
     #modalHiddenHookBound = false;
     #eventsBound = false;
@@ -24,6 +25,7 @@ class Daily {
         currentEditionYear: null,
         showPreviousEditions: null,
         prevEditionsToShowWhenCollapsed: null,
+        prevEditionsToShowWhenExpanded: null,
     };
 
     constructor(options) {
@@ -33,6 +35,7 @@ class Daily {
         this.#modalTitle = options.modalTitle;
         this.#modalFrame = options.modalFrame;
         this.#showAllPastButton = options.showAllPastButton || null;
+        this.#archiveMoreLink = options.archiveMoreLink || null;
     }
 
     async build() {
@@ -165,6 +168,7 @@ class Daily {
         const pageConfig = window.__EF_DAILY_CONFIG__ || {};
         const currentEditionYear = this.#toIntegerOrNull(pageConfig.currentEditionYear);
         const prevEditionsToShowWhenCollapsedRaw = this.#toIntegerOrNull(pageConfig.prevEditionsToShowWhenCollapsed);
+        const prevEditionsToShowWhenExpandedRaw = this.#toIntegerOrNull(pageConfig.prevEditionsToShowWhenExpanded);
         const showPreviousEditions =
             typeof pageConfig.showPreviousEditions === "boolean" ? pageConfig.showPreviousEditions : null;
 
@@ -173,6 +177,10 @@ class Daily {
             showPreviousEditions,
             prevEditionsToShowWhenCollapsed:
                 prevEditionsToShowWhenCollapsedRaw !== null ? Math.max(0, prevEditionsToShowWhenCollapsedRaw) : null,
+            prevEditionsToShowWhenExpanded:
+                prevEditionsToShowWhenExpandedRaw !== null && prevEditionsToShowWhenExpandedRaw > 0
+                    ? prevEditionsToShowWhenExpandedRaw
+                    : null,
         };
     }
 
@@ -251,6 +259,9 @@ class Daily {
                 ? groups.find((group) => group && group.year === yearToShowAsCurrentInt) || null
                 : null;
         const additionalGroupsToShow = this.#settings.prevEditionsToShowWhenCollapsed;
+        const pastGroupsLimit = this.#showAllPastEditions
+            ? this.#settings.prevEditionsToShowWhenExpanded
+            : additionalGroupsToShow;
 
         if (this.#settings.showPreviousEditions === false) {
             return {
@@ -266,9 +277,7 @@ class Daily {
             olderGroups.sort((left, right) => right.year - left.year);
 
             const visiblePastGroups =
-                additionalGroupsToShow === null || this.#showAllPastEditions
-                    ? olderGroups
-                    : olderGroups.slice(0, Math.max(0, additionalGroupsToShow));
+                pastGroupsLimit === null ? olderGroups : olderGroups.slice(0, Math.max(0, pastGroupsLimit));
 
             return {
                 currentGroup: currentEditionGroup,
@@ -279,10 +288,7 @@ class Daily {
         }
 
         const sorted = [...groups].sort((left, right) => right.year - left.year);
-        const visiblePastGroups =
-            additionalGroupsToShow === null || this.#showAllPastEditions
-                ? sorted
-                : sorted.slice(0, Math.max(0, additionalGroupsToShow));
+        const visiblePastGroups = pastGroupsLimit === null ? sorted : sorted.slice(0, Math.max(0, pastGroupsLimit));
 
         return {
             currentGroup: null,
@@ -292,21 +298,42 @@ class Daily {
         };
     }
 
+    #setElementHidden(element, isHidden) {
+        if (!element) {
+            return;
+        }
+
+        element.hidden = isHidden;
+        element.setAttribute("aria-hidden", String(isHidden));
+        element.toggleAttribute("inert", isHidden);
+    }
+
     #syncPastToggle(totalPastAvailable, shownPastCount) {
-        if (!this.#showAllPastButton) {
-            return;
+        const editionLimitsMatch =
+            this.#settings.prevEditionsToShowWhenCollapsed !== null &&
+            this.#settings.prevEditionsToShowWhenExpanded !== null &&
+            this.#settings.prevEditionsToShowWhenCollapsed === this.#settings.prevEditionsToShowWhenExpanded;
+        let shouldShowToggle = false;
+
+        if (
+            this.#showAllPastButton &&
+            this.#settings.showPreviousEditions !== false &&
+            this.#settings.prevEditionsToShowWhenCollapsed !== null &&
+            !editionLimitsMatch
+        ) {
+            const expandedPastCount =
+                this.#settings.prevEditionsToShowWhenExpanded === null
+                    ? totalPastAvailable
+                    : Math.min(totalPastAvailable, this.#settings.prevEditionsToShowWhenExpanded);
+            const additionalPastCount = Math.max(0, expandedPastCount - shownPastCount);
+            shouldShowToggle = this.#showAllPastEditions ? totalPastAvailable > 0 : additionalPastCount > 0;
+            this.#showAllPastButton.textContent = this.#showAllPastEditions
+                ? "Show fewer past editions"
+                : `Show more past editions (${additionalPastCount} more)`;
         }
 
-        if (this.#settings.showPreviousEditions === false || this.#settings.prevEditionsToShowWhenCollapsed === null) {
-            this.#showAllPastButton.hidden = true;
-            return;
-        }
-
-        const shouldShow = totalPastAvailable > shownPastCount || (this.#showAllPastEditions && totalPastAvailable > 0);
-        this.#showAllPastButton.hidden = !shouldShow;
-        this.#showAllPastButton.textContent = this.#showAllPastEditions
-            ? "Show fewer past editions"
-            : `Show all past editions (${totalPastAvailable - shownPastCount} more)`;
+        this.#setElementHidden(this.#showAllPastButton, !shouldShowToggle);
+        this.#setElementHidden(this.#archiveMoreLink, shouldShowToggle);
     }
 
     #createIssueCard(issue, useLivePreview, isPastEdition, year = 0) {
@@ -525,6 +552,7 @@ const daily = new Daily({
     currentEditionList: document.getElementById("daily-current-list"),
     pastEditionsList: document.getElementById("daily-archive-list"),
     showAllPastButton: document.getElementById("daily-show-all-past-btn"),
+    archiveMoreLink: document.getElementById("daily-archive-more-link"),
     modalRoot: document.getElementById("daily-pdf-modal"),
     modalTitle: document.getElementById("daily-pdf-modal-title"),
     modalFrame: document.getElementById("daily-pdf-modal-frame"),
