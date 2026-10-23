@@ -102,6 +102,7 @@
 
 	nav > div:nth-of-type(2) {
 		overflow-y: scroll;
+		padding-bottom: env(safe-area-inset-bottom, 0px);
 	}
 	main {
 		margin-top: calc(var(--ef-nav-height) - 20px);
@@ -124,7 +125,7 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 100dvh;
 		margin: 0;
 		padding-top: var(--ef-nav-height);
 		overflow: hidden;
@@ -144,11 +145,11 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, .64), rgba(255, 255, 255, .28), rgba(255, 255, 255, 0));
     }
-    nav > div > ul ul a::before,
     nav > div > ul > li::before,
 	nav > div > ul > li + li::before {
         display: none;
 	}
+    
 	nav > div > ul > li > a {
 		padding: 5px 10px;
         color: var(--ef-green) !important;
@@ -172,16 +173,33 @@
 		backdrop-filter: none;
 		box-shadow: none;
 		background-color: transparent;
+		border-radius: 0;
 		padding: 0;
-        text-indent: .66em;
+		text-indent: 0;
 	}
 	nav > div ul label {
 		color: #333;
 	}
 	nav > div > ul ul a {
+		display: block;
+		width: 100%;
 		color: #fff;
-        padding-left: 0;
+		padding-left: .66em;
 	}
+	nav > div > ul ul a:hover,
+	nav > div > ul ul a:focus-visible,
+	nav > div > ul ul a:active {
+		background-color: rgba(255, 255, 255, .9);
+		color: var(--ef-green);
+		font-weight: 500;
+	}
+
+    nav > div > ul ul a.ef-active > span::before {
+        left: -2px;
+    }
+    nav > div > ul ul a.ef-active > span::after {
+        display: none;
+    }
 
 	/* Mobile nav toggle button */
 	#nav-toggle {

@@ -66,9 +66,43 @@ function initializeNavigationAccessibility() {
     const navButton = document.querySelector("#nav-toggle");
     const navigation = document.querySelector("#nav-toggle ~ nav");
     const navigationHeader = navButton?.closest("header");
+    const menu = document.getElementById("ef-nav-menu");
 
     if (!navButton || !navigation || !navigationHeader) {
         return;
+    }
+
+    if (menu && !menu.__efActiveNavigationInitialized) {
+        menu.addEventListener("click", (event) => {
+            const activeLink = event.target instanceof Element ? event.target.closest("a.ef-active") : null;
+            if (!activeLink || !menu.contains(activeLink)) {
+                return;
+            }
+
+            if (navButton.getAttribute("aria-expanded") === "true") {
+                event.preventDefault();
+                setNavigationExpanded(false);
+                navButton.focus({ preventScroll: true });
+                return;
+            }
+
+            const categoryItem = activeLink.closest("#ef-nav-menu > ul > li");
+            const category = categoryItem?.querySelector(":scope > a.has-submenu");
+            if (!categoryItem || !category) {
+                return;
+            }
+
+            event.preventDefault();
+            categoryItem.classList.add("ef-collapse");
+            if (event.detail === 0) {
+                category.focus({ preventScroll: true });
+            } else {
+                activeLink.blur();
+            }
+            category.setAttribute("aria-expanded", "false");
+        });
+
+        menu.__efActiveNavigationInitialized = true;
     }
 
     if (!navButton.__efNavigationInitialized) {
@@ -97,15 +131,20 @@ function initializeNavigationAccessibility() {
         categoryItem.addEventListener("mouseleave", () => {
             if (!categoryItem.contains(document.activeElement)) {
                 category.setAttribute("aria-expanded", "false");
+                categoryItem.classList.remove("ef-collapse");
             }
         });
         categoryItem.addEventListener("focusout", (event) => {
             if (!categoryItem.contains(event.relatedTarget)) {
                 category.setAttribute("aria-expanded", "false");
+                if (!categoryItem.matches(":hover")) {
+                    categoryItem.classList.remove("ef-collapse");
+                }
             }
         });
 
         category.addEventListener("click", (event) => {
+            categoryItem.classList.remove("ef-collapse");
             if (event.detail > 0) {
                 category.blur();
             }

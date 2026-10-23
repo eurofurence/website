@@ -204,7 +204,8 @@ nav > div > ul > li:hover > a::after,
 nav > div > ul > li:focus-within > a::after,
 nav > div > ul > li:hover > label::after,
 nav > div > ul > li:focus-within > label::after,
-nav > div > ul > li > a.ef-active::after {
+nav > div > ul > li > a.ef-active::after,
+nav > div > ul > li:has(> ul a.ef-active) > a.has-submenu::after {
 	opacity: .9;
 	transform: scaleX(1);
 }
@@ -256,6 +257,13 @@ nav input[name="subnav-ctl"]:checked~ul {
 	max-height: 100vh;
 }
 
+nav>div>ul>li.ef-collapse>ul,
+nav>div>ul>li.ef-collapse:hover>ul,
+nav>div>ul>li.ef-collapse:focus-within>ul,
+nav>div>ul>li.ef-collapse>ul:hover {
+	max-height: 0;
+}
+
 nav>div>ul ul {
 	position: absolute;
 	top: 100%;
@@ -264,7 +272,7 @@ nav>div>ul ul {
 	overflow: hidden;
 	background-color: var(--ef-green);
 	border-radius: 0 0 var(--ef-border-radius) var(--ef-border-radius);
-    opacity: .94;
+    opacity: .96;
 	transition: max-height .25s ease;
 }
 
@@ -301,12 +309,37 @@ nav>div>ul ul a:hover {
 	text-decoration: none;
 }
 
-nav > div > ul ul a:hover::before {
-	background: var(--ef-green);
-	transform: translateY(-50%) scale(1.1);
-}
 nav a[href^="http"]:not(.hide-ext, .uk-icon-button):hover:after {
 	background-color: var(--ef-green) !important;
+}
+
+nav > div > ul ul a.ef-active > span {
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	padding-inline: 16px;
+}
+nav > div > ul ul a.ef-active > span::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 6px;
+	height: 6px;
+	border-right: 1px solid currentColor;
+	border-bottom: 1px solid currentColor;
+	transform: translateY(-50%) rotate(-45deg);
+}
+nav > div > ul ul a.ef-active > span::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 6px;
+	height: 6px;
+	border-left: 1px solid currentColor;
+	border-top: 1px solid currentColor;
+	transform: translateY(-50%) rotate(-45deg);
 }
 
 /* body area */
