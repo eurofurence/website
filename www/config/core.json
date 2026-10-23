@@ -57,6 +57,11 @@
 	"jobs": {
 		"newLabelDays": 14
 	},
+    "dailyEF": {
+		"showPreviousEditions": true,
+		"prevEditionsToShowWhenCollapsed": 3,
+		"prevEditionsToShowWhenExpanded": 3
+	},
 	"ui": {
 		"scrollToTopThreshold": 100
 	},

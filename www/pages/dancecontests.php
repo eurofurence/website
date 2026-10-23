@@ -9,7 +9,6 @@
 ]; ?>
 
 <style>
-
     .ef-reg-button {
         border-width: 3px;
         background-color: var(--ef-palette-1);
@@ -33,7 +32,6 @@
     .reg-closed-display {
         color: var(--ef-palette-1);
     }
-
 </style>
 
 <section>
