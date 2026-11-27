@@ -240,7 +240,7 @@
                     <a target="_blank" href="https://meow.social/@eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Mastodon" uk-icon="mastodon" rel="me"></a>
                     <a target="_blank" href="https://bsky.app/profile/eurofurence.org" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Bluesky" uk-icon="bluesky"></a>
                     <a target="_blank" href="https://vimeo.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Vimeo" uk-icon="vimeo"></a>
-                    <a target="_blank" href="https://discord.com/invite/VMESBMM" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
+                    <a target="_blank" href="https://discord.gg/XNN8QPdJTj" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
                 </div>
 			</div>
 
